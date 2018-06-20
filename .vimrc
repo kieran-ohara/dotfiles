@@ -45,7 +45,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
-Plug '~/src/dotfiles/bundle/myvim'
+Plug '~/.vim/bundle/vim-kieran'
 call plug#end()
 " }}}
 " Vim Settings. {{{
@@ -363,7 +363,7 @@ let g:airline_powerline_fonts=1
 let g:vim_json_syntax_conceal=0
 
 " Set the Ultisnips directory.
-let g:UltiSnipsSnippetsDir='~/src/dotfiles/bundle/myvim/ultisnips'
+let g:UltiSnipsSnippetsDir='~/.vim/snippets'
 
 " Set the Ultisnips edit window to split vertically.
 let g:UltiSnipsEditSplit="vertical"
