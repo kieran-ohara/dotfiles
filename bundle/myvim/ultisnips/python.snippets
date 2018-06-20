@@ -1,0 +1,27 @@
+snippet def
+def $1($2):
+    $3
+endsnippet
+
+snippet deb
+pdb.set_trace()
+endsnippet
+
+snippet env
+os.environ['$1']
+endsnippet
+
+snippet ifmain "ifmain" b
+if __name__ == "__main__":
+    ${1:${VISUAL:main()}}
+endsnippet
+
+snippet fopen
+with open('${1:filename}', '${2:rw+}') as file:
+endsnippet
+
+snippet class
+class ${1:MyClass}:
+    def __init__(self$2):
+        ${3:self.data = []}
+endsnippet

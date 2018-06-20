@@ -1,0 +1,48 @@
+snippet service
+${1:SERVICE_NAME}:
+	image:
+endsnippet
+
+snippet build
+build:
+	context: ${1:./dir}
+	dockerfile: ${2:Dockerfile}
+image: ${3:imagename}
+endsnippet
+
+snippet env_file
+env_file:
+	- ${1:./.env}
+endsnippet
+
+snippet volumes
+volumes:
+	- ${1:./volume}:${2:/mount/point}
+endsnippet
+
+snippet tty
+tty: true
+stdin_open: true
+endsnippet
+
+snippet command
+command: ${1:command}
+endsnippet
+
+snippet ports
+ports:
+	- ${1:HOST}:${2:CONTAINER}
+endsnippet
+
+snippet networks
+networks:
+	${1:some-network}:
+		aliases:
+			- ${2:alias}
+endsnippet
+
+snippet networks1
+networks:
+	${1:some-network}:
+		driver: bridge
+endsnippet

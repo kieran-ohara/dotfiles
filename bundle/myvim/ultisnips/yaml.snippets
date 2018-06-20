@@ -1,0 +1,20 @@
+snippet resource
+${1:ComponentName}:
+    Type: AWS::$2::$3
+    Properties:
+        $4
+endsnippet
+
+snippet output
+${1:ID}:
+	Value: ${2:Value}
+endsnippet
+
+snippet outline
+Outputs:
+Resources:
+endsnippet
+
+snippet kv
+${1:key}: ${2:value}
+endsnippet
