@@ -356,7 +356,7 @@ augroup end
 " Plugins. {{{
 " Airline.
 let g:airline_theme="gruvbox"
-let g:airline_extensions=[]
+let g:airline_extensions=['branch']
 let g:airline_powerline_fonts=1
 
 " Dont conceal quotes when viewing JSON.
