@@ -313,6 +313,16 @@ function! StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunc
+
+function! GoyoEnter()
+    Limelight
+    silent !tmux set status off
+endfunction
+
+function! GoyoLeave()
+    Limelight!
+    silent !tmux set status on
+endfunction
 " }}}
 " {{{ Autocmd.
 " Highlight trailing spaces
@@ -363,8 +373,8 @@ augroup vimrc
     autocmd FileType gitcommit,markdown,python RainbowParentheses
 
     " When entering/exiting Goyo, turn Limelight on / off.
-    autocmd! User GoyoEnter Limelight
-    autocmd! User GoyoLeave Limelight!
+    autocmd! User GoyoEnter nested call GoyoEnter()
+    autocmd! User GoyoLeave nested call GoyoLeave()
 
 augroup end
 " }}}
