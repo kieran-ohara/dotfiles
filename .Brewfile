@@ -48,10 +48,10 @@ cask 'vagrant'
 cask 'virtualbox'
 
 mas 'Apple Configurator 2', id: 1037126344
-mas 'Boom2', id: 948176063
+mas 'Boom 3D', id: 1233048948
 mas 'JPEGmini Lite', id: 525742250
 mas 'Kaleidoscope', id: 587512244
-mas 'Mindnote', id: 992076693
+mas 'MindNode', id: 992076693
 mas 'OmniFocus', id: 867299399
 mas 'OmniGraffle', id: 711830901
 mas 'Transmit', id: 403388562
@@ -59,6 +59,7 @@ mas 'Tweetbot', id: 557168941
 mas 'WhatsApp Desktop', id: 1147396723
 mas 'Xcode', id: 497799835
 mas 'macOS server', id: 883878097
+mas 'Sketch', id: 852320343
 
 # Using custom python for asciinema, httpie, macvim, mycli
 
