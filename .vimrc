@@ -356,7 +356,10 @@ augroup vimrc
     autocmd FileType gitcommit,markdown setlocal linebreak
     autocmd FileType gitcommit,markdown setlocal textwidth=80 colorcolumn=80
 
-    autocmd FileType python RainbowParentheses
+    " Emoji for text files.
+    autocmd FileType gitcommit,markdown setlocal omnifunc=emoji#complete
+    " Set rainbox parentheses.
+    autocmd FileType gitcommit,markdown,python RainbowParentheses
 augroup end
 " }}}
 " Plugins. {{{
