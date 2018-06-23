@@ -10,6 +10,7 @@ Plug 'dracula/vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'janko-m/vim-test'
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/limelight.vim'
@@ -112,12 +113,13 @@ set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 set guifont=Fira\ Code\ Retina:h14
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
-let g:gruvbox_italic=1
+let g:onedark_termcolors=16
+let g:onedark_terminal_italics=1
 
 " Colour scheme.
 set termguicolors
 set background=dark
-colorscheme gruvbox
+colorscheme onedark
 
 " Enable mouse.
 set mouse=a
@@ -359,7 +361,7 @@ augroup end
 " }}}
 " Plugins. {{{
 " Airline.
-let g:airline_theme="gruvbox"
+let g:airline_theme="onedark"
 let g:airline_extensions=['branch']
 let g:airline_powerline_fonts=1
 
