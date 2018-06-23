@@ -358,8 +358,14 @@ augroup vimrc
 
     " Emoji for text files.
     autocmd FileType gitcommit,markdown setlocal omnifunc=emoji#complete
+
     " Set rainbox parentheses.
     autocmd FileType gitcommit,markdown,python RainbowParentheses
+
+    " When entering/exiting Goyo, turn Limelight on / off.
+    autocmd! User GoyoEnter Limelight
+    autocmd! User GoyoLeave Limelight!
+
 augroup end
 " }}}
 " Plugins. {{{
