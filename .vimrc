@@ -370,7 +370,7 @@ augroup vimrc
     autocmd FileType gitcommit,markdown setlocal omnifunc=emoji#complete
 
     " Set rainbox parentheses.
-    autocmd FileType gitcommit,markdown,python RainbowParentheses
+    autocmd FileType gitcommit,markdown,python,vim RainbowParentheses
 
     " When entering/exiting Goyo, turn Limelight on / off.
     autocmd! User GoyoEnter nested call GoyoEnter()
@@ -381,7 +381,7 @@ augroup end
 " Plugins. {{{
 " Airline.
 let g:airline_theme="onedark"
-let g:airline_extensions=['branch']
+let g:airline_extensions=['ale','branch']
 let g:airline_powerline_fonts=1
 
 " Dont conceal quotes when viewing JSON.
