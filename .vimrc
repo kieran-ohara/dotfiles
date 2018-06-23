@@ -318,12 +318,14 @@ augroup vimrc
     autocmd!
 
     " File types.
+
     autocmd BufNewFile,BufRead *.conf setfiletype nginx
     autocmd BufNewFile,BufRead *.hbs setfiletype html
     autocmd BufNewFile,BufRead *.json.dist setfiletype json
     autocmd BufNewFile,BufRead *.mustache setfiletype html
     autocmd BufNewFile,BufRead *.puml setfiletype plantuml
     autocmd BufNewFile,BufRead *.spv setfiletype dockerfile
+    autocmd BufNewFile,BufRead .Brewfile setfiletype ruby
     autocmd BufNewFile,BufRead .ctags setfiletype ctags
     autocmd BufNewFile,BufRead .env.* setfiletype yaml
     autocmd BufNewFile,BufRead .npmrc setfiletype dosini
