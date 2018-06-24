@@ -31,10 +31,6 @@ export EDITOR='vim'
 export GPG_TTY=$(tty) # Needed to sign Git commits with GPG.
 export KEYTIMEOUT=1
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/MySQLWorkbench.app/Contents/MacOS"
-
-# Make the LS colours solarized.
-eval `gdircolors -b $ZPLUG_REPOS/seebi/dircolors-solarized/dircolors.ansi-dark`
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # }}}
 # Keyboard bindings. {{{
 # Fix shift-tab in vi-mode.
