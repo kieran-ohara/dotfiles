@@ -107,6 +107,7 @@ brew 'lua'
 brew 'macvim', args: [ 'env-std', "with-override-system-vim" ]
 brew 'makefile2graph'
 brew 'mas'
+brew 'maven'
 brew 'mycli'
 brew 'node'
 brew 'nodenv'
