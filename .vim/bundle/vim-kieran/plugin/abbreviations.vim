@@ -18,3 +18,4 @@ abbreviate maek make
 abbreviate spome some
 abbreviate teh the
 abbreviate updating Updating
+abbreviate poeple people
