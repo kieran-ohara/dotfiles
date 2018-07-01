@@ -54,12 +54,13 @@ mas 'Kaleidoscope', id: 587512244
 mas 'MindNode', id: 992076693
 mas 'OmniFocus', id: 867299399
 mas 'OmniGraffle', id: 711830901
+mas 'Pocket', id: 568494494
+mas 'Sketch', id: 852320343
 mas 'Transmit', id: 403388562
 mas 'Tweetbot', id: 557168941
 mas 'WhatsApp Desktop', id: 1147396723
 mas 'Xcode', id: 497799835
 mas 'macOS server', id: 883878097
-mas 'Sketch', id: 852320343
 
 # Using custom python for asciinema, httpie, macvim, mycli
 
