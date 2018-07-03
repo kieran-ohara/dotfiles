@@ -362,9 +362,9 @@ augroup vimrc
     autocmd FileType javascript,json setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
     " Set spelling / linebreak for text files.
-    autocmd FileType gitcommit,markdown,plantuml setlocal spell
-    autocmd FileType gitcommit,markdown setlocal linebreak
-    autocmd FileType gitcommit,markdown setlocal textwidth=80 colorcolumn=80
+    autocmd FileType gitcommit,markdown,plantuml,conf setlocal spell
+    autocmd FileType gitcommit,markdown,conf setlocal linebreak
+    autocmd FileType gitcommit,markdown,conf setlocal textwidth=80 colorcolumn=80
 
     " Emoji for text files.
     autocmd FileType gitcommit,markdown setlocal omnifunc=emoji#complete
