@@ -18,6 +18,7 @@ local spectacle = {"cmd", "alt"}
 hotkey.bind(mash, 'C', function() application.launchorfocus('Calendar') end)
 hotkey.bind(mash, 'E', function() application.launchorfocus('Preview') end)
 hotkey.bind(mash, 'F', function() application.launchorfocus('Finder') end)
+hotkey.bind(mash, 'H', function() application.launchorfocus('Google Chrome') end)
 hotkey.bind(mash, 'I', function() application.launchorfocus('iTerm') end)
 hotkey.bind(mash, 'J', function() application.launchorfocus('IntelliJ IDEA CE') end)
 hotkey.bind(mash, 'K', function() application.launchorfocus('Kaleidoscope') end)
