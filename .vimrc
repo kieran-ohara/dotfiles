@@ -64,6 +64,10 @@ set incsearch
 set directory=~/.vim/swapfiles//
 set backupdir=~/.vim/backupfiles//
 
+" Set undo directory so undo persists outside of vim.
+set undodir=~/.vim/undodir
+set undofile
+
 " Instead of failing a command because of unsaved changes, instead raise a dialogue asking if you wish to save changed files.
 set confirm
 
