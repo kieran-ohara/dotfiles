@@ -1,0 +1,34 @@
+[mergetool "Kaleidoscope"]
+[merge]
+[difftool "Kaleidoscope"]
+[difftool]
+[mergetool]
+[diff]
+	tool = Kaleidoscope
+[user]
+	name = Kieran Bamforth
+	email = hello@kieranbamforth.me
+	signingkey = D816D92D
+[hub]
+	protocol = ssh
+[credential]
+[core]
+	excludesFile = ~/.gitignore-global
+    filemode = true
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[color]
+	ui = auto
+[push]
+	default = upstream
+[commit]
+	gpgsign = true

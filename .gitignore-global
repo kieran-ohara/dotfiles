@@ -1,0 +1,10 @@
+*.orig
+*.swo
+*.swp
+.DS_Store
+.classpath
+.project
+.tern-project
+node_modules
+tags
+venv
