@@ -1,6 +1,7 @@
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'kieran-bamforth/homebrew-repo'
+tap 'universal-ctags/universal-ctags'
 
 cask '1password'
 cask '1password-cli'
@@ -63,8 +64,6 @@ mas 'WhatsApp Desktop', id: 1147396723
 mas 'Xcode', id: 497799835
 mas 'macOS server', id: 883878097
 
-# Using custom python for asciinema, httpie, macvim, mycli
-
 brew 'ansible'
 brew 'ant'
 brew 'asciinema'
@@ -74,7 +73,6 @@ brew 'awscli'
 brew 'awslogs'
 brew 'cmake'
 brew 'coreutils'
-brew 'ctags'
 brew 'diff-so-fancy'
 brew 'flake8'
 brew 'fswatch'
@@ -135,6 +133,7 @@ brew 'thefuck'
 brew 'tldr'
 brew 'tmux'
 brew 'tree'
+brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 brew 'wget'
 brew 'yarn'
 brew 'zplug'
