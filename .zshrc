@@ -6,8 +6,8 @@ source $ZPLUG_HOME/init.zsh
 export ZSH_THEME=robbyrussell
 export ZSH=$ZPLUG_REPOS/robbyrussell/oh-my-zsh
 
-zplug "~/src/dots", from:local, use:"sh/completions/"
-zplug "~/src/dots", from:local, use:"sh/functions/*.sh", defer:3
+zplug "~/src/secrets", from:local, use:"sh/completions/"
+zplug "~/src/secrets", from:local, use:"sh/functions/*.sh", defer:3
 zplug "arialdomartini/oh-my-git", use:"*.sh"
 zplug "aws/aws-cli", use:"bin/aws_zsh_completer.sh"
 zplug "b4b4r07/enhancd", use:init.sh
