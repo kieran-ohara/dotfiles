@@ -61,8 +61,9 @@ declare -a FILES_TO_SYMLINK=$(find . -type f -maxdepth 1 \
     -name ".*" \
     -not -name .DS_Store \
     -not -name .git \
+    -not -name .gitignore \
     | sed -e 's|//|/|' | sed -e 's|./.|.|')
-FILES_TO_SYMLINK="$FILES_TO_SYMLINK .vim .mjolnir"
+FILES_TO_SYMLINK="$FILES_TO_SYMLINK .config/karabiner .mjolnir .vim"
 
 main() {
 
@@ -73,7 +74,7 @@ main() {
     for i in ${FILES_TO_SYMLINK[@]}; do
 
         sourceFile="$(pwd)/$i"
-        targetFile="$HOME/$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
+        targetFile="$HOME/$(printf "%s" "$i")"
 
         if [ -e "$targetFile" ]; then
             if [ "$(readlink "$targetFile")" != "$sourceFile" ]; then
