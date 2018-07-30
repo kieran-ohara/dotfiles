@@ -7,7 +7,7 @@ package.cpath = package.cpath .. ';' .. cpath
 
 local application = require "mjolnir.application"
 local fnutils = require "mjolnir.fnutils"
-local fnutils = require "mjolnir.fnutils"
+local geometry = require "mjolnir.geometry"
 local hotkey = require "mjolnir.hotkey"
 local screen = require "mjolnir.screen"
 local window = require "mjolnir.window"
@@ -35,34 +35,33 @@ hotkey.bind(mash, 'U', function() application.launchorfocus('Mail') end)
 hotkey.bind(mash, 'W', function() application.launchorfocus('1Password 7') end)
 hotkey.bind(mash, 'X', function() application.launchorfocus('GitX') end)
 
--- Left half.
-local function leftHalf(win)
-    local screenFrame = screen.mainscreen():frame()
-    local frame = win:frame()
-    frame.x = screenFrame.x
-    frame.y = screenFrame.y
-    frame.w = screenFrame.w / 2
-    frame.h = screenFrame.h
-    win:setframe(frame)
+-- Move the focused window to the specific position.
+function moveTo(win, x, y, h, w)
+  local rect = geometry.rect(x, y, h, w)
+  win:movetounit(rect)
 end
 
-hotkey.bind(spectacle, "j", function()
-    leftHalf(window.focusedwindow())
+hotkey.bind(spectacle, "h", function()
+    moveTo(window.focusedwindow(), 0, 0, 0.5, 1)
 end)
 
--- Right half.
-local function rightHalf(win)
-    local screenFrame = screen.mainscreen():frame()
-    local frame = win:frame()
-    frame.x = screenFrame.x + (screenFrame.w / 2)
-    frame.y = screenFrame.y
-    frame.w = screenFrame.w / 2
-    frame.h = screenFrame.h
-    win:setframe(frame)
-end
+hotkey.bind(spectacle, "j", function()
+    moveTo(window.focusedwindow(), 0, 0.5, 1, 0.5)
+end)
 
 hotkey.bind(spectacle, "k", function()
-    rightHalf(window.focusedwindow())
+    moveTo(window.focusedwindow(), 0, 0, 1, 0.5)
+end)
+
+hotkey.bind(spectacle, "l", function()
+    moveTo(window.focusedwindow(), 0.5, 0, 0.5, 1)
+end)
+
+-- iTerm love.
+hotkey.bind(mash, "'", function()
+    local iterm = application.applicationsforbundleid('com.googlecode.iterm2')[1]
+    moveTo(iterm:mainwindow(), 0, 0, 0.5, 1)
+    moveTo(window.focusedwindow(), 0.5, 0, 0.5, 1)
 end)
 
 -- Full screen.
@@ -70,18 +69,7 @@ hotkey.bind(spectacle, "F", function()
     local win = window.focusedwindow():maximize()
 end)
 
--- iTerm love.
-hotkey.bind(mash, "'", function()
-    rightHalf(window.focusedwindow())
-    local iterm = application.applicationsforbundleid('com.googlecode.iterm2')[1]
-    leftHalf(iterm:mainwindow())
-end)
-
 -- Focus.
 hotkey.bind(mash, "1", function()
     os.execute("open \"focus://focus?minutes=5\"")
-end)
-
-hotkey.bind(mash, "2", function()
-    os.execute("open \"focus://focus?minutes=25\"")
 end)
