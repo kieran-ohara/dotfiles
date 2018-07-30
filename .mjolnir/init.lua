@@ -1,3 +1,5 @@
+-- vim: set foldmethod=marker foldlevel=0 nomodeline:
+-- Setup. {{{
 local path = os.getenv("HOME") .. '/.luarocks/share/lua/5.2/?.lua'
 local path_init = os.getenv("HOME") .. '/.luarocks/share/lua/5.2/?/init.lua'
 local cpath = os.getenv("HOME") .. '/.luarocks/lib/lua/5.2/?.so'
@@ -14,8 +16,10 @@ local window = require "mjolnir.window"
 
 local mash = {"cmd", "alt", "ctrl"}
 local spectacle = {"cmd", "alt"}
-
--- Most common used apps get their own shortcuts.
+local spectacleshift = {"cmd", "alt", "shift"}
+-- }}}
+-- Global Keyboard Shortcuts. {{{
+hotkey.bind(mash, "2", function() os.execute("open \"focus://focus?minutes=25\"") end)
 hotkey.bind(mash, 'C', function() application.launchorfocus('Calendar') end)
 hotkey.bind(mash, 'E', function() application.launchorfocus('Preview') end)
 hotkey.bind(mash, 'F', function() application.launchorfocus('Finder') end)
@@ -34,42 +38,57 @@ hotkey.bind(mash, 'T', function() application.launchorfocus('Contacts') end)
 hotkey.bind(mash, 'U', function() application.launchorfocus('Mail') end)
 hotkey.bind(mash, 'W', function() application.launchorfocus('1Password 7') end)
 hotkey.bind(mash, 'X', function() application.launchorfocus('GitX') end)
-
--- Move the focused window to the specific position.
+-- }}}
+-- Move Windows. {{{
 function moveTo(win, x, y, h, w)
   local rect = geometry.rect(x, y, h, w)
   win:movetounit(rect)
 end
 
-hotkey.bind(spectacle, "h", function()
+function moveNamedAppTo(name, x, y, h, w)
+    local app = application.applicationsforbundleid(name)[1]
+    moveTo(app:mainwindow(), x, y, h, w)
+    app:mainwindow():focus()
+end
+
+hotkey.bind(spectacle, "H", function()
     moveTo(window.focusedwindow(), 0, 0, 0.5, 1)
 end)
 
-hotkey.bind(spectacle, "j", function()
+hotkey.bind(spectacle, "J", function()
     moveTo(window.focusedwindow(), 0, 0.5, 1, 0.5)
 end)
 
-hotkey.bind(spectacle, "k", function()
+hotkey.bind(spectacle, "K", function()
     moveTo(window.focusedwindow(), 0, 0, 1, 0.5)
 end)
 
-hotkey.bind(spectacle, "l", function()
+hotkey.bind(spectacle, "L", function()
     moveTo(window.focusedwindow(), 0.5, 0, 0.5, 1)
 end)
 
--- iTerm love.
-hotkey.bind(mash, "'", function()
-    local iterm = application.applicationsforbundleid('com.googlecode.iterm2')[1]
-    moveTo(iterm:mainwindow(), 0, 0, 0.5, 1)
+hotkey.bind(spectacleshift, "H", function()
+    moveTo(window.focusedwindow(), 0, 0, 0.5, 1)
+    moveNamedAppTo('com.googlecode.iterm2', 0.5, 0, 0.5, 1)
+end)
+
+hotkey.bind(spectacleshift, "J", function()
+    moveTo(window.focusedwindow(), 0, 0.5, 1, 0.5)
+    moveNamedAppTo('com.googlecode.iterm2', 0, 0, 1, 0.5)
+end)
+
+hotkey.bind(spectacleshift, "K", function()
+    moveTo(window.focusedwindow(), 0, 0, 1, 0.5)
+    moveNamedAppTo('com.googlecode.iterm2', 0, 0.5, 1, 0.5)
+end)
+
+hotkey.bind(spectacleshift, "L", function()
     moveTo(window.focusedwindow(), 0.5, 0, 0.5, 1)
+    moveNamedAppTo('com.googlecode.iterm2', 0, 0, 0.5, 1)
 end)
 
 -- Full screen.
 hotkey.bind(spectacle, "F", function()
     local win = window.focusedwindow():maximize()
 end)
-
--- Focus.
-hotkey.bind(mash, "1", function()
-    os.execute("open \"focus://focus?minutes=5\"")
-end)
+-- }}}
