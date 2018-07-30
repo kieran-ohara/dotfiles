@@ -5,8 +5,9 @@ local cpath = os.getenv("HOME") .. '/.luarocks/lib/lua/5.2/?.so'
 package.path = package.path .. ';' .. path .. ';' .. path_init
 package.cpath = package.cpath .. ';' .. cpath
 
-local alert = require "mjolnir.alert"
 local application = require "mjolnir.application"
+local fnutils = require "mjolnir.fnutils"
+local fnutils = require "mjolnir.fnutils"
 local hotkey = require "mjolnir.hotkey"
 local screen = require "mjolnir.screen"
 local window = require "mjolnir.window"
@@ -84,32 +85,3 @@ end)
 hotkey.bind(mash, "2", function()
     os.execute("open \"focus://focus?minutes=25\"")
 end)
-
--- -- Tile those windows. Just the way I like it. Oh yeah.
--- hotkey.bind(mash, "C", function()
---     local mainscreen = screen.mainscreen()
---     local allWindows = window.visiblewindows()
---     local windowsCount = tablelength(allWindows) - 1
---     local padding = 20
---     windowWidth = (mainscreen:frame().w) - (windowsCount * padding)
---     windowHeight = (mainscreen:frame().h) - (windowsCount * padding)
---     local currentX = mainscreen:frame().x
---     local currentY = mainscreen:frame().y
---     for k,v in pairs(allWindows) do
---         local frame = v:frame()
---         frame.x = currentX
---         frame.y = currentY
---         frame.w = windowWidth
---         frame.h = windowHeight
---         v:setframe(frame)
---         currentX = currentX + padding
---         currentY = currentY + padding
---     end
---     alert.show(windowsCount .. ' Windows Tiled')
--- end)
-
-function tablelength(T)
-    local count = 0
-    for _ in pairs(T) do count = count + 1 end
-    return count
-end
