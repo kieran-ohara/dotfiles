@@ -1,29 +1,7 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
-# {{{ Antigen / ZSH.
+# Antigen. {{{
 source /usr/local/share/antigen/antigen.zsh
-
-antigen use oh-my-zsh
-
-antigen bundle $HOME/src/secrets/sh/completions
-antigen bundle $HOME/src/secrets/sh/functions
-
-antigen bundle docker
-antigen bundle git
-antigen bundle tmux
-antigen bundle vi-mode
-
-antigen bundle aws/aws-cli --loc=bin/aws_zsh_completer.sh
-antigen bundle b4b4r07/enhancd --loc=init.sh
-antigen bundle djui/alias-tips
-antigen bundle seebi/dircolors-solarized
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-antigen theme robbyrussell
-
-antigen apply
+antigen init ~/.antigenrc
 # }}}
 # Settings. {{{
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/MySQLWorkbench.app/Contents/MacOS"
