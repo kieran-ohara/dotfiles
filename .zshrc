@@ -1,30 +1,29 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
-# {{{ Zplug / ZSH.
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+# {{{ Antigen / ZSH.
+source /usr/local/share/antigen/antigen.zsh
 
-export ZSH_THEME=robbyrussell
-export ZSH=$ZPLUG_REPOS/robbyrussell/oh-my-zsh
+antigen use oh-my-zsh
 
-zplug "~/src/secrets", from:local, use:"sh/completions/"
-zplug "~/src/secrets", from:local, use:"sh/functions/*.sh", defer:3
-zplug "arialdomartini/oh-my-git", use:"*.sh"
-zplug "aws/aws-cli", use:"bin/aws_zsh_completer.sh"
-zplug "b4b4r07/enhancd", use:init.sh
-zplug "djui/alias-tips"
-zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/tmux", from:oh-my-zsh
-zplug "plugins/vi-mode", from:oh-my-zsh
-zplug "robbyrussell/oh-my-zsh", use:"oh-my-zsh.sh"
-zplug "seebi/dircolors-solarized"
-zplug "supercrabtree/k"
-zplug "zsh-users/zsh-autosuggestions", defer:2
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search", defer:3
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
+antigen bundle $HOME/src/secrets/sh/completions
+antigen bundle $HOME/src/secrets/sh/functions
 
-zplug load
+antigen bundle docker
+antigen bundle git
+antigen bundle tmux
+antigen bundle vi-mode
+
+antigen bundle aws/aws-cli --loc=bin/aws_zsh_completer.sh
+antigen bundle b4b4r07/enhancd --loc=init.sh
+antigen bundle djui/alias-tips
+antigen bundle seebi/dircolors-solarized
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme robbyrussell
+
+antigen apply
 # }}}
 # Settings. {{{
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/MySQLWorkbench.app/Contents/MacOS"

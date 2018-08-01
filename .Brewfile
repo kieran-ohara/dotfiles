@@ -67,6 +67,7 @@ mas 'macOS server', id: 883878097
 
 brew 'ansible'
 brew 'ant'
+brew 'antigen'
 brew 'asciinema'
 brew 'autojump'
 brew 'aws-shell'
@@ -137,5 +138,4 @@ brew 'tree'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 brew 'wget'
 brew 'yarn'
-brew 'zplug'
 brew 'zsh'
