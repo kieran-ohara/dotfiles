@@ -76,7 +76,7 @@ bindkey -M vicmd ':' vi-add-next
 # }}}
 # Plugins. {{{
 # Autosuggest.
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 
 # Enhancd.
 export ENHANCD_FILTER=fzf
