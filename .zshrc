@@ -63,12 +63,10 @@ export ENHANCD_FILTER=fzf
 # Env.
 export JENV_ROOT=/usr/local/var/jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-export NODENV_ROOT=/usr/local/var/nodenv
-if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+source /usr/local/opt/asdf/asdf.sh
+source /usr/local/etc/bash_completion.d/asdf.bash
+
 eval "$(direnv hook zsh)"
 
 # FZF.
