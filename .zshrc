@@ -2,8 +2,10 @@
 # Antigen. {{{
 source /usr/local/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
+
+source ~/src/dotfiles/utilities.sh
 # }}}
-# Settings. {{{
+# ZSH Settings. {{{
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/MySQLWorkbench.app/Contents/MacOS"
 
 # Use vim where possible.
@@ -43,7 +45,7 @@ setopt hist_save_no_dups
 # Ignore commands that start with space.
 setopt hist_ignore_space
 # }}}
-# Keyboard bindings. {{{
+# Mappings. {{{
 # Fix shift-tab in vi-mode.
 bindkey '^[[Z' reverse-menu-complete
 
