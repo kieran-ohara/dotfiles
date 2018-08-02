@@ -167,6 +167,7 @@ nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>ggl :Gpull<CR>
 nnoremap <leader>ggp :Gpush<CR>
 nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gpr :!hub pull-request<CR>
 nnoremap <leader>gst :Gstatus<CR>
 nnoremap <leader>gx :GV<CR>
 
