@@ -69,6 +69,7 @@ export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+eval "$(direnv hook zsh)"
 
 # FZF.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
