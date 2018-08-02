@@ -160,6 +160,13 @@ function aws_cloudwatch_alarms_namespace_search {
         | jq ".MetricAlarms[] | select(.Namespace | startswith(\"${SEARCH}\")) | {Name: .AlarmName, Description: .AlarmDescription, Namespace: .Namespace}"
 }
 
+function aws_cloudwatch_alarms_describe {
+    SEARCH=$1
+
+    aws cloudwatch describe-alarms --alarm-names=$SEARCH | jq '.MetricAlarms[] | {AlarmName: .AlarmName, MetricName: .MetricName, Period: .Period, EvaluationPeriods: .EvaluationPeriods, Threshold: .Threshold, ComparisonOperator: .ComparisonOperator}'
+
+}
+
 function aws_ec2_instance_iam_profiles {
     aws iam list-instance-profiles | jq '.InstanceProfiles[] | {Arn: .Arn, RoleArns: .Roles[].Arn}'
 }
