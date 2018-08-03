@@ -388,7 +388,7 @@ augroup end
 " Plugins. {{{
 " Airline.
 let g:airline_theme="onedark"
-let g:airline_extensions=['ale','branch']
+let g:airline_extensions=['ale','branch','obsession']
 let g:airline_powerline_fonts=1
 
 " Dont conceal quotes when viewing JSON.
@@ -418,10 +418,7 @@ highlight! link ALEErrorSign SignColumn
 highlight! link ALEWarningSign SignColumn
 
 " Gitgutter.
-let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
 let g:gitgutter_sign_removed = emoji#for('fire')
-let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
 " Dash.
 let g:dash_map = { 'yaml': ['cloudformation'] }
