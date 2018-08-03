@@ -2,7 +2,7 @@
 " Plug. {{{
 call plug#begin('~/.vim/bundle')
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
@@ -395,7 +395,7 @@ let g:airline_powerline_fonts=1
 let g:vim_json_syntax_conceal=0
 
 " Set the Ultisnips directory.
-let g:UltiSnipsSnippetsDir='~/.vim/snippets'
+let g:UltiSnipsSnippetsDir='~/.vim/ultisnips'
 
 " Set the Ultisnips edit window to split vertically.
 let g:UltiSnipsEditSplit="vertical"

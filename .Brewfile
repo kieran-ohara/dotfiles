@@ -108,7 +108,7 @@ brew 'kieran-bamforth/homebrew-repo/uglifyjs'
 brew 'libffi'
 brew 'libyaml'
 brew 'lolcat'
-brew 'macvim', args: [ 'env-std', "with-override-system-vim" ]
+brew 'macvim', args: [ 'env-std', 'with-override-system-vim', 'with-python@2' ]
 brew 'makefile2graph'
 brew 'mas'
 brew 'maven'
