@@ -119,6 +119,11 @@ let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 let g:onedark_terminal_italics=1
 
+" Set cursor shape according to mode.
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
 " Colour scheme.
 set termguicolors
 set background=dark
