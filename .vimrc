@@ -15,7 +15,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-emoji'
 Plug 'junegunn/vim-peekaboo'
 Plug 'justinmk/vim-dirvish'
@@ -375,9 +374,6 @@ augroup vimrc
 
     " Emoji for text files.
     autocmd FileType gitcommit,markdown setlocal omnifunc=emoji#complete
-
-    " Set rainbox parentheses.
-    autocmd FileType gitcommit,markdown,python,vim RainbowParentheses
 
     " When entering/exiting Goyo, turn Limelight on / off.
     autocmd! User GoyoEnter nested call GoyoEnter()
