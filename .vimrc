@@ -114,11 +114,9 @@ set completeopt=menuone,preview
 
 set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
-" Set FiraCode font, and correct escape sequences for italics.
-set guifont=Fira\ Code\ Retina:h14
+" Set italic escape codes
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
-let g:onedark_termcolors=16
 let g:onedark_terminal_italics=1
 
 " Colour scheme.
