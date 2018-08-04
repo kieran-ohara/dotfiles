@@ -87,8 +87,7 @@ set clipboard=unnamed
 
 " Restore <EOL> if missing.
 set nobinary
-set fixeol " Turn off to preserve situation from original file (ignored when binary).
-" endofline not set becuase nobinary && fixeol - automatically (re)set according to new file.
+set fixendofline
 
 " Tabs are four columns wide. Each indentation level is one tab.
 set tabstop=4
