@@ -115,6 +115,4 @@ eval "$(jira --completion-script-zsh)"
 # Lua.
 eval "$(luarocks path)"
 
-# The Fuck?!
-eval "$(thefuck --alias)"
 # }}}
