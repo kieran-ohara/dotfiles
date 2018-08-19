@@ -1,6 +1,4 @@
 *.orig
-*.swo
-*.swp
 .DS_Store
 .classpath
 .project
