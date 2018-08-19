@@ -185,11 +185,7 @@ vnoremap <leader>s :sort u<CR>
 nnoremap <leader>o :noh<CR>
 
 " Dispatch.
-nnoremap <leader>dd :Dispatch<CR>
 nnoremap <leader>df :Focus
-nnoremap <leader>m :Make<space>
-nnoremap <leader>mm :Make<CR>
-nnoremap <leader>mt :Make test<CR>
 
 " Test.
 nnoremap <leader>t :TestNearest<CR>
