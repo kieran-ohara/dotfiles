@@ -114,6 +114,9 @@ set completeopt=menuone,preview
 
 set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
+" Add ~/src to cd path for easy jumping between projects.
+set cdpath+=~/src
+
 " Set italic escape codes
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
