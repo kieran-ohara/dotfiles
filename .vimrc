@@ -385,9 +385,11 @@ augroup end
 " }}}
 " Plugins. {{{
 " Airline.
-let g:airline_theme="onedark"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_extensions=['ale','branch','obsession']
 let g:airline_powerline_fonts=1
+let g:airline_theme="onedark"
 
 " Dont conceal quotes when viewing JSON.
 let g:vim_json_syntax_conceal=0
