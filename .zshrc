@@ -57,16 +57,17 @@ bindkey -M vicmd ':' vi-add-next
 # Autosuggest.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 
+# Enable JIRA autocompletion.
+eval "$(jira --completion-script-zsh)"
+
 # Enhancd.
 export ENHANCD_FILTER=fzf
 
-# Env.
-export JENV_ROOT=/usr/local/var/jenv
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-
+# Asdf.
 source /usr/local/opt/asdf/asdf.sh
 source /usr/local/etc/bash_completion.d/asdf.bash
 
+# Direnv.
 eval "$(direnv hook zsh)"
 
 # FZF.
@@ -108,9 +109,6 @@ function fzf_git_checkout() {
 
 # Hub.
 eval $(hub alias -s)
-
-# Enable JIRA autocompletion.
-eval "$(jira --completion-script-zsh)"
 
 # Lua.
 eval "$(luarocks path)"
