@@ -413,10 +413,8 @@ highlight! link Sneak Search
 highlight! link SneakScope Search
 
 " ALE.
-let g:ale_sign_error = emoji#for('balloon')
-let g:ale_sign_warning = emoji#for('space_invader')
-highlight! link ALEErrorSign SignColumn
-highlight! link ALEWarningSign SignColumn
+let g:ale_sign_error = ""
+let g:ale_sign_warning = ""
 
 " Gitgutter.
 let g:gitgutter_sign_removed = emoji#for('fire')
