@@ -228,6 +228,9 @@ nmap <silent> <leader>H <Plug>DashGlobalSearch
 
 " Delete current buffer.
 nnoremap <leader>x :bd<CR>
+
+" Insert current dir into command line when %% is pressed.
+cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 " }}}
 " Functions. {{{
 function! NumberToggle()
