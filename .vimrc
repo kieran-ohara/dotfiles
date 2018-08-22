@@ -138,9 +138,6 @@ set mouse=a
 " }}}
 " Mappings. {{{
 
-" Dirvish
-nnoremap <C-n> :Dirvish<CR>
-
 " FZF shortcuts.
 nnoremap <C-p> :FZF<CR>
 nnoremap <leader>cd :call fzf#run({'sink': 'cd', 'source': 'ls', 'dir': '~/src/', 'down': '40%'})<CR>
