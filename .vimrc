@@ -415,6 +415,7 @@ highlight! link SneakScope Search
 " ALE.
 let g:ale_sign_error = ""
 let g:ale_sign_warning = ""
+highlight! link ALEWarningSign ALEWarning
 
 " Gitgutter.
 let g:gitgutter_sign_removed = emoji#for('fire')
