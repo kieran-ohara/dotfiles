@@ -94,7 +94,7 @@ brew 'imagemagick'
 brew 'jid'
 brew 'jq'
 brew 'kieran-bamforth/homebrew-repo/awscli-wormhole-credentials'
-brew 'kieran-bamforth/homebrew-repo/client-cert-proxy', args: ['HEAD']
+brew 'kieran-bamforth/homebrew-repo/client-cert-proxy'
 brew 'kieran-bamforth/homebrew-repo/csso'
 brew 'kieran-bamforth/homebrew-repo/git-sweep'
 brew 'kieran-bamforth/homebrew-repo/json-diff'
