@@ -59,7 +59,7 @@ alias rm="rm -rf"
 alias sac="app/console"
 alias showfiles="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
 alias tre="nice_tree"
-alias v="vim"
+alias v="vim -S ~/.vim/sessions/session"
 alias x="exit"
 # }}}
 # Docker. {{{
