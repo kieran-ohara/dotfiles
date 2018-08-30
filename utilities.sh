@@ -137,6 +137,10 @@ function aws_cloudformation_stacks_browse {
     open "https://eu-west-1.console.aws.amazon.com/cloudformation/home?region-eu-west-1#/stack/detail?stackId=${STACK_ID}"
 }
 
+function aws_ecr_repos {
+    aws ecr describe-repositories --query "repositories[*].repositoryUri"
+}
+
 function aws_rds_endpoints {
     aws rds describe-db-instances | jq '.DBInstances[].Endpoint'
 }
