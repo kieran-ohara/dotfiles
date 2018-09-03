@@ -230,6 +230,9 @@ nnoremap <leader>x :bd<CR>
 
 " Insert current dir into command line when %% is pressed.
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
+
+" Docker tools.
+nnoremap <leader>dkp :DockerToolsToggle<CR>
 " }}}
 " Functions. {{{
 function! NumberToggle()
