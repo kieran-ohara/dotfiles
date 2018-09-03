@@ -143,7 +143,6 @@ nnoremap <C-p> :FZF<CR>
 nnoremap <leader>cd :call fzf#run({'sink': 'cd', 'source': 'ls', 'dir': '~/src/', 'down': '40%'})<CR>
 nnoremap <leader>ff :GFiles<CR>
 nnoremap <leader>fh :History:<CR>
-nnoremap <leader>fj :call JiraFzf()<CR>
 nnoremap <leader>fl :Lines<Space>
 nnoremap <leader>fm :Marks<CR>
 nnoremap <leader>fp :Maps<CR>
@@ -244,70 +243,6 @@ endfunc
 function! OpenSwps()
     execute "!open ~/.vim/swapfiles/"
 endfunc
-
-function! GoogleIt()
-    " Why is this not a built-in Vim script function?!
-    let [line_start, column_start] = getpos("'<")[1:2]
-    let [line_end, column_end] = getpos("'>")[1:2]
-    let lines = getline(line_start, line_end)
-    if len(lines) == 0
-        return ''
-    endif
-    let lines[-1] = lines[-1][: column_end - (&selection == 'inclusive' ? 1 : 2)]
-    let lines[0] = lines[0][column_start - 1:]
-    let selection = join(lines, "\n")
-	echom selection
-    execute '!open "http://www.google.co.uk/search?q=' . selection .'"'
-endfunction
-
-function! CosmosBrowseService()
-    let filename=system('echo ${$(pwd)##*/}')
-    let url="https://admin.live.bbc.co.uk/cosmos/services/" . filename
-    execute "!open " . url
-endfunction
-
-function! JiraIssueFromString(issue)
-    let split = split(a:issue, ":")
-    return split[0]
-endfunction
-
-function! JiraEdit(issue)
-    execute "!jira edit " . JiraIssueFromString(a:issue)
-endfunction
-
-function! JiraBrowse(issue)
-    execute "!jira browse " . JiraIssueFromString(a:issue)
-endfunction
-
-function! JiraView(issue)
-    " Get the issue.
-    let issue = system("jira view " . JiraIssueFromString(a:issue))
-
-    " Open a new split and set it up.
-    vsplit __jira_issue__
-    normal! ggdG
-    setlocal filetype=yaml
-    setlocal buftype=nofile
-
-    " Insert the issue.
-    call append(0, split(issue, '\v\n'))
-endfunction
-
-function! JiraFzf()
-    call fzf#run({'source': 'jira orbiten',
-                \ 'options': '-d:
-                \ --preview "jira view {1} -t fzf_preview"
-                \ --preview-window top:wrap
-                \ --expect=ctrl-r,ctrl-e',
-                \ 'sink*': function('HandleJiraKeys')})
-endfunction
-
-function! HandleJiraKeys(lines)
-    let cmd = get({'ctrl-r': 'JiraBrowse', 'ctrl-e': 'JiraEdit'}, a:lines[0], 'JiraView')
-    let issue = a:lines[1]
-    let Fn = function(cmd)
-    call Fn(issue)
-endfunction
 
 function! StripTrailingWhitespaces()
     "Preparation: save last search, and cursor position.
