@@ -353,6 +353,9 @@ highlight! link SneakScope Search
 " ALE.
 let g:ale_sign_error = ""
 let g:ale_sign_warning = ""
+let g:ale_linters={
+            \'python':['flake8', 'mypy', 'pylint', 'pyls']
+            \}
 highlight! link ALEWarningSign ALEWarning
 
 " Gitgutter.
