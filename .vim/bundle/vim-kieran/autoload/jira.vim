@@ -20,7 +20,7 @@ function! jira#fzf_ui()
                 \ 'options': '-d:
                 \ --preview "jira view {1} -t fzf_preview"
                 \ --preview-window right:wrap
-                \ --expect=ctrl-b,ctrl-e',
+                \ --expect=ctrl-b',
                 \ 'sink*': function('jira#fzf_sink')})
 endfunction
 
