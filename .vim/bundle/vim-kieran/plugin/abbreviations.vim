@@ -13,9 +13,10 @@ abbreviate hte the
 abbreviate htis this
 abbreviate htose those
 abbreviate implemment implement
+abbreviate jenkinsfile Jenkinsfile
 abbreviate jst just
 abbreviate maek make
+abbreviate poeple people
 abbreviate spome some
 abbreviate teh the
 abbreviate updating Updating
-abbreviate poeple people
