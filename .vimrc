@@ -150,7 +150,7 @@ nnoremap <leader>ft :BTags<CR>
 nnoremap <leader>fu :Buffers<CR>
 
 " Easy edit / source VIMRC.
-nnoremap <leader>ve :vsplit $MYVIMRC<CR>
+nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
 nnoremap <leader>va :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran/plugin/abbreviations.vim<CR>
 nnoremap <leader>vb :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
@@ -233,6 +233,9 @@ cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 
 " Docker tools.
 nnoremap <leader>dkp :DockerToolsToggle<CR>
+
+" Escape terminal with normal <esc> key.
+tnoremap <Esc> <C-\><C-n>
 " }}}
 " Functions. {{{
 function! NumberToggle()
