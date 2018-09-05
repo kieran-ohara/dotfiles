@@ -148,6 +148,7 @@ nnoremap <leader>fm :Marks<CR>
 nnoremap <leader>fp :Maps<CR>
 nnoremap <leader>ft :BTags<CR>
 nnoremap <leader>fu :Buffers<CR>
+nnoremap <leader>fj :call jira#fzf_ui()<CR>
 
 " Easy edit / source VIMRC.
 nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
@@ -193,8 +194,8 @@ nnoremap <leader>t :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 
 " Jira commands.
-nnoremap <leader>jb :call jira#browse()<CR><CR>
-nnoremap <leader>jc :call jira#comment()<CR>
+nnoremap <leader>jb :call jira#browse(jira#ticketFromBranch())<CR><CR>
+nnoremap <leader>jc :call jira#comment(jira#ticketFromBranch())<CR>
 
 " Sneak.
 nmap f <Plug>Sneak_f
