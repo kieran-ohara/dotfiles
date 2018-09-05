@@ -151,8 +151,8 @@ nnoremap <leader>fu :Buffers<CR>
 
 " Easy edit / source VIMRC.
 nnoremap <leader>ve :vsplit $MYVIMRC<CR>
-nnoremap <leader>va :vsplit ~/src/dotfiles/bundle/myvim/plugin/abbreviations.vim<CR>
-nnoremap <leader>vb :vsplit ~/src/dotfiles/bundle/myvim<CR>
+nnoremap <leader>va :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran/plugin/abbreviations.vim<CR>
+nnoremap <leader>vb :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 nnoremap <leader>vu :UltiSnipsEdit<CR>
 
