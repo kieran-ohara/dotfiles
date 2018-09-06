@@ -87,7 +87,7 @@ function _gen_fzf_default_opts() {
 
     export FZF_DEFAULT_OPTS="
     --color fg:-1,bg:-1,hl:$onedark_blue
-    --color fg+:-1,bg+:-1,hl+:$onedark_green
+    --color fg+:254,bg+:-1,hl+:$onedark_green
     --color info:$onedark_yellow,prompt:$onedark_yellow,pointer:$onedark_green
     --color marker:$onedark_green,spinner:$onedark_yellow,header:$onedark_yellow"
 }
