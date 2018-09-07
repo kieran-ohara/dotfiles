@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>me.kieranbamforth.s3fs</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/bash</string>
+		<string>-c</string>
+		<string>/usr/local/bin/s3fs -f -o allow_other kieran-bamforth $HOME/src/kieran-bamforth</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/tmp/local.job.stderr</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/local.job.stdout</string>
+</dict>
+</plist>
