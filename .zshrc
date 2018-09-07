@@ -76,22 +76,19 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 function _gen_fzf_default_opts() {
-    local onedark_black="#282c34"
     local onedark_blue="#61afef"
-    local onedark_yellow="#e5c07b"
-    local onedark_red="#e06c75"
-    local onedark_white="#aab2bf"
     local onedark_green="#98c379"
-    local onedark_visual_grey="#3e4452"
-    local onedark_comment_grey="#5c6370"
+    local onedark_yellow="#e5c07b"
+
+    local ui_tint=$onedark_yellow
+    local hover_tint=$onedark_green
+    local match=$onedark_blue
 
     export FZF_DEFAULT_OPTS="
-    --color fg:-1,bg:-1,hl:$onedark_blue
-    --color fg+:254,bg+:-1,hl+:$onedark_green
-    --color info:$onedark_yellow,prompt:$onedark_yellow,pointer:$onedark_green
-    --color marker:$onedark_green,spinner:$onedark_yellow,header:$onedark_yellow"
+    --color fg:-1,bg:-1,bg+:-1,hl:$match
+    --color header:$ui_tint,info:$ui_tint,spinner:$ui_tint,prompt:$ui_tint
+    --color marker:$hover_tint,pointer:$hover_tint,hl+:$hover_tint,fg+:254"
 }
-
 _gen_fzf_default_opts
 
 function fzf_git_checkout() {
