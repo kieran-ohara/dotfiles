@@ -360,6 +360,8 @@ let g:ale_sign_warning = ""
 let g:ale_linters={
             \'python':['flake8', 'mypy', 'pylint', 'pyls']
             \}
+let g:ale_python_pyls_use_global = 1
+
 highlight! link ALEWarningSign ALEWarning
 
 " Gitgutter.
