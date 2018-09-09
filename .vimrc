@@ -143,9 +143,7 @@ nnoremap <C-p> :FZF<CR>
 nnoremap <leader>cd :call fzf#run({'sink': 'cd', 'source': 'ls', 'dir': '~/src/', 'down': '40%'})<CR>
 nnoremap <leader>ff :GFiles<CR>
 nnoremap <leader>fh :History:<CR>
-nnoremap <leader>fl :Lines<Space>
 nnoremap <leader>fm :Marks<CR>
-nnoremap <leader>fp :Maps<CR>
 nnoremap <leader>ft :BTags<CR>
 nnoremap <leader>fu :Buffers<CR>
 nnoremap <leader>fj :call jira#fzf_ui()<CR>
