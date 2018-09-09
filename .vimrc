@@ -312,7 +312,7 @@ augroup vimrc
 
     " Override tabs/spaces.
     autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-    autocmd FileType javascript,json,javascript.jsx setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+    autocmd FileType javascript,json,javascript.jsx,ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
     " Set spelling / linebreak for text files.
     autocmd FileType gitcommit,markdown,plantuml,conf setlocal spell
