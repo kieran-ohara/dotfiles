@@ -80,6 +80,10 @@ function dkvs {
 function dkpwn {
     docker stop $1 && docker rm $1
 }
+
+function dkenv {
+    docker inspect $1 | jq '.[].Config.Env'
+}
 # }}}
 # AWS. {{{
 function aws_asg_scaleup {
