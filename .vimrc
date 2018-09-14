@@ -141,7 +141,7 @@ set mouse=a
 " FZF shortcuts.
 nnoremap <C-p> :FZF<CR>
 nnoremap <leader>cd :call fzf#run({
-            \ 'sink': 'tabe',
+            \ 'sink': 'lcd',
             \ 'source': 'ls',
             \ 'dir': '~/src/',
             \ 'down': '40%'})<CR>
