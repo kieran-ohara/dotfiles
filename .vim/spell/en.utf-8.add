@@ -1,5 +1,6 @@
 ATOS
 AWS
+Brewfile
 Chronos
 Cloudwatch
 EC2
@@ -7,6 +8,7 @@ FZF
 Homebrew
 JIRA
 JSON
+Jenkinsfile
 Jira
 Mjolnir
 NPM
@@ -19,6 +21,5 @@ json
 macOS
 tagline
 techradar
-webmodules
-Jenkinsfile
 toolshed
+webmodules
