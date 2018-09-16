@@ -291,11 +291,13 @@ endfunc
 
 function! GoyoEnter()
     Limelight
+    execute 'match ErrorMsg /\%81v.\+/'
     silent !tmux set status off
 endfunction
 
 function! GoyoLeave()
     Limelight!
+    call clearmatches()
     silent !tmux set status on
 endfunction
 " }}}
