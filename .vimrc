@@ -255,6 +255,12 @@ nnoremap <leader>dkp :DockerToolsToggle<CR>
 
 " Escape terminal with normal <esc> key.
 tnoremap <Esc> <C-\><C-n>
+
+" Get the highlight colours under the cursor.
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 " }}}
 " Functions. {{{
 function! NumberToggle()
