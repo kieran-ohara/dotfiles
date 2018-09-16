@@ -2,6 +2,7 @@
 " Plug. {{{
 call plug#begin('~/.vim/bundle')
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
@@ -122,6 +123,14 @@ set cdpath+=~/src
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 let g:onedark_terminal_italics=1
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default.light': {
+  \       'allow_bold': 1,
+  \       'allow_italic': 1
+  \     }
+  \   }
+  \ }
 
 " Set cursor shape according to mode.
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
@@ -130,8 +139,8 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 " Colour scheme.
 set termguicolors
-set background=dark
-colorscheme onedark
+set background=light
+colorscheme PaperColor
 
 " Enable mouse.
 set mouse=a
@@ -358,7 +367,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_extensions=['ale','branch','obsession']
 let g:airline_powerline_fonts=1
-let g:airline_theme="onedark"
+let g:airline_theme="papercolor"
 
 " Dont conceal quotes when viewing JSON.
 let g:vim_json_syntax_conceal=0
