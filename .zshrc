@@ -80,18 +80,24 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 function _gen_fzf_default_opts() {
+    local paper_blue="#005faf"
+    local paper_blue_bgp="#afd7ff"
+    local paper_blue_fgp="#0087af"
+    local paper_pink="#d70087"
+    local paper_green="#5f8700"
+
     local onedark_blue="#61afef"
     local onedark_green="#98c379"
     local onedark_yellow="#e5c07b"
 
-    local ui_tint=$onedark_yellow
-    local hover_tint=$onedark_green
-    local match=$onedark_blue
+    local ui_tint=$paper_green
+    local hover_tint=$paper_blue_fgp
+    local match=$paper_pink
 
     export FZF_DEFAULT_OPTS="
-    --color fg:-1,bg:-1,bg+:-1,hl:$match
+    --color fg:-1,bg:-1,bg+:$paper_blue_bgp,hl:$match
     --color header:$ui_tint,info:$ui_tint,spinner:$ui_tint,prompt:$ui_tint
-    --color marker:$hover_tint,pointer:$hover_tint,hl+:$hover_tint,fg+:254"
+    --color marker:$hover_tint,pointer:$hover_tint,hl+:$hover_tint,fg+:$hover_tint"
 }
 _gen_fzf_default_opts
 
