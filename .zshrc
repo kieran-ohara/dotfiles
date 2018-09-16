@@ -44,6 +44,10 @@ setopt hist_reduce_blanks
 setopt hist_save_no_dups
 # Ignore commands that start with space.
 setopt hist_ignore_space
+
+# Load colours into shell variables https://github.com/ninrod/dotfiles/issues/134
+autoload -U colors
+colors
 # }}}
 # Mappings. {{{
 # Fix shift-tab in vi-mode.
