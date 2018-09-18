@@ -378,6 +378,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Ack to use Ag.
 let g:ackprg='ag --vimgrep --hidden'
+let g:ack_use_dispatch=1
 
 " Test strategy is Dispatch.
 let test#strategy = "dispatch"
