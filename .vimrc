@@ -43,6 +43,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -245,9 +246,6 @@ nnoremap <leader>aiw :execute('Ag ' . expand("<cword>"))<CR>
 
 " Last inserted text
 nnoremap g. :normal! `[v`]<cr><left>
-
-" Readline style key binding in command-line.
-cnoremap <C-A> <Home>
 
 " Dash shortcuts
 nmap <silent> <leader>h <Plug>DashSearch
