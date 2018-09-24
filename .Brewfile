@@ -55,7 +55,7 @@ mas 'Boom 3D', id: 1233048948
 mas 'JPEGmini Lite', id: 525742250
 mas 'Kaleidoscope', id: 587512244
 mas 'MindNode', id: 1289197285
-mas 'OmniFocus', id: 867299399
+mas 'OmniFocus', id: 1346203938
 mas 'OmniGraffle', id: 711830901
 mas 'Pocket', id: 568494494
 mas 'Sketch', id: 852320343
