@@ -16,6 +16,7 @@ abbreviate implemment implement
 abbreviate jenkinsfile Jenkinsfile
 abbreviate jst just
 abbreviate maek make
+abbreviate naivation navigation
 abbreviate poeple people
 abbreviate spome some
 abbreviate teh the
