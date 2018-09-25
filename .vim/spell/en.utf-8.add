@@ -16,12 +16,14 @@ Mjolnir
 NPM
 ORBITEN
 S3
+Tmux
 Webmodules
 cd
 config
 cukes
 dotfile
 dotfiles
+gitignore
 json
 macOS
 tagline
