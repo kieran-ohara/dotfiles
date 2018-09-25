@@ -381,6 +381,7 @@ let g:ackprg='ag --vimgrep --hidden'
 let g:ack_use_dispatch=1
 
 " Test strategy is Dispatch.
+let test#ruby#use_binstubs = 0
 let test#strategy = "dispatch"
 
 " Sneak config.
