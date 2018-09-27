@@ -197,6 +197,10 @@ function aws_route53_records_table {
 # Kitchen Sink. {{{
 function open_src_dir {
     DIR=~/src/$1
+    if [ "$1" = "master" ]; then
+        git checkout master
+        return
+    fi
     if [ ! -d "$DIR" ]; then
         DIR=~/src/$(basename $1)
         hub clone $1 $DIR
