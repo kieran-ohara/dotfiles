@@ -3,3 +3,9 @@ for ${1:i} in ${2:$ITERABLE}; do
 	${3:echo item: $i}
 done
 endsnippet
+
+snippet strcmp
+if [ "${1:$VAR"}" = "${2:VAR}" ]; then
+	${3}
+fi
+endsnippet
