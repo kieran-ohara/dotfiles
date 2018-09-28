@@ -17,6 +17,6 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-antigen theme robbyrussell
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply

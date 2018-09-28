@@ -115,6 +115,24 @@ eval $(hub alias -s)
 # Lua.
 eval "$(luarocks path)"
 
+# Spaceship
+SPACESHIP_PROMPT_ORDER=(
+    user
+    dir
+    host
+    git
+    venv
+    line_sep
+    vi_mode
+    char
+)
+SPACESHIP_CHAR_COLOR_SECONDARY=black
+SPACESHIP_CHAR_COLOR_SUCCESS=black
+SPACESHIP_DIR_COLOR=black
+SPACESHIP_GIT_BRANCH_COLOR=black
+SPACESHIP_GIT_STATUS_COLOR=black
+SPACESHIP_VENV_COLOR=black
+SPACESHIP_VI_MODE_COLOR=black
 # }}}
 # zsh-sticky-keys. {{{
 # Taken from https://github.com/utdemir/me/blob/master/blog/zsh-sticky-prefix.md
