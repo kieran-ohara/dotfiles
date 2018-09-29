@@ -81,8 +81,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 function _gen_fzf_default_opts() {
     local paper_blue="#005faf"
-    local paper_blue_bgp="#afd7ff"
-    local paper_blue_fgp="#0087af"
+    local paper_blue_bgp="#0087af"
+    local paper_blue_fgp="#eeeeee"
     local paper_pink="#d70087"
     local paper_green="#5f8700"
 
