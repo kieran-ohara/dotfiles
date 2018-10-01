@@ -198,7 +198,7 @@ nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>ggl :Gpull<CR>
 nnoremap <leader>ggp :Gpush<CR>
 nnoremap <leader>gl :Glog<CR>
-nnoremap <leader>gpr :!hub pull-request<CR>
+nnoremap <leader>gpr :!hub pull-request -r benwainwright,andrewscfc,lalkhum,cefn,saralk<CR>
 nnoremap <leader>gst :Gstatus<CR>
 nnoremap <leader>gx :GV<CR>
 
