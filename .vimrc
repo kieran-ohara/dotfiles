@@ -150,11 +150,7 @@ set mouse=a
 
 " FZF shortcuts.
 nnoremap <C-p> :FZF<CR>
-nnoremap <leader>cd :call fzf#run({
-            \ 'sink': 'lcd',
-            \ 'source': 'ls',
-            \ 'dir': '~/src/',
-            \ 'down': '40%'})<CR>
+nnoremap <leader>cd :call cd#fzf_ui()<CR>
 nnoremap <leader>ff :GFiles<CR>
 nnoremap <leader>fh :History:<CR>
 nnoremap <leader>fm :Marks<CR>
