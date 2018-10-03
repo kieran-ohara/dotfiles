@@ -21,3 +21,4 @@ abbreviate poeple people
 abbreviate spome some
 abbreviate teh the
 abbreviate updating Updating
+abbreviate Updateing Updating
