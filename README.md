@@ -1,4 +1,3 @@
-# dotfiles
+# ~/.:two_hearts:
 
-Here are dotfiles. There are many others like them, but these are my dotfiles
-:yellow_heart:.
+![screenshot](./images/terminal.png "screenshot")
