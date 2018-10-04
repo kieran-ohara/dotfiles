@@ -400,4 +400,6 @@ let g:gitgutter_sign_removed = emoji#for('fire')
 
 " Dash.
 let g:dash_map = { 'yaml': ['cloudformation'] }
+
+set formatoptions+=j
 " }}}
