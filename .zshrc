@@ -22,13 +22,13 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 
-# Allow changing directories without `cd`
+# Allow changing directories without `cd`.
 setopt autocd
-# Dont overwrite history
+# Dont overwrite history.
 setopt append_history
 # Also record time and duration of commands.
 setopt extended_history
-# Share history between multiple shells
+# Share history between multiple shells.
 setopt share_history
 # Clear duplicates when trimming internal hist.
 setopt hist_expire_dups_first
