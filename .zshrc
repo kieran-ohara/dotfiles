@@ -6,7 +6,7 @@ antigen init ~/.antigenrc
 source ~/src/dotfiles/utilities.sh
 # }}}
 # ZSH Settings. {{{
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/MySQLWorkbench.app/Contents/MacOS"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/MySQLWorkbench.app/Contents/MacOS:/Library/TeX/texbin"
 
 # Use vim where possible.
 export EDITOR='vim'
