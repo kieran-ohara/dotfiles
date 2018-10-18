@@ -145,6 +145,9 @@ colorscheme PaperColor
 
 " Enable mouse.
 set mouse=a
+
+" Join comments.
+set formatoptions+=j
 " }}}
 " Mappings. {{{
 
