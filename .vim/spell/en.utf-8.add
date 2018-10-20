@@ -12,10 +12,12 @@ Jenkinsfile
 Jira
 Lalkhum
 Lalkhum's
+MindNode
 Mjolnir
 NPM
 ORBITEN
 Qaurtiles
+REPL
 S3
 Tmux
 Webmodules
@@ -25,8 +27,11 @@ cukes
 dotfile
 dotfiles
 gitignore
+iPython
 json
 macOS
+mindmap
+reusability
 tagline
 techradar
 timestamp
