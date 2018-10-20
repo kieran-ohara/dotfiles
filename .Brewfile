@@ -50,6 +50,7 @@ cask 'suspicious-package'
 cask 'tripmode'
 cask 'vagrant'
 cask 'virtualbox'
+cask 'weka'
 
 mas 'Apple Configurator 2', id: 1037126344
 mas 'Boom 3D', id: 1233048948
