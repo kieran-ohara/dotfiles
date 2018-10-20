@@ -20,6 +20,7 @@ local spectacleshift = {"cmd", "alt", "shift"}
 -- }}}
 -- Global Keyboard Shortcuts. {{{
 hotkey.bind(mash, "2", function() os.execute("open \"focus://focus?minutes=25\"") end)
+hotkey.bind(mash, 'B', function() application.launchorfocus('weka-3-9-2-oracle-jvm') end)
 hotkey.bind(mash, 'C', function() application.launchorfocus('Calendar') end)
 hotkey.bind(mash, 'E', function() application.launchorfocus('Preview') end)
 hotkey.bind(mash, 'F', function() application.launchorfocus('Finder') end)
