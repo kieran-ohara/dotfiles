@@ -6,6 +6,7 @@ Cloudwatch
 EC2
 FZF
 Homebrew
+J48
 JIRA
 JSON
 Jenkinsfile
@@ -16,11 +17,13 @@ MindNode
 Mjolnir
 NPM
 ORBITEN
+OneR
 Qaurtiles
 REPL
 S3
 Tmux
 Webmodules
+ZeroR
 cd
 config
 cukes
