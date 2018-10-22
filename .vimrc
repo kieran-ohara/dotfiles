@@ -148,6 +148,9 @@ set mouse=a
 
 " Join comments.
 set formatoptions+=j
+
+" Dont show mode, as status bars do a good job for us.
+set noshowmode
 " }}}
 " Mappings. {{{
 
