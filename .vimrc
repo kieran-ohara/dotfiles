@@ -249,10 +249,6 @@ nnoremap <leader>aiw :execute('Ag ' . expand("<cword>"))<CR>
 " Last inserted text
 nnoremap g. :normal! `[v`]<cr><left>
 
-" Dash shortcuts
-nmap <silent> <leader>h <Plug>DashSearch
-nmap <silent> <leader>H <Plug>DashGlobalSearch
-
 " Delete current buffer.
 nnoremap <leader>x :bd<CR>
 
