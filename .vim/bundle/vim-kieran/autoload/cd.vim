@@ -13,5 +13,5 @@ function! cd#fzf_sink(lines)
                 \ 'ctrl-x': 'split'
                 \ }, a:lines[0], 'lcd')
     let dir = '~/src/' . a:lines[1]
-    execute cmd . ' ' . fnameescape(dir)
+    execute cmd . ' ' . fnameescape(dir) . ' | lcd ' . fnameescape(dir)
 endfunction
