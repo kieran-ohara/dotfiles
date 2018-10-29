@@ -58,8 +58,9 @@ alias py="python"
 alias rm="rm -rf"
 alias sac="app/console"
 alias showfiles="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
-alias tre="nice_tree"
+alias t="nice_tree"
 alias v="vim -S ~/.vim/sessions/session"
+alias w="nice_which"
 alias x="exit"
 # }}}
 # Docker. {{{
@@ -253,8 +254,21 @@ function nice_tree() {
     tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
-function whic() {
-    ls -al $(which $1)
+function nice_which {
+    WHICH=`which $1`
+
+    if [ ! -L $WHICH ]; then
+        echo $WHICH
+        return
+    fi
+
+    GREEN="\u001b[32m"
+    RED="\u001b[31m"
+
+    READLINK=`readlink $WHICH`
+    READLINK_COLOUR=`test -f $(dirname $WHICH)/$READLINK && echo $GREEN || echo $RED`
+
+    echo "$WHICH -> $READLINK_COLOUR$READLINK"
 }
 
 function github_latest() {
