@@ -1,5 +1,6 @@
 ATOS
 AWS
+Apriori
 Bamforth
 Brewfile
 Chronos
@@ -26,6 +27,8 @@ StatsD
 Tmux
 Webmodules
 ZeroR
+apriori
+arff
 cd
 config
 cukes
