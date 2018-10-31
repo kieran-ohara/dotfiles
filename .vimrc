@@ -151,6 +151,15 @@ set formatoptions+=j
 
 " Dont show mode, as status bars do a good job for us.
 set noshowmode
+
+" Automatically save before :next, :make etc.
+set autoread
+
+" Automatically reread changed files without asking me anything.
+set autowrite
+
+" Don't redraw when executing macros.
+set lazyredraw
 " }}}
 " Mappings. {{{
 
