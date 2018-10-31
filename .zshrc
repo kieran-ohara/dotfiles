@@ -62,7 +62,7 @@ bindkey -M vicmd ':' vi-add-next
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 
 # Enable JIRA autocompletion.
-eval "$(jira --completion-script-zsh)"
+source <(jira --completion-script-zsh)
 
 # Enhancd.
 export ENHANCD_FILTER=fzf
