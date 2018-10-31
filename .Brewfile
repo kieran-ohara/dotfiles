@@ -3,6 +3,7 @@ tap 'caskroom/versions'
 tap 'jesseduffield/lazygit'
 tap 'kieran-bamforth/homebrew-repo'
 tap 'universal-ctags/universal-ctags'
+tap 'getantibody/tap'
 
 cask '1password'
 cask '1password-cli'
@@ -69,7 +70,7 @@ mas 'macOS server', id: 883878097
 
 brew 'ansible'
 brew 'ant'
-brew 'antigen'
+brew 'antibody'
 brew 'asciinema'
 brew 'asdf'
 brew 'autojump'

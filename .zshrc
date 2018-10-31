@@ -1,12 +1,17 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
-# Antigen. {{{
-source /usr/local/share/antigen/antigen.zsh
-antigen init ~/.antigenrc
-
-source ~/src/dotfiles/utilities.sh
-# }}}
 # ZSH Settings. {{{
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/MySQLWorkbench.app/Contents/MacOS:/Library/TeX/texbin"
+
+# Quicker compinit.
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+    compinit
+else
+    compinit -C
+fi
+
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' completer _complete _approximate
 
 # Use vim where possible.
 export EDITOR='vim'
@@ -48,6 +53,26 @@ setopt hist_ignore_space
 # Load colours into shell variables https://github.com/ninrod/dotfiles/issues/134
 autoload -U colors
 colors
+# }}}
+# Antibody. {{{
+source <(antibody init)
+antibody bundle << EOF
+robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/tmux
+robbyrussell/oh-my-zsh path:plugins/vi-mode
+
+djui/alias-tips
+seebi/dircolors-solarized
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-syntax-highlighting
+
+denysdovhan/spaceship-prompt spaceship
+EOF
+
+source ~/src/dotfiles/utilities.sh
 # }}}
 # Mappings. {{{
 # Fix shift-tab in vi-mode.
