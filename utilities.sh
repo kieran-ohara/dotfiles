@@ -228,6 +228,7 @@ function open_src_dir {
     fi
     cd $DIR
 }
+compdef '_files -/ -W ~/src' open_src_dir
 
 function copy_file_contents {
     cat $1 | pbcopy
