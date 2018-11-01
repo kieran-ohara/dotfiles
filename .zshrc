@@ -10,8 +10,17 @@ else
     compinit -C
 fi
 
-zstyle ':completion:*' menu select=1
+# Autocomplete options.
+unsetopt menu_complete
+unsetopt flowcontrol
+
+setopt always_to_end
+setopt auto_menu
+setopt complete_in_word
+
 zstyle ':completion:*' completer _complete _approximate
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' menu select=1
 
 # Use vim where possible.
 export EDITOR='vim'
