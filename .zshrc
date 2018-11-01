@@ -158,11 +158,14 @@ SPACESHIP_PROMPT_ORDER=(
     dir
     host
     git
+    aws
     venv
     line_sep
     vi_mode
     char
 )
+SPACESHIP_AWS_COLOR=black
+SPACESHIP_AWS_SYMBOL="  "
 SPACESHIP_CHAR_COLOR_SECONDARY=black
 SPACESHIP_CHAR_COLOR_SUCCESS=black
 SPACESHIP_DIR_COLOR=black
