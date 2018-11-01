@@ -153,17 +153,18 @@ eval $(hub alias -s)
 eval "$(luarocks path)"
 
 # Spaceship
-SPACESHIP_PROMPT_ORDER=(
-    user
-    dir
-    host
-    git
-    aws
-    venv
-    line_sep
-    vi_mode
-    char
-)
+spaceship_dockerhost() {
+    spaceship::exists docker || return
+
+    [[ -z $DOCKER_HOST ]] && return
+
+    spaceship::section \
+        "black" \
+        "$SPACESHIP_PROMPT_DEFAULT_PREFIX" \
+        "🐳 $DOCKER_HOST" \
+        "$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
+    }
+
 SPACESHIP_AWS_COLOR=black
 SPACESHIP_AWS_SYMBOL="  "
 SPACESHIP_CHAR_COLOR_SECONDARY=black
@@ -173,4 +174,17 @@ SPACESHIP_GIT_BRANCH_COLOR=black
 SPACESHIP_GIT_STATUS_COLOR=black
 SPACESHIP_VENV_COLOR=black
 SPACESHIP_VI_MODE_COLOR=black
+
+SPACESHIP_PROMPT_ORDER=(
+    user
+    dir
+    host
+    git
+    aws
+    dockerhost
+    venv
+    line_sep
+    vi_mode
+    char
+)
 # }}}
