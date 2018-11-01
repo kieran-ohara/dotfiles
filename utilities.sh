@@ -94,6 +94,7 @@ function aws_cli_profile_list {
 function aws_cli_profile_set {
     export AWS_DEFAULT_PROFILE=$1
 }
+compdef '_alternative "profiles:AWS profiles:($(aws_cli_profile_list))"' aws_cli_profile_set
 
 function aws_cloudformation_resources_list {
     STACK=$1
