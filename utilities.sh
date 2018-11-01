@@ -192,6 +192,23 @@ function aws_route53_records_table {
     aws route53 list-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --output table --query 'ResourceRecordSets[].{"Name": Name, "TTL": TTL, "Type":Type}'
 }
 # }}}
+# Git. {{{
+function github_latest() {
+    REPO_NAME=$1
+    http https://api.github.com/repos/${REPO_NAME}/releases/latest | jq -r .tag_name
+}
+
+function git_current_branch() {
+    local ref
+    ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)
+    local ret=$?
+    if [[ $ret != 0 ]]; then
+        [[ $ret == 128 ]] && return  # no git repo.
+        ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
+    fi
+    echo ${ref#refs/heads/}
+}
+# }}}
 # Kitchen Sink. {{{
 function open_src_dir {
     DIR=~/src/$1
