@@ -35,6 +35,7 @@ alias dkvs="docker_volumes"
 alias dpl="diff_plist"
 alias e="echo"
 alias egrep="egrep --color=always"
+alias fpath='echo -e ${FPATH//:/\\n}'
 alias gcmd="lazygit"
 alias gd="git diff --color  | diff-so-fancy"
 alias gdc="git diff --color --cached | diff-so-fancy"
