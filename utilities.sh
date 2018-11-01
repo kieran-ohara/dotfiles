@@ -19,16 +19,19 @@ alias dkc="docker-compose"
 alias dkcd="docker-compose down"
 alias dkcu="docker-compose up -d"
 alias dke="docker exec"
+alias dkenv="docker_env"
 alias dki="docker images"
 alias dkl="docker logs"
 alias dkm="docker-machine"
 alias dkp="docker ps -a"
+alias dkpwn="docker_kill"
 alias dkr="dk run"
 alias dkrmi="docker rmi"
 alias dkrmoc="docker ps -aqf \"status=exited\" | xargs docker rm"
 alias dkrmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
 alias dks="docker_shell"
 alias dkv="docker volume"
+alias dkvs="docker_volumes"
 alias dpl="diff_plist"
 alias e="echo"
 alias egrep="egrep --color=always"
@@ -64,25 +67,19 @@ alias w="nice_which"
 alias x="exit"
 # }}}
 # Docker. {{{
-function dkmip {
-    DOCKERM_IP=`docker-machine ip $1`
-    echo $DOCKERM_IP | pbcopy
-    echo "Copied Docker Machine IP ($DOCKERM_IP) to clipboard."
-}
-
 function docker_shell {
     docker exec -it $1 /bin/bash
 }
 
-function dkvs {
+function docker_volumes {
     docker inspect $1 | jq '.[].ContainerConfig.Volumes'
 }
 
-function dkpwn {
+function docker_kill {
     docker stop $1 && docker rm $1
 }
 
-function dkenv {
+function docker_env {
     docker inspect $1 | jq '.[].Config.Env'
 }
 # }}}
