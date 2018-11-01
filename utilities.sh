@@ -177,21 +177,26 @@ function aws_route53_records_table {
 }
 # }}}
 # Docker. {{{
-function docker_shell {
-    docker exec -it $1 /bin/bash
-}
-
-function docker_volumes {
-    docker inspect $1 | jq '.[].ContainerConfig.Volumes'
+function docker_env {
+    docker inspect $1 | jq '.[].Config.Env'
 }
 
 function docker_kill {
     docker stop $1 && docker rm $1
 }
 
-function docker_env {
-    docker inspect $1 | jq '.[].Config.Env'
+function docker_shell {
+    docker exec -it $1 /bin/bash
 }
+
+function docker_volumes {
+    docker inspect $1 | jq '.[].Config.Volumes'
+}
+
+compdef _docker docker_env=_docker_complete_containers \
+    docker_kill=_docker_complete_running_containers \
+    docker_shell=_docker_complete_running_containers \
+    docker_volumes=_docker_complete_containers
 # }}}
 # Git. {{{
 function github_latest() {
