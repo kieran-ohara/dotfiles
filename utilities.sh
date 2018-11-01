@@ -1,5 +1,5 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
-# Aliases {{{
+# Aliases. {{{
 alias :q="exit"
 alias :qa="tmux kill-window"
 alias acps="aws_cli_profile_set"
@@ -65,23 +65,6 @@ alias t="nice_tree"
 alias v="vim -S ~/.vim/sessions/session"
 alias w="nice_which"
 alias x="exit"
-# }}}
-# Docker. {{{
-function docker_shell {
-    docker exec -it $1 /bin/bash
-}
-
-function docker_volumes {
-    docker inspect $1 | jq '.[].ContainerConfig.Volumes'
-}
-
-function docker_kill {
-    docker stop $1 && docker rm $1
-}
-
-function docker_env {
-    docker inspect $1 | jq '.[].Config.Env'
-}
 # }}}
 # AWS. {{{
 function aws_asg_scaleup {
@@ -192,6 +175,23 @@ function aws_route53_records_table {
     aws route53 list-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --output table --query 'ResourceRecordSets[].{"Name": Name, "TTL": TTL, "Type":Type}'
 }
 # }}}
+# Docker. {{{
+function docker_shell {
+    docker exec -it $1 /bin/bash
+}
+
+function docker_volumes {
+    docker inspect $1 | jq '.[].ContainerConfig.Volumes'
+}
+
+function docker_kill {
+    docker stop $1 && docker rm $1
+}
+
+function docker_env {
+    docker inspect $1 | jq '.[].Config.Env'
+}
+# }}}
 # Git. {{{
 function github_latest() {
     REPO_NAME=$1
@@ -283,10 +283,5 @@ function nice_which {
     READLINK_COLOUR=`test -f $(dirname $WHICH)/$READLINK && echo $GREEN || echo $RED`
 
     echo "$WHICH -> $READLINK_COLOUR$READLINK"
-}
-
-function github_latest() {
-    REPO_NAME=$1
-    http https://api.github.com/repos/${REPO_NAME}/releases/latest | jq -r .tag_name
 }
 # }}}
