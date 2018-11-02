@@ -176,6 +176,27 @@ function aws_route53_records_table {
 
     aws route53 list-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --output table --query 'ResourceRecordSets[].{"Name": Name, "TTL": TTL, "Type":Type}'
 }
+
+function aws_assume_role_personal {
+    aws iam update-assume-role-policy --role-name "kieran.bamforth@bbc.co.uk" --policy-document \
+    '{
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "",
+                    "Effect": "Allow",
+                    "Principal": { "AWS": "arn:aws:iam::470820891875:role/live-aws-wormhole-resources-ComponentRole-1U534EGLBW9ZD" },
+                    "Action": "sts:AssumeRole"
+                },
+                {
+                    "Sid": "",
+                    "Effect": "Allow",
+                    "Principal": { "AWS": "arn:aws:iam::855277617897:user/kieran-bamforth" },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+    }'
+}
 # }}}
 # Docker. {{{
 function docker_env {
