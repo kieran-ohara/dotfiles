@@ -84,7 +84,7 @@ EOF
 # Antibody glob means we have to do this manually: https://github.com/getantibody/antibody/blob/master/bundle/zsh.go#L35
 fpath=($fpath $(antibody list | grep docker/cli | awk '{print $2"/contrib/completion/zsh"}'))
 
-source ~/src/dotfiles/utilities.sh
+source ~/src/dotfiles/utilities.zsh
 # }}}
 # Mappings. {{{
 # Fix shift-tab in vi-mode.
