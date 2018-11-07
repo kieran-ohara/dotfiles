@@ -66,6 +66,7 @@ colors
 # Antibody. {{{
 source <(antibody init)
 antibody bundle << EOF
+robbyrussell/oh-my-zsh path:plugins/fancy-ctrl-z
 robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:plugins/tmux
 robbyrussell/oh-my-zsh path:plugins/vi-mode
