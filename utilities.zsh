@@ -198,6 +198,20 @@ function aws_assume_role_personal {
     }'
 }
 # }}}
+# Cosmos. {{{
+export COSMOS_CERT=/etc/pki/tls/certs/client.crt
+export COSMOS_CERT_KEY=/etc/pki/tls/private/client.key
+
+function cosmos_ssh {
+    COSMOS_SERVICE=$1
+    COSMOS_ENV=$2
+    INSTANCES=`cosmos instances ${COSMOS_SERVICE} ${COSMOS_ENV}`
+    INSTANCE=`echo $INSTANCES | awk '{print $1}' | tail -n 1`
+    IP=`echo $INSTANCES | awk '{print $5}' | tail -n 1`
+    cosmos login $COSMOS_SERVICE $COSMOS_ENV
+    ssh kieran_bamforth@$IP,eu-west-1
+}
+# }}}
 # Docker. {{{
 function docker_env {
     docker inspect $1 | jq '.[].Config.Env'
