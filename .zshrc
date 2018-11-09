@@ -178,4 +178,6 @@ SPACESHIP_PROMPT_ORDER=(
     vi_mode
     char
 )
+
+SPACESHIP_AWS_SYMBOL="☁️  "
 # }}}
