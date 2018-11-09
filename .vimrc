@@ -137,8 +137,7 @@ let g:PaperColor_Theme_Options = {
 
 " Colour scheme.
 set termguicolors
-set background=light
-colorscheme PaperColor
+colorscheme challenger_deep
 
 " Enable mouse.
 set mouse=a
@@ -372,7 +371,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_extensions=['ale','branch','obsession']
 let g:airline_powerline_fonts=1
-let g:airline_theme="papercolor"
+let g:airline_theme="challenger_deep"
 
 " Dont conceal quotes when viewing JSON.
 let g:vim_json_syntax_conceal=0

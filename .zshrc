@@ -160,21 +160,11 @@ spaceship_dockerhost() {
     [[ -z $DOCKER_HOST ]] && return
 
     spaceship::section \
-        "black" \
+        "blue" \
         "$SPACESHIP_PROMPT_DEFAULT_PREFIX" \
         "🐳 $DOCKER_HOST" \
         "$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
     }
-
-SPACESHIP_AWS_COLOR=black
-SPACESHIP_AWS_SYMBOL="  "
-SPACESHIP_CHAR_COLOR_SECONDARY=black
-SPACESHIP_CHAR_COLOR_SUCCESS=black
-SPACESHIP_DIR_COLOR=black
-SPACESHIP_GIT_BRANCH_COLOR=black
-SPACESHIP_GIT_STATUS_COLOR=black
-SPACESHIP_VENV_COLOR=black
-SPACESHIP_VI_MODE_COLOR=black
 
 SPACESHIP_PROMPT_ORDER=(
     user
