@@ -52,6 +52,7 @@ alias hidefiles="defaults write com.apple.finder AppleShowAllFiles NO; killall F
 alias ji="jira"
 alias ls="gls --color=always"
 alias m="make"
+alias md="mkdir -p"
 alias npmi="npm install"
 alias npmt="npm test"
 alias npmx='PATH=$(npm bin):$PATH'
