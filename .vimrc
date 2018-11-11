@@ -369,7 +369,7 @@ augroup end
 " Airline/Tmuxline.
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_extensions=['ale','branch','obsession']
+let g:airline_extensions=['ale','branch']
 let g:airline_powerline_fonts=0
 let g:airline_theme="challenger_deep"
 let g:tmuxline_powerline_separators=0
