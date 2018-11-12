@@ -49,6 +49,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug '~/.vim/bundle/vim-kieran'
+
+" Has to be loaded at the end.
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 " }}}
 " Vim Settings. {{{
@@ -369,10 +372,19 @@ augroup end
 " Airline/Tmuxline.
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+
 let g:airline_extensions=['ale','branch']
+
 let g:airline_powerline_fonts=0
-let g:airline_theme="challenger_deep"
 let g:tmuxline_powerline_separators=0
+
+let g:airline_symbols = get(g:, 'airline_symbols', {})
+let g:airline_symbols.branch = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.readonly = ''
+
+let g:airline_theme="challenger_deep"
 
 " Dont conceal quotes when viewing JSON.
 let g:vim_json_syntax_conceal=0
