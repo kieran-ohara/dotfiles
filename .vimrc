@@ -1,7 +1,7 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline:
 " Plug. {{{
 call plug#begin('~/.vim/bundle')
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -10,6 +10,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/limelight.vim'
