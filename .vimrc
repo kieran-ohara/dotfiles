@@ -4,6 +4,7 @@ call plug#begin('~/.vim/bundle')
 Plug '/usr/local/opt/fzf'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
+Plug 'chrisbra/Colorizer'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'direnv/direnv.vim'
 Plug 'edkolev/tmuxline.vim'
