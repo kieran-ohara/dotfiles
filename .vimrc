@@ -172,6 +172,9 @@ nnoremap <leader>ft :BTags<CR>
 nnoremap <leader>fu :Buffers<CR>
 nnoremap <leader>fj :call jira#fzf_ui()<CR>
 
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-k> <plug>(fzf-complete-word)
+
 " Easy edit / source VIMRC.
 nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
 nnoremap <leader>va :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran/plugin/abbreviations.vim<CR>
