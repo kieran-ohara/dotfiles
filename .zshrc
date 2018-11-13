@@ -118,6 +118,7 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 function _gen_fzf_default_opts() {
+
     local paper_blue="#005faf"
     local paper_blue_bgp="#0087af"
     local paper_blue_fgp="#eeeeee"
@@ -128,14 +129,27 @@ function _gen_fzf_default_opts() {
     local onedark_green="#98c379"
     local onedark_yellow="#e5c07b"
 
-    local ui_tint=$paper_green
-    local hover_tint=$paper_blue_fgp
-    local match=$paper_pink
+    local challenger_deep_red="#ff8080"
+    local challenger_deep_dark_red="#ff5458"
+    local challenger_deep_green="#95ffa4"
+    local challenger_deep_dark_green="#62d196"
+    local challenger_deep_yellow="#ffe9aa"
+    local challenger_deep_dark_yellow="#ffb378"
+    local challenger_deep_blue="#91ddff"
+    local challenger_deep_dark_blue="#65b2ff"
+    local challenger_deep_purple="#c991e1"
+    local challenger_deep_dark_purple="#906cff"
+    local challenger_deep_cyan="#aaffe4"
+    local challenger_deep_dark_cyan="#63f2f1"
+    local challenger_deep_clouds="#cbe3e7"
+    local challenger_deep_dark_clouds="#a6b3cc"
+
+    local ui_tint=$challenger_deep_yellow
 
     export FZF_DEFAULT_OPTS="
-    --color fg:-1,bg:-1,bg+:$paper_blue_bgp,hl:$match
+    --color fg:-1,bg:-1,bg+:$challenger_deep_dark_purple,hl:$challenger_deep_dark_cyan
     --color header:$ui_tint,info:$ui_tint,spinner:$ui_tint,prompt:$ui_tint
-    --color marker:$hover_tint,pointer:$hover_tint,hl+:$hover_tint,fg+:$hover_tint"
+    --color marker:#ffffff,pointer:#ffffff,hl+:$challenger_deep_dark_cyan,fg+:#ffffff"
 }
 _gen_fzf_default_opts
 
