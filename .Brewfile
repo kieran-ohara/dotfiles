@@ -136,6 +136,7 @@ brew 'tldr'
 brew 'tmate'
 brew 'tmux'
 brew 'tree'
+brew 'um'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 brew 'wget'
 brew 'yarn'
