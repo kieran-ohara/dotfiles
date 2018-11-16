@@ -345,4 +345,5 @@ function nice_which {
 
     echo "$WHICH -> $READLINK_COLOUR$READLINK"
 }
+compdef nice_which=which
 # }}}
