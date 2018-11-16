@@ -213,7 +213,7 @@ nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>ggl :Gpull<CR>
 nnoremap <leader>ggp :Gpush<CR>
 nnoremap <leader>gl :Glog<CR>
-nnoremap <leader>gpr :!hub pull-request -r benwainwright,andrewscfc,lalkhum,cefn,saralk<CR>
+nnoremap <leader>gpr :Hub pull-request -r benwainwright,andrewscfc,lalkhum,cefn,saralk<CR>
 nnoremap <leader>gst :Gstatus<CR>
 nnoremap <leader>gx :GV<CR>
 
@@ -321,6 +321,8 @@ function! GoyoLeave()
     call clearmatches()
     silent !tmux set status on
 endfunction
+
+command! -nargs=* Hub !hub <args>
 " }}}
 " {{{ Autocmd.
 " Highlight trailing spaces
