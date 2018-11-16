@@ -17,6 +17,7 @@ abbreviate htose those
 abbreviate implemment implement
 abbreviate jenkinsfile Jenkinsfile
 abbreviate jst just
+abbreviate lcoation location
 abbreviate maek make
 abbreviate naivation navigation
 abbreviate poeple people
