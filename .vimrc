@@ -190,23 +190,8 @@ nnoremap <leader>zu :vsplit ~/src/dotfiles/utilities.zsh<CR>
 nnoremap <leader>ga :Git add %<CR><CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit -v -q<CR>
-function! s:open_branch_fzf(line)
-    let l:parser = split(a:line)
-    let l:branch = l:parser[0]
-    if l:branch ==? '*'
-        let l:branch = l:parser[1]
-    endif
-    execute 'Git checkout ' . l:branch
-endfunction
-command! -bang -nargs=0 GCheckout
-            \ call fzf#vim#grep(
-            \   'git branch -v', 0,
-            \   {
-            \     'sink': function('s:open_branch_fzf')
-            \   },
-            \   <bang>0
-            \ )
-nnoremap <leader>gco :GCheckout<CR>
+nnoremap <leader>gcop :GCheckout<CR>
+nnoremap <leader>gcon :Git checkout -b<SPACE>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gdt :Git difftool<CR><CR>
 nnoremap <leader>gdtc :Git difftool --cached<CR><CR>
@@ -324,6 +309,23 @@ function! GoyoLeave()
     silent !tmux set status on
 endfunction
 
+function! s:open_branch_fzf(line)
+    let l:parser = split(a:line)
+    let l:branch = l:parser[0]
+    if l:branch ==? '*'
+        let l:branch = l:parser[1]
+    endif
+    execute 'Git checkout ' . l:branch
+endfunction
+
+command! -bang -nargs=0 GCheckout
+            \ call fzf#vim#grep(
+            \   'git branch -v', 0,
+            \   {
+            \     'sink': function('s:open_branch_fzf')
+            \   },
+            \   <bang>0
+            \ )
 " }}}
 " Commands. {{{
 command! -nargs=* Hub !hub <args>
