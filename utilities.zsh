@@ -210,7 +210,18 @@ function cosmos_ssh {
     INSTANCES=`cosmos instances ${COSMOS_SERVICE} ${COSMOS_ENV}`
     INSTANCE=`echo $INSTANCES | awk '{print $1}' | tail -n 1`
     IP=`echo $INSTANCES | awk '{print $5}' | tail -n 1`
-    cosmos login $COSMOS_SERVICE $COSMOS_ENV
+
+    local cached_cosmos_hosts="$HOME/.ssh/cosmos_hosts"
+
+    if [ ! -e $cached_cosmos_hosts ]; then
+        touch $cached_cosmos_hosts
+    fi
+
+    if ! grep -Fxq "$INSTANCE" $cached_cosmos_hosts; then
+        cosmos login $COSMOS_SERVICE $COSMOS_ENV
+        echo "${INSTANCE}" >> $cached_cosmos_hosts
+    fi
+
     ssh kieran_bamforth@$IP,eu-west-1
 }
 # }}}
