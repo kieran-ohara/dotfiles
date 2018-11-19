@@ -322,7 +322,10 @@ function! GoyoLeave()
     silent !tmux set status on
 endfunction
 
+" }}}
+" Commands. {{{
 command! -nargs=* Hub !hub <args>
+command! -nargs=* Jira !jira <args>
 " }}}
 " {{{ Autocmd.
 " Highlight trailing spaces
