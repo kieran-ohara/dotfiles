@@ -317,7 +317,11 @@ function! s:open_branch_fzf(line)
     endif
     execute 'Git checkout ' . l:branch
 endfunction
-
+" }}}
+" Commands. {{{
+command! -nargs=* Hub !hub <args>
+command! -nargs=* Jira !jira <args>
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
 command! -bang -nargs=0 GCheckout
             \ call fzf#vim#grep(
             \   'git branch -v', 0,
@@ -326,10 +330,6 @@ command! -bang -nargs=0 GCheckout
             \   },
             \   <bang>0
             \ )
-" }}}
-" Commands. {{{
-command! -nargs=* Hub !hub <args>
-command! -nargs=* Jira !jira <args>
 " }}}
 " {{{ Autocmd.
 " Highlight trailing spaces
