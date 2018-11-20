@@ -322,21 +322,21 @@ echo
 
 function diff_plist {
     PLIST=$1
-    NEW_PLIST=$PLIST.new
 
-    # Make a back up of the new plist, and checkout the old plist.
-    cp $PLIST $NEW_PLIST
-    git checkout $PLIST
+    if [ ! -e $PLIST ]; then
+        echo "${fg[red]}File not found: ${PLIST}"
+        return 1
+    fi
 
-    # Convert the plists to XML and diff them.
-    plutil -convert xml1 $PLIST
-    plutil -convert xml1 $NEW_PLIST
-    ksdiff --wait $PLIST $NEW_PLIST
+    local plist_xml=$(mktemp)
+    plutil -convert xml1 -o $plist_xml $PLIST
 
-    # Replace the old plist with the new (binary) plist.
-    plutil -convert binary1 $NEW_PLIST
-    rm $PLIST
-    mv $NEW_PLIST $PLIST
+    local head_plist_xml=$(mktemp)
+    git show HEAD:$PLIST | plutil -convert xml1 -o $head_plist_xml -
+
+    ksdiff --wait $plist_xml $head_plist_xml
+
+    rm $plist_xml $head_plist_xml
 }
 
 function nice_tree() {
