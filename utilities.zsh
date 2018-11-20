@@ -219,7 +219,7 @@ function cosmos_ssh {
     fi
 
     if ! grep -Fxq "$INSTANCE" $cached_cosmos_hosts; then
-        cosmos login $COSMOS_SERVICE $COSMOS_ENV
+        cosmos login --limit 1 $COSMOS_SERVICE $COSMOS_ENV
         echo "${INSTANCE}" >> $cached_cosmos_hosts
     fi
 
