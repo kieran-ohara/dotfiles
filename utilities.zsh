@@ -225,6 +225,11 @@ function cosmos_ssh {
 
     ssh kieran_bamforth@$IP,eu-west-1
 }
+function _cosmos_ssh_completions {
+    local services=(cd-jenkins navigation toolshed)
+    _arguments "1:service:($(echo ${services[@]}))" "2:environment:(int test live)"
+}
+compdef _cosmos_ssh_completions cosmos_ssh
 # }}}
 # Docker. {{{
 function docker_env {
