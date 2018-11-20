@@ -202,9 +202,6 @@ function aws_assume_role_personal {
 }
 # }}}
 # Cosmos. {{{
-export COSMOS_CERT=/etc/pki/tls/certs/client.crt
-export COSMOS_CERT_KEY=/etc/pki/tls/private/client.key
-
 function cosmos_ssh {
     COSMOS_SERVICE=$1
     COSMOS_ENV=$2

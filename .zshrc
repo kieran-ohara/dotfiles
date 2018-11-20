@@ -31,6 +31,10 @@ export GPG_TTY=$(tty)
 # Shorter key timeout
 export KEYTIMEOUT=1
 
+# Set Cosmos Settings
+export COSMOS_CERT=/etc/pki/tls/certs/client.crt
+export COSMOS_CERT_KEY=/etc/pki/tls/private/client.key
+
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
