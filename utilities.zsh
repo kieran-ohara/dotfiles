@@ -351,11 +351,8 @@ function nice_which {
         return
     fi
 
-    GREEN="\u001b[32m"
-    RED="\u001b[31m"
-
     READLINK=`readlink $WHICH`
-    READLINK_COLOUR=`test -f $(dirname $WHICH)/$READLINK && echo $GREEN || echo $RED`
+    READLINK_COLOUR=`test -f $(dirname $WHICH)/$READLINK && echo ${fg[green]} || echo ${fg[red]}`
 
     echo "$WHICH -> $READLINK_COLOUR$READLINK"
 }
