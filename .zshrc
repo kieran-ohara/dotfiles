@@ -22,6 +22,9 @@ zstyle ':completion:*' completer _complete _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=1
 
+# For AWS ECR credential provider
+export AWS_SDK_LOAD_CONFIG=true
+
 # Use vim where possible.
 export EDITOR='vim'
 
