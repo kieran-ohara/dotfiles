@@ -28,7 +28,7 @@ alias dkp="docker ps -a"
 alias dkpwn="docker_kill"
 alias dkr="dk run"
 alias dkrmi="docker rmi"
-alias dkrmoc="docker ps -aqf \"status=exited\" | xargs docker rm"
+alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias dkrmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
 alias dks="docker_shell"
 alias dkv="docker volume"
