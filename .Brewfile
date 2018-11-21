@@ -133,6 +133,7 @@ brew 's3fs'
 brew 'sshfs'
 brew 'the_silver_searcher'
 brew 'tldr'
+brew 'tmate'
 brew 'tmux'
 brew 'tree'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
