@@ -317,6 +317,8 @@ function! s:open_branch_fzf(line)
     endif
     execute 'Git checkout ' . l:branch
 endfunction
+
+command! -nargs=0 Gmypullrequests execute '!open https://github.com/pulls'
 " }}}
 " Commands. {{{
 command! -nargs=* Hub !hub <args>
