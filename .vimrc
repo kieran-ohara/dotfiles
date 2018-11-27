@@ -1,5 +1,5 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline:
-" Plug. {{{
+" Plug {{{
 call plug#begin('~/.vim/bundle')
 Plug '/usr/local/opt/fzf'
 Plug 'SirVer/ultisnips'
@@ -52,119 +52,71 @@ Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug '~/.vim/bundle/vim-kieran'
 
-" Has to be loaded at the end.
+" Has to be loaded at the end
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 " }}}
-" Vim Settings. {{{
-" Use case insensitive search, except when using capital letters.
-set ignorecase
-set smartcase
-
-" Highlight the search options.
-set hlsearch
-set incsearch
-
-" Set all swap files to go to the same directory so they are not scattered everywhere.
+" Vim Settings {{{
+" Manage Vim files
+" Editing text
 set directory=~/.vim/swapfiles//
 set backupdir=~/.vim/backupfiles//
-
-" Set undo directory so undo persists outside of vim.
 set undodir=~/.vim/undodir
 set undofile
-
-" Instead of failing a command because of unsaved changes, instead raise a dialogue asking if you wish to save changed files.
-set confirm
-
-" Set the command window height to 2 lines, to avoid many cases of having to 'press <Enter> to continue'.
-set cmdheight=2
-
-" Display line numbers on the left.
-set number
-
-" More natural tab splitting.
-set splitbelow
-set splitright
-
-" Trying to yank to system clipboard.
-set clipboard=unnamed
-
-" Restore <EOL> if missing.
+set clipboard=unnamed              " Yank to * register (system clipboard)
+set autoread                       " Auto read/write
+set autowrite
+set confirm                        " Raise dialogue instead of failing q/qa/w command
+set fixendofline                   " Restore EOL if missing
 set nobinary
-set fixendofline
+set spelllang=en_gb                " English dictionary
 
-" Tabs are four columns wide. Each indentation level is one tab.
-set tabstop=4
+set tabstop=4                      " Use 4 spaces to indent
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-" Indenting
-set autoindent
+set autoindent                     " Use C-style indenting or indent from previous line
 set smartindent
+set formatoptions+=j               " Join comments
 
-" Do not redraw when executing macros, registers / other commands.
-set lazyredraw
+" UI
+set lazyredraw           " Execute macros faster
+set mouse=a              " Enable mouse
 
-" Apply all abbreviations, hide intro message & truncate messages.
-set shortmess=aIT
+set shortmess=a          " Use shorter labels in UI
+set shortmess+=I         " Don't give the Vim intro message
+set shortmess+=T         " Trunacte messages in middle if too long for command line
+set number               " Display line numbers
+set completeopt=menuone  " Show pop up menu even when there's one match
+set completeopt+=preview
+set scrolloff=5          " Show context around cursor when scrolling
+set splitbelow           " Natural split
+set splitright
+set cmdheight=2          " More command-line lines to help avoid 'hit-enter' prompts
+set noshowmode           " Dont show mode—status bars do this for us
 
-" Show 5 lines above / below the cursor to show context around where I'm working.
-set scrolloff=5
-
-" Show menu even when only one option for context.
-set completeopt=menuone,preview
-
-set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
-
-" Add ~/src to cd path for easy jumping between projects.
-set cdpath+=~/src
-
-" Set italic escape codes
+set termguicolors
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
-
-" Set cursor shape according to mode.
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-
-" Colour scheme options.
-let g:onedark_terminal_italics=1
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default.light': {
-  \       'allow_bold': 1,
-  \       'allow_italic': 1
-  \     }
-  \   }
-  \ }
-
-" Colour scheme.
-set termguicolors
+let challenger_deep_terminal_italics = 1
 colorscheme challenger_deep
 
-" Enable mouse.
-set mouse=a
+set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
-" Join comments.
-set formatoptions+=j
+" Search + Files
+set ignorecase " Case insensitive search unless there's a mix
+set smartcase
+set hlsearch   " Highlight previous/current matches as they are typed
+set incsearch
 
-" Dont show mode, as status bars do a good job for us.
-set noshowmode
-
-" Automatically save before :next, :make etc.
-set autoread
-
-" Automatically reread changed files without asking me anything.
-set autowrite
-
-" Don't redraw when executing macros.
-set lazyredraw
+set cdpath+=~/src
 " }}}
-" Mappings. {{{
+" Mappings {{{
 
-" FZF shortcuts.
+" FZF shortcuts
 nnoremap <C-p> :FZF<CR>
 nnoremap <leader>cd :call cd#fzf_ui()<CR>
 nnoremap <leader>ff :GFiles<CR>
@@ -177,7 +129,7 @@ nnoremap <leader>fj :call jira#fzf_ui()<CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-k> <plug>(fzf-complete-word)
 
-" Easy edit / source VIMRC.
+" Easy edit / source VIMRC
 nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
 nnoremap <leader>va :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran/plugin/abbreviations.vim<CR>
 nnoremap <leader>vb :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran<CR>
@@ -186,7 +138,7 @@ nnoremap <leader>vu :UltiSnipsEdit<CR>
 nnoremap <leader>ze :vsplit ~/src/dotfiles/.zshrc<CR>
 nnoremap <leader>zu :vsplit ~/src/dotfiles/utilities.zsh<CR>
 
-" Git shortcuts.
+" Git shortcuts
 nnoremap <leader>ga :Git add %<CR><CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit -v -q<CR>
@@ -204,43 +156,43 @@ nnoremap <leader>gpr :Hub pull-request -r benwainwright,andrewscfc,lalkhum,cefn,
 nnoremap <leader>gst :Gstatus<CR>
 nnoremap <leader>gx :GV<CR>
 
-" Show / hide the hidden characters.
+" Show / hide the hidden characters
 nnoremap <leader>l :setlocal list!<CR>
 
-" Toggle relativenumber.
+" Toggle relativenumber
 nnoremap <leader>n :call NumberToggle()<CR>
 
-" Sort a selection.
+" Sort a selection
 vnoremap <leader>s :sort u<CR>
 
-" Remove highlight.
+" Remove highlight
 nnoremap <leader>o :noh<CR>
 
-" Dispatch.
+" Dispatch
 nnoremap <leader>df :Focus
 
-" Test.
+" Test
 nnoremap <leader>t :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 
-" Jira commands.
+" Jira commands
 nnoremap <leader>jb :call jira#browse(jira#ticketFromBranch())<CR><CR>
 nnoremap <leader>jc :call jira#comment(jira#ticketFromBranch())<CR>
 
-" Sneak.
+" Sneak
 nmap f <Plug>Sneak_f
 nmap F <Plug>Sneak_F
 nmap t <Plug>Sneak_t
 nmap T <Plug>Sneak_T
 
-" Saner 'n' directions.
+" Saner 'n' directions
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
 
-" Make Y behave like other capitals.
+" Make Y behave like other capitals
 nnoremap Y y$
 
-" qq to record, Q to replay.
+" qq to record, Q to replay
 nnoremap Q @q
 
 " Ag in word
@@ -249,19 +201,19 @@ nnoremap <leader>aiw :execute('Ag ' . expand("<cword>"))<CR>
 " Last inserted text
 nnoremap g. :normal! `[v`]<cr><left>
 
-" Delete current buffer.
+" Delete current buffer
 nnoremap <leader>x :bd<CR>
 
-" Insert current dir into command line when %% is pressed.
+" Insert current dir into command line when %% is pressed
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 
-" Docker tools.
+" Docker tools
 nnoremap <leader>dkp :DockerToolsToggle<CR>
 
-" Escape terminal with normal <esc> key.
+" Escape terminal with normal <esc> key
 tnoremap <Esc> <C-\><C-n>
 
-" Get the highlight colours under the cursor.
+" Get the highlight colours under the cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
@@ -333,7 +285,7 @@ command! -bang -nargs=0 GCheckout
             \   <bang>0
             \ )
 " }}}
-" {{{ Autocmd.
+" {{{ Autocmd
 " Highlight trailing spaces
 augroup vimrc
     autocmd!
@@ -385,7 +337,7 @@ augroup vimrc
 augroup end
 " }}}
 " Plugins. {{{
-" Airline/Tmuxline.
+" Airline/Tmuxline
 let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
@@ -403,29 +355,29 @@ let g:airline_symbols.readonly = ''
 
 let g:airline_theme="challenger_deep"
 
-" Dont conceal quotes when viewing JSON.
+" Dont conceal quotes when viewing JSON
 let g:vim_json_syntax_conceal=0
 
-" Set the Ultisnips directory.
+" Set the Ultisnips directory
 let g:UltiSnipsSnippetsDir='~/.vim/ultisnips'
 
-" Set the Ultisnips edit window to split vertically.
+" Set the Ultisnips edit window to split vertically
 let g:UltiSnipsEditSplit="vertical"
 
-" Ack to use Ag.
+" Ack to use Ag
 let g:ackprg='ag --vimgrep --hidden'
 let g:ack_use_dispatch=1
 
-" Test strategy is Dispatch.
+" Test strategy is Dispatch
 let test#ruby#use_binstubs = 0
 let test#strategy = "dispatch"
 
-" Sneak config.
+" Sneak config
 let g:sneak#label = 1
 highlight! link Sneak Search
 highlight! link SneakScope Search
 
-" ALE.
+" ALE
 let g:ale_sign_error = ""
 let g:ale_sign_warning = ""
 let g:ale_linters={
@@ -435,11 +387,9 @@ let g:ale_python_pyls_use_global = 1
 
 highlight! link ALEWarningSign ALEWarning
 
-" Gitgutter.
+" Gitgutter
 let g:gitgutter_sign_removed = emoji#for('fire')
 
-" Dash.
+" Dash
 let g:dash_map = { 'yaml': ['cloudformation'] }
-
-set formatoptions+=j
 " }}}
