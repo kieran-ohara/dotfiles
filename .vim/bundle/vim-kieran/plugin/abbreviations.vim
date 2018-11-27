@@ -9,6 +9,7 @@ abbreviate fixing Fixing
 abbreviate fucntion function
 abbreviate funciton function
 abbreviate funcitons functions
+abbreviate gdpr GDPR
 abbreviate hsow show
 abbreviate hte the
 abbreviate htis this
