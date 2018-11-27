@@ -79,6 +79,8 @@ set autoindent                     " Use C-style indenting or indent from previo
 set smartindent
 set formatoptions+=j               " Join comments
 
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-k> <plug>(fzf-complete-word)
 " UI
 set lazyredraw           " Execute macros faster
 set mouse=a              " Enable mouse
@@ -115,7 +117,6 @@ set incsearch
 set cdpath+=~/src
 " }}}
 " Mappings {{{
-
 " FZF shortcuts
 nnoremap <C-p> :FZF<CR>
 nnoremap <leader>cd :call cd#fzf_ui()<CR>
@@ -126,8 +127,6 @@ nnoremap <leader>ft :BTags<CR>
 nnoremap <leader>fu :Buffers<CR>
 nnoremap <leader>fj :call jira#fzf_ui()<CR>
 
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-k> <plug>(fzf-complete-word)
 
 " Easy edit / source VIMRC
 nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
