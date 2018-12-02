@@ -127,7 +127,6 @@ nnoremap <leader>ft :BTags<CR>
 nnoremap <leader>fu :Buffers<CR>
 nnoremap <leader>fj :call jira#fzf_ui()<CR>
 
-
 " Easy edit / source VIMRC
 nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
 nnoremap <leader>va :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran/plugin/abbreviations.vim<CR>
@@ -220,6 +219,8 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 " Open current directory
 nnoremap <leader>fn :!open .<CR><CR>
 
+" Save faster!
+nnoremap <leader>w :w<CR>
 " }}}
 " Functions. {{{
 function! NumberToggle()
