@@ -5,6 +5,7 @@ abbreviate Updateing Updating
 abbreviate adding Adding
 abbreviate ahve have
 abbreviate andn and
+abbreviate api API
 abbreviate fixing Fixing
 abbreviate fucntion function
 abbreviate funciton function
@@ -21,6 +22,7 @@ abbreviate lcoation location
 abbreviate maek make
 abbreviate naivation navigation
 abbreviate poeple people
+abbreviate ramparts RAMPARTS
 abbreviate spome some
 abbreviate teh the
 abbreviate updating Updating
