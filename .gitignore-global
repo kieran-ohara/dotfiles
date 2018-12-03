@@ -3,6 +3,7 @@
 .classpath
 .project
 .tern-project
+dive.log
 node_modules
 npm-debug.log
 tags
