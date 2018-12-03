@@ -78,6 +78,7 @@ robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:plugins/tmux
 robbyrussell/oh-my-zsh path:plugins/vi-mode
 
+b4b4r07/enhancd
 djui/alias-tips
 docker/cli path:contrib/completion/zsh
 seebi/dircolors-solarized

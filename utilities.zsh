@@ -1,5 +1,6 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
 # Aliases. {{{
+alias -- -='cd -'
 alias -g G='| grep'
 alias -g H='| head'
 alias -g T='| tail'
