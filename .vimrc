@@ -299,7 +299,7 @@ augroup vimrc
     autocmd BufNewFile,BufRead *.spv setfiletype dockerfile
     autocmd BufNewFile,BufRead .Brewfile setfiletype ruby
     autocmd BufNewFile,BufRead .ctags setfiletype ctags
-    autocmd BufNewFile,BufRead .env.* setfiletype yaml
+    autocmd BufNewFile,BufRead .env.* setfiletype sh
     autocmd BufNewFile,BufRead .npmrc setfiletype dosini
     autocmd BufNewFile,BufRead .tern-project setfiletype json
     autocmd BufNewFile,BufRead Brewfile setfiletype ruby
