@@ -1,5 +1,8 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
 # Aliases. {{{
+alias -g G='| grep'
+alias -g H='| head'
+alias -g T='| tail'
 alias :q="exit"
 alias :qa="tmux kill-window"
 alias acps="aws_cli_profile_set"
@@ -37,6 +40,7 @@ alias dkvs="docker_volumes"
 alias dpl="diff_plist"
 alias e="echo"
 alias egrep="egrep --color=always"
+alias f='find . -name'
 alias fpath='echo -e ${FPATH//:/\\n}'
 alias gbr="hub browse"
 alias gcmd="lazygit"
@@ -54,6 +58,8 @@ alias gx="gitx"
 alias hidefiles="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app"
 alias j="open_src_dir"
 alias ji="jira"
+alias l="ls -lFh"
+alias ll="ls -alFhd .*"
 alias ls="gls --color=always"
 alias m="make"
 alias md="mkdir -p"
