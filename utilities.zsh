@@ -51,6 +51,7 @@ alias gdt="git difftool"
 alias gdtc="git difftool --cached"
 alias gmb="git merge-base"
 alias gpr="git pull-request"
+alias gprs='hub pr list -f "%sC%>(8)%i%Creset %t (%au) %l %n"'
 alias grep="grep --color=always"
 alias grp="git remote prune origin"
 alias gs="git remote prune origin && git-sweep cleanup"
