@@ -2,6 +2,7 @@
 # Aliases. {{{
 alias -- -='cd -'
 alias -g G='| grep'
+alias -g GBR='() {local x=`git symbolic-ref HEAD 2>/dev/null`; echo ${x##refs/heads/}}'
 alias -g H='| head'
 alias -g T='| tail'
 alias :q="exit"
