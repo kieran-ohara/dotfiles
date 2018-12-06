@@ -5,6 +5,7 @@ alias -g G='| grep'
 alias -g GBR='() {local x=`git symbolic-ref HEAD 2>/dev/null`; echo ${x##refs/heads/}}'
 alias -g H='| head'
 alias -g T='| tail'
+alias -g UP='| up'
 alias :q="exit"
 alias :qa="tmux kill-window"
 alias acps="aws_cli_profile_set"
