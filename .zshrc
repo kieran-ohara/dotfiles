@@ -188,7 +188,6 @@ spaceship_dockerhost() {
         "🐳 $DOCKER_HOST" \
         "$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
     }
-
 SPACESHIP_PROMPT_ORDER=(
     user
     dir
@@ -199,9 +198,10 @@ SPACESHIP_PROMPT_ORDER=(
     venv
     line_sep
     vi_mode
+    jobs
     char
 )
-
 SPACESHIP_AWS_SYMBOL="☁️  "
+SPACESHIP_JOBS_COLOR="yellow"
 SPACESHIP_VENV_SYMBOL="🐍 "
 # }}}
