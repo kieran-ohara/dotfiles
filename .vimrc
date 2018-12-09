@@ -81,6 +81,16 @@ set formatoptions+=j               " Join comments
 
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-k> <plug>(fzf-complete-word)
+
+" Files & buffers
+nnoremap <space>bd :bdelete<CR>
+nnoremap <space>ba :bufdo bdelete<CR>
+
+cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
+nmap <space>ev :vsplit %%
+nmap <space>es :split %%
+nmap <space>ee :edit %%
+
 " UI
 set lazyredraw           " Execute macros faster
 set mouse=a              " Enable mouse
@@ -199,11 +209,6 @@ nnoremap <leader>aiw :execute('Ag ' . expand("<cword>"))<CR>
 " Last inserted text
 nnoremap g. :normal! `[v`]<cr><left>
 
-" Delete current buffer
-nnoremap <leader>x :bd<CR>
-
-" Insert current dir into command line when %% is pressed
-cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 
 " Docker tools
 nnoremap <leader>dkp :DockerToolsToggle<CR>
