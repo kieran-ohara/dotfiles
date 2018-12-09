@@ -96,6 +96,10 @@ main() {
 
     done
 
+    sourceFile="$(pwd)/firefox.json"
+    targetFile="/Applications/Firefox.app/Contents/Resources/distribution/policies.json"
+    mkdir -p "/Applications/Firefox.app/Contents/Resources/distribution"
+    execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
 }
 
 main
