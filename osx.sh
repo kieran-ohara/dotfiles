@@ -1,15 +1,14 @@
 #!/bin/bash
-sudo defaults delete /Library/Preferences/com.apple.loginwindow LoginwindowText
 defaults write com.apple.dock checked-for-launchpad -bool false
 defaults write com.apple.dock magnification -bool false
 defaults write com.apple.dock orientation -string "right"
 defaults write com.apple.dock persistent-apps -array "()"
+defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock tilesize -int 48
 
 defaults write com.apple.screencapture disable-shadow -bool true
 
 # Dont show accent selector.
-defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Set function keys as default.
