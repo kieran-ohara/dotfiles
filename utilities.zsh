@@ -40,6 +40,7 @@ alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker 
 alias dkrmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
 alias dks="docker_shell"
 alias dksr="docker service"
+alias dksrps='() { docker container ps --filter "label=com.docker.swarm.service.name=${1}" }'
 alias dkv="docker volume"
 alias dkvs="docker_volumes"
 alias dpl="diff_plist"
