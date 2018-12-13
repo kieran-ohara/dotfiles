@@ -1,6 +1,7 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline:
 " Plug {{{
 call plug#begin('~/.vim/bundle')
+
 Plug '/usr/local/opt/fzf'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
@@ -30,6 +31,7 @@ Plug 'mileszs/ack.vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rizzatti/dash.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'sodapopcan/vim-twiggy'
 Plug 'tfnico/vim-gradle'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-abolish'
@@ -150,7 +152,7 @@ nnoremap <leader>zu :vsplit ~/src/dotfiles/utilities.zsh<CR>
 nnoremap <leader>ga :Git add %<CR><CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit -v -q<CR>
-nnoremap <leader>gcop :GCheckout<CR>
+nnoremap <leader>gcop :Twiggy<CR>
 nnoremap <leader>gcon :Git checkout -b<SPACE>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gdt :Git difftool<CR><CR>
