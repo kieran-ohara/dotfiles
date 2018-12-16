@@ -179,7 +179,7 @@ vnoremap <leader>s :sort u<CR>
 nnoremap <leader>o :noh<CR>
 
 " Dispatch
-nnoremap <leader>df :Focus
+nnoremap <leader>df :Focus make<space>
 
 " Test
 nnoremap <leader>t :TestNearest<CR>
