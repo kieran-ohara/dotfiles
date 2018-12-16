@@ -84,10 +84,14 @@ set formatoptions+=j               " Join comments
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-k> <plug>(fzf-complete-word)
 
-" Files & buffers
+" Files buffers & tabs
+set cdpath+=~/src
+
 nnoremap <space>bd :bdelete<CR>
 nnoremap <space>ba :bufdo bdelete<CR>
 
+nnoremap <space>tc :tabclose<CR>
+nnoremap <space>te :tabedit<space>
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 nmap <space>ev :vsplit %%
 nmap <space>es :split %%
@@ -120,13 +124,11 @@ colorscheme challenger_deep
 
 set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
-" Search + Files
+" Search
 set ignorecase " Case insensitive search unless there's a mix
 set smartcase
 set hlsearch   " Highlight previous/current matches as they are typed
 set incsearch
-
-set cdpath+=~/src
 " }}}
 " Mappings {{{
 " FZF shortcuts
