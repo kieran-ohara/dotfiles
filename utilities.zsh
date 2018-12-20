@@ -29,6 +29,7 @@ alias dkcu="docker-compose up -d"
 alias dkd="docker deploy"
 alias dke="docker exec"
 alias dkenv="docker_env"
+alias dkh="docker_set_host"
 alias dki="docker images"
 alias dkl="docker logs"
 alias dkm="docker-machine"
@@ -260,10 +261,16 @@ function docker_volumes {
     docker inspect $1 | jq '.[].Config.Volumes'
 }
 
+function docker_set_host {
+    export DOCKER_HOST=`cat ~/.docker/hosts/$1/host` && export DOCKER_TLS_VERIFY=1 && export DOCKER_CERT_PATH=~/.docker/hosts/$1
+}
+
 compdef _docker docker_env=_docker_complete_containers \
     docker_kill=_docker_complete_running_containers \
     docker_shell=_docker_complete_running_containers \
     docker_volumes=_docker_complete_containers
+
+compdef '_files -/ -W ~/.docker/hosts' docker_set_host
 # }}}
 # Git. {{{
 function github_latest() {
