@@ -3,7 +3,7 @@
 alias -- -='cd -'
 alias -g G='| grep'
 alias -g GBR='() {local x=`git symbolic-ref HEAD 2>/dev/null`; echo ${x##refs/heads/}}'
-alias -g H='| head'
+alias -g H='--help'
 alias -g T='| tail'
 alias -g UP='| up'
 alias :q="exit"
