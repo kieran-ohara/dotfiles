@@ -1,6 +1,7 @@
 *.orig
 .DS_Store
 .classpath
+.idea
 .project
 .tern-project
 dive.log
