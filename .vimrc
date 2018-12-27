@@ -101,6 +101,8 @@ nmap <space>ee :edit %%
 " UI
 set lazyredraw           " Execute macros faster
 set mouse=a              " Enable mouse
+set timeoutlen=1000      " Stop taking so long!
+set ttimeoutlen=0
 
 set shortmess=a          " Use shorter labels in UI
 set shortmess+=I         " Don't give the Vim intro message
