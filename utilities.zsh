@@ -270,7 +270,7 @@ function docker_set_host {
 }
 
 compdef _docker docker_env=_docker_complete_containers \
-    docker_kill=_docker_complete_running_containers \
+    docker_kill=_docker_complete_containers \
     docker_shell=_docker_complete_running_containers \
     docker_volumes=_docker_complete_containers
 
