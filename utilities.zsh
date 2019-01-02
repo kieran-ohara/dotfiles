@@ -182,6 +182,10 @@ function aws_ec2_instance_iam_profiles {
     aws iam list-instance-profiles | jq '.InstanceProfiles[] | {Arn: .Arn, RoleArns: .Roles[].Arn}'
 }
 
+function aws_iam_list_roles {
+    aws iam list-roles --query "Roles[].[RoleName,Arn]"
+}
+
 function aws_lambda_list {
     aws lambda list-functions --query 'Functions[].FunctionName' --output text
 }
