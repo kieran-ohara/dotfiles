@@ -5,7 +5,6 @@ abbreviate Updateing Updating
 abbreviate adding Adding
 abbreviate ahve have
 abbreviate andn and
-abbreviate api API
 abbreviate fixing Fixing
 abbreviate fucntion function
 abbreviate funciton function
