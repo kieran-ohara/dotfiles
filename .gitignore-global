@@ -4,6 +4,7 @@
 .idea
 .project
 .tern-project
+__pycache__
 dive.log
 node_modules
 npm-debug.log
