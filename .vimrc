@@ -5,6 +5,7 @@ call plug#begin('~/.vim/bundle')
 Plug '/usr/local/opt/fzf'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'chrisbra/Colorizer'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'direnv/direnv.vim'
@@ -404,4 +405,11 @@ let g:gitgutter_sign_removed = emoji#for('fire')
 
 " Dash
 let g:dash_map = { 'yaml': ['cloudformation'] }
+
+" Language Client
+let g:LanguageClient_serverCommands = {
+            \ 'javascript': ['tcp://127.0.0.1:2089'],
+            \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+            \ 'python': ['tcp://127.0.0.1:2090']
+            \}
 " }}}
