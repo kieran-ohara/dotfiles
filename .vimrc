@@ -283,6 +283,14 @@ function! s:open_branch_fzf(line)
     execute 'Git checkout ' . l:branch
 endfunction
 
+function! LanguageClientMaps()
+    if has_key(g:LanguageClient_serverCommands, &filetype)
+        nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<cr>
+        nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
+        nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+    endif
+endfunction
+
 command! -nargs=0 Gmypullrequests execute '!open https://github.com/pulls'
 " }}}
 " Commands. {{{
@@ -304,7 +312,6 @@ augroup vimrc
     autocmd!
 
     " File types.
-
     autocmd BufNewFile,BufRead *.conf setfiletype nginx
     autocmd BufNewFile,BufRead *.hbs setfiletype html
     autocmd BufNewFile,BufRead *.json.dist setfiletype json
@@ -322,6 +329,7 @@ augroup vimrc
     autocmd BufNewFile,BufRead Jenkinsfile.* setfiletype groovy
     autocmd BufNewFile,BufRead config setfiletype dosini
     autocmd BufNewFile,BufRead hub setfiletype yaml
+    autocmd FileType * call LanguageClientMaps()
 
     " Highlight whitespace.
     autocmd InsertEnter * match ErrorMsg /\s\+\%#\@<!$/
