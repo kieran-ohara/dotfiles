@@ -125,6 +125,7 @@ let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 let challenger_deep_terminal_italics = 1
 colorscheme challenger_deep
+highlight Normal guibg=NONE ctermbg=NONE
 
 set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
