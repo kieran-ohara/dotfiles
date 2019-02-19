@@ -349,6 +349,9 @@ augroup vimrc
     autocmd FileType gitcommit,markdown,conf setlocal linebreak
     autocmd FileType gitcommit,markdown,conf setlocal textwidth=80 colorcolumn=80
 
+    " Set local format programs according to filetypes.
+    autocmd FileType json setlocal formatprg='jq'
+
     " Emoji for text files.
     autocmd FileType gitcommit,markdown setlocal omnifunc=emoji#complete
 
