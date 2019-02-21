@@ -7,11 +7,19 @@ function! cd#fzf_ui()
 endfunction
 
 function! cd#fzf_sink(lines)
+    if len(a:lines) == 0
+        return
+    endif
+
     let cmd = get({
                 \ 'ctrl-t': 'tabe',
                 \ 'ctrl-v': 'vsplit',
                 \ 'ctrl-x': 'split'
                 \ }, a:lines[0], 'lcd')
+
+
     let dir = '~/src/' . a:lines[1]
-    execute cmd . ' ' . fnameescape(dir) . ' | lcd ' .fnameescape(dir)
+    let command_to_exec = cmd . ' ' . fnameescape(dir) . ' | lcd ' .fnameescape(dir)
+    echom command_to_exec
+    execute command_to_exec
 endfunction
