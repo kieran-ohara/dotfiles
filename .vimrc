@@ -235,6 +235,10 @@ nnoremap <leader>fn :!open .<CR><CR>
 
 " Save faster!
 nnoremap <leader>w :w<CR>
+
+" Jid
+nnoremap <leader>j :call Jid()<CR>
+
 " }}}
 " Functions. {{{
 function! NumberToggle()
