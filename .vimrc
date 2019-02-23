@@ -98,6 +98,7 @@ cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 nmap <space>ev :vsplit %%
 nmap <space>es :split %%
 nmap <space>ee :edit %%
+nmap <space>sa :saveas %%
 
 " UI
 set lazyredraw           " Execute macros faster
