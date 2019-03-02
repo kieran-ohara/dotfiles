@@ -297,6 +297,10 @@ function! LanguageClientMaps()
     endif
 endfunction
 
+function! Jid()
+    execute '!jid < %'
+endfunction
+
 command! -nargs=0 Gmypullrequests execute '!open https://github.com/pulls'
 " }}}
 " Commands. {{{
