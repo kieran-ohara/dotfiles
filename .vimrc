@@ -3,6 +3,7 @@
 call plug#begin('~/.vim/bundle')
 
 Plug '/usr/local/opt/fzf'
+Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
