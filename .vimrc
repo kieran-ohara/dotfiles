@@ -64,6 +64,7 @@ call plug#end()
 " Vim Settings {{{
 " Manage Vim files
 " Editing text
+
 set directory=~/.vim/swapfiles//
 set backupdir=~/.vim/backupfiles//
 set undodir=~/.vim/undodir
@@ -84,24 +85,42 @@ set autoindent                     " Use C-style indenting or indent from previo
 set smartindent
 set formatoptions+=j               " Join comments
 
+function! ZoteroCite()
+  let api_call = 'http://localhost:23119/better-bibtex/cayw?format=pandoc&brackets=1'
+  let ref = system('curl -s '.shellescape(api_call))
+  return ref
+endfunction
+
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-k> <plug>(fzf-complete-word)
+nmap F <Plug>Sneak_F
+nmap T <Plug>Sneak_T
+nmap f <Plug>Sneak_f
+nmap t <Plug>Sneak_t
+nnoremap <expr> N  'nN'[v:searchforward]
+nnoremap <expr> n  'Nn'[v:searchforward]
+nnoremap <leader>w :w<CR>
+nnoremap <leader>zo "=ZoteroCite()<CR>p
+nnoremap Q @q
+nnoremap Y y$
+vnoremap <leader>s :sort u<CR>
 
 " Files buffers & tabs
+
 set cdpath+=~/src
 
-nnoremap <space>bd :bdelete<CR>
+cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
+nmap <space>ee :edit %%
+nmap <space>es :split %%
+nmap <space>ev :vsplit %%
+nmap <space>sa :saveas %%
 nnoremap <space>ba :bufdo bdelete<CR>
-
+nnoremap <space>bd :bdelete<CR>
 nnoremap <space>tc :tabclose<CR>
 nnoremap <space>te :tabedit<space>
-cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
-nmap <space>ev :vsplit %%
-nmap <space>es :split %%
-nmap <space>ee :edit %%
-nmap <space>sa :saveas %%
 
 " UI
+
 set lazyredraw           " Execute macros faster
 set mouse=a              " Enable mouse
 set timeoutlen=1000      " Stop taking so long!
@@ -131,11 +150,25 @@ highlight Normal guibg=NONE ctermbg=NONE
 
 set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap <leader>n :call NumberToggle()<CR>
+nnoremap <leader>l :setlocal list!<CR>
+nnoremap <leader>o :noh<CR>
+
 " Search
+
 set ignorecase " Case insensitive search unless there's a mix
 set smartcase
 set hlsearch   " Highlight previous/current matches as they are typed
 set incsearch
+
 " }}}
 " Mappings {{{
 " FZF shortcuts
@@ -175,18 +208,6 @@ nnoremap <leader>gpr :Hub pull-request -r benwainwright,andrewscfc,lalkhum,cefn,
 nnoremap <leader>gst :Gstatus<CR>
 nnoremap <leader>gx :GV<CR>
 
-" Show / hide the hidden characters
-nnoremap <leader>l :setlocal list!<CR>
-
-" Toggle relativenumber
-nnoremap <leader>n :call NumberToggle()<CR>
-
-" Sort a selection
-vnoremap <leader>s :sort u<CR>
-
-" Remove highlight
-nnoremap <leader>o :noh<CR>
-
 " Dispatch
 nnoremap <leader>df :Focus make<space>
 
@@ -198,28 +219,8 @@ nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>jb :call jira#browse(jira#ticketFromBranch())<CR><CR>
 nnoremap <leader>jc :call jira#comment(jira#ticketFromBranch())<CR>
 
-" Sneak
-nmap f <Plug>Sneak_f
-nmap F <Plug>Sneak_F
-nmap t <Plug>Sneak_t
-nmap T <Plug>Sneak_T
-
-" Saner 'n' directions
-nnoremap <expr> n  'Nn'[v:searchforward]
-nnoremap <expr> N  'nN'[v:searchforward]
-
-" Make Y behave like other capitals
-nnoremap Y y$
-
-" qq to record, Q to replay
-nnoremap Q @q
-
 " Ag in word
 nnoremap <leader>aiw :execute('Ag ' . expand("<cword>"))<CR>
-
-" Last inserted text
-nnoremap g. :normal! `[v`]<cr><left>
-
 
 " Docker tools
 nnoremap <leader>dkp :DockerToolsToggle<CR>
@@ -235,21 +236,11 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 " Open current directory
 nnoremap <leader>fn :!open .<CR><CR>
 
-" Save faster!
-nnoremap <leader>w :w<CR>
-
 " Jid
 nnoremap <leader>j :call Jid()<CR>
 
 " }}}
 " Functions. {{{
-function! NumberToggle()
-    if(&relativenumber == 1)
-        set norelativenumber
-    else
-        set relativenumber
-    endif
-endfunc
 
 function! OpenSwps()
     execute "!open ~/.vim/swapfiles/"
