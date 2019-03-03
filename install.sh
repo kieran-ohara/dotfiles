@@ -63,7 +63,7 @@ declare -a FILES_TO_SYMLINK=$(find . -type f -maxdepth 1 \
     -not -name .git \
     -not -name .gitignore \
     | sed -e 's|//|/|' | sed -e 's|./.|.|')
-FILES_TO_SYMLINK="$FILES_TO_SYMLINK .asdfrc .Brewfile .config/karabiner .ctags.d .default-gems .mjolnir .tmux tool-versions .um .vim"
+FILES_TO_SYMLINK="$FILES_TO_SYMLINK .asdfrc .Brewfile .config/karabiner .ctags.d .default-gems .docker/config.json .mjolnir .tmux tool-versions .um .vim"
 
 main() {
 
