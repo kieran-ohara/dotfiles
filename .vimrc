@@ -427,4 +427,7 @@ let g:LanguageClient_serverCommands = {
             \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
             \ 'python': ['tcp://127.0.0.1:2090']
             \}
+" This fucks with the quickfix list.
+let g:LanguageClient_diagnosticsEnable=0
+
 " }}}
