@@ -82,7 +82,7 @@ alias rm="rm -rf"
 alias sac="app/console"
 alias showfiles="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
 alias t="nice_tree"
-alias v="vim -S ~/.vim/sessions/session"
+alias v="resume_vim_session"
 alias w="nice_which"
 alias x="exit"
 # }}}
@@ -383,4 +383,13 @@ function nice_which {
     echo "$WHICH -> $READLINK_COLOUR$READLINK"
 }
 compdef nice_which=which
+
+function resume_vim_session {
+    if [[ $(ps -ax | grep -v grep | grep vim) ]]; then
+        echo "Vim is already running in another window."
+        return
+    fi
+
+    vim -S ~/.vim/sessions/session
+}
 # }}}
