@@ -52,6 +52,7 @@ cask 'suspicious-package'
 cask 'tripmode'
 cask 'vagrant'
 cask 'virtualbox'
+cask 'visual-studio-code'
 cask 'weka'
 cask 'zotero'
 
