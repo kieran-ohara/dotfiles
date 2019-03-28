@@ -27,3 +27,6 @@
     default = upstream
 [commit]
     gpgsign = true
+[rebase]
+   instructionFormat = "%s (%an)"
+   autosquash = true
