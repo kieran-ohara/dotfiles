@@ -25,3 +25,13 @@ class ${1:MyClass}:
     def __init__(self$2):
         ${3:self.data = []}
 endsnippet
+
+snippet Statement
+Statement(
+    Effect=Allow,
+    Action=Action(
+        '${1:action}',
+    ),
+    Resource=Sub('${2:resource}')
+),
+endsnippet
