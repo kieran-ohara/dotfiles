@@ -1,5 +1,5 @@
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'Homebrew/homebrew-cask-fonts'
+tap 'Homebrew/homebrew-cask-versions'
 tap 'getantibody/tap'
 tap 'jesseduffield/lazygit'
 tap 'kieran-bamforth/homebrew-repo'
