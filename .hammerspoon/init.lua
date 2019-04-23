@@ -5,6 +5,7 @@ local application = hs.application
 local geometry = hs.geometry
 local hotkey = hs.hotkey
 local window = hs.window
+hs.window.animationDuration = 0
 
 local mash = {"cmd", "alt", "ctrl"}
 local spectacle = {"cmd", "alt"}
