@@ -177,9 +177,6 @@ function fzf_git_checkout() {
 # Hub.
 eval $(hub alias -s)
 
-# Lua.
-eval "$(luarocks path)"
-
 # Spaceship
 spaceship_dockerhost() {
     spaceship::exists docker || return
