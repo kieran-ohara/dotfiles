@@ -3,6 +3,7 @@
 call plug#begin('~/.vim/bundle')
 
 Plug '/usr/local/opt/fzf'
+Plug 'AndrewRadev/sideways.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
@@ -13,13 +14,12 @@ Plug 'direnv/direnv.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
-Plug 'godlygeek/tabular'
-Plug 'AndrewRadev/sideways.vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
 Plug 'junegunn/vim-peekaboo'
 Plug 'justinmk/vim-dirvish'
@@ -97,6 +97,7 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 nmap F <Plug>Sneak_F
 nmap T <Plug>Sneak_T
 nmap f <Plug>Sneak_f
+nmap ga <Plug>(EasyAlign)
 nmap t <Plug>Sneak_t
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <expr> n  'Nn'[v:searchforward]
@@ -105,6 +106,7 @@ nnoremap <leader>zo "=ZoteroCite()<CR>p
 nnoremap Q @q
 nnoremap Y y$
 vnoremap <leader>s :sort u<CR>
+xmap ga <Plug>(EasyAlign)
 
 " Files buffers & tabs
 
