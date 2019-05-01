@@ -27,7 +27,7 @@ hotkey.bind(mash, 'P', function() application.launchOrFocus('Spotify') end)
 hotkey.bind(mash, 'R', function() application.launchOrFocus('OmniFocus') end)
 hotkey.bind(mash, 'S', function() application.launchOrFocus('Firefox') end)
 hotkey.bind(mash, 'T', function() application.launchOrFocus('Contacts') end)
-hotkey.bind(mash, 'U', function() application.launchOrFocus('Mail') end)
+hotkey.bind(mash, 'U', function() application.launchOrFocus('Spark') end)
 hotkey.bind(mash, 'W', function() application.launchOrFocus('1Password 7') end)
 hotkey.bind(mash, 'X', function() application.launchOrFocus('GitX') end)
 -- }}}
