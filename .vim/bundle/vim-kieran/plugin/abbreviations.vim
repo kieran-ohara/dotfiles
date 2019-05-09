@@ -2,6 +2,7 @@ abbreviate ADded Added
 abbreviate ADding Adding
 abbreviate UPdating Updating
 abbreviate Updateing Updating
+abbreviate acheive achieve
 abbreviate adding Adding
 abbreviate ahve have
 abbreviate andn and
