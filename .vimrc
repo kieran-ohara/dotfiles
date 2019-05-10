@@ -187,11 +187,9 @@ nnoremap <leader>fj :call jira#fzf_ui()<CR>
 " Easy edit / source VIMRC
 nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
 nnoremap <leader>va :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran/plugin/abbreviations.vim<CR>
-nnoremap <leader>vb :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran<CR>
+nnoremap <leader>vb :vsplit ~/src/dotfiles<CR> lcd ~/src/dotfiles<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 nnoremap <leader>vu :UltiSnipsEdit<CR>
-nnoremap <leader>ze :vsplit ~/src/dotfiles/.zshrc<CR>
-nnoremap <leader>zu :vsplit ~/src/dotfiles/utilities.zsh<CR>
 
 " Git shortcuts
 nnoremap <leader>ga :Git add %<CR><CR>
