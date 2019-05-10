@@ -30,6 +30,7 @@ hotkey.bind(mash, 'T', function() application.launchOrFocus('Contacts') end)
 hotkey.bind(mash, 'U', function() application.launchOrFocus('Spark') end)
 hotkey.bind(mash, 'W', function() application.launchOrFocus('1Password 7') end)
 hotkey.bind(mash, 'X', function() application.launchOrFocus('GitX') end)
+hotkey.bind(mash, 'Z', function() application.launchOrFocus('Zotero') end)
 -- }}}
 -- Move Windows. {{{
 function moveTo(win, x, y, h, w)
