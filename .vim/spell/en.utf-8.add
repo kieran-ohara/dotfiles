@@ -3,11 +3,14 @@ AWS
 Apriori
 BAU
 Bamforth
+Bikeshed
 Brewfile
 CentOS
 Chronos
 Cloudwatch
 EC2
+ECR
+EFS
 FZF
 GDPR
 HRA
@@ -15,6 +18,7 @@ Homebrew
 IDEs
 J48
 JIRA
+JIT
 JSON
 Jenkinsfile
 Jira
@@ -33,7 +37,9 @@ REPL
 RHEL
 S3
 StatsD
+Strawman
 Tmux
+Traefik
 Webmodules
 ZeroR
 Zotero
@@ -42,6 +48,7 @@ arff
 cd
 config
 cukes
+dockerd
 dotfile
 dotfiles
 gitignore
@@ -59,3 +66,4 @@ timestamp
 toolshed
 webmodule
 webmodules
+x509
