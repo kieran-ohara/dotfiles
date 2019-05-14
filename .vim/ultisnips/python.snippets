@@ -35,3 +35,12 @@ Statement(
     Resource=Sub('${2:resource}')
 ),
 endsnippet
+
+snippet node
+dot.node('${1:NAME}', '${2:label}')
+endsnippet
+
+snippet edge
+dot.edge('${1:FROM}', '${2:TO}')
+endsnippet
+
