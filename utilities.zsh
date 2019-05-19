@@ -10,6 +10,7 @@ alias :q="exit"
 alias :qa="tmux kill-window"
 alias acps="aws_cli_profile_set"
 alias ag="ag --hidden"
+alias as -='aws-shell'
 alias bbi="brew bundle --install"
 alias c="bat"
 alias cdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
