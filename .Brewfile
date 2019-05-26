@@ -71,7 +71,6 @@ mas 'Transmit', id: 403388562
 mas 'Tweetbot', id: 557168941
 mas 'WhatsApp Desktop', id: 1147396723
 mas 'Xcode', id: 497799835
-mas 'macOS server', id: 883878097
 
 brew 'ansible'
 brew 'antibody'
