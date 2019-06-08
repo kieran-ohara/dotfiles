@@ -65,7 +65,7 @@ mas 'MindNode', id: 1289197285
 mas 'OmniFocus', id: 1346203938
 mas 'OmniGraffle', id: 711830901
 mas 'Pocket', id: 568494494
-mas 'Reeder', id: 880001334
+mas 'Reeder', id: 1449412482
 mas 'Sketch', id: 852320343
 mas 'Spark', id: 1176895641
 mas 'Transmit', id: 403388562
