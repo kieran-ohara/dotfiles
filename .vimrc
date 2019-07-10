@@ -101,6 +101,8 @@ nmap ga <Plug>(EasyAlign)
 nmap t <Plug>Sneak_t
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <expr> n  'Nn'[v:searchforward]
+nnoremap <leader>sh :SidewaysLeft<CR>
+nnoremap <leader>sl :SidewaysRight<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>zo "=ZoteroCite()<CR>p
 nnoremap Q @q
