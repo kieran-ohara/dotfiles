@@ -7,30 +7,30 @@ local hotkey = hs.hotkey
 local window = hs.window
 hs.window.animationDuration = 0
 
-local mash = {"cmd", "alt", "ctrl"}
+local hyper = {"cmd", "alt", "ctrl", "shift"}
 local spectacle = {"cmd", "alt"}
 local spectacleshift = {"cmd", "alt", "shift"}
 -- }}}
 -- Global Keyboard Shortcuts. {{{
-hotkey.bind(mash, "2", function() os.execute("open \"focus://focus?minutes=25\"") end)
-hotkey.bind(mash, 'A', function() application.launchOrFocus('Reeder') end)
-hotkey.bind(mash, 'B', function() application.launchOrFocus('weka-3-9-2-oracle-jvm') end)
-hotkey.bind(mash, 'C', function() application.launchOrFocus('Calendar') end)
-hotkey.bind(mash, 'E', function() application.launchOrFocus('Preview') end)
-hotkey.bind(mash, 'F', function() application.launchOrFocus('Finder') end)
-hotkey.bind(mash, 'H', function() application.launchOrFocus('Google Chrome') end)
-hotkey.bind(mash, 'I', function() application.launchOrFocus('iTerm') end)
-hotkey.bind(mash, 'K', function() application.launchOrFocus('Kaleidoscope') end)
-hotkey.bind(mash, 'M', function() application.launchOrFocus('MindNode') end)
-hotkey.bind(mash, 'O', function() application.launchOrFocus('Firefox') end)
-hotkey.bind(mash, 'P', function() application.launchOrFocus('Spotify') end)
-hotkey.bind(mash, 'R', function() application.launchOrFocus('OmniFocus') end)
-hotkey.bind(mash, 'S', function() application.launchOrFocus('Firefox') end)
-hotkey.bind(mash, 'T', function() application.launchOrFocus('Contacts') end)
-hotkey.bind(mash, 'U', function() application.launchOrFocus('Spark') end)
-hotkey.bind(mash, 'W', function() application.launchOrFocus('1Password 7') end)
-hotkey.bind(mash, 'X', function() application.launchOrFocus('GitX') end)
-hotkey.bind(mash, 'Z', function() application.launchOrFocus('Zotero') end)
+hotkey.bind(hyper, "2", function() os.execute("open \"focus://focus?minutes=25\"") end)
+hotkey.bind(hyper, 'A', function() application.launchOrFocus('Reeder') end)
+hotkey.bind(hyper, 'B', function() application.launchOrFocus('weka-3-9-2-oracle-jvm') end)
+hotkey.bind(hyper, 'C', function() application.launchOrFocus('Calendar') end)
+hotkey.bind(hyper, 'E', function() application.launchOrFocus('Preview') end)
+hotkey.bind(hyper, 'F', function() application.launchOrFocus('Finder') end)
+hotkey.bind(hyper, 'H', function() application.launchOrFocus('Google Chrome') end)
+hotkey.bind(hyper, 'I', function() application.launchOrFocus('iTerm') end)
+hotkey.bind(hyper, 'K', function() application.launchOrFocus('Kaleidoscope') end)
+hotkey.bind(hyper, 'M', function() application.launchOrFocus('MindNode') end)
+hotkey.bind(hyper, 'O', function() application.launchOrFocus('Firefox') end)
+hotkey.bind(hyper, 'P', function() application.launchOrFocus('Spotify') end)
+hotkey.bind(hyper, 'R', function() application.launchOrFocus('OmniFocus') end)
+hotkey.bind(hyper, 'S', function() application.launchOrFocus('Firefox') end)
+hotkey.bind(hyper, 'T', function() application.launchOrFocus('Contacts') end)
+hotkey.bind(hyper, 'U', function() application.launchOrFocus('Spark') end)
+hotkey.bind(hyper, 'W', function() application.launchOrFocus('1Password 7') end)
+hotkey.bind(hyper, 'X', function() application.launchOrFocus('GitX') end)
+hotkey.bind(hyper, 'Z', function() application.launchOrFocus('Zotero') end)
 -- }}}
 -- Move Windows. {{{
 function moveTo(win, x, y, h, w)
