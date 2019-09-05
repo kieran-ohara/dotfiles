@@ -56,6 +56,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'weka'
+cask 'zoomus'
 cask 'zotero'
 
 mas 'Apple Configurator 2', id: 1037126344
