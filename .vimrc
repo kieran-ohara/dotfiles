@@ -357,7 +357,7 @@ augroup vimrc
     autocmd FileType json setlocal formatprg='jq'
 
     " Emoji for text files.
-    autocmd FileType gitcommit,markdown setlocal omnifunc=emoji#complete
+    autocmd FileType gitcommit,markdown,yaml setlocal omnifunc=emoji#complete
 
     " When entering/exiting Goyo, turn Limelight on / off.
     autocmd! User GoyoEnter nested call GoyoEnter()
