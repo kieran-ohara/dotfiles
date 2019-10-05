@@ -19,7 +19,7 @@ hotkey.bind(hyper, 'B', function() application.launchOrFocus('weka-3-9-2-oracle-
 hotkey.bind(hyper, 'C', function() application.launchOrFocus('Calendar') end)
 hotkey.bind(hyper, 'E', function() application.launchOrFocus('Preview') end)
 hotkey.bind(hyper, 'F', function() application.launchOrFocus('Finder') end)
-hotkey.bind(hyper, 'H', function() application.launchOrFocus('Google Chrome') end)
+hotkey.bind(hyper, 'H', function() application.launchOrFocus('Visual Studio Code') end)
 hotkey.bind(hyper, 'I', function() application.launchOrFocus('iTerm') end)
 hotkey.bind(hyper, 'K', function() application.launchOrFocus('Kaleidoscope') end)
 hotkey.bind(hyper, 'M', function() application.launchOrFocus('MindNode') end)
@@ -32,7 +32,6 @@ hotkey.bind(hyper, 'U', function() application.launchOrFocus('Microsoft Outlook'
 hotkey.bind(hyper, 'W', function() application.launchOrFocus('1Password 7') end)
 hotkey.bind(hyper, 'X', function() application.launchOrFocus('GitX') end)
 hotkey.bind(hyper, 'Z', function() application.launchOrFocus('Zotero') end)
-hotkey.bind(meh, 'I', function() application.launchOrFocus('Visual Studio Code') end)
 -- }}}
 -- Move Windows. {{{
 function moveTo(win, x, y, h, w)
