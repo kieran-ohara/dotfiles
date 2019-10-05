@@ -8,8 +8,9 @@ local window = hs.window
 hs.window.animationDuration = 0
 
 local hyper = {"cmd", "alt", "ctrl", "shift"}
+local meh = {"cmd", "alt", "shift"}
 local spectacle = {"cmd", "alt"}
-local spectacleshift = {"cmd", "alt", "shift"}
+
 -- }}}
 -- Global Keyboard Shortcuts. {{{
 hotkey.bind(hyper, "2", function() os.execute("open \"focus://focus?minutes=25\"") end)
@@ -31,6 +32,7 @@ hotkey.bind(hyper, 'U', function() application.launchOrFocus('Microsoft Outlook'
 hotkey.bind(hyper, 'W', function() application.launchOrFocus('1Password 7') end)
 hotkey.bind(hyper, 'X', function() application.launchOrFocus('GitX') end)
 hotkey.bind(hyper, 'Z', function() application.launchOrFocus('Zotero') end)
+hotkey.bind(meh, 'I', function() application.launchOrFocus('Visual Studio Code') end)
 -- }}}
 -- Move Windows. {{{
 function moveTo(win, x, y, h, w)
@@ -59,26 +61,6 @@ end)
 
 hotkey.bind(spectacle, "L", function()
     moveTo(window.focusedWindow(), 0.5, 0, 0.5, 1)
-end)
-
-hotkey.bind(spectacleshift, "H", function()
-    moveTo(window.focusedWindow(), 0, 0, 0.5, 1)
-    moveNamedAppTo('com.googlecode.iterm2', 0.5, 0, 0.5, 1)
-end)
-
-hotkey.bind(spectacleshift, "J", function()
-    moveTo(window.focusedWindow(), 0, 0.5, 1, 0.5)
-    moveNamedAppTo('com.googlecode.iterm2', 0, 0, 1, 0.5)
-end)
-
-hotkey.bind(spectacleshift, "K", function()
-    moveTo(window.focusedWindow(), 0, 0, 1, 0.5)
-    moveNamedAppTo('com.googlecode.iterm2', 0, 0.5, 1, 0.5)
-end)
-
-hotkey.bind(spectacleshift, "L", function()
-    moveTo(window.focusedWindow(), 0.5, 0, 0.5, 1)
-    moveNamedAppTo('com.googlecode.iterm2', 0, 0, 0.5, 1)
 end)
 
 -- Full screen.
