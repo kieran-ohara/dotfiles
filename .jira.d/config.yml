@@ -1,0 +1,35 @@
+endpoint: https://jira.dev.bbc.co.uk
+unixproxy: /usr/local/var/client-cert-proxy.sock
+user: kieran.bamforth@bbc.co.uk
+project: ORBITEN
+custom-commands:
+
+    - name : mine
+      help: Display issues assigned to me
+      script: |-
+          {{jira}} list --query "resolution = unresolved and assignee=currentuser() ORDER BY created"
+
+    - name: browser
+      help: Open an issue in the browser
+      args:
+        - name: number
+          required: true
+      options:
+        - name: project
+          short: p
+          default: $JIRA_PROJECT
+      script: |-
+          {{jira}} browse {{options.project}}-{{args.number}}
+      aliases:
+        - br
+
+    - name: sprint
+      help: Display issues for active sprint
+      options:
+        - name: project
+          short: p
+          default: $JIRA_PROJECT
+      script: |-
+          {{jira}} list --query "sprint in openSprints() and type != epic and resolution = unresolved and project={{options.project}} ORDER BY rank asc, created"
+      aliases:
+        - sp
