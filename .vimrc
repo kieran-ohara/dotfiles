@@ -57,6 +57,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug '~/.vim/bundle/vim-kieran'
+Plug 'Yggdroot/indentLine'
 
 " Has to be loaded at the end
 Plug 'ryanoasis/vim-devicons'
@@ -347,6 +348,8 @@ augroup vimrc
     " Override tabs/spaces.
     autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
     autocmd FileType javascript,json,javascript.jsx,ruby,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+    autocmd FileType yaml let b:indentLine_enabled = 1
+
 
     " Set spelling / linebreak for text files.
     autocmd FileType gitcommit,markdown,conf setlocal spell
@@ -432,5 +435,9 @@ let g:LanguageClient_serverCommands = {
             \}
 " This fucks with the quickfix list.
 let g:LanguageClient_diagnosticsEnable=0
+
+" Don't show indent lines by default.
+let g:indentLine_enabled = 0
+let g:indentLine_char_list = ['│', '¦']
 
 " }}}
