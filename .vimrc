@@ -438,6 +438,6 @@ let g:LanguageClient_diagnosticsEnable=0
 
 " Don't show indent lines by default.
 let g:indentLine_enabled = 0
-let g:indentLine_char_list = ['│', '¦']
+let g:indentLine_char_list = ['|', '¦', '┊']
 
 " }}}
