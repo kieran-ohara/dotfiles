@@ -51,7 +51,6 @@ alias egrep="egrep --color=always"
 alias f='find . -name'
 alias fpath='echo -e ${FPATH//:/\\n}'
 alias gbr="hub browse"
-alias gcmd="lazygit"
 alias gd="git diff --color  | diff-so-fancy"
 alias gdc="git diff --color --cached | diff-so-fancy"
 alias gdt="git difftool"
