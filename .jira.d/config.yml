@@ -33,3 +33,11 @@ custom-commands:
           {{jira}} list --query "sprint in openSprints() and type != epic and resolution = unresolved and project={{options.project}} ORDER BY rank asc, created"
       aliases:
         - sp
+
+    - name: watching
+      help: Display issues I'm watching
+      options:
+      script: |-
+          {{jira}} list --query "watcher = currentUser()"
+      aliases:
+        - wa
