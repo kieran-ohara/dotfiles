@@ -41,3 +41,17 @@ custom-commands:
           {{jira}} list --query "watcher = currentUser()"
       aliases:
         - wa
+
+    - name: created
+      help: Display issues that have been created
+      options:
+        - name: count
+          short: c
+          default: 1w
+        - name: project
+          short: p
+          default: $JIRA_PROJECT
+      script: |-
+        {{jira}} list --query "created >= -{{options.count}} and project = {{options.project}}"
+      aliases:
+        - cr
