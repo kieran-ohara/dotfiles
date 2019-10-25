@@ -55,3 +55,17 @@ custom-commands:
         {{jira}} list --query "created >= -{{options.count}} and project = {{options.project}}"
       aliases:
         - cr
+
+    - name: search
+      help: Search for issues
+      options:
+        - name: project
+          short: p
+          default: $JIRA_PROJECT
+      args:
+        - name: text
+          required: true
+      script: |-
+        {{jira}} list --query "text ~ {{args.text}} and project = {{options.project}}"
+      aliases:
+        - se
