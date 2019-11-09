@@ -83,3 +83,10 @@ custom-commands:
         {{jira}} list --query "labels in ( {{args.labels}} ) and project = {{options.project}}"
       aliases:
         - la
+
+    - name: innersource
+      help: List issues with innersource labels that are not complete
+      script: |-
+        {{jira}} list --query "labels in (innersource) and project = {{options.project}} and statusCategory != done order by updatedDate desc"
+      aliases:
+        - is
