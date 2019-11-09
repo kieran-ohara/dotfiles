@@ -69,3 +69,17 @@ custom-commands:
         {{jira}} list --query "text ~ {{args.text}} and project = {{options.project}}"
       aliases:
         - se
+
+    - name: label
+      help: List issues with labels
+      options:
+        - name: project
+          short: p
+          default: $JIRA_PROJECT
+      args:
+        - name: labels
+          required: true
+      script: |-
+        {{jira}} list --query "labels in ( {{args.labels}} ) and project = {{options.project}}"
+      aliases:
+        - la
