@@ -6,7 +6,9 @@ Plug '/usr/local/opt/fzf'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'SirVer/ultisnips'
+Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
+Plug 'alok/notational-fzf-vim'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'chrisbra/Colorizer'
 Plug 'christoomey/vim-tmux-navigator'
@@ -57,7 +59,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug '~/.vim/bundle/vim-kieran'
-Plug 'Yggdroot/indentLine'
 
 " Has to be loaded at the end
 Plug 'ryanoasis/vim-devicons'
@@ -439,5 +440,8 @@ let g:LanguageClient_diagnosticsEnable=0
 " Don't show indent lines by default.
 let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┊']
+
+" Search Google Drive
+let g:nv_search_paths = ['/Volumes/GoogleDrive/My Drive/Notes']
 
 " }}}
