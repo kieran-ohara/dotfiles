@@ -90,3 +90,17 @@ custom-commands:
         {{jira}} list --query "labels in (innersource) and project = {{options.project}} and statusCategory != done order by updatedDate desc"
       aliases:
         - is
+
+    - name: commentissue
+      help: Comment on an issue
+      options:
+        - name: project
+          short: p
+          default: $JIRA_PROJECT
+      args:
+        - name: number
+          required: true
+      script: |-
+        {{jira}} comment {{options.project}}-{{args.number}}
+      aliases:
+        - co
