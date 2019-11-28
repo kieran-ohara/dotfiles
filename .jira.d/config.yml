@@ -104,3 +104,15 @@ custom-commands:
         {{jira}} comment {{options.project}}-{{args.number}}
       aliases:
         - co
+
+    - name: backlogissues
+      help: List issues in the backlog
+      options:
+        - name: project
+          short: p
+          default: $JIRA_PROJECT
+      script: |-
+        {{jira}} list --query "project = ORBITEN AND sprint is EMPTY and statusCategory = 'To Do'"
+      aliases:
+        - bl
+
