@@ -100,6 +100,12 @@ main() {
     targetFile="/Applications/Firefox.app/Contents/Resources/distribution/policies.json"
     mkdir -p "/Applications/Firefox.app/Contents/Resources/distribution"
     execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+
+    sourceFile="$(pwd)/stunnel.conf"
+    targetFile="/usr/local/etc/stunnel/stunnel.conf"
+    mkdir -p /usr/local/etc/stunnel
+    execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
+
 }
 
 main
