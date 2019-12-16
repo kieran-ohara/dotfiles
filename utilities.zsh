@@ -1,5 +1,6 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
 # Aliases. {{{
+
 alias -- -='cd -'
 alias -g G='| grep'
 alias -g GBR='() {local x=`git symbolic-ref HEAD 2>/dev/null`; echo ${x##refs/heads/}}'
@@ -86,6 +87,8 @@ alias t="nice_tree"
 alias v="resume_vim_session"
 alias w="nice_which"
 alias x="exit"
+alias rm="trash -vF"
+
 # }}}
 # AWS. {{{
 function aws_asg_scaleup {
