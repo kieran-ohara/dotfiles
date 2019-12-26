@@ -431,6 +431,7 @@ let g:dash_map = { 'yaml': ['cloudformation'] }
 
 " Language Client
 let g:LanguageClient_serverCommands = {
+            \ 'typescript': ['tcp://127.0.0.1:2089'],
             \ 'javascript': ['tcp://127.0.0.1:2089'],
             \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
             \ 'python': ['tcp://127.0.0.1:2090']
