@@ -368,8 +368,9 @@ augroup vimrc
     " Set local format programs according to filetypes.
     autocmd FileType json setlocal formatprg='jq'
 
-    " Emoji for text files.
+    " Autocomplete functions.
     autocmd FileType gitcommit,markdown,yaml setlocal omnifunc=emoji#complete
+    autocmd FileType typescript setlocal omnifunc=LanguageClient#complete
 
     " When entering/exiting Goyo, turn Limelight on / off.
     autocmd! User GoyoEnter nested call GoyoEnter()
