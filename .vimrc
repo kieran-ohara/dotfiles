@@ -454,4 +454,7 @@ let g:indentLine_char_list = ['|', '¦', '┊']
 " Search Google Drive
 let g:nv_search_paths = ['/Volumes/GoogleDrive/My Drive/Notes', './docs']
 
+" Try omnifunc, path and fallback to <c-p>
+let g:SuperTabDefaultCompletionType = "context"
+
 " }}}
