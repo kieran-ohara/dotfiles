@@ -1,5 +1,5 @@
 endpoint: https://jira.dev.bbc.co.uk
-unixproxy: /usr/local/var/client-cert-proxy.sock
+unixproxy: /usr/local/var/client-cert-proxy-stunnel.sock
 user: kieran.bamforth@bbc.co.uk
 project: ORBITEN
 custom-commands:

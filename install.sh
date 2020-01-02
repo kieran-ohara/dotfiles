@@ -96,6 +96,10 @@ main() {
 
     done
 
+    sourceFile="$(pwd)/LaunchAgents/me.kieranbamforth.stunnel.plist"
+    targetFile="$HOME/Library/LaunchAgents/me.kieranbamforth.stunnel.plist"
+    execute "ln -fs $sourceFile $targetFile" "$targetFile --> $sourceFile"
+
     sourceFile="$(pwd)/firefox.json"
     targetFile="/Applications/Firefox.app/Contents/Resources/distribution/policies.json"
     mkdir -p "/Applications/Firefox.app/Contents/Resources/distribution"

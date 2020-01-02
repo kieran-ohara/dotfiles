@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>local.job</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/env</string>
+		<string>/bin/bash</string>
+		<string>-c</string>
+		<string>find /usr/local/var -name *-stunnel.sock* | xargs rm &amp;&amp; exec /usr/local/bin/stunnel</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/tmp/client-cert-proxy.sterr</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/client-cert-proxy.stdout</string>
+</dict>
+</plist>
