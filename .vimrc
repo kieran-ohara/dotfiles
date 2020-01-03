@@ -278,6 +278,15 @@ function! GoyoLeave()
     silent !tmux set status on
 endfunction
 
+function! SetBufferRootDir()
+    if getbufinfo('%')[0]['listed'] && filereadable(@%)
+        let l:root = fnamemodify(FugitiveGitDir(), ":h")
+        if isdirectory(l:root)
+            execute 'lcd ' . l:root
+        endif
+    endif
+endfunction
+
 function! s:open_branch_fzf(line)
     let l:parser = split(a:line)
     let l:branch = l:parser[0]
@@ -349,10 +358,10 @@ augroup vimrc
     " Highlight whitespace.
     autocmd InsertEnter * match ErrorMsg /\s\+\%#\@<!$/
     autocmd BufWinEnter,InsertLeave * match ErrorMsg /\s\+$/
-    autocmd BufWinLeave * call clearmatches()
 
     " Remove whitespace.
     autocmd BufWritePre * :call StripTrailingWhitespaces()
+    autocmd BufWinLeave * call clearmatches()
 
     " Override tabs/spaces.
     autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
@@ -375,6 +384,9 @@ augroup vimrc
     " When entering/exiting Goyo, turn Limelight on / off.
     autocmd! User GoyoEnter nested call GoyoEnter()
     autocmd! User GoyoLeave nested call GoyoLeave()
+
+    " When opening a buffer, set the root directory.
+    autocmd BufWinEnter * call SetBufferRootDir()
 
 augroup end
 " }}}
