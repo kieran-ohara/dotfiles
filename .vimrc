@@ -278,6 +278,15 @@ function! GoyoLeave()
     silent !tmux set status on
 endfunction
 
+function! SetBufferRootDir()
+    if getbufinfo('%')[0]['listed'] && filereadable(@%)
+        let l:root = fnamemodify(FugitiveGitDir(), ":h")
+        if isdirectory(l:root)
+            execute 'lcd ' . l:root
+        endif
+    endif
+endfunction
+
 function! s:open_branch_fzf(line)
     let l:parser = split(a:line)
     let l:branch = l:parser[0]
@@ -291,7 +300,14 @@ function! LanguageClientMaps()
     if has_key(g:LanguageClient_serverCommands, &filetype)
         nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<cr>
         nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
-        nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+        nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
+        nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
+        nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
+        nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
+        nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
+        nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
+        nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
+        nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
     endif
 endfunction
 
@@ -342,10 +358,10 @@ augroup vimrc
     " Highlight whitespace.
     autocmd InsertEnter * match ErrorMsg /\s\+\%#\@<!$/
     autocmd BufWinEnter,InsertLeave * match ErrorMsg /\s\+$/
-    autocmd BufWinLeave * call clearmatches()
 
     " Remove whitespace.
     autocmd BufWritePre * :call StripTrailingWhitespaces()
+    autocmd BufWinLeave * call clearmatches()
 
     " Override tabs/spaces.
     autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
@@ -361,12 +377,16 @@ augroup vimrc
     " Set local format programs according to filetypes.
     autocmd FileType json setlocal formatprg='jq'
 
-    " Emoji for text files.
+    " Autocomplete functions.
     autocmd FileType gitcommit,markdown,yaml setlocal omnifunc=emoji#complete
+    autocmd FileType typescript setlocal omnifunc=LanguageClient#complete
 
     " When entering/exiting Goyo, turn Limelight on / off.
     autocmd! User GoyoEnter nested call GoyoEnter()
     autocmd! User GoyoLeave nested call GoyoLeave()
+
+    " When opening a buffer, set the root directory.
+    autocmd BufWinEnter * call SetBufferRootDir()
 
 augroup end
 " }}}
@@ -431,6 +451,7 @@ let g:dash_map = { 'yaml': ['cloudformation'] }
 
 " Language Client
 let g:LanguageClient_serverCommands = {
+            \ 'typescript': ['tcp://127.0.0.1:2089'],
             \ 'javascript': ['tcp://127.0.0.1:2089'],
             \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
             \ 'python': ['tcp://127.0.0.1:2090']
@@ -444,5 +465,8 @@ let g:indentLine_char_list = ['|', '¦', '┊']
 
 " Search Google Drive
 let g:nv_search_paths = ['/Volumes/GoogleDrive/My Drive/Notes', './docs']
+
+" Try omnifunc, path and fallback to <c-p>
+let g:SuperTabDefaultCompletionType = "context"
 
 " }}}

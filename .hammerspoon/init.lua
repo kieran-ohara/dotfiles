@@ -30,7 +30,7 @@ hotkey.bind(hyper, 'S', function() application.launchOrFocus('Firefox') end)
 hotkey.bind(hyper, 'T', function() application.launchOrFocus('Contacts') end)
 hotkey.bind(hyper, 'U', function() application.launchOrFocus('Microsoft Outlook') end)
 hotkey.bind(hyper, 'W', function() application.launchOrFocus('1Password 7') end)
-hotkey.bind(hyper, 'X', function() application.launchOrFocus('GitX') end)
+hotkey.bind(hyper, 'X', function() application.launchOrFocus('Tower') end)
 hotkey.bind(hyper, 'Z', function() application.launchOrFocus('Zotero') end)
 -- }}}
 -- Move Windows. {{{
