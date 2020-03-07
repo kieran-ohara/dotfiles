@@ -59,7 +59,7 @@ mas 'Medis', id: 1063631769
 mas 'MindNode', id: 1289197285
 mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
-mas 'Transmit', id: 403388562
+mas 'Transmit', id: 1436522307
 mas 'Tweetbot', id: 557168941
 mas 'WhatsApp Desktop', id: 1147396723
 mas 'Xcode', id: 497799835
