@@ -116,3 +116,14 @@ custom-commands:
       aliases:
         - bl
 
+    - name: design
+      help: List issues in the design board
+      options:
+        - name: project
+          short: p
+          default: $JIRA_PROJECT
+      script: |-
+        {{jira}} list --query "project = ORBITEN AND sprint is EMPTY and status in (Analysis, 'Analysis Done')"
+      aliases:
+        - de
+
