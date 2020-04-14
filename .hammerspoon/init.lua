@@ -31,7 +31,7 @@ hotkey.bind(hyper, 'T', function() application.launchOrFocus('Contacts') end)
 hotkey.bind(hyper, 'U', function() application.launchOrFocus('Microsoft Outlook') end)
 hotkey.bind(hyper, 'W', function() application.launchOrFocus('1Password 7') end)
 hotkey.bind(hyper, 'X', function() application.launchOrFocus('Tower') end)
-hotkey.bind(hyper, 'Z', function() application.launchOrFocus('Zotero') end)
+hotkey.bind(hyper, 'Z', function() application.launchOrFocus('zoom.us') end)
 -- }}}
 -- Move Windows. {{{
 function moveTo(win, x, y, h, w)
