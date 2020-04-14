@@ -64,6 +64,7 @@ mas 'Tweetbot', id: 557168941
 mas 'WhatsApp Desktop', id: 1147396723
 mas 'Xcode', id: 497799835
 
+brew 'amazon-ecs-cli'
 brew 'ansible'
 brew 'antibody'
 brew 'asciinema'
