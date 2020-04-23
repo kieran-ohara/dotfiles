@@ -365,7 +365,7 @@ augroup vimrc
 
     " Override tabs/spaces.
     autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-    autocmd FileType javascript,json,javascript.jsx,ruby,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+    autocmd FileType javascript,json,javascript.jsx,ruby,yaml,typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
     autocmd FileType yaml let b:indentLine_enabled = 1
 
 
