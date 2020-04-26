@@ -9,11 +9,14 @@ Botkit
 Brewfile
 CCPA
 CentOS
+ChatOps
 Chronos
 Cloudwatch
+DevOps
 EC2
 ECR
 EFS
+Elasticache
 FZF
 GDPR
 GNL
@@ -39,6 +42,7 @@ OneR
 Qaurtiles
 REPL
 RHEL
+Redis
 S3
 Simorgh
 StatsD
