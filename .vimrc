@@ -245,6 +245,9 @@ nnoremap <leader>fn :!open .<CR><CR>
 " Jid
 nnoremap <leader>j :call Jid()<CR>
 
+" NV
+nnoremap <leader>n :NV<CR>
+
 " }}}
 " Functions. {{{
 
@@ -416,6 +419,10 @@ let g:vim_json_syntax_conceal=0
 
 " Set the Ultisnips directory
 let g:UltiSnipsSnippetsDir='~/.vim/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Set the Ultisnips edit window to split vertically
 let g:UltiSnipsEditSplit="vertical"
