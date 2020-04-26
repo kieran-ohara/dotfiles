@@ -2,10 +2,16 @@ snippet log
 console.log('$1')
 endsnippet
 
-snippet fn
+snippet cfn
 ${1:public} ${2:async} ${3:name}(${4:params}): ${5:returnType} {
 	$6
 }
+endsnippet
+
+snippet fn
+export const ${1:fn} = (${2:args}) => {
+  $3
+};
 endsnippet
 
 snippet db
