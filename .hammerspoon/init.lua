@@ -13,6 +13,7 @@ local spectacle = {"cmd", "alt"}
 
 -- }}}
 -- Global Keyboard Shortcuts. {{{
+
 hotkey.bind(hyper, "2", function() os.execute("open \"focus://focus?minutes=25\"") end)
 hotkey.bind(hyper, 'A', function() application.launchOrFocus('Reeder') end)
 hotkey.bind(hyper, 'B', function() application.launchOrFocus('weka-3-9-2-oracle-jvm') end)
@@ -26,12 +27,13 @@ hotkey.bind(hyper, 'M', function() application.launchOrFocus('MindNode') end)
 hotkey.bind(hyper, 'O', function() application.launchOrFocus('Firefox') end)
 hotkey.bind(hyper, 'P', function() application.launchOrFocus('Spotify') end)
 hotkey.bind(hyper, 'R', function() application.launchOrFocus('OmniFocus') end)
-hotkey.bind(hyper, 'S', function() application.launchOrFocus('Firefox') end)
+hotkey.bind(hyper, 'S', function() application.launchOrFocus('Visual Studio Code') end)
 hotkey.bind(hyper, 'T', function() application.launchOrFocus('Contacts') end)
 hotkey.bind(hyper, 'U', function() application.launchOrFocus('Microsoft Outlook') end)
 hotkey.bind(hyper, 'W', function() application.launchOrFocus('1Password 7') end)
 hotkey.bind(hyper, 'X', function() application.launchOrFocus('Tower') end)
 hotkey.bind(hyper, 'Z', function() application.launchOrFocus('zoom.us') end)
+
 -- }}}
 -- Move Windows. {{{
 function moveTo(win, x, y, h, w)
