@@ -178,24 +178,13 @@ function fzf_git_checkout() {
 eval $(hub alias -s)
 
 # Spaceship
-spaceship_dockerhost() {
-    spaceship::exists docker || return
-
-    [[ -z $DOCKER_HOST ]] && return
-
-    spaceship::section \
-        "blue" \
-        "$SPACESHIP_PROMPT_DEFAULT_PREFIX" \
-        "🐳 $DOCKER_HOST" \
-        "$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-    }
 SPACESHIP_PROMPT_ORDER=(
     user
     dir
     host
     git
     aws
-    dockerhost
+    docker_context
     venv
     line_sep
     vi_mode
@@ -203,6 +192,8 @@ SPACESHIP_PROMPT_ORDER=(
     char
 )
 SPACESHIP_AWS_SYMBOL="☁️  "
+SPACESHIP_DOCKER_CONTEXT_PREFIX="🐳 "
+SPACESHIP_DOCKER_CONTEXT_SUFFIX=""
 SPACESHIP_JOBS_COLOR="yellow"
 SPACESHIP_VENV_SYMBOL="🐍 "
 # }}}
