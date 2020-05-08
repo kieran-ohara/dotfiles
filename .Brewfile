@@ -7,7 +7,7 @@ tap 'wagoodman/dive'
 
 cask '1password'
 cask '1password-cli'
-cask 'alfred2'
+cask 'alfred'
 cask 'anki'
 cask 'appzapper'
 cask 'basictex'
