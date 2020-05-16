@@ -17,3 +17,21 @@ endsnippet
 snippet db
 debug(`$1`)
 endsnippet
+
+snippet test
+test('${1:Description}', () => {
+  ${2:expect(sum(1, 2)).toBe(3);}
+});
+endsnippet
+
+snippet import
+import { ${1:export} } from '${2:module}';
+endsnippet
+
+snippet cls "class .." b
+class ${1:ClassName}${2: extends ${3:ParentClass}} {
+	${4:constructor(${5:args}) {
+    ${6://code...}
+  }}
+}
+endsnippet
