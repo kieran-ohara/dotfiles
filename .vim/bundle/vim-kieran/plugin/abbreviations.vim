@@ -28,4 +28,3 @@ abbreviate spome some
 abbreviate teh the
 abbreviate toolsehd toolshed
 abbreviate updating Updating
-abbreviate nginx NGINX
