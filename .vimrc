@@ -217,8 +217,9 @@ nnoremap <leader>df :Focus make<space>
 nnoremap <leader>dr :Focus!<CR>
 
 " Test
-nnoremap <leader>t :TestNearest<CR>
-nnoremap <leader>T :TestFile<CR>
+nnoremap <leader>tt :TestNearest<CR>
+nnoremap <leader>tf :TestFile<CR>
+nnoremap <leader>tl :TestLast<CR>
 
 " Jira commands
 nnoremap <leader>jb :call jira#browse(jira#ticketFromBranch())<CR><CR>
