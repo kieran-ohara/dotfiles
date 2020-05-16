@@ -56,7 +56,10 @@ Zotero
 apriori
 arff
 async
+bakescript
 cd
+cloudssl
+cloudwatchmon
 config
 cukes
 dockerd
@@ -77,10 +80,8 @@ tagline
 techradar
 timestamp
 toolshed
+vimes
 webmodule
 webmodules
 webserver
 x509
-Redis
-Redis
-Elasticache
