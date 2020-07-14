@@ -15,7 +15,22 @@ export const ${1:fn} = (${2:args}) => {
 endsnippet
 
 snippet db
-debug(`$1`)
+debug(`${1:note}`)
+endsnippet
+
+snippet import
+import { $1 } from '$2';
+endsnippet
+
+snippet
+test('$1', () => {
+    $2
+});
+endsnippet
+
+snippet exportfn
+export const $1 = ${2:async} ($3) => {
+};
 endsnippet
 
 snippet test
