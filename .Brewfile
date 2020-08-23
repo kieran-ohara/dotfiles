@@ -117,6 +117,7 @@ brew 'luarocks'
 brew 'macvim', args: [ 'env-std', 'with-override-system-vim', 'with-python@2' ]
 brew 'makefile2graph'
 brew 'mas'
+brew 'mitmproxy'
 brew 'mycli'
 brew 'ncdu'
 brew 'node'
