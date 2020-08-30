@@ -156,15 +156,6 @@ colorscheme challenger_deep
 
 set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
-function! NumberToggle()
-    if(&relativenumber == 1)
-        set norelativenumber
-    else
-        set relativenumber
-    endif
-endfunc
-
-nnoremap <leader>n :call NumberToggle()<CR>
 nnoremap <leader>l :setlocal list!<CR>
 nnoremap <leader>o :noh<CR>
 nnoremap <leader>gy :Goyo<CR>
