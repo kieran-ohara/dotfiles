@@ -298,6 +298,10 @@ function git_current_branch() {
     fi
     echo ${ref#refs/heads/}
 }
+
+function fzf_git_log() {
+  git log --oneline | fzf --preview='git show {1}' --preview-window=right --ansi | awk '{ print $1 }'
+}
 # }}}
 # Kitchen Sink. {{{
 function open_src_dir {
