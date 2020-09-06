@@ -30,3 +30,5 @@
 [rebase]
    instructionFormat = "%s (%an)"
    autosquash = true
+[gpg]
+	program = /usr/local/bin/gpg
