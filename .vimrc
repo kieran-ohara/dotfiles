@@ -436,7 +436,8 @@ highlight! link SneakScope Search
 let g:ale_sign_error = ""
 let g:ale_sign_warning = ""
 let g:ale_linters={
-            \'python':['flake8', 'mypy', 'pylint', 'pyls2']
+            \'python':['prospector']
+            \}
             \}
 let g:ale_python_pyls_use_global = 1
 
