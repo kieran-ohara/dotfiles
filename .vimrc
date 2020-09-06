@@ -438,6 +438,8 @@ let g:ale_sign_warning = ""
 let g:ale_linters={
             \'python':['prospector']
             \}
+let g:ale_fixers = {
+            \'python': ['black']
             \}
 let g:ale_python_pyls_use_global = 1
 
