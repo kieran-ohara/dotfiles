@@ -23,7 +23,6 @@ abbreviate maek make
 abbreviate naivation navigation
 abbreviate poeple people
 abbreviate ramparts RAMPARTS
-abbreviate rpm RPM
 abbreviate spome some
 abbreviate teh the
 abbreviate toolsehd toolshed
