@@ -241,6 +241,9 @@ nnoremap <leader>j :call Jid()<CR>
 " NV
 nnoremap <leader>n :NV<CR>
 
+" Dash
+nnoremap <leader>d :Dash<CR>
+
 " }}}
 " Functions. {{{
 
