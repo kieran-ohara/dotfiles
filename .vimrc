@@ -207,6 +207,7 @@ nnoremap <leader>gx :GV<CR>
 " Dispatch
 nnoremap <leader>df :Focus make<space>
 nnoremap <leader>dr :Focus!<CR>
+nnoremap <leader>ds :Start<CR>
 
 " Test
 nnoremap <leader>tt :TestNearest<CR>
