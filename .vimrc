@@ -3,7 +3,6 @@
 call plug#begin('~/.vim/bundle')
 
 Plug 'AndrewRadev/sideways.vim'
-Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
