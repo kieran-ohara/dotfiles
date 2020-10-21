@@ -2,6 +2,11 @@
 " Plug {{{
 call plug#begin('~/.vim/bundle')
 
+# Syntax plugins.
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'chr4/nginx.vim'
+Plug 'ekalinin/Dockerfile.vim'
+
 Plug 'AndrewRadev/sideways.vim'
 Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/indentLine'
@@ -26,7 +31,6 @@ Plug 'mbbill/undotree'
 Plug 'mileszs/ack.vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rizzatti/dash.vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'sodapopcan/vim-twiggy'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-abolish'
