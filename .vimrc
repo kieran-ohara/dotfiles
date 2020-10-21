@@ -2,7 +2,6 @@
 " Plug {{{
 call plug#begin('~/.vim/bundle')
 
-Plug '/usr/local/opt/fzf'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'SirVer/ultisnips'
@@ -17,6 +16,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/gv.vim'
