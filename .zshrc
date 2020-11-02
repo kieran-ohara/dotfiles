@@ -200,3 +200,6 @@ SPACESHIP_DOCKER_CONTEXT_SUFFIX=""
 SPACESHIP_JOBS_COLOR="yellow"
 SPACESHIP_VENV_SYMBOL="🐍 "
 # }}}
+# {{{ My stuff
+source ~/src/secrets/sh/functions/functions.sh
+# }}}
