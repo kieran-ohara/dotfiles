@@ -239,6 +239,13 @@ nnoremap <leader>n :NV<CR>
 " Dash
 nnoremap <leader>d :Dash<CR>
 
+" TmuxNavigator being a wee bitch.
+let g:tmux_navigator_no_mappings = 1
+nnoremap  <C-h> :TmuxNavigateLeft<cr>
+nnoremap <C-l> :TmuxNavigateRight<cr>
+nnoremap <C-k> :TmuxNavigateUp<cr>
+nnoremap <C-j> :TmuxNavigateDown<cr>
+
 " }}}
 " Functions. {{{
 
