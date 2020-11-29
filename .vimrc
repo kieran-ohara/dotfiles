@@ -448,6 +448,7 @@ let g:ale_fixers = {
             \'python': ['black']
             \}
 let g:ale_python_pyls_use_global = 1
+let g:ale_python_black_options = '-l 79'
 
 highlight! link ALEWarningSign ALEWarning
 
