@@ -11,6 +11,7 @@ Plug 'AndrewRadev/sideways.vim'
 Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
+Plug 'aklt/plantuml-syntax'
 Plug 'alok/notational-fzf-vim'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'christoomey/vim-tmux-navigator'
@@ -468,5 +469,8 @@ let g:nv_search_paths = ['/Volumes/GoogleDrive/My\ Drive/Notes', './docs']
 
 " Try omnifunc, path and fallback to <c-p>
 let g:SuperTabDefaultCompletionType = "context"
+
+" Do not overwrite makefile.
+let plantuml_set_makeprg=0
 
 " }}}
