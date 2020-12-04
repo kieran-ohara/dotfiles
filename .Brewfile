@@ -123,6 +123,7 @@ brew 'macvim', args: [ 'env-std', 'with-override-system-vim', 'with-python@2' ]
 brew 'makefile2graph'
 brew 'mas'
 brew 'mitmproxy'
+brew 'mkcert'
 brew 'mycli'
 brew 'mypy'
 brew 'ncdu'
