@@ -124,6 +124,10 @@ source /usr/local/etc/bash_completion.d/asdf.bash
 # Direnv.
 eval "$(direnv hook zsh)"
 
+# Enable kubectl completion.
+source <(kubectl completion zsh)
+alias k=kubectl
+
 # FZF.
 source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
