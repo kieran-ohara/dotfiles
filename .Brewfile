@@ -119,7 +119,6 @@ brew 'libffi'
 brew 'libyaml'
 brew 'lolcat'
 brew 'luarocks'
-brew 'macvim', args: [ 'env-std', 'with-override-system-vim', 'with-python@2' ]
 brew 'makefile2graph'
 brew 'mas'
 brew 'mitmproxy'
@@ -149,5 +148,7 @@ brew 'tmux'
 brew 'trash'
 brew 'tree'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
+brew 'unrar'
+brew 'vim', args: ['enable-gui']
 brew 'wget'
 brew 'zsh'
