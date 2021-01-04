@@ -66,7 +66,9 @@ alias grp="git remote prune origin"
 alias gs="git remote prune origin && git-sweep cleanup"
 alias gsl="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
 alias gx="gitx"
+alias h="http"
 alias hidefiles="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app"
+alias hps="httpie_profile_set"
 alias j="open_src_dir"
 alias ji="jira"
 alias l="ls -lFh"
@@ -402,4 +404,10 @@ function resume_vim_session {
 
     vim -S ~/.vim/sessions/session
 }
+
+function httpie_profile_set {
+    export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/$1
+}
+
+compdef '_files -/ -W ~/src/dotfiles/httpie-profiles' httpie_profile_set
 # }}}
