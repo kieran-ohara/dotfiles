@@ -1,6 +1,6 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
 # ZSH Settings. {{{
-export PATH="/usr/local/bin:$(go env GOPATH)/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/fzf/bin:/Applications/MySQLWorkbench.app/Contents/MacOS:/Library/TeX/texbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/fzf/bin:/Applications/MySQLWorkbench.app/Contents/MacOS:/Library/TeX/texbin"
 
 # Quicker compinit.
 autoload -Uz compinit
