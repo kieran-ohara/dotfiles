@@ -203,4 +203,7 @@ SPACESHIP_VENV_SYMBOL="🐍 "
 # }}}
 # {{{ My stuff
 source ~/src/secrets/sh/functions/functions.sh
+
+export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/default
+
 # }}}
