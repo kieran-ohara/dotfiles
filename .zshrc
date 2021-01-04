@@ -177,9 +177,6 @@ function fzf_git_checkout() {
 # Hub.
 eval $(hub alias -s)
 
-# AWS Vault
-eval "$(aws-vault --completion-script-zsh)"
-
 # Spaceship
 SPACESHIP_PROMPT_ORDER=(
     user
