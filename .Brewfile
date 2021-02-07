@@ -74,6 +74,7 @@ mas 'WhatsApp Desktop', id: 1147396723
 brew 'amazon-ecs-cli'
 brew 'ansible'
 brew 'antibody'
+brew 'argocd'
 brew 'asciinema'
 brew 'asdf'
 brew 'aws-iam-authenticator'

@@ -128,6 +128,8 @@ eval "$(direnv hook zsh)"
 source <(kubectl completion zsh)
 alias k=kubectl
 
+# Enable argocd autocompletion
+source <(argocd completion zsh)
 # FZF.
 source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
