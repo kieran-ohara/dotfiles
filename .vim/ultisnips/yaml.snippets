@@ -66,6 +66,21 @@ spec:
           - key: SPECIAL_LEVEL
             path: keys
 endsnippet
+
+snippet kservice
+apiVersion: v1
+kind: Service
+metadata:
+  app.kubernetes.io/name: ${1:name}
+spec:
+  selector:
+    app: ${2:selector}
+  ports:
+    - protocol: ${3:TCP}
+      port: ${4:80}
+      targetPort: ${5:80}
+endsnippet
+
 snippet knamespace
 apiVersion: v1
 kind: Namespace
