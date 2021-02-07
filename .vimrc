@@ -125,33 +125,41 @@ nnoremap <space>te :tabedit<space>
 
 " UI
 
-set lazyredraw           " Execute macros faster
-set mouse=a              " Enable mouse
-set timeoutlen=1000      " Stop taking so long!
+set lazyredraw          " Execute macros faster
+set mouse=a             " Enable mouse
+set timeoutlen=1000     " Stop taking so long!
 set ttimeoutlen=0
 
-set shortmess=a          " Use shorter labels in UI
-set shortmess+=I         " Don't give the Vim intro message
-set shortmess+=T         " Trunacte messages in middle if too long for command line
-set number               " Display line numbers
-set completeopt=menuone  " Show pop up menu even when there's one match
+set shortmess=a         " Use shorter labels in UI
+set shortmess+=I        " Don't give the Vim intro message
+set shortmess+=T        " Trunacte messages in middle if too long for command line
+set number              " Display line numbers
+set completeopt=menuone " Show pop up menu even when there's one match
 set completeopt+=preview
-set scrolloff=5          " Show context around cursor when scrolling
-set splitbelow           " Natural split
+set scrolloff=5         " Show context around cursor when scrolling
+set splitbelow          " Natural split
 set splitright
-set cmdheight=2          " More command-line lines to help avoid 'hit-enter' prompts
-set noshowmode           " Dont show mode—status bars do this for us
+set cmdheight=2         " More command-line lines to help avoid 'hit-enter' prompts
+set noshowmode          " Dont show mode—status bars do this for us
 
-set termguicolors
+set title               " Set terminal title to filename
+
+set termguicolors       " Use truecolorcolors
+
+set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
+
+" When italics mode is entered/exited.
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
+
+" When insert|replace mode is entered|exited, change the cursor shape.
+" (see help termcap-cursor-shape)
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
 let challenger_deep_terminal_italics = 1
 colorscheme challenger_deep
-
-set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
 nnoremap <leader>l :setlocal list!<CR>
 nnoremap <leader>o :noh<CR>
