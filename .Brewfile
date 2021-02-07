@@ -57,10 +57,10 @@ cask 'weka'
 cask 'zoomus'
 cask 'zotero'
 cask 'zsa-wally'
+cask 'daisydisk'
 
 mas 'Apple Configurator 2', id: 1037126344
 mas 'Boom 3D', id: 1233048948
-mas 'DaisyDisk', id: 411643860
 mas 'Kaleidoscope', id: 587512244
 mas 'Medis', id: 1063631769
 mas 'MindNode', id: 1289197285
