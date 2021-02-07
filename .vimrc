@@ -4,6 +4,7 @@ call plug#begin('~/.vim/bundle')
 
 " Syntax plugins.
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'ekalinin/Dockerfile.vim'
 
