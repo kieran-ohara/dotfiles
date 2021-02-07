@@ -151,3 +151,4 @@ brew 'unrar'
 brew 'vim', args: ['enable-gui']
 brew 'wget'
 brew 'zsh'
+brew 'terraform'

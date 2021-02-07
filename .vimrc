@@ -7,6 +7,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'hashivim/vim-terraform'
 
 Plug 'AndrewRadev/sideways.vim'
 Plug 'SirVer/ultisnips'
