@@ -153,3 +153,4 @@ brew 'vim', args: ['enable-gui']
 brew 'wget'
 brew 'zsh'
 brew 'terraform'
+brew 'doctl'
