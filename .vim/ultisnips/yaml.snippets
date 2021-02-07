@@ -22,6 +22,50 @@ endsnippet
 snippet href
 [${1:TEXT}|${2:HREF}]
 endsnippet
+
+snippet kdeployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  app.kubernetes.io/name: ${1:deployment_name}
+spec:
+  replicas: ${3:1}
+  selector:
+    matchLabels:
+	  app: ${4:app}
+  template:
+      ${5:podspec}
+endsnippet
+
+snippet kpodspec
+metadata:
+  labels:
+    app: ${1:app}
+spec:
+  containers:
+    - name: app
+      image: ${2:image}
+      ports:
+        - containerPort: ${3:80}
+      volumeMounts:
+        - mountPath: /test-ebs
+          name: test-volume
+      env:
+        - name: SPECIAL_LEVEL_KEY
+          valueFrom:
+            configMapKeyRef:
+              name: config-map
+              key: SPECIAL_LEVEL
+  volumes:
+    - name: test-volume
+      hostPath: /var/somewhere
+    - name: config-map
+      configMap:
+        name: config-map
+        items:
+          - key: SPECIAL_LEVEL
+            path: keys
+endsnippet
 snippet knamespace
 apiVersion: v1
 kind: Namespace
