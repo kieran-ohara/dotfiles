@@ -92,7 +92,6 @@ alias t="terraform"
 alias v="resume_vim_session"
 alias w="nice_which"
 alias x="exit"
-alias rm="trash -vF"
 
 # }}}
 # AWS. {{{
