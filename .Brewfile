@@ -14,6 +14,7 @@ cask 'appzapper'
 cask 'basictex'
 cask 'browserstacklocal'
 cask 'charles'
+cask 'daisydisk'
 cask 'dash'
 cask 'docker'
 cask 'drawio'
@@ -57,7 +58,6 @@ cask 'weka'
 cask 'zoomus'
 cask 'zotero'
 cask 'zsa-wally'
-cask 'daisydisk'
 
 mas 'Apple Configurator 2', id: 1037126344
 mas 'Boom 3D', id: 1233048948
