@@ -231,6 +231,7 @@ nnoremap <leader>aiw :execute('Ag ' . expand("<cword>"))<CR>
 " Docker tools
 nnoremap <leader>dkp :DockerToolsToggle<CR>
 nnoremap <leader>kk :!kubectl apply -f %<CR>
+nnoremap <leader>kd :!kubectl delete -f %<CR>
 
 " Escape terminal with normal <esc> key
 tnoremap <Esc> <C-\><C-n>
