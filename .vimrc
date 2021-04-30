@@ -71,21 +71,21 @@ set directory=~/.vim/swapfiles//
 set backupdir=~/.vim/backupfiles//
 set undodir=~/.vim/undodir
 set undofile
-set clipboard=unnamed              " Yank to * register (system clipboard)
-set autoread                       " Auto read/write
+set clipboard=unnamed " Yank to * register (system clipboard)
+set autoread          " Auto read/write
 set autowrite
-set confirm                        " Raise dialogue instead of failing q/qa/w command
-set fixendofline                   " Restore EOL if missing
+set confirm           " Raise dialogue instead of failing q/qa/w command
+set fixendofline      " Restore EOL if missing
 set nobinary
-set spelllang=en_gb                " English dictionary
+set spelllang=en_gb   " English dictionary
 
-set tabstop=4                      " Use 4 spaces to indent
-set shiftwidth=4
-set softtabstop=4
+set tabstop=4         " Use 4 spaces to indent
+set shiftwidth=0      " No. of spaces to use for each indent (<<, >>, etc).
+set softtabstop=0     " What the tabs 'feel' like (0 = feature off)
 set expandtab
-set autoindent                     " Use C-style indenting or indent from previous line
+set autoindent        " Use C-style indenting or indent from previous line
 set smartindent
-set formatoptions+=j               " Join comments
+set formatoptions+=j  " Join comments
 
 function! ZoteroCite()
   let api_call = 'http://localhost:23119/better-bibtex/cayw?format=pandoc&brackets=1'
@@ -380,8 +380,9 @@ augroup vimrc
     autocmd BufWinLeave * call clearmatches()
 
     " Override tabs/spaces.
-    autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-    autocmd FileType javascript,json,javascript.jsx,ruby,yaml,typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+    autocmd FileType python setlocal tabstop=4 expandtab
+    autocmd FileType json,ruby,yaml setlocal tabstop=2 expandtab
+    autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal tabstop=2 expandtab
     autocmd FileType yaml let b:indentLine_enabled = 1
 
 
