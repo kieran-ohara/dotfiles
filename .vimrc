@@ -354,6 +354,7 @@ augroup vimrc
     autocmd BufNewFile,BufRead *.conf setfiletype nginx
     autocmd BufNewFile,BufRead *.hbs setfiletype html
     autocmd BufNewFile,BufRead *.json.dist setfiletype json
+    autocmd BufNewFile,BufRead *.jsx setfiletype typescriptreact
     autocmd BufNewFile,BufRead *.mustache setfiletype html
     autocmd BufNewFile,BufRead *.puml setfiletype plantuml
     autocmd BufNewFile,BufRead *.spv setfiletype dockerfile
