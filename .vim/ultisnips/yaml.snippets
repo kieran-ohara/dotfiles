@@ -27,7 +27,9 @@ snippet kdeployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  app.kubernetes.io/name: ${1:deployment_name}
+  name: name
+  labels:
+    app.kubernetes.io/name: ${1:deployment_name}
 spec:
   replicas: ${3:1}
   selector:
@@ -52,10 +54,25 @@ spec:
           name: test-volume
       env:
         - name: SPECIAL_LEVEL_KEY
+		  valueFrom:
+		    secretKeyRef:
+			  name: secret
+			  key: key
+        - name: SPECIAL_LEVEL_KEY
           valueFrom:
             configMapKeyRef:
               name: config-map
               key: SPECIAL_LEVEL
+	  resources:
+	    limits:
+		  cpu: 0.1
+		  memory: "10Mi"
+		requests:
+		  cpu: 0.1
+		  memory: "10Mi"
+	  securityContext:
+	    readOnlyRootFilesystem: true
+		runAsNonRoot: true
   volumes:
     - name: test-volume
       hostPath: /var/somewhere
@@ -71,14 +88,30 @@ snippet kservice
 apiVersion: v1
 kind: Service
 metadata:
-  app.kubernetes.io/name: ${1:name}
+  name: ${1:name}
+  labels:
+    app.kubernetes.io/name: ${2:name}
 spec:
   selector:
-    app: ${2:selector}
+    app: ${3:selector}
   ports:
-    - protocol: ${3:TCP}
-      port: ${4:80}
-      targetPort: ${5:80}
+    - protocol: ${4:TCP}
+      port: ${5:80}
+      targetPort: ${6:80}
+endsnippet
+
+snippet ktls
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ${1:secret-name}
+type: kubernetes.io/tls
+data:
+  # the data is abbreviated in this example
+  tls.crt: |
+        ${2:crt}
+  tls.key: |
+        ${3:key}
 endsnippet
 
 snippet knamespace
@@ -86,4 +119,31 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: ${1:namespace}
+endsnippet
+
+snippet kingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-resource-backend
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+    - hosts:
+        - example.com
+      secretName: example.com-tls
+  rules:
+    - host: example.com
+	  http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+				name: servicename
+                port:
+				  number: 80
 endsnippet
