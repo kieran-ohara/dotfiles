@@ -8,7 +8,7 @@ Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'hashivim/vim-terraform'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'AndrewRadev/sideways.vim'
 Plug 'SirVer/ultisnips'
