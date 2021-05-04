@@ -130,6 +130,10 @@ alias k=kubectl
 
 # Enable argocd autocompletion
 source <(argocd completion zsh)
+
+# Enable gcloud autocompletion.
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+
 # FZF.
 source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
