@@ -90,8 +90,6 @@ zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-syntax-highlighting
-
-denysdovhan/spaceship-prompt spaceship
 EOF
 
 # Antibody glob means we have to do this manually: https://github.com/getantibody/antibody/blob/master/bundle/zsh.go#L35
@@ -188,24 +186,7 @@ function fzf_git_checkout() {
 eval $(hub alias -s)
 
 # Spaceship
-SPACESHIP_PROMPT_ORDER=(
-    user
-    dir
-    host
-    git
-    aws
-    docker_context
-    venv
-    line_sep
-    vi_mode
-    jobs
-    char
-)
-SPACESHIP_AWS_SYMBOL="☁️  "
-SPACESHIP_DOCKER_CONTEXT_PREFIX="🐳 "
-SPACESHIP_DOCKER_CONTEXT_SUFFIX=""
-SPACESHIP_JOBS_COLOR="yellow"
-SPACESHIP_VENV_SYMBOL="🐍 "
+eval "$(starship init zsh)"
 # }}}
 # {{{ My stuff
 source ~/src/secrets/sh/functions/functions.sh
