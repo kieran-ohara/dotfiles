@@ -138,7 +138,7 @@ set shortmess+=T        " Trunacte messages in middle if too long for command li
 set number              " Display line numbers
 set completeopt=menuone " Show pop up menu even when there's one match
 set completeopt+=preview
-set scrolloff=5         " Show context around cursor when scrolling
+set scrolloff=0         " Show context around cursor when scrolling
 set splitbelow          " Natural split
 set splitright
 set cmdheight=2         " More command-line lines to help avoid 'hit-enter' prompts
