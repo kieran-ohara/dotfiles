@@ -25,3 +25,5 @@ defaults write com.apple.dock no-bouncing -bool TRUE
 chflags nohidden ~/Library
 
 sudo killall Dock Finder SystemUIServer
+
+defaults write io.alacritty CGFontRenderingFontSmoothingDisabled 1

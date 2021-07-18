@@ -30,7 +30,6 @@ cask 'hammerspoon'
 cask 'imageoptim'
 cask 'impactor'
 cask 'intellij-idea-ce'
-cask 'iterm2'
 cask 'java'
 cask 'karabiner-elements'
 cask 'keystore-explorer'
@@ -73,6 +72,7 @@ mas 'Trello' , id: 1278508951
 mas 'Tweetbot', id: 557168941
 mas 'WhatsApp Desktop', id: 1147396723
 
+brew 'alacritty'
 brew 'amazon-ecs-cli'
 brew 'ansible'
 brew 'antibody'
