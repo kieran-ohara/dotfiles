@@ -205,7 +205,7 @@ nnoremap <leader>gdtc :Git difftool --cached<CR><CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>ggl :Gpull<CR>
-nnoremap <leader>ggp :Gpush<CR>
+nnoremap <leader>ggp :Git push<CR>
 nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gpr :Hub pull-request -r benwainwright,andrewscfc,lalkhum,cefn,saralk<CR>
 nnoremap <leader>gst :Gstatus<CR>
