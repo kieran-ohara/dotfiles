@@ -8,6 +8,7 @@ tap 'wagoodman/dive'
 
 cask '1password'
 cask '1password-cli'
+cask 'alacritty'
 cask 'alfred'
 cask 'anki'
 cask 'appzapper'
@@ -72,7 +73,6 @@ mas 'Trello' , id: 1278508951
 mas 'Tweetbot', id: 557168941
 mas 'WhatsApp Desktop', id: 1147396723
 
-brew 'alacritty'
 brew 'amazon-ecs-cli'
 brew 'ansible'
 brew 'antibody'
