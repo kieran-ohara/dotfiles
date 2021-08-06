@@ -397,13 +397,16 @@ function nice_which {
 compdef nice_which=which
 
 function resume_vim_session {
-    if [[ $(ps -ax | grep -v grep | grep vim) ]]; then
-        echo "Vim is already running in another window."
+    FILENAME=~/src/$1/Session.vim
+    echo $FILENAME
+    if [ -f $FILENAME ]; then
+        vim -S $FILENAME;
         return
     fi
-
-    vim -S ~/.vim/sessions/session
+    vim -c "cd ~/src/$1 | :Obsess"
 }
+
+compdef '_files -/ -W ~/src' resume_vim_session
 
 function httpie_profile_set {
     export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/$1
