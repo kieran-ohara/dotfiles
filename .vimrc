@@ -15,7 +15,6 @@ Plug 'AndrewRadev/sideways.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'alok/notational-fzf-vim'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'direnv/direnv.vim'
 Plug 'edkolev/tmuxline.vim'
@@ -30,6 +29,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'neovim/nvim-lspconfig'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rizzatti/dash.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -129,25 +129,6 @@ augroup end
 
 " }}}
 " Code Editing {{{
-function! LanguageClientMaps()
-    if has_key(g:LanguageClient_serverCommands, &filetype)
-        nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<cr>
-        nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
-        nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
-        nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
-        nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
-        nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
-        nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
-        nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
-        nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
-        nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
-    endif
-endfunction
-augroup lcmaps
-    autocmd!
-    autocmd FileType * call LanguageClientMaps()
-augroup end
-
 augroup fileTypes
     autocmd!
 
@@ -174,7 +155,6 @@ augroup fileTypes
 
     autocmd FileType json setlocal formatprg='jq'
 
-    autocmd FileType typescript setlocal omnifunc=LanguageClient#complete
 augroup end
 
 " Dont conceal quotes when viewing JSON
@@ -199,17 +179,6 @@ let g:ale_python_pyls_use_global = 1
 let g:ale_python_black_options = '-l 79'
 
 highlight! link ALEWarningSign ALEWarning
-
-" Language Client
-let g:LanguageClient_serverCommands = {
-            \ 'javascript': ['tcp://127.0.0.1:2089'],
-            \ 'javascriptreact': ['tcp://127.0.0.1:2089'],
-            \ 'python': ['tcp://127.0.0.1:2090'],
-            \ 'typescript': ['tcp://127.0.0.1:2089'],
-            \ 'typescriptreact': ['tcp://127.0.0.1:2089'],
-            \}
-" This fucks with the quickfix list.
-let g:LanguageClient_diagnosticsEnable=0
 
 " Test strategy is Dispatch
 let test#ruby#use_binstubs = 0
