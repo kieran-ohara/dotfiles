@@ -87,12 +87,6 @@ set autoindent        " Use C-style indenting or indent from previous line
 set smartindent
 set formatoptions+=j  " Join comments
 
-function! ZoteroCite()
-  let api_call = 'http://localhost:23119/better-bibtex/cayw?format=pandoc&brackets=1'
-  let ref = system('curl -s '.shellescape(api_call))
-  return ref
-endfunction
-
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-k> <plug>(fzf-complete-word)
 nmap F <Plug>Sneak_F
@@ -105,7 +99,6 @@ nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <leader>sh :SidewaysLeft<CR>
 nnoremap <leader>sl :SidewaysRight<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>zo "=ZoteroCite()<CR>p
 nnoremap Q @q
 nnoremap Y y$
 vnoremap <leader>s :sort u<CR>
