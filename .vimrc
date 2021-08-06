@@ -12,7 +12,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'aklt/plantuml-syntax'
 
 Plug 'AndrewRadev/sideways.vim'
-Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'alok/notational-fzf-vim'
@@ -128,15 +127,6 @@ augroup stripspaces
     autocmd InsertEnter * match ErrorMsg /\s\+\%#\@<!$/
     autocmd BufWinEnter,InsertLeave * match ErrorMsg /\s\+$/
 augroup end
-
-" Set the Ultisnips directory
-let g:UltiSnipsSnippetsDir='~/.vim/ultisnips'
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-" Set the Ultisnips edit window to split vertically
-let g:UltiSnipsEditSplit="vertical"
 
 " }}}
 " Code Editing {{{
@@ -346,7 +336,6 @@ let g:gitgutter_sign_removed = emoji#for('fire')
 nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
 nnoremap <leader>va :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran/plugin/abbreviations.vim<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
-nnoremap <leader>vu :UltiSnipsEdit<CR>
 
 " Git shortcuts
 nnoremap <leader>gb :Gblame<CR>
