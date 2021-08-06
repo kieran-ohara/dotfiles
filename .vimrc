@@ -85,7 +85,6 @@ set smartindent       " Same as above but recognises C-like syntax (brackets et 
 set formatoptions+=j  " Remove comment character when joining comments
 
 set backspace=indent,eol,start
-set complete=i
 
 set nrformats-=octal  " CTRL-A does not mess with numbers starting with 0
 
