@@ -400,10 +400,10 @@ function resume_vim_session {
     FILENAME=~/src/$1/Session.vim
     echo $FILENAME
     if [ -f $FILENAME ]; then
-        vim -S $FILENAME;
+        nvim -S $FILENAME;
         return
     fi
-    vim -c "cd ~/src/$1 | :Obsess"
+    nvim -c "cd ~/src/$1 | :Obsess"
 }
 
 compdef '_files -/ -W ~/src' resume_vim_session
