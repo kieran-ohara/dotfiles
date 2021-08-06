@@ -30,6 +30,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rizzatti/dash.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -231,40 +232,40 @@ augroup bufferroot
 augroup end
 " }}}
 " UI {{{
-set laststatus=2        " Always show status bar
-set noshowmode          " Dont show mode—status bars do this for us
-set ruler               " We are using airline so this has no effect
+set laststatus=2                          " Always show status bar
+set noshowmode                            " Dont show mode—status bars do this for us
+set ruler                                 " We are using airline so this has no effect
 
-set wildmenu            " Shows bar above command line on wildchar press
+set wildmenu                              " Shows bar above command line on wildchar press
 set wildchar=<Tab>
-set cmdheight=2         " More command-line lines to help avoid 'hit-enter' prompts
-set confirm             " Use confirmation instead of failng commands
+set cmdheight=2                           " More command-line lines to help avoid 'hit-enter' prompts
+set confirm                               " Use confirmation instead of failng commands
 
-set lazyredraw          " Execute macros faster
-set timeoutlen=1000     " Stop taking so long!
+set lazyredraw                            " Execute macros faster
+set timeoutlen=1000                       " Stop taking so long!
 set ttimeoutlen=0
 
-set shortmess=a         " Use shorter labels in UI
-set shortmess+=I        " Don't give the Vim intro message
-set shortmess+=T        " Trunacte messages in middle if too long for command line
+set shortmess=a                           " Use shorter labels in UI
+set shortmess+=I                          " Don't give the Vim intro message
+set shortmess+=T                          " Trunacte messages in middle if too long for command line
 
-set number              " Display line numbers
+set number                                " Display line numbers
 
-set completeopt=menuone " Show pop up menu even when there's one match
+set completeopt=menuone,noinsert,noselect " Show pop up menu even when there's one match
 set completeopt+=preview
 
 set nowrap
-set sidescrolloff=5     " How many characters to keep on screen when nowrap
-set scrolloff=0         " Show context around cursor when scrolling
+set sidescrolloff=5                       " How many characters to keep on screen when nowrap
+set scrolloff=0                           " Show context around cursor when scrolling
 
-set splitbelow          " More Natural splitting
+set splitbelow                            " More Natural splitting
 set splitright
 
-set title               " Set terminal title to filename
+set title                                 " Set terminal title to filename
 
 set listchars=tab:>\ ,space:-,trail:-,extends:>,precedes:<,nbsp:+,eol:$
 
-set termguicolors       " Use truecolorcolors
+set termguicolors                         " Use truecolorcolors
 
 " When italics mode is entered/exited.
 let &t_ZH="\e[3m"
