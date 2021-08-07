@@ -1,5 +1,11 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline:
 " Plugins {{{
+
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 call plug#begin('~/.vim/bundle')
 
 " Syntax plugins.
@@ -29,8 +35,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+Plug 'neovim/nvim-lspconfig', Cond(has('nvim'))
+Plug 'nvim-lua/completion-nvim', Cond(has('nvim'))
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rizzatti/dash.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
