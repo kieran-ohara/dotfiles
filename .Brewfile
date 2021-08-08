@@ -28,6 +28,7 @@ cask 'font-hack-nerd-font'
 cask 'gas-mask'
 cask 'google-drive-file-stream'
 cask 'hammerspoon'
+cask 'homebrew/cask-drivers/zsa-wally'
 cask 'imageoptim'
 cask 'impactor'
 cask 'intellij-idea-ce'
@@ -59,7 +60,6 @@ cask 'visual-studio-code'
 cask 'weka'
 cask 'zoomus'
 cask 'zotero'
-cask 'zsa-wally'
 
 mas 'Apple Configurator 2', id: 1037126344
 mas 'Boom 3D', id: 1233048948
