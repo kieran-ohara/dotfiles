@@ -1,6 +1,7 @@
 abbreviate ADded Added
 abbreviate ADding Adding
 abbreviate UPdating Updating
+abbreviate UPdate Update
 abbreviate Updateing Updating
 abbreviate acheive achieve
 abbreviate adding Adding
