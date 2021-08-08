@@ -6,6 +6,7 @@ window:
   dynamic_padding: true
   padding:
     y: 22
+    x: 16
 
 font:
   size: 14.0
