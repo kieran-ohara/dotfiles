@@ -27,7 +27,7 @@ Plug 'nvim-telescope/telescope.nvim', Cond(has('nvim'))
 
 " Colour schemes
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'folke/tokyonight.nvim', Cond(has('nvim'),{ 'branch': 'main' })
 
 Plug 'AndrewRadev/sideways.vim'
 Plug 'Yggdroot/indentLine'
@@ -302,7 +302,12 @@ let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 let challenger_deep_terminal_italics = 1
-colorscheme tokyonight
+if (has('nvim'))
+    colorscheme tokyonight
+endif
+if (!has('nvim'))
+    colorscheme challenger_deep
+endif
 
 nnoremap <leader>l :setlocal list!<CR>
 
