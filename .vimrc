@@ -69,7 +69,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
+Plug 'w0rp/ale', Cond(!has('nvim'))
 Plug 'wellle/targets.vim'
 Plug '~/.vim/bundle/vim-kieran'
 

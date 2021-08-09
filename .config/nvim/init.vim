@@ -3,9 +3,6 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 lua << EOF
-require'lspconfig'.tsserver.setup{}
-require'lspsaga'.init_lsp_saga()
-
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {},
     incremental_selection = {
@@ -21,6 +18,7 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 luafile ~/.config/nvim/initlua.lua
+luafile ~/.config/nvim/lsp.lua
 
 nnoremap <silent>K :Lspsaga hover_doc<CR>
 nnoremap <silent> gp :Lspsaga preview_definition<CR>
