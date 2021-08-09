@@ -43,7 +43,6 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab', Cond(!has('nvim'))
 Plug 'janko-m/vim-test'
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/vim-emoji'
 Plug 'justinmk/vim-dirvish'
 Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
@@ -332,7 +331,7 @@ let g:airline_theme="challenger_deep"
 
 let g:tmuxline_powerline_separators=0
 
-let g:gitgutter_sign_removed = emoji#for('fire')
+let g:gitgutter_sign_removed = ""
 " }}}
 " Mappings {{{
 
