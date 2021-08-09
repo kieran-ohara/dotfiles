@@ -2,21 +2,6 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = {},
-    incremental_selection = {
-        enable = true;
-    },
-    indent = {
-        enable = true,
-    },
-    highlight = {
-        enable = true,
-    },
-}
-EOF
-
 luafile ~/.config/nvim/initlua.lua
 luafile ~/.config/nvim/lsp.lua
 

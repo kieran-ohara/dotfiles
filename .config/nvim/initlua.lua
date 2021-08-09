@@ -75,6 +75,18 @@ neorg_callbacks.on_event("core.keybinds.events.enable_keybinds", function(_, key
 }, { silent = true, noremap = true })
 end)
 
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = {},
+    incremental_selection = {
+        enable = true;
+    },
+    indent = {
+        enable = true,
+    },
+    highlight = {
+        enable = true,
+    },
+}
 require "nvim-treesitter.configs".setup {
   playground = {
     enable = false,
