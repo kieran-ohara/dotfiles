@@ -29,6 +29,7 @@ require'compe'.setup {
     omni = false;
     nvim_lsp = true;
     nvim_lua = true;
+    neorg = true;
   };
 }
 
