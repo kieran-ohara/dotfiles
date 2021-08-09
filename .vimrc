@@ -17,6 +17,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'maxmellon/vim-jsx-pretty', Cond(!has('nvim'))
 Plug 'aklt/plantuml-syntax'
 Plug 'nvim-treesitter/nvim-treesitter', Cond(has('nvim'), { 'branch': '0.5-compat'})
+Plug 'nvim-treesitter/playground', Cond(0)
 
 " Pickers
 Plug 'junegunn/fzf', Cond(!has('nvim'))
