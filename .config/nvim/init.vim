@@ -3,7 +3,7 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 lua << EOF
-require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.tsserver.setup{}
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {},
     highlight = {
@@ -11,6 +11,8 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 EOF
+
+luafile ~/.config/nvim/initlua.lua
 
 function! LanguageClientMaps()
     nnoremap <buffer> K :lua vim.lsp.buf.hover()<CR>
@@ -26,3 +28,9 @@ augroup lcmaps
     autocmd!
     autocmd FileType javascript,javascriptreact,typescript,typescriptreact call LanguageClientMaps()
 augroup end
+
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })

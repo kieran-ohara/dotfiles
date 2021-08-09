@@ -36,7 +36,7 @@ Plug 'alok/notational-fzf-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'direnv/direnv.vim'
 Plug 'edkolev/tmuxline.vim'
-Plug 'ervandew/supertab'
+Plug 'ervandew/supertab', Cond(!has('nvim'))
 Plug 'janko-m/vim-test'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
@@ -45,8 +45,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'hrsh7th/nvim-compe', Cond(has('nvim'))
 Plug 'neovim/nvim-lspconfig', Cond(has('nvim'))
-Plug 'nvim-lua/completion-nvim', Cond(has('nvim'))
 
 
 Plug 'rizzatti/dash.vim'
@@ -236,7 +236,9 @@ endif
 nnoremap <leader>aiw :execute('Rg ' . expand("<cword>"))<CR>
 
 " Try omnifunc, path and fallback to <c-p>
-let g:SuperTabDefaultCompletionType = "context"
+if !has('nvim')
+    let g:SuperTabDefaultCompletionType = "context"
+endif
 
 function! OpenSwps()
     execute "!open ~/.vim/swapfiles/"
