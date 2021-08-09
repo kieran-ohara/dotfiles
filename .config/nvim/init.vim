@@ -20,3 +20,7 @@ inoremap <silent><expr> <CR> compe#confirm('<CR>')
 inoremap <silent><expr> <C-e> compe#close('<C-e>')
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+sign define LspDiagnosticsSignError text= texthl=LspDiagnosticsSignError linehl= numhl=
+sign define LspDiagnosticsSignWarning text= texthl=LspDiagnosticsSignWarning linehl= numhl=
+sign define LspDiagnosticsSignHint text= texthl=LspDiagnosticsSignHint linehl= numhl=
