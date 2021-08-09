@@ -14,7 +14,7 @@ Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'hashivim/vim-terraform'
-Plug 'maxmellon/vim-jsx-pretty'
+Plug 'maxmellon/vim-jsx-pretty', Cond(!has('nvim'))
 Plug 'aklt/plantuml-syntax'
 
 Plug 'AndrewRadev/sideways.vim'
@@ -37,6 +37,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'neovim/nvim-lspconfig', Cond(has('nvim'))
 Plug 'nvim-lua/completion-nvim', Cond(has('nvim'))
+Plug 'nvim-treesitter/nvim-treesitter', Cond(has('nvim'), { 'branch': '0.5-compat'})
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rizzatti/dash.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'

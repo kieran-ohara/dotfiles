@@ -17,7 +17,7 @@ $(tree-sitter):
 $(tsrepo)/src/parser.c: $(tree-sitter) $(tsrepo)
 	cd $(tsrepo) && $< generate
 
-parser.so: $(tsrepo)/src/parser.c $(tsrepo)/src/scanner.c
+javascript.so: $(tsrepo)/src/parser.c $(tsrepo)/src/scanner.c
 	# -o: output,
 	# -I: add to search path for include files
 	# -lstdc++: link stdc++ library

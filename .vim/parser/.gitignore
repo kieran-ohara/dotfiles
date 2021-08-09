@@ -1,5 +1,4 @@
+*.so
 node_modules
 package-lock.json
-package.json
-parser.so
 tree-sitter-javascript

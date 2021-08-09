@@ -4,6 +4,12 @@ source ~/.vimrc
 
 lua << EOF
 require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = {},
+    highlight = {
+        enable = true,
+    },
+}
 EOF
 
 function! LanguageClientMaps()
