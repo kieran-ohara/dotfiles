@@ -16,6 +16,14 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'maxmellon/vim-jsx-pretty', Cond(!has('nvim'))
 Plug 'aklt/plantuml-syntax'
+Plug 'nvim-treesitter/nvim-treesitter', Cond(has('nvim'), { 'branch': '0.5-compat'})
+
+" Pickers
+Plug 'junegunn/fzf', Cond(!has('nvim'))
+Plug 'junegunn/fzf.vim', Cond(!has('nvim'))
+Plug 'nvim-lua/popup.nvim' , Cond(has('nvim'))
+Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
+Plug 'nvim-telescope/telescope.nvim', Cond(has('nvim'))
 
 Plug 'AndrewRadev/sideways.vim'
 Plug 'Yggdroot/indentLine'
@@ -26,8 +34,6 @@ Plug 'direnv/direnv.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'janko-m/vim-test'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
 Plug 'justinmk/vim-dirvish'
@@ -37,7 +43,6 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'neovim/nvim-lspconfig', Cond(has('nvim'))
 Plug 'nvim-lua/completion-nvim', Cond(has('nvim'))
-Plug 'nvim-treesitter/nvim-treesitter', Cond(has('nvim'), { 'branch': '0.5-compat'})
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rizzatti/dash.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -210,10 +215,16 @@ nmap t <Plug>Sneak_t
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <expr> n  'Nn'[v:searchforward]
 
-nnoremap <C-p> :FZF<CR>
-nnoremap <leader>ff :GFiles<CR>
-nnoremap <leader>fh :History:<CR>
-nnoremap <leader>fu :Buffers<CR>
+if !has('nvim')
+    nnoremap <C-p> :FZF<CR>
+    nnoremap <leader>ff :GFiles<CR>
+    nnoremap <leader>fh :History:<CR>
+    nnoremap <leader>fu :Buffers<CR>
+endif
+if has('nvim')
+    nnoremap <C-p> :Telescope find_files<CR>
+    nnoremap <leader>fu :Telescope buffers<CR>
+endif
 
 " Ag in word
 nnoremap <leader>aiw :execute('Rg ' . expand("<cword>"))<CR>
