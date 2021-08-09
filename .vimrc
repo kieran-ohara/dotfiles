@@ -25,6 +25,10 @@ Plug 'nvim-lua/popup.nvim' , Cond(has('nvim'))
 Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
 Plug 'nvim-telescope/telescope.nvim', Cond(has('nvim'))
 
+" Colour schemes
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
 Plug 'AndrewRadev/sideways.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
@@ -43,7 +47,8 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'neovim/nvim-lspconfig', Cond(has('nvim'))
 Plug 'nvim-lua/completion-nvim', Cond(has('nvim'))
-Plug 'rafi/awesome-vim-colorschemes'
+
+
 Plug 'rizzatti/dash.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-abolish'
@@ -296,7 +301,7 @@ let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 let challenger_deep_terminal_italics = 1
-colorscheme challenger_deep
+colorscheme tokyonight
 
 nnoremap <leader>l :setlocal list!<CR>
 
