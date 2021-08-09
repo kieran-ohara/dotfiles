@@ -228,6 +228,7 @@ if !has('nvim')
 endif
 if has('nvim')
     nnoremap <C-p> :Telescope find_files<CR>
+    nnoremap <leader>ff :Telescope git_files<CR>
     nnoremap <leader>fu :Telescope buffers<CR>
 endif
 
