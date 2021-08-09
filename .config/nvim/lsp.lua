@@ -23,7 +23,7 @@ local eslint_d = {
 
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.efm.setup{
-    filetypes = {'javascriptreact'},
+    filetypes = { 'javascript', 'javascriptreact'},
     init_options = {
         documentFormatting = true,
         documentSymbol = false,
@@ -34,6 +34,7 @@ require'lspconfig'.efm.setup{
     settings = {
         rootMarkers = { 'package.json', '.git/' },
         languages = {
+            javascript = { eslint_d },
             javascriptreact = { eslint_d },
         },
     },
