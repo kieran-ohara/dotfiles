@@ -29,10 +29,13 @@ Plug 'nvim-telescope/telescope.nvim', Cond(has('nvim'))
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'folke/tokyonight.nvim', Cond(has('nvim'),{ 'branch': 'main' })
 
+" orgmode
+Plug 'vhyrro/neorg', Cond(has('nvim'))
+Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
+
 Plug 'AndrewRadev/sideways.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
-Plug 'alok/notational-fzf-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'direnv/direnv.vim'
 Plug 'edkolev/tmuxline.vim'
@@ -47,7 +50,6 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'hrsh7th/nvim-compe', Cond(has('nvim'))
 Plug 'neovim/nvim-lspconfig', Cond(has('nvim'))
-
 
 Plug 'rizzatti/dash.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -374,4 +376,3 @@ nnoremap <leader>n :NV<CR>
 nnoremap <leader>d :Dash<CR>
 
 " }}}
-let g:nv_search_paths = ['/Volumes/GoogleDrive/My\ Drive/Notes']
