@@ -6,6 +6,12 @@ lua << EOF
 require'lspconfig'.tsserver.setup{}
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {},
+    incremental_selection = {
+        enable = true;
+    },
+    indent = {
+        enable = true,
+    },
     highlight = {
         enable = true,
     },
