@@ -1,29 +1,41 @@
-.DEFAULT_GOAL := parser.so
+.DEFAULT_GOAL := message
+message:
+	# Please specify a *.so target.
 
-tsrepo = tree-sitter-javascript
+# Allow using variable expansion in pre requisites.
+.SECONDEXPANSION:
+
+# Prevent make from deleting git repos that are created as intermediate files.
+.PRECIOUS: src/%.git
+
+# The repo + tag to build. Default to Javascript Treesitter.
+REPO := tree-sitter/tree-sitter-javascript.git
+TAG := v0.19.0
+
+# Quick access to tree-sitter CLI.
 tree-sitter = node_modules/.bin/tree-sitter
 
-$(tsrepo):
+src/%.git:
 	git clone \
-		--branch v0.19.0 \
+		--branch $(TAG) \
 		--depth 1 \
-		https://github.com/tree-sitter/tree-sitter-javascript.git \
-		$(tsrepo)
-	rm -rf $@/.git
+		https://github.com/$*.git \
+		$@
+	rm -rf $./.git
 
 $(tree-sitter):
 	npm install tree-sitter-cli
 
-$(tsrepo)/src/parser.c: $(tree-sitter) $(tsrepo)
-	cd $(tsrepo) && $< generate
+%/src/parser.c: $(tree-sitter) $$*
+	cd $* && ../../../$< generate
 
-javascript.so: $(tsrepo)/src/parser.c $(tsrepo)/src/scanner.c
-	# -o: output,
+src/$(REPO)/src/scanner.c:
+	touch $@
+
+%.so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c
+	# -o: output
 	# -I: add to search path for include files
 	# -lstdc++: link stdc++ library
 	# -Os: optimisation
 	# -shared: create shared object (.so)
-	cc -o $@ -I./$(tsrepo)/src -lstdc++ -Os -shared $^
-
-# File already exists in repo.
-.PHONY: $(tsrepo)/src/scanner.c
+	cc -o $@ -I./src/$(REPO)/src -lstdc++ -Os -shared $^
