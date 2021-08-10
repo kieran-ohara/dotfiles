@@ -206,6 +206,8 @@ let test#ruby#use_binstubs = 0
 let test#strategy = "dispatch"
 " }}}
 " Navigation {{{
+set mouse=a
+
 set ignorecase " Case insensitive search unless there's a mix
 set smartcase
 set hlsearch   " Highlight previous/current matches as they are typed
