@@ -92,3 +92,4 @@ require "nvim-treesitter.configs".setup {
     enable = false,
   }
 }
+require'lspkind'.init{}
