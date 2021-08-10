@@ -36,7 +36,8 @@ Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
 
 Plug 'AndrewRadev/sideways.vim'
 Plug 'Yggdroot/indentLine'
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', Cond(!has('nvim'))
+Plug 'lewis6991/gitsigns.nvim', Cond(has('nvim'))
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'direnv/direnv.vim'
 Plug 'edkolev/tmuxline.vim'
