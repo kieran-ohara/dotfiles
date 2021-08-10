@@ -68,8 +68,9 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline', Cond(!has('nvim'))
+Plug 'vim-airline/vim-airline-themes', Cond(!has('nvim'))
+Plug 'itchyny/lightline.vim', Cond(has('nvim'))
 Plug 'w0rp/ale', Cond(!has('nvim'))
 Plug 'wellle/targets.vim'
 Plug '~/.vim/bundle/vim-kieran'
@@ -320,18 +321,25 @@ endif
 
 nnoremap <leader>l :setlocal list!<CR>
 
-let g:airline#extensions#hunks#non_zero_only = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_extensions=['ale','branch', 'hunks']
-let g:airline_powerline_fonts=0
-let g:airline_symbols = get(g:, 'airline_symbols', {})
-let g:airline_symbols.branch = ''
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.readonly = ''
-let g:airline_detect_spelllang=0
-let g:airline_theme="challenger_deep"
+if !has('nvim')
+    let g:airline#extensions#hunks#non_zero_only = 1
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#formatter = 'default'
+    let g:airline_extensions=['ale','branch', 'hunks']
+    let g:airline_powerline_fonts=0
+    let g:airline_symbols = get(g:, 'airline_symbols', {})
+    let g:airline_symbols.branch = ''
+    let g:airline_symbols.linenr = '☰'
+    let g:airline_symbols.maxlinenr = ''
+    let g:airline_symbols.readonly = ''
+    let g:airline_detect_spelllang=0
+    let g:airline_theme="challenger_deep"
+endif
+
+if has('nvim')
+    let g:lightline = {}
+    let g:lightline.colorscheme = 'tokyonight'
+endif
 
 let g:tmuxline_powerline_separators=0
 
