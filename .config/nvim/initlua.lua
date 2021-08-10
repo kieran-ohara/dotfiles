@@ -93,3 +93,6 @@ require "nvim-treesitter.configs".setup {
   }
 }
 require'lspkind'.init{}
+require'trouble'.setup{
+    use_lsp_diagnostic_signs = true
+}
