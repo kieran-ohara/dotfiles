@@ -232,13 +232,11 @@ nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <expr> n  'Nn'[v:searchforward]
 
 if !has('nvim')
-    nnoremap <C-p> :FZF<CR>
     nnoremap <leader>ff :GFiles<CR>
     nnoremap <leader>fh :History:<CR>
     nnoremap <leader>fu :Buffers<CR>
 endif
 if has('nvim')
-    nnoremap <C-p> :Telescope find_files<CR>
     nnoremap <leader>ff :Telescope git_files<CR>
     nnoremap <leader>fu :Telescope buffers<CR>
 endif
