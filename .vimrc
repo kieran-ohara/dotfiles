@@ -25,6 +25,7 @@ Plug 'junegunn/fzf.vim', Cond(!has('nvim'))
 Plug 'nvim-lua/popup.nvim' , Cond(has('nvim'))
 Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
 Plug 'nvim-telescope/telescope.nvim', Cond(has('nvim'))
+Plug 'kyazdani42/nvim-tree.lua', Cond(has('nvim'))
 
 " Colour schemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -77,7 +78,8 @@ Plug 'wellle/targets.vim'
 Plug '~/.vim/bundle/vim-kieran'
 
 " Has to be loaded at the end
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons', Cond(!has('nvim'))
+Plug 'kyazdani42/nvim-web-devicons', Cond(has('nvim'))
 call plug#end()
 " }}}
 " Text Editing {{{
