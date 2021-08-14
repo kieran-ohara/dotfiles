@@ -26,7 +26,7 @@ zstyle ':completion:*' menu select=1
 export AWS_SDK_LOAD_CONFIG=true
 
 # Use vim where possible.
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Needed to sign Git commits with GPG.
 export GPG_TTY=$(tty)
