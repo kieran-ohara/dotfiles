@@ -104,7 +104,7 @@ require'nvim-treesitter.configs'.setup {
             enable = true,
             lookahead = true,
             keymaps = {
-                -- ["af"] = "@function.outer",
+                ["af"] = "@function.outer",
                 ["if"] = "@function.inner",
                 -- ["aa"] = "@parameter.outer", it does not work!
                 ["ia"] = "@parameter.inner",
