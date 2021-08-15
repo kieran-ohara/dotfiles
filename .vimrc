@@ -17,6 +17,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'maxmellon/vim-jsx-pretty', Cond(!has('nvim'))
 Plug 'aklt/plantuml-syntax'
 Plug 'nvim-treesitter/nvim-treesitter', Cond(has('nvim'), { 'branch': '0.5-compat'})
+Plug 'nvim-treesitter/nvim-treesitter-textobjects', Cond(has('nvim'), { 'branch': '0.5-compat'})
 Plug 'nvim-treesitter/playground', Cond(0)
 
 " Pickers
@@ -35,7 +36,7 @@ Plug 'folke/tokyonight.nvim', Cond(has('nvim'),{ 'branch': 'main' })
 Plug 'vhyrro/neorg', Cond(has('nvim'))
 Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
 
-Plug 'AndrewRadev/sideways.vim'
+Plug 'AndrewRadev/sideways.vim', Cond(!has('nvim'))
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter', Cond(!has('nvim'))
 Plug 'lewis6991/gitsigns.nvim', Cond(has('nvim'))
@@ -74,7 +75,7 @@ Plug 'vim-airline/vim-airline', Cond(!has('nvim'))
 Plug 'vim-airline/vim-airline-themes', Cond(!has('nvim'))
 Plug 'itchyny/lightline.vim', Cond(has('nvim'))
 Plug 'w0rp/ale', Cond(!has('nvim'))
-Plug 'wellle/targets.vim'
+Plug 'wellle/targets.vim', Cond(!has('nvim'))
 Plug '~/.vim/bundle/vim-kieran'
 
 " Has to be loaded at the end
@@ -127,8 +128,11 @@ nnoremap <space>bd :bdelete<CR>
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 nmap <space>sa :saveas %%
 
-nnoremap <leader>sh :SidewaysLeft<CR>
-nnoremap <leader>sl :SidewaysRight<CR>
+if (!has('nvim'))
+    nnoremap <leader>sh :SidewaysLeft<CR>
+    nnoremap <leader>sl :SidewaysRight<CR>
+endif
+
 nnoremap <leader>w :w<CR>
 
 nmap ga <Plug>(EasyAlign)
