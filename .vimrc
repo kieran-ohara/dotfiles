@@ -78,6 +78,9 @@ Plug 'w0rp/ale', Cond(!has('nvim'))
 Plug 'wellle/targets.vim', Cond(!has('nvim'))
 Plug '~/.vim/bundle/vim-kieran'
 
+Plug 'hrsh7th/vim-vsnip', Cond(has('nvim'))
+Plug 'hrsh7th/vim-vsnip-integ', Cond(has('nvim'))
+
 " Has to be loaded at the end
 Plug 'ryanoasis/vim-devicons', Cond(!has('nvim'))
 Plug 'kyazdani42/nvim-web-devicons', Cond(has('nvim'))
@@ -157,6 +160,12 @@ augroup stripspaces
     autocmd InsertEnter * match ErrorMsg /\s\+\%#\@<!$/
     autocmd BufWinEnter,InsertLeave * match ErrorMsg /\s\+$/
 augroup end
+
+let g:vsnip_filetypes = {}
+let g:vsnip_filetypes.javascript = ['javascript']
+let g:vsnip_filetypes.typescript = ['typescript']
+let g:vsnip_filetypes.javascriptreact = ['javascript']
+let g:vsnip_filetypes.typescriptreact = ['typescript']
 
 " }}}
 " Code Editing {{{

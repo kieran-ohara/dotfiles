@@ -21,9 +21,14 @@ local eslint_d = {
     formatStdin = true,
 }
 
-require'lspconfig'.tsserver.setup{}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+require'lspconfig'.tsserver.setup{
+    capabilities = capabilities
+}
+
 require'lspconfig'.efm.setup{
-    filetypes = { 'javascript', 'javascriptreact'},
+    filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'},
     init_options = {
         documentFormatting = true,
         documentSymbol = false,
