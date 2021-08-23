@@ -8,7 +8,7 @@ cmd + alt + ctrl + shift - l : open -a Lens
 cmd + alt + ctrl + shift - o : open -a Firefox
 cmd + alt + ctrl + shift - p : open -a Spotify
 cmd + alt + ctrl + shift - r : open -a OmniFocus
-cmd + alt + ctrl + shift - w : open -a 1Password 7
+cmd + alt + ctrl + shift - w : open -a "1Password 7"
 cmd + alt + ctrl + shift - x : open -a Tower
 cmd + alt + ctrl + shift - z : open -a zoom.us
 
