@@ -71,8 +71,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline', Cond(!has('nvim'))
-Plug 'vim-airline/vim-airline-themes', Cond(!has('nvim'))
 Plug 'itchyny/lightline.vim', Cond(has('nvim'))
 Plug 'w0rp/ale', Cond(!has('nvim'))
 Plug 'wellle/targets.vim', Cond(!has('nvim'))
@@ -334,21 +332,6 @@ if (!has('nvim'))
 endif
 
 nnoremap <leader>l :setlocal list!<CR>
-
-if !has('nvim')
-    let g:airline#extensions#hunks#non_zero_only = 1
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#tabline#formatter = 'default'
-    let g:airline_extensions=['ale','branch', 'hunks']
-    let g:airline_powerline_fonts=0
-    let g:airline_symbols = get(g:, 'airline_symbols', {})
-    let g:airline_symbols.branch = ''
-    let g:airline_symbols.linenr = '☰'
-    let g:airline_symbols.maxlinenr = ''
-    let g:airline_symbols.readonly = ''
-    let g:airline_detect_spelllang=0
-    let g:airline_theme="challenger_deep"
-endif
 
 if has('nvim')
     let g:lightline = {}
