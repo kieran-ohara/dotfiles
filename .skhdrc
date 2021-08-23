@@ -5,6 +5,7 @@ cmd + alt + ctrl + shift - f : open -a Finder
 cmd + alt + ctrl + shift - i : open -a Alacritty
 cmd + alt + ctrl + shift - k : open -a Kaleidoscope
 cmd + alt + ctrl + shift - l : open -a Lens
+cmd + alt + ctrl + shift - m : open -a MindNode
 cmd + alt + ctrl + shift - o : open -a Firefox
 cmd + alt + ctrl + shift - p : open -a Spotify
 cmd + alt + ctrl + shift - r : open -a OmniFocus
