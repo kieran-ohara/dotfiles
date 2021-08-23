@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.Brewfile: .Brewfile
+    ~/.alacritty.yml: .alacritty.yml
+    ~/.config/karabiner: .config/karabiner
+    ~/.skhdrc: .skhdrc
+    ~/.tmux.conf: .tmux.conf
+    ~/.tmux: .tmux
+    ~/.vim: .vim
+    ~/.vimrc: .vimrc
+    ~/.zshrc: .zshrc
+
+- create:
+  - ~/.config
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
