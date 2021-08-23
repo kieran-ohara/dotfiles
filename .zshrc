@@ -63,6 +63,13 @@ setopt hist_ignore_space
 autoload -U colors
 colors
 # }}}
+# zim-fw. {{{
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  # Update static initialization script if it does not exist or it's outdated, before sourcing it
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+source ${ZIM_HOME}/init.zsh
+# }}}
 # Antibody. {{{
 source <(antibody init)
 antibody bundle << EOF
@@ -180,10 +187,4 @@ source ~/src/secrets/sh/functions/functions.sh
 export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/default
 
 # }}}
-
-if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
-  # Update static initialization script if it does not exist or it's outdated, before sourcing it
-  source ${ZIM_HOME}/zimfw.zsh init -q
-fi
-source ${ZIM_HOME}/init.zsh
 
