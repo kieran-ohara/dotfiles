@@ -13,6 +13,10 @@
     ~/.tmux: .tmux
     ~/.vim: .vim
     ~/.vimrc: .vimrc
+    ~/.zim: .zim
+    ~/.zimrc: .zimrc
+    ~/.zlogin: .zlogin
+    ~/.zshenv: .zshenv
     ~/.zshrc: .zshrc
 
 - create:

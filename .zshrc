@@ -1,25 +1,14 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
 # ZSH Settings. {{{
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/fzf/bin:/Applications/MySQLWorkbench.app/Contents/MacOS:/Library/TeX/texbin:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin"
-
-# Quicker compinit.
-autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-    compinit
-else
-    compinit -C
-fi
 
 # Autocomplete options.
-unsetopt menu_complete
-unsetopt flowcontrol
+# unsetopt menu_complete
+# unsetopt flowcontrol
 
-setopt always_to_end
-setopt auto_menu
-setopt complete_in_word
+# setopt auto_menu
+# setopt complete_in_word
 
-zstyle ':completion:*' completer _complete _approximate
-zstyle ':completion:*' list-colors ''
+# Tabbing through the menu highlights the selection.
 zstyle ':completion:*' menu select=1
 
 # For AWS ECR credential provider
@@ -80,16 +69,13 @@ antibody bundle << EOF
 robbyrussell/oh-my-zsh path:plugins/fancy-ctrl-z
 robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:plugins/tmux
-robbyrussell/oh-my-zsh path:plugins/vi-mode
 
 b4b4r07/enhancd
 djui/alias-tips
 docker/cli path:contrib/completion/zsh
 seebi/dircolors-solarized
-zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
-zsh-users/zsh-syntax-highlighting
 EOF
 
 # Antibody glob means we have to do this manually: https://github.com/getantibody/antibody/blob/master/bundle/zsh.go#L35
@@ -194,3 +180,10 @@ source ~/src/secrets/sh/functions/functions.sh
 export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/default
 
 # }}}
+
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  # Update static initialization script if it does not exist or it's outdated, before sourcing it
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+source ${ZIM_HOME}/init.zsh
+
