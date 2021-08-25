@@ -13,11 +13,9 @@ source ~/src/dotfiles/zsh-settings/shared-settings.zsh
 # Tabbing through the menu highlights the selection.
 zstyle ':completion:*' menu select=1
 
-# Needed to sign Git commits with GPG.
-export GPG_TTY=$(tty)
 
-# Shorter key timeout
-export KEYTIMEOUT=1
+# # Needed to sign Git commits with GPG.
+# export GPG_TTY=$(tty)
 
 # }}}
 # zim-fw. {{{
