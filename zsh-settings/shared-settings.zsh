@@ -36,3 +36,18 @@ setopt HIST_IGNORE_SPACE
 # Don't execute the command directly upon history expansion.
 # setopt HIST_VERIFY
 # }}}
+# My things. {{{
+
+# Autoload tells ZSH to look for a function definition in a file.
+#
+# They are defined once and live in the shell's memory, therefore have side effects.
+# Note they are not called, so it is up to us to call the function inside the file after defining it.
+#
+# Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
+
+fpath=($fpath ~/src/dotfiles/zsh-functions)
+autoload -Uz opensrcdir
+# }}}
+#  Aliases. {{{
+alias j=opensrcdir
+#  }}}
