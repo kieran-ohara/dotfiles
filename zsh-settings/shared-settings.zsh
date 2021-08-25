@@ -1,5 +1,7 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
 
+# Use vim where possible.
+export EDITOR='vim'
 # Allow changing directories without `cd`.
 setopt AUTOCD
 # History {{{

@@ -13,9 +13,6 @@ source ~/src/dotfiles/zsh-settings/shared-settings.zsh
 # Tabbing through the menu highlights the selection.
 zstyle ':completion:*' menu select=1
 
-# Use vim where possible.
-export EDITOR='nvim'
-
 # Needed to sign Git commits with GPG.
 export GPG_TTY=$(tty)
 

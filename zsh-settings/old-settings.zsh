@@ -1,7 +1,7 @@
 # Load colours into shell variables https://github.com/ninrod/dotfiles/issues/134
 autoload -U colors
 colors
-
+export EDITOR='nvim'
 # Antibody. {{{
 source <(antibody init)
 antibody bundle << EOF
