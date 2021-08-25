@@ -227,33 +227,6 @@ function aws_assume_role_personal {
     }'
 }
 # }}}
-# Cosmos. {{{
-function cosmos_ssh {
-    COSMOS_SERVICE=$1
-    COSMOS_ENV=$2
-    INSTANCES=`cosmos instances ${COSMOS_SERVICE} ${COSMOS_ENV}`
-    INSTANCE=`echo $INSTANCES | awk '{print $1}' | tail -n 1`
-    IP=`echo $INSTANCES | awk '{print $5}' | tail -n 1`
-
-    local cached_cosmos_hosts="$HOME/.ssh/cosmos_hosts"
-
-    if [ ! -e $cached_cosmos_hosts ]; then
-        touch $cached_cosmos_hosts
-    fi
-
-    if ! grep -Fxq "$INSTANCE" $cached_cosmos_hosts; then
-        cosmos login --limit 1 $COSMOS_SERVICE $COSMOS_ENV
-        echo "${INSTANCE}" >> $cached_cosmos_hosts
-    fi
-
-    ssh kieran_bamforth@$IP,eu-west-1
-}
-function _cosmos_ssh_completions {
-    local services=(cd-jenkins navigation toolshed search-ingest bikeshed)
-    _arguments "1:service:($(echo ${services[@]}))" "2:environment:(int test live)"
-}
-compdef _cosmos_ssh_completions cosmos_ssh
-# }}}
 # Docker. {{{
 function docker_env {
     docker inspect $1 | jq '.[].Config.Env'
