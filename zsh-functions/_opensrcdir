@@ -1,0 +1,2 @@
+#compdef opensrcdir
+_files -/ -W ~/src
