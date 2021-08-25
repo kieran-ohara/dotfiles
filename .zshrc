@@ -1,4 +1,5 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
+source ~/src/dotfiles/zsh-settings/shared-settings.zsh
 # ZSH Settings. {{{
 
 # Autocomplete options.
@@ -20,34 +21,6 @@ export GPG_TTY=$(tty)
 # Shorter key timeout
 export KEYTIMEOUT=1
 
-
-# History
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=$HISTSIZE
-
-# Allow changing directories without `cd`.
-setopt autocd
-# Dont overwrite history.
-setopt append_history
-# Also record time and duration of commands.
-setopt extended_history
-# Share history between multiple shells.
-setopt share_history
-# Clear duplicates when trimming internal hist.
-setopt hist_expire_dups_first
-# Dont display duplicates during searches.
-setopt hist_find_no_dups
-# Ignore consecutive duplicates.
-setopt hist_ignore_dups
-# Remember only one unique copy of the command.
-setopt hist_ignore_all_dups
-# Remove superfluous blanks.
-setopt hist_reduce_blanks
-# Omit older commands in favor of newer ones.
-setopt hist_save_no_dups
-# Ignore commands that start with space.
-setopt hist_ignore_space
 
 # Load colours into shell variables https://github.com/ninrod/dotfiles/issues/134
 autoload -U colors
