@@ -4,6 +4,8 @@
 export EDITOR='vim'
 # Allow changing directories without `cd`.
 setopt AUTOCD
+# Give Autosuggest a more readable colour.
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 # History {{{
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

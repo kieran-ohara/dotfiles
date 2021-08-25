@@ -35,8 +35,6 @@ bindkey -M vicmd -r ':'
 bindkey -M vicmd ':' vi-add-next
 # }}}
 # Plugins. {{{
-# Autosuggest.
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 
 # Enable JIRA autocompletion.
 source <(jira --completion-script-zsh)
