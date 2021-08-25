@@ -11,9 +11,6 @@
 # Tabbing through the menu highlights the selection.
 zstyle ':completion:*' menu select=1
 
-# For AWS ECR credential provider
-export AWS_SDK_LOAD_CONFIG=true
-
 # Use vim where possible.
 export EDITOR='nvim'
 
@@ -23,13 +20,6 @@ export GPG_TTY=$(tty)
 # Shorter key timeout
 export KEYTIMEOUT=1
 
-# Specify directories outside of $GOROOT that contains source for Go projects.
-# Can be a list.
-export GOPATH=$HOME/go
-
-# Set Cosmos Settings
-export COSMOS_CERT=/etc/pki/tls/certs/client.crt
-export COSMOS_CERT_KEY=/etc/pki/tls/private/client.key
 
 # History
 HISTFILE=~/.zsh_history
