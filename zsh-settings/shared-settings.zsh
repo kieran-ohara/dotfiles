@@ -53,4 +53,5 @@ export GPG_TTY=$(tty)
 # }}}
 #  Aliases. {{{
 alias j=opensrcdir
+alias g=git
 #  }}}
