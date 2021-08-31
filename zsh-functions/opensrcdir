@@ -6,7 +6,7 @@ opensrcdir() {
     fi
     if [ ! -d "$DIR" ]; then
         DIR=~/src/$(basename $1)
-        hub clone $1 $DIR
+        gh repo clone $1 $DIR
     fi
     cd $DIR
 }
