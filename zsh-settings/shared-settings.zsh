@@ -47,6 +47,9 @@ setopt HIST_IGNORE_SPACE
 
 fpath=($fpath ~/src/dotfiles/zsh-functions)
 autoload -Uz opensrcdir
+
+# Needed to sign Git commits with GPG.
+export GPG_TTY=$(tty)
 # }}}
 #  Aliases. {{{
 alias j=opensrcdir

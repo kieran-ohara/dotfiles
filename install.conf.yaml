@@ -18,6 +18,7 @@
     ~/.zlogin: .zlogin
     ~/.zshenv: .zshenv
     ~/.zshrc: .zshrc
+    ~/.gitconfig: .gitconfig
 
 - create:
   - ~/.config

@@ -3,9 +3,6 @@ autoload -U colors
 colors
 export EDITOR='nvim'
 
-# Needed to sign Git commits with GPG.
-export GPG_TTY=$(tty)
-
 # Shorter key timeout
 export KEYTIMEOUT=1
 # Antibody. {{{
