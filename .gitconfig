@@ -34,3 +34,6 @@
 	program = gpg
 [pull]
 	rebase = true
+[alias]
+    c = commit
+    p = push
