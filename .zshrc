@@ -4,6 +4,10 @@ source ~/src/dotfiles/zsh-settings/shared-settings.zsh
 # ZSH Settings. {{{
 
 # Autocomplete options.
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 # unsetopt menu_complete
 # unsetopt flowcontrol
 
@@ -12,7 +16,6 @@ source ~/src/dotfiles/zsh-settings/shared-settings.zsh
 
 # Tabbing through the menu highlights the selection.
 zstyle ':completion:*' menu select=1
-
 
 # # Needed to sign Git commits with GPG.
 # export GPG_TTY=$(tty)
@@ -25,5 +28,3 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
 fi
 source ${ZIM_HOME}/init.zsh
 # }}}
-
-
