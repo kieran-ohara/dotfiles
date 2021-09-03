@@ -1,0 +1,10 @@
+resumevimsession() {
+    FILENAME=~/src/$1/Session.vim
+    echo $FILENAME
+    if [ -f $FILENAME ]; then
+        nvim -S $FILENAME;
+        return
+    fi
+    nvim -c "cd ~/src/$1 | :Obsess"
+}
+

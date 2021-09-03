@@ -396,17 +396,6 @@ function nice_which {
 }
 compdef nice_which=which
 
-function resume_vim_session {
-    FILENAME=~/src/$1/Session.vim
-    echo $FILENAME
-    if [ -f $FILENAME ]; then
-        nvim -S $FILENAME;
-        return
-    fi
-    nvim -c "cd ~/src/$1 | :Obsess"
-}
-
-compdef '_files -/ -W ~/src' resume_vim_session
 
 function httpie_profile_set {
     export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/$1

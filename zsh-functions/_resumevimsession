@@ -1,0 +1,2 @@
+#compdef resumevimsession
+_files -/ -W ~/src

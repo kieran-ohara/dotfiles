@@ -8,6 +8,7 @@
     ~/.Brewfile: .Brewfile
     ~/.alacritty.yml: .alacritty.yml
     ~/.config/karabiner: .config/karabiner
+    ~/.config/nvim: .config/nvim
     ~/.skhdrc: .skhdrc
     ~/.tmux.conf: .tmux.conf
     ~/.tmux: .tmux
