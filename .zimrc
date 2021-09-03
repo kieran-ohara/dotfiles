@@ -4,6 +4,8 @@ zmodule jeffreytse/zsh-vi-mode
 # completion must be sourced after zsh-users/zsh-completions
 zmodule completion
 
+# Additional completion definitions for Zsh.
+zmodule zsh-users/zsh-completions
 # Fish-like autosuggestions for Zsh.
 zmodule zsh-users/zsh-autosuggestions
 
