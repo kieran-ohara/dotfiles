@@ -26,9 +26,7 @@ Plug 'folke/tokyonight.nvim', Cond(has('nvim'),{ 'branch': 'main' })
 Plug 'vhyrro/neorg', Cond(has('nvim'))
 Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
 
-Plug 'AndrewRadev/sideways.vim', Cond(!has('nvim'))
 Plug 'Yggdroot/indentLine'
-Plug 'airblade/vim-gitgutter', Cond(!has('nvim'))
 Plug 'lewis6991/gitsigns.nvim', Cond(has('nvim'))
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'direnv/direnv.vim'
@@ -47,7 +45,6 @@ Plug 'glepnir/lspsaga.nvim', Cond(has('nvim'))
 Plug 'onsails/lspkind-nvim', Cond(has('nvim'))
 Plug 'folke/trouble.nvim', Cond(has('nvim'))
 
-Plug 'rizzatti/dash.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -62,15 +59,12 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'itchyny/lightline.vim', Cond(has('nvim'))
-Plug 'w0rp/ale', Cond(!has('nvim'))
-Plug 'wellle/targets.vim', Cond(!has('nvim'))
 Plug '~/.vim/bundle/vim-kieran'
 
 Plug 'hrsh7th/vim-vsnip', Cond(has('nvim'))
 Plug 'hrsh7th/vim-vsnip-integ', Cond(has('nvim'))
 
 " Has to be loaded at the end
-Plug 'ryanoasis/vim-devicons', Cond(!has('nvim'))
 Plug 'kyazdani42/nvim-web-devicons', Cond(has('nvim'))
 call plug#end()
 " }}}
