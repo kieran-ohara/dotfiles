@@ -155,7 +155,7 @@ nnoremap <leader>gc :Gcommit -v -q<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>ggp :Git push<CR>
-nnoremap <leader>gst :Gstatus<CR>
+nnoremap <leader>gst :Git<CR>
 
 " Kube tools
 nnoremap <leader>kk :!kubectl apply -f %<CR>
