@@ -44,8 +44,6 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/trouble.nvim'
 
-Plug 'ervandew/supertab', Cond(0)
-
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-dispatch'
