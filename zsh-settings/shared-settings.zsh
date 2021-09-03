@@ -54,7 +54,10 @@ autoload -Uz vimpackage
 export GPG_TTY=$(tty)
 # }}}
 #  Aliases. {{{
-alias j=opensrcdir
+alias d='docker'
+alias dkp="docker ps -a"
+alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias g=git
+alias j=opensrcdir
 alias v=resumevimsession
 #  }}}
