@@ -1,0 +1,6 @@
+vimpackage() {
+    DIR=~/src/dotfiles/.vim/pack/packages/start/$(basename $1)
+    if [ ! -d "$DIR" ]; then
+        git submodule add https://github.com/$1 $DIR
+    fi
+}

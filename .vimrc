@@ -1,73 +1,4 @@
-" vim: set foldmethod=marker foldlevel=0 nomodeline:
-" Plugins {{{
-
-function! Cond(cond, ...)
-  let opts = get(a:000, 0, {})
-  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
-endfunction
-
-call plug#begin('~/.vim/bundle')
-
-" Syntax plugins.
-Plug 'nvim-treesitter/nvim-treesitter', Cond(has('nvim'), { 'branch': '0.5-compat'})
-Plug 'nvim-treesitter/nvim-treesitter-textobjects', Cond(has('nvim'), { 'branch': '0.5-compat'})
-Plug 'nvim-treesitter/playground', Cond(0)
-
-" Pickers
-Plug 'nvim-lua/popup.nvim' , Cond(has('nvim'))
-Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
-Plug 'nvim-telescope/telescope.nvim', Cond(has('nvim'))
-Plug 'kyazdani42/nvim-tree.lua', Cond(has('nvim'))
-
-" Colour schemes
-Plug 'folke/tokyonight.nvim', Cond(has('nvim'),{ 'branch': 'main' })
-
-" orgmode
-Plug 'vhyrro/neorg', Cond(has('nvim'))
-Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
-
-Plug 'Yggdroot/indentLine'
-Plug 'lewis6991/gitsigns.nvim', Cond(has('nvim'))
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'direnv/direnv.vim'
-Plug 'edkolev/tmuxline.vim'
-Plug 'ervandew/supertab', Cond(!has('nvim'))
-Plug 'janko-m/vim-test'
-Plug 'junegunn/vim-easy-align'
-Plug 'justinmk/vim-dirvish'
-Plug 'justinmk/vim-sneak'
-Plug 'kshenoy/vim-signature'
-Plug 'mattn/emmet-vim'
-Plug 'mbbill/undotree'
-Plug 'hrsh7th/nvim-compe', Cond(has('nvim'))
-Plug 'neovim/nvim-lspconfig', Cond(has('nvim'))
-Plug 'glepnir/lspsaga.nvim', Cond(has('nvim'))
-Plug 'onsails/lspkind-nvim', Cond(has('nvim'))
-Plug 'folke/trouble.nvim', Cond(has('nvim'))
-
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-obsession', Cond(has('nvim'))
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'itchyny/lightline.vim', Cond(has('nvim'))
-Plug '~/.vim/bundle/vim-kieran'
-
-Plug 'hrsh7th/vim-vsnip', Cond(has('nvim'))
-Plug 'hrsh7th/vim-vsnip-integ', Cond(has('nvim'))
-
-" Has to be loaded at the end
-Plug 'kyazdani42/nvim-web-devicons', Cond(has('nvim'))
-call plug#end()
-" }}}
+" vim: set foldmethod=marker foldlevel=0 nomodeline
 " Text Editing {{{
 set cdpath+=~/src
 set directory=~/.vim/swapfiles//
@@ -95,6 +26,8 @@ set smarttab          " Tab at front of line inserts blanks according to tabstop
 set autoindent        " Use indent from previous line
 set smartindent       " Same as above but recognises C-like syntax (brackets et al.)
 
+syntax enable
+
 set formatoptions+=j  " Remove comment character when joining comments
 
 set backspace=indent,eol,start
@@ -113,15 +46,8 @@ nnoremap <space>bd :bdelete<CR>
 cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 nmap <space>sa :saveas %%
 
-if (!has('nvim'))
-    nnoremap <leader>sh :SidewaysLeft<CR>
-    nnoremap <leader>sl :SidewaysRight<CR>
-endif
 
 nnoremap <leader>w :w<CR>
-
-nmap ga <Plug>(EasyAlign)
-vmap <Enter> <Plug>(EasyAlign)
 
 function! StripTrailingWhitespaces()
     "Preparation: save last search, and cursor position.
@@ -142,69 +68,6 @@ augroup stripspaces
     autocmd InsertEnter * match ErrorMsg /\s\+\%#\@<!$/
     autocmd BufWinEnter,InsertLeave * match ErrorMsg /\s\+$/
 augroup end
-
-let g:vsnip_filetypes = {}
-let g:vsnip_filetypes.javascript = ['javascript']
-let g:vsnip_filetypes.typescript = ['typescript']
-let g:vsnip_filetypes.javascriptreact = ['javascript']
-let g:vsnip_filetypes.typescriptreact = ['typescript']
-
-" }}}
-" Code Editing {{{
-augroup fileTypes
-    autocmd!
-
-    autocmd BufNewFile,BufRead *.conf setfiletype nginx
-    autocmd BufNewFile,BufRead *.jsx setfiletype typescriptreact
-    autocmd BufNewFile,BufRead *.puml setfiletype plantuml
-    autocmd BufNewFile,BufRead .Brewfile setfiletype ruby
-    autocmd BufNewFile,BufRead .env.* setfiletype sh
-    autocmd BufNewFile,BufRead .npmrc setfiletype dosini
-    autocmd BufNewFile,BufRead Dockerfile.* setfiletype dockerfile
-    autocmd BufNewFile,BufRead hub setfiletype yaml
-
-    autocmd BufWinLeave * call clearmatches()
-
-    " Override tabs/spaces.
-    autocmd FileType python setlocal tabstop=4 expandtab
-    autocmd FileType json,ruby,yaml setlocal tabstop=2 expandtab
-    autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal tabstop=2 expandtab
-    autocmd FileType yaml let b:indentLine_enabled = 1
-
-    autocmd FileType gitcommit,markdown,conf setlocal spell
-    autocmd FileType gitcommit,markdown,conf setlocal linebreak
-    autocmd FileType gitcommit,markdown,conf setlocal textwidth=80 colorcolumn=80
-
-    autocmd FileType json setlocal formatprg='jq'
-
-augroup end
-
-" Dont conceal quotes when viewing JSON
-let g:vim_json_syntax_conceal=0
-" Do not overwrite makefile.
-let plantuml_set_makeprg=0
-
-" Don't show indent lines by default.
-let g:indentLine_enabled = 0
-let g:indentLine_char_list = ['|', '¦', '┊']
-
-" ALE
-let g:ale_sign_error = ""
-let g:ale_sign_warning = ""
-let g:ale_linters={
-            \'python':['prospector']
-            \}
-let g:ale_fixers = {
-            \'python': ['black']
-            \}
-let g:ale_python_pyls_use_global = 1
-let g:ale_python_black_options = '-l 79'
-
-highlight! link ALEWarningSign ALEWarning
-
-" Test strategy is Dispatch
-let test#ruby#use_binstubs = 0
-let test#strategy = "dispatch"
 " }}}
 " Navigation {{{
 set mouse=a
@@ -226,35 +89,9 @@ nmap t <Plug>Sneak_t
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <expr> n  'Nn'[v:searchforward]
 
-if has('nvim')
-    nnoremap <leader>ff :Telescope git_files<CR>
-    nnoremap <leader>fu :Telescope buffers<CR>
-endif
-
-" Ag in word
-nnoremap <leader>aiw :execute('Rg ' . expand("<cword>"))<CR>
-
-" Try omnifunc, path and fallback to <c-p>
-if !has('nvim')
-    let g:SuperTabDefaultCompletionType = "context"
-endif
-
 function! OpenSwps()
     execute "!open ~/.vim/swapfiles/"
 endfunc
-
-function! SetBufferRootDir()
-    if getbufinfo('%')[0]['listed'] && filereadable(@%)
-        let l:root = fnamemodify(FugitiveGitDir(), ":h")
-        if isdirectory(l:root)
-            execute 'lcd ' . l:root
-        endif
-    endif
-endfunction
-augroup bufferroot
-    " When opening a buffer, set the root directory.
-    autocmd BufWinEnter * call SetBufferRootDir()
-augroup end
 " }}}
 " UI {{{
 set laststatus=2                          " Always show status bar
@@ -302,20 +139,8 @@ let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
-if (has('nvim'))
-    colorscheme tokyonight
-endif
 
 nnoremap <leader>l :setlocal list!<CR>
-
-if has('nvim')
-    let g:lightline = {}
-    let g:lightline.colorscheme = 'tokyonight'
-endif
-
-let g:tmuxline_powerline_separators=0
-
-let g:gitgutter_sign_removed = ""
 " }}}
 " Mappings {{{
 
@@ -332,17 +157,7 @@ nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>ggp :Git push<CR>
 nnoremap <leader>gst :Gstatus<CR>
 
-" Dispatch
-nnoremap <leader>df :Focus make<space>
-nnoremap <leader>dr :Focus!<CR>
-nnoremap <leader>ds :Start<CR>
-
-" Test
-nnoremap <leader>tt :TestNearest<CR>
-nnoremap <leader>tf :TestFile<CR>
-nnoremap <leader>tl :TestLast<CR>
-
-" Docker tools
+" Kube tools
 nnoremap <leader>kk :!kubectl apply -f %<CR>
 nnoremap <leader>kd :!kubectl delete -f %<CR>
 
@@ -353,11 +168,4 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 
 " Open current directory
 nnoremap <leader>fn :!open .<CR><CR>
-
-" NV
-nnoremap <leader>n :NV<CR>
-
-" Dash
-nnoremap <leader>d :Dash<CR>
-
 " }}}

@@ -48,6 +48,7 @@ setopt HIST_IGNORE_SPACE
 fpath=($fpath ~/src/dotfiles/zsh-functions)
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
+autoload -Uz vimpackage
 
 # Needed to sign Git commits with GPG.
 export GPG_TTY=$(tty)
