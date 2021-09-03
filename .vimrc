@@ -21,8 +21,6 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects', Cond(has('nvim'), { 'branch'
 Plug 'nvim-treesitter/playground', Cond(0)
 
 " Pickers
-Plug 'junegunn/fzf', Cond(!has('nvim'))
-Plug 'junegunn/fzf.vim', Cond(!has('nvim'))
 Plug 'nvim-lua/popup.nvim' , Cond(has('nvim'))
 Plug 'nvim-lua/plenary.nvim', Cond(has('nvim'))
 Plug 'nvim-telescope/telescope.nvim', Cond(has('nvim'))
@@ -241,11 +239,6 @@ nmap t <Plug>Sneak_t
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <expr> n  'Nn'[v:searchforward]
 
-if !has('nvim')
-    nnoremap <leader>ff :GFiles<CR>
-    nnoremap <leader>fh :History:<CR>
-    nnoremap <leader>fu :Buffers<CR>
-endif
 if has('nvim')
     nnoremap <leader>ff :Telescope git_files<CR>
     nnoremap <leader>fu :Telescope buffers<CR>
