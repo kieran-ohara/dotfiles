@@ -1,5 +1,5 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
+set runtimepath^=~/.vim
 let &packpath = &runtimepath
 source ~/.vimrc
 
@@ -10,7 +10,7 @@ function! Cond(cond, ...)
   return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
 endfunction
 
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.config/nvim/bundle')
 
 " Syntax plugins.
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -54,7 +54,6 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-speeddating'
 
-Plug '~/.vim/bundle/vim-kieran'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 

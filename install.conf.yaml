@@ -9,6 +9,7 @@
     ~/.alacritty.yml: .alacritty.yml
     ~/.config/karabiner: .config/karabiner
     ~/.config/nvim: .config/nvim
+    ~/.gitignore-global: .gitignore-global
     ~/.skhdrc: .skhdrc
     ~/.tmux.conf: .tmux.conf
     ~/.tmux: .tmux
@@ -19,7 +20,6 @@
     ~/.zlogin: .zlogin
     ~/.zshenv: .zshenv
     ~/.zshrc: .zshrc
-    ~/.gitconfig: .gitconfig
 
 - create:
   - ~/.config
