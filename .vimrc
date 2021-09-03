@@ -29,7 +29,6 @@ Plug 'nvim-telescope/telescope.nvim', Cond(has('nvim'))
 Plug 'kyazdani42/nvim-tree.lua', Cond(has('nvim'))
 
 " Colour schemes
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'folke/tokyonight.nvim', Cond(has('nvim'),{ 'branch': 'main' })
 
 " orgmode
@@ -325,10 +324,6 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 if (has('nvim'))
     colorscheme tokyonight
-endif
-if (!has('nvim'))
-    let challenger_deep_terminal_italics = 1
-    colorscheme challenger_deep
 endif
 
 nnoremap <leader>l :setlocal list!<CR>
