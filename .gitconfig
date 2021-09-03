@@ -35,5 +35,8 @@
 [pull]
 	rebase = true
 [alias]
+    a = add
     c = commit
+    co = checkout
     p = push
+    s = status
