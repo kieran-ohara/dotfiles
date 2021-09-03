@@ -32,3 +32,6 @@
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-unimpaired"]
 	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
+[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/undotree"]
+	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/undotree
+	url = https://github.com/mbbill/undotree

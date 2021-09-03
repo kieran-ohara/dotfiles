@@ -43,7 +43,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/trouble.nvim'
-Plug 'mbbill/undotree'
 
 Plug 'ervandew/supertab', Cond(0)
 
