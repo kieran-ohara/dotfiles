@@ -1,11 +1,14 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
-
 # Use vim where possible.
 export EDITOR='vim'
 # Allow changing directories without `cd`.
 setopt AUTOCD
 # Give Autosuggest a more readable colour.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
+# Needed to sign Git commits with GPG.
+export GPG_TTY=$(tty)
+# Set prompts
+PS1='%B%F{cyan}%~%f%b %% '
 # History {{{
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -36,7 +39,7 @@ setopt HIST_IGNORE_SPACE
 # Don't execute the command directly upon history expansion.
 # setopt HIST_VERIFY
 # }}}
-# My things. {{{
+# My functions. {{{
 
 # Autoload tells ZSH to look for a function definition in a file.
 #
@@ -49,13 +52,12 @@ fpath=($fpath ~/src/dotfiles/zsh-functions)
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
 autoload -Uz vimpackage
-
-# Needed to sign Git commits with GPG.
-export GPG_TTY=$(tty)
 # }}}
 #  Aliases. {{{
 alias d='docker'
+alias dkl="docker logs"
 alias dkp="docker ps -a"
+alias dkr="dk run"
 alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias g=git
 alias j=opensrcdir

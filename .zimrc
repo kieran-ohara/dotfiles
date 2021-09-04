@@ -1,5 +1,9 @@
 # Better vi-mode.
 zmodule jeffreytse/zsh-vi-mode
+
+# A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+# zmodule asciiship
+
 # Enables and configures smart and extensive tab completion.
 # completion must be sourced after zsh-users/zsh-completions
 zmodule completion
