@@ -49,9 +49,13 @@ setopt HIST_IGNORE_SPACE
 # Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
 
 fpath=($fpath ~/src/dotfiles/zsh-functions)
+autoload -Uz fancyctrlz
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
 autoload -Uz vimpackage
+
+zle -N fancyctrlz
+bindkey '^Z' fancyctrlz
 # }}}
 #  Aliases. {{{
 alias d='docker'
