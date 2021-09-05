@@ -66,4 +66,5 @@ alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker 
 alias g=git
 alias j=opensrcdir
 alias v=resumevimsession
+alias x=exit
 #  }}}
