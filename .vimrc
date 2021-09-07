@@ -151,7 +151,7 @@ nnoremap <leader>vs :source $MYVIMRC<CR>
 
 " Git shortcuts
 nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gc :Gcommit -v -q<CR>
+nnoremap <leader>gc :Git commit -v -q<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>ggp :Git push<CR>
