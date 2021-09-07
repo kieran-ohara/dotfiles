@@ -21,6 +21,7 @@ cask 'spotify'
 cask 'suspicious-package'
 cask 'tower'
 cask 'utm'
+cask 'whatsapp'
 cask 'zoom'
 cask 'zotero'
 
