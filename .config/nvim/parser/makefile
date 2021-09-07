@@ -12,9 +12,6 @@ message:
 REPO := tree-sitter/tree-sitter-javascript.git
 TAG := v0.19.0
 
-# Quick access to tree-sitter CLI.
-tree-sitter = node_modules/.bin/tree-sitter
-
 src/%.git:
 	git clone \
 		--branch $(TAG) \
@@ -23,16 +20,15 @@ src/%.git:
 		$@
 	rm -rf $./.git
 
-$(tree-sitter):
-	npm install tree-sitter-cli
 
-%/src/parser.c: $(tree-sitter) $$*
-	cd $* && ../../../$< generate
+%/src/parser.c:  $$*
+	cd $* && tree-sitter generate
 
 src/$(REPO)/src/scanner.c:
 	touch $@
 
 %.so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c
+# %.so: src/$(REPO)/src/scanner.c
 	# -o: output
 	# -I: add to search path for include files
 	# -lstdc++: link stdc++ library
