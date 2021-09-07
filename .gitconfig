@@ -40,6 +40,9 @@
     co = checkout
     gl = pull
     p = push
+    rb = rebase
+    rbi = rebase --interactive
+    rbim = rebase master --interactive
     s = status
     st = stash
     stp = stash pop
