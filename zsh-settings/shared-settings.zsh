@@ -9,6 +9,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 export GPG_TTY=$(tty)
 # Set prompts
 PS1='%B%F{cyan}%~%f%b %% '
+# Enable kubectl completion.
+source <(kubectl completion zsh)
 # History {{{
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -67,4 +69,5 @@ alias g=git
 alias j=opensrcdir
 alias v=resumevimsession
 alias x=exit
+alias k=kubectl
 #  }}}

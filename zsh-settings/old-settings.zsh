@@ -46,10 +46,6 @@ source /usr/local/etc/bash_completion.d/asdf.bash
 # Direnv.
 eval "$(direnv hook zsh)"
 
-# Enable kubectl completion.
-source <(kubectl completion zsh)
-alias k=kubectl
-
 # Enable argocd autocompletion
 source <(argocd completion zsh)
 
