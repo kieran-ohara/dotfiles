@@ -1,0 +1,3 @@
+dot () {
+    docker run --rm -v $(PWD):/ws -w /ws kieranbamforth:dotfiledeps dot $@
+}

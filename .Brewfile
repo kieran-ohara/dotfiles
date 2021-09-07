@@ -31,7 +31,6 @@ mas 'Reeder', id: 1449412482
 
 brew 'gh'
 brew 'gnupg'
-brew 'graphviz'
 brew 'koekeishiya/formulae/skhd'
 brew 'kubectl'
 brew 'nvim'

@@ -1,5 +1,4 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
-source ~/src/dotfiles/zsh-settings/shared-settings.zsh
 # ZSH Settings. {{{
 
 # Autocomplete options.
@@ -28,4 +27,5 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
 fi
 source ${ZIM_HOME}/init.zsh
 # }}}
+source ~/src/dotfiles/zsh-settings/shared-settings.zsh
 source ~/src/dotfiles/zsh-settings/old-settings.zsh
