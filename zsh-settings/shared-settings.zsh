@@ -53,6 +53,7 @@ setopt HIST_IGNORE_SPACE
 fpath=($fpath ~/src/dotfiles/zsh-functions)
 autoload -Uz dot
 autoload -Uz fancyctrlz
+autoload -Uz http
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
 autoload -Uz vimpackage

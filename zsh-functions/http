@@ -1,0 +1,4 @@
+
+http () {
+    docker run -t --rm -v $(PWD):/ws -w /ws kieranbamforth:dotfiledeps http $@
+}
