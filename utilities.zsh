@@ -91,25 +91,6 @@ alias x="exit"
 
 # }}}
 # AWS. {{{
-function aws_asg_scaleup {
-    ASG=$1
-    SIZE=$2
-
-    aws autoscaling update-auto-scaling-group \
-        --auto-scaling-group-name ${ASG} \
-        --min-size ${SIZE} \
-        --max-size ${SIZE} \
-        --desired-capacity ${SIZE} \
-}
-
-function aws_asg_size {
-    ASG=$1
-
-    aws autoscaling describe-auto-scaling-groups \
-        --auto-scaling-group-names ${ASG} \
-        | jq '.AutoScalingGroups[0] | {MaxSize: .MaxSize, MinSize: .MinSize, DesiredCapacity: .DesiredCapacity}'
-}
-
 function aws_cli_profile_list {
 	gawk 'match($0, /^\[(profile)\s(.*)\]$/, a) {print a[2]}' < ~/.aws/config
 }
@@ -118,112 +99,6 @@ function aws_cli_profile_set {
     export AWS_PROFILE=$1
 }
 compdef '_alternative "profiles:AWS profiles:($(aws_cli_profile_list))"' aws_cli_profile_set
-
-function aws_cloudformation_resources_list {
-    STACK=$1
-
-    aws cloudformation describe-stack-resources \
-        --stack-name ${STACK} \
-        --output text \
-        --query 'StackResources[].LogicalResourceId'
-}
-
-function aws_cloudformation_resources_search {
-    STACK=$1
-    QUERY=$2
-
-    aws cloudformation describe-stack-resources \
-        --stack-name ${STACK} \
-        | jq ".StackResources[] | select(.LogicalResourceId | contains(\"${QUERY}\"))"
-}
-
-function aws_cloudformation_stacks_browse {
-    STACK=$1
-
-    STACK_ID=`aws cloudformation describe-stacks \
-        --stack-name ${STACK} \
-        | jq -r '.Stacks[].StackId'`
-
-    open "https://eu-west-1.console.aws.amazon.com/cloudformation/home?region-eu-west-1#/stack/detail?stackId=${STACK_ID}"
-}
-
-function aws_ecr_repos {
-    aws ecr describe-repositories --query "repositories[*].repositoryUri"
-}
-
-function aws_rds_endpoints {
-    aws rds describe-db-instances | jq '.DBInstances[].Endpoint'
-}
-
-function aws_cloudformation_stacks_list {
-    aws cloudformation describe-stacks \
-        --output text \
-        --query 'Stacks[*].StackName'
-}
-
-function aws_cloudwatch_alarms_name_search {
-    SEARCH=$1
-
-    aws cloudwatch describe-alarms \
-        | jq ".MetricAlarms[] | select(.AlarmName | startswith(\"${SEARCH}\")) | {Name: .AlarmName, Description: .AlarmDescription, Namespace: .Namespace}"
-}
-
-function aws_cloudwatch_alarms_namespace_search {
-    SEARCH=$1
-
-    aws cloudwatch describe-alarms \
-        | jq ".MetricAlarms[] | select(.Namespace | startswith(\"${SEARCH}\")) | {Name: .AlarmName, Description: .AlarmDescription, Namespace: .Namespace}"
-}
-
-function aws_cloudwatch_alarms_describe {
-    SEARCH=$1
-
-    aws cloudwatch describe-alarms --alarm-names=$SEARCH | jq '.MetricAlarms[] | {AlarmName: .AlarmName, MetricName: .MetricName, Period: .Period, EvaluationPeriods: .EvaluationPeriods, Threshold: .Threshold, ComparisonOperator: .ComparisonOperator}'
-
-}
-
-function aws_ec2_instance_iam_profiles {
-    aws iam list-instance-profiles | jq '.InstanceProfiles[] | {Arn: .Arn, RoleArns: .Roles[].Arn}'
-}
-
-function aws_iam_list_roles {
-    aws iam list-roles --query "Roles[].[RoleName,Arn]"
-}
-
-function aws_lambda_list {
-    aws lambda list-functions --query 'Functions[].FunctionName' --output text
-}
-
-function aws_route53_hosted_zones_list {
-    aws route53 list-hosted-zones --query 'HostedZones[].Id' --output text
-}
-
-function aws_route53_records_table {
-    HOSTED_ZONE_ID=$1
-
-    aws route53 list-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --output table --query 'ResourceRecordSets[].{"Name": Name, "TTL": TTL, "Type":Type}'
-}
-
-function aws_assume_role_personal {
-    aws iam update-assume-role-policy --role-name "kieran.bamforth@bbc.co.uk" --policy-document \
-    '{
-            "Version": "2012-10-17",
-            "Statement": [
-                {
-                    "Sid": "",
-                    "Effect": "Allow",
-                    "Principal": { "AWS": "arn:aws:iam::470820891875:role/live-aws-wormhole-resources-ComponentRole-1U534EGLBW9ZD" },
-                    "Action": "sts:AssumeRole"
-                },
-                {
-                    "Sid": "",
-                    "Effect": "Allow",
-                    "Principal": { "AWS": "arn:aws:iam::855277617897:user/kieran-bamforth" },
-                    "Action": "sts:AssumeRole"
-                }
-            ]
-    }'
-}
 # }}}
 # Docker. {{{
 function docker_env {
