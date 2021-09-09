@@ -16,7 +16,6 @@ bindkey -M vicmd ':' vi-add-next
 
 # Asdf.
 source /usr/local/opt/asdf/asdf.sh
-source /usr/local/etc/bash_completion.d/asdf.bash
 
 # Direnv.
 eval "$(direnv hook zsh)"
