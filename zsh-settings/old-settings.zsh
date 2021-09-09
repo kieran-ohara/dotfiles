@@ -4,19 +4,6 @@ colors
 
 # Shorter key timeout
 export KEYTIMEOUT=1
-source <(antibody init)
-antibody bundle << EOF
-robbyrussell/oh-my-zsh path:plugins/fancy-ctrl-z
-robbyrussell/oh-my-zsh path:plugins/git
-robbyrussell/oh-my-zsh path:plugins/tmux
-
-b4b4r07/enhancd
-djui/alias-tips
-docker/cli path:contrib/completion/zsh
-seebi/dircolors-solarized
-zsh-users/zsh-completions
-zsh-users/zsh-history-substring-search
-EOF
 # Mappings. {{{
 # Fix shift-tab in vi-mode.
 bindkey '^[[Z' reverse-menu-complete
