@@ -3,35 +3,35 @@
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-tmux-navigator"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-tmux-navigator
+	path = .vim/pack/packages/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-sneak"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-sneak
+	path = .vim/pack/packages/start/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-dirvish"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-dirvish
+	path = .vim/pack/packages/start/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-commentary"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-commentary
+	path = .vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-eunuch"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-eunuch
+	path = .vim/pack/packages/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-fugitive"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-fugitive
+	path = .vim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-repeat"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-repeat
+	path = .vim/pack/packages/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-rhubarb"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-rhubarb
+	path = .vim/pack/packages/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-surround"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-surround
+	path = .vim/pack/packages/start/vim-surround
 	url = https://github.com/tpope/vim-surround
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-unimpaired"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-unimpaired
+	path = .vim/pack/packages/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/undotree"]
-	path = /Users/kieranohara/src/dotfiles/.vim/pack/packages/start/undotree
+	path = .vim/pack/packages/start/undotree
 	url = https://github.com/mbbill/undotree
