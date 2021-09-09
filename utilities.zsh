@@ -86,7 +86,6 @@ alias sac="app/console"
 alias showfiles="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
 alias t="nice_tree"
 alias t="terraform"
-alias v="resume_vim_session"
 alias w="nice_which"
 alias x="exit"
 
@@ -276,19 +275,6 @@ function fzf_git_log() {
 }
 # }}}
 # Kitchen Sink. {{{
-function open_src_dir {
-    DIR=~/src/$1
-    if [ "$1" = "master" ]; then
-        git checkout master
-        return
-    fi
-    if [ ! -d "$DIR" ]; then
-        DIR=~/src/$(basename $1)
-        hub clone $1 $DIR
-    fi
-    cd $DIR
-}
-compdef '_files -/ -W ~/src' open_src_dir
 
 function copy_file_contents {
     cat $1 | pbcopy
