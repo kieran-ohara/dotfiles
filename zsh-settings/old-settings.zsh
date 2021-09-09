@@ -4,24 +4,6 @@ colors
 
 # Shorter key timeout
 export KEYTIMEOUT=1
-# Antibody. {{{
-source <(antibody init)
-antibody bundle << EOF
-robbyrussell/oh-my-zsh path:plugins/fancy-ctrl-z
-robbyrussell/oh-my-zsh path:plugins/git
-robbyrussell/oh-my-zsh path:plugins/tmux
-
-b4b4r07/enhancd
-djui/alias-tips
-docker/cli path:contrib/completion/zsh
-seebi/dircolors-solarized
-zsh-users/zsh-completions
-zsh-users/zsh-history-substring-search
-EOF
-
-# Antibody glob means we have to do this manually: https://github.com/getantibody/antibody/blob/master/bundle/zsh.go#L35
-fpath=($fpath $(antibody list | grep docker/cli | awk '{print $2"/contrib/completion/zsh"}'))
-# }}}
 # Mappings. {{{
 # Fix shift-tab in vi-mode.
 bindkey '^[[Z' reverse-menu-complete
@@ -104,11 +86,9 @@ function fzf_git_checkout() {
 # Hub.
 eval $(hub alias -s)
 
-# Spaceship
-eval "$(starship init zsh)"
 # }}}
 # {{{ My stuff
-source ~/src/dotfiles/utilities.zsh
+# source ~/src/dotfiles/utilities.zsh
 # source ~/src/secrets/sh/functions/functions.sh
 
 export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/default
