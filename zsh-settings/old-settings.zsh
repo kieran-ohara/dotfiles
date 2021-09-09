@@ -4,6 +4,19 @@ colors
 
 # Shorter key timeout
 export KEYTIMEOUT=1
+source <(antibody init)
+antibody bundle << EOF
+robbyrussell/oh-my-zsh path:plugins/fancy-ctrl-z
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/tmux
+
+b4b4r07/enhancd
+djui/alias-tips
+docker/cli path:contrib/completion/zsh
+seebi/dircolors-solarized
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+EOF
 # Mappings. {{{
 # Fix shift-tab in vi-mode.
 bindkey '^[[Z' reverse-menu-complete
@@ -17,18 +30,12 @@ bindkey -M vicmd ':' vi-add-next
 # Enable JIRA autocompletion.
 source <(jira --completion-script-zsh)
 
-# Enhancd.
-export ENHANCD_FILTER=fzf
-
 # Asdf.
 source /usr/local/opt/asdf/asdf.sh
 source /usr/local/etc/bash_completion.d/asdf.bash
 
 # Direnv.
 eval "$(direnv hook zsh)"
-
-# Enable argocd autocompletion
-source <(argocd completion zsh)
 
 # Enable gcloud autocompletion.
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
@@ -74,17 +81,6 @@ function _gen_fzf_default_opts() {
     --color marker:#ffffff,pointer:#ffffff,hl+:$challenger_deep_dark_cyan,fg+:#ffffff"
 }
 _gen_fzf_default_opts
-
-function fzf_git_checkout() {
-    local branches branch
-
-    branches=$(git branch -vv) &&
-        branch=$(echo "$branches" | fzf +m) &&
-        git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
-    }
-
-# Hub.
-eval $(hub alias -s)
 
 # }}}
 # {{{ My stuff
