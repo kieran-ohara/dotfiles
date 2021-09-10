@@ -1,7 +1,0 @@
-{
-    "default_options": [
-      "--cert=/etc/pki/tls/certs/client.crt",
-      "--cert-key=/etc/pki/tls/private/client.key",
-      "--verify=/etc/pki/cosmos/current/client.crt"
-    ]
-}
