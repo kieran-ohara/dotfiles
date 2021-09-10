@@ -51,6 +51,8 @@ setopt HIST_IGNORE_SPACE
 # Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
 
 fpath=($fpath ~/src/dotfiles/zsh-functions)
+autoload -Uz colourgrid
+autoload -Uz colourbar
 autoload -Uz dot
 autoload -Uz fancyctrlz
 autoload -Uz http
