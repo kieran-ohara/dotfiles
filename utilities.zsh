@@ -163,11 +163,4 @@ function nice_which {
     echo "$WHICH -> $READLINK_COLOUR$READLINK"
 }
 compdef nice_which=which
-
-
-function httpie_profile_set {
-    export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/$1
-}
-
-compdef '_files -/ -W ~/src/dotfiles/httpie-profiles' httpie_profile_set
 # }}}

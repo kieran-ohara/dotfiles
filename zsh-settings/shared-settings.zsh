@@ -59,6 +59,7 @@ autoload -Uz http
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
 autoload -Uz vimpackage
+autoload -Uz httpieprofileset
 
 zle -N fancyctrlz
 bindkey '^Z' fancyctrlz
@@ -70,6 +71,7 @@ alias dkp="docker ps -a"
 alias dkr="dk run"
 alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias g=git
+alias hps=httpieprofileset
 alias j=opensrcdir
 alias k=kubectl
 alias v=resumevimsession

@@ -1,0 +1,3 @@
+function httpieprofileset {
+    export HTTPIE_CONFIG_DIR=~/src/dotfiles/httpie-profiles/$1
+}
