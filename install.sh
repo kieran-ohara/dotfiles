@@ -63,7 +63,7 @@ declare -a FILES_TO_SYMLINK=$(find . -type f -maxdepth 1 \
     -not -name .git \
     -not -name .gitignore \
     | sed -e 's|//|/|' | sed -e 's|./.|.|')
-FILES_TO_SYMLINK="$FILES_TO_SYMLINK .asdfrc .config/nvim .ctags.d .default-gems .default-npm-packages .docker/config.json .gnupg/gpg.conf .gnupg/gpg-agent.conf .hammerspoon .jira.d .tool-versions .um
+FILES_TO_SYMLINK="$FILES_TO_SYMLINK .asdfrc .default-gems .default-npm-packages .gnupg/gpg.conf .gnupg/gpg-agent.conf .tool-versions
 
 main() {
 
