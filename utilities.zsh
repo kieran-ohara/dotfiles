@@ -119,27 +119,6 @@ compdef _docker docker_env=_docker_complete_containers \
 
 compdef '_files -/ -W ~/.docker/hosts' docker_set_host
 # }}}
-# Git. {{{
-function github_latest() {
-    REPO_NAME=$1
-    http https://api.github.com/repos/${REPO_NAME}/releases/latest | jq -r .tag_name
-}
-
-function git_current_branch() {
-    local ref
-    ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)
-    local ret=$?
-    if [[ $ret != 0 ]]; then
-        [[ $ret == 128 ]] && return  # no git repo.
-        ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
-    fi
-    echo ${ref#refs/heads/}
-}
-
-function fzf_git_log() {
-  git log --oneline | fzf --preview='git show {1}' --preview-window=right --ansi | awk '{ print $1 }'
-}
-# }}}
 # Kitchen Sink. {{{
 
 function copy_file_contents {
