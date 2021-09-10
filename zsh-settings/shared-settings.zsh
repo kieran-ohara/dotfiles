@@ -69,7 +69,7 @@ alias dkr="dk run"
 alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias g=git
 alias j=opensrcdir
+alias k=kubectl
 alias v=resumevimsession
 alias x=exit
-alias k=kubectl
 #  }}}
