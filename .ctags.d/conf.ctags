@@ -1,6 +1,0 @@
---exclude=node_modules
---exclude=tests
---exclude=venv
---kinds-javascript=-c-f-m-p-v
---kinds-python=-i
--R
