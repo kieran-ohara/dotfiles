@@ -60,6 +60,7 @@ autoload -Uz httpieprofileset
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
 autoload -Uz vimpackage
+autoload -Uz pullsecrets
 
 zle -N fancyctrlz
 bindkey '^Z' fancyctrlz
