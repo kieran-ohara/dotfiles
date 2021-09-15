@@ -7,3 +7,9 @@ ergodox_ez_default.hex: keyboards/ergodox_ez/default
 
 flash_keyboard: ergodox_ez_default.hex
 	teensy_loader_cli -mmcu=atmega32u4 -w -v $<
+
+dep_graph.dot: .Brewfile
+	brew graph --installed > $@
+
+dep_graph.png: dep_graph.dot
+	dot -Tpng $< -o $@

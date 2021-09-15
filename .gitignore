@@ -1,4 +1,5 @@
 /.config/karabiner/automatic_backups
+/dep_graph.*
 /.jira.d/*
 !/.jira.d/config.yml
 /.vim/spell/en.utf-8.add.spl
