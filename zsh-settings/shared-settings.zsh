@@ -75,6 +75,7 @@ alias g=git
 alias hps=httpieprofileset
 alias j=opensrcdir
 alias k=kubectl
+alias m=make
 alias v=resumevimsession
 alias x=exit
 #  }}}
