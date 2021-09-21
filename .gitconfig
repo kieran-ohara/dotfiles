@@ -39,6 +39,7 @@
     c = commit
     co = checkout
     gl = pull
+    l = pull
     p = push
     rb = rebase
     rbi = rebase --interactive
