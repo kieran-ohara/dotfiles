@@ -4,8 +4,6 @@
     name = Kieran Bamforth
     email = hello@kieranbamforth.me
     signingkey = D816D92D
-[hub]
-    protocol = ssh
 [credential]
 [core]
     excludesFile = ~/.gitignore-global
