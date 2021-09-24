@@ -43,6 +43,7 @@
     gl = pull
     l = pull
     p = push
+    pf = push --force-with-lease origin HEAD
     rb = rebase
     rbi = rebase --interactive
     rbim = rebase master --interactive
