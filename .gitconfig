@@ -34,6 +34,7 @@
 	rebase = true
 [alias]
     a = add
+    b = branch
     c = commit
     co = checkout
     cp = cherry-pick
