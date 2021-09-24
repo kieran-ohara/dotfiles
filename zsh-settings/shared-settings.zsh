@@ -8,7 +8,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 # Needed to sign Git commits with GPG.
 export GPG_TTY=$(tty)
 # Set prompts
-PS1='%B%F{cyan}%~%f%b %% '
+PS1=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b %% '
 # Enable kubectl completion.
 source <(kubectl completion zsh)
 # History {{{
