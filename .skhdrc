@@ -1,3 +1,5 @@
+cmd + alt + ctrl + shift - 0 : open -a Zotero
+cmd + alt + ctrl + shift - 9 : open -a "Microsoft Word"
 cmd + alt + ctrl + shift - a : open -a Reeder
 cmd + alt + ctrl + shift - c : open -a Calendar
 cmd + alt + ctrl + shift - e : open -a Preview
@@ -13,4 +15,3 @@ cmd + alt + ctrl + shift - u : open -a Mail
 cmd + alt + ctrl + shift - w : open -a "1Password 7"
 cmd + alt + ctrl + shift - x : open -a Tower
 cmd + alt + ctrl + shift - z : open -a zoom.us
-
