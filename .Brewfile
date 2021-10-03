@@ -30,6 +30,7 @@ mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
 
 brew 'direnv'
+brew 'doctl'
 brew 'gh'
 brew 'gnupg'
 brew 'koekeishiya/formulae/skhd'
