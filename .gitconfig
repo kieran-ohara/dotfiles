@@ -33,6 +33,7 @@
 [pull]
 	rebase = true
 [alias]
+
     a = add
     b = branch
     c = commit
@@ -46,6 +47,7 @@
     p = push
     pf = push --force-with-lease origin HEAD
     rb = rebase
+    rbc = rebase --continue
     rbi = rebase --interactive
     rbim = rebase master --interactive
     rs = restore
