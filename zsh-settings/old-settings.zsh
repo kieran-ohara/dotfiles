@@ -5,8 +5,6 @@ colors
 # Shorter key timeout
 export KEYTIMEOUT=1
 # Mappings. {{{
-# Fix shift-tab in vi-mode.
-bindkey '^[[Z' reverse-menu-complete
 
 # Disable execute-named-command when pressing colon in vi-mode.
 bindkey -M vicmd -r ':'

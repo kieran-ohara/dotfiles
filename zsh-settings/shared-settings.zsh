@@ -9,6 +9,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 export GPG_TTY=$(tty)
 # Set prompts
 PS1=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b %% '
+# Fix shift-tab in vi-mode.
+bindkey '^[[Z' reverse-menu-complete
 # History {{{
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
