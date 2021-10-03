@@ -10,6 +10,7 @@
     ~/.config/karabiner: .config/karabiner
     ~/.config/nvim: .config/nvim
     ~/.gitignore-global: .gitignore-global
+    ~/.skaffold: .skaffold
     ~/.skhdrc: .skhdrc
     ~/.tmux.conf: .tmux.conf
     ~/.tmux: .tmux
