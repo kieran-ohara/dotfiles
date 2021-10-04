@@ -6,6 +6,7 @@ cmd + alt + ctrl + shift - e : open -a Preview
 cmd + alt + ctrl + shift - f : open -a Finder
 cmd + alt + ctrl + shift - i : open -a Alacritty
 cmd + alt + ctrl + shift - k : open -a Kaleidoscope
+cmd + alt + ctrl + shift - j : sleep 0.1 && pmset sleepnow
 cmd + alt + ctrl + shift - l : open -a Lens
 cmd + alt + ctrl + shift - m : open -a MindNode
 cmd + alt + ctrl + shift - o : open -a Firefox
