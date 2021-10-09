@@ -21,7 +21,6 @@ Plug 'nvim-treesitter/playground', Cond(0)
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'kyazdani42/nvim-tree.lua'
 
 " Colour schemes
 Plug 'folke/tokyonight.nvim'
