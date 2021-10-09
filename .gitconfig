@@ -52,6 +52,7 @@
     rbim = rebase master --interactive
     rs = restore
     s = status
+    smu =  submodule update --recursive --remote
     st = stash
     stp = stash pop
     unstage = restore --staged
