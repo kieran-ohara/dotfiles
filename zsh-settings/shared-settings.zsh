@@ -56,6 +56,7 @@ autoload -Uz httpieprofileset
 autoload -Uz launchkind
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
+autoload -Uz tldr
 autoload -Uz vimpackage
 autoload -Uz pullsecrets
 
