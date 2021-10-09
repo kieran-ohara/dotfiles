@@ -13,3 +13,8 @@ dep_graph.dot: .Brewfile
 
 dep_graph.png: dep_graph.dot
 	dot -Tpng $< -o $@
+
+dotfiledeps: Dockerfile
+	docker build -t kieranbamforth:dotfiledeps .
+	docker save kieranbamforth:dotfiledeps > $@
+

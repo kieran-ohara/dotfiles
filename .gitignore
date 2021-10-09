@@ -1,5 +1,6 @@
 /.config/karabiner/automatic_backups
 /dep_graph.*
+/dotfiledeps
 /.jira.d/*
 !/.jira.d/config.yml
 /.skaffold/cache
