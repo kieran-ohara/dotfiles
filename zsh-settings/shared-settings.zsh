@@ -55,10 +55,10 @@ autoload -Uz http
 autoload -Uz httpieprofileset
 autoload -Uz launchkind
 autoload -Uz opensrcdir
+autoload -Uz pullsecrets
 autoload -Uz resumevimsession
 autoload -Uz tldr
 autoload -Uz vimpackage
-autoload -Uz pullsecrets
 
 zle -N fancyctrlz
 bindkey '^Z' fancyctrlz
