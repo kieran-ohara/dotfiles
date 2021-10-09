@@ -1,12 +1,8 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
-# Use vim where possible.
-export EDITOR='vim'
 # Allow changing directories without `cd`.
 setopt AUTOCD
 # Give Autosuggest a more readable colour.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
-# Needed to sign Git commits with GPG.
-export GPG_TTY=$(tty)
 # Set prompts
 PS1=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b %% '
 # Fix shift-tab in vi-mode.

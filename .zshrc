@@ -28,4 +28,7 @@ fi
 source ${ZIM_HOME}/init.zsh
 # }}}
 source ~/src/dotfiles/zsh-settings/shared-settings.zsh
-source ~/src/dotfiles/zsh-settings/old-settings.zsh
+
+if [ "$DOTS_USE_OLD_SETTINGS" = true ] ; then
+    source ~/src/dotfiles/zsh-settings/old-settings.zsh
+fi
