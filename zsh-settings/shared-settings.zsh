@@ -5,7 +5,7 @@ setopt AUTOCD
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 # Set prompts
 PS1=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b %% '
-# Fix shift-tab in vi-mode.
+# Allow shift-tab in ZSH suggestions
 bindkey '^[[Z' reverse-menu-complete
 # History {{{
 HISTFILE=~/.zsh_history
