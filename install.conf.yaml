@@ -9,6 +9,7 @@
     ~/.alacritty.yml: .alacritty.yml
     ~/.config/karabiner: .config/karabiner
     ~/.config/nvim: .config/nvim
+    ~/.docker/config.json: .docker/config.json
     ~/.gitignore-global: .gitignore-global
     ~/.skaffold: .skaffold
     ~/.skhdrc: .skhdrc
