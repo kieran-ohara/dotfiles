@@ -35,3 +35,6 @@
 [submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/undotree"]
 	path = .vim/pack/packages/start/undotree
 	url = https://github.com/mbbill/undotree
+[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/targets.vim"]
+	path = .vim/pack/packages/start/targets.vim
+	url = https://github.com/wellle/targets.vim
