@@ -34,6 +34,10 @@ set backspace=indent,eol,start
 
 set nrformats-=octal  " CTRL-A does not mess with numbers starting with 0
 
+if executable('rg')
+    set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+endif
+
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
