@@ -43,6 +43,7 @@
     dc = diff --cached
     f = fetch
     gl = pull
+    gp = push
     l = pull
     p = push
     pf = push --force-with-lease origin HEAD
