@@ -11,6 +11,11 @@ if type brew &>/dev/null; then
   FPATH=$BREW_PREFIX/share/zsh/site-functions:$FPATH
 fi
 
+if type volta &>/dev/null; then
+    export VOLTA_HOME=$HOME/.volta
+    PATH=$VOLTA_HOME/bin:$PATH
+fi
+
 # Use vim where possible.
 export EDITOR='vim'
 export ZSH_PROFILE=false
