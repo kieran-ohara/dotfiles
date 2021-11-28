@@ -6,8 +6,9 @@
 
 # Autocomplete options.
 if type brew &>/dev/null; then
-  PATH=$(brew --prefix)/bin:$PATH
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  BREW_PREFIX=$(brew --prefix)
+  PATH=$BREW_PREFIX/bin:$PATH
+  FPATH=$BREW_PREFIX/share/zsh/site-functions:$FPATH
 fi
 
 # Use vim where possible.
