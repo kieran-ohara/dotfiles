@@ -25,3 +25,4 @@ chflags nohidden ~/Library
 sudo killall Dock Finder SystemUIServer
 
 defaults write io.alacritty CGFontRenderingFontSmoothingDisabled 1
+defaults write org.p0deje.Maccy pasteByDefault 1
