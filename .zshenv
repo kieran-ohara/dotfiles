@@ -4,7 +4,6 @@
 # Define Zim location
 : ${ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim}
 
-# Autocomplete options.
 if type brew &>/dev/null; then
   BREW_PREFIX=$(brew --prefix)
   PATH=$BREW_PREFIX/bin:$PATH
