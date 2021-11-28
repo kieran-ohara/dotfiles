@@ -2,39 +2,40 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-tmux-navigator"]
+
+[submodule "vim-tmux-navigator"]
 	path = .vim/pack/packages/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-sneak"]
+[submodule "vim-sneak"]
 	path = .vim/pack/packages/start/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-dirvish"]
+[submodule "vim-dirvish"]
 	path = .vim/pack/packages/start/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-commentary"]
+[submodule "vim-commentary"]
 	path = .vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-eunuch"]
+[submodule "vim-eunuch"]
 	path = .vim/pack/packages/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-fugitive"]
+[submodule "vim-fugitive"]
 	path = .vim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-repeat"]
+[submodule "vim-repeat"]
 	path = .vim/pack/packages/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-rhubarb"]
+[submodule "vim-rhubarb"]
 	path = .vim/pack/packages/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-surround"]
+[submodule "vim-surround"]
 	path = .vim/pack/packages/start/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/vim-unimpaired"]
+[submodule "vim-unimpaired"]
 	path = .vim/pack/packages/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/undotree"]
+[submodule "undotree"]
 	path = .vim/pack/packages/start/undotree
 	url = https://github.com/mbbill/undotree
-[submodule "/Users/kieranohara/src/dotfiles/.vim/pack/packages/start/targets.vim"]
+[submodule "targets.vim"]
 	path = .vim/pack/packages/start/targets.vim
 	url = https://github.com/wellle/targets.vim
