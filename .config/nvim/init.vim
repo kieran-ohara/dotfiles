@@ -25,10 +25,6 @@ Plug 'nvim-telescope/telescope.nvim'
 " Colour schemes
 Plug 'folke/tokyonight.nvim'
 
-" orgmode
-Plug 'vhyrro/neorg'
-Plug 'nvim-lua/plenary.nvim'
-
 Plug 'Yggdroot/indentLine'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'direnv/direnv.vim'
