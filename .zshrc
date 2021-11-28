@@ -1,4 +1,7 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
+if [ "$ZSH_ORDER" = true ] ; then
+    echo "zshrc"
+fi
 if [ "$ZSH_PROFILE" = true ] ; then
     zmodload zsh/zprof
 fi

@@ -13,3 +13,8 @@ fi
 # Use vim where possible.
 export EDITOR='vim'
 export ZSH_PROFILE=false
+export ZSH_ORDER=false
+
+if [ "$ZSH_ORDER" = true ] ; then
+    echo "zshenv"
+fi
