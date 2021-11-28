@@ -16,9 +16,6 @@ fi
 # Tabbing through the menu highlights the selection.
 zstyle ':completion:*' menu select=1
 
-# # Needed to sign Git commits with GPG.
-# export GPG_TTY=$(tty)
-
 # }}}
 # zim-fw. {{{
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
