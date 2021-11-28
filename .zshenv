@@ -6,3 +6,4 @@
 
 # Use vim where possible.
 export EDITOR='vim'
+export ZSH_PROFILE=false

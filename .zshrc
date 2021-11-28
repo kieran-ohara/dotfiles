@@ -1,4 +1,8 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
+if [ "$ZSH_PROFILE" = true ] ; then
+    zmodload zsh/zprof
+fi
+
 # ZSH Settings. {{{
 
 # Autocomplete options.
@@ -28,4 +32,8 @@ source ~/src/dotfiles/zsh-settings/shared-settings.zsh
 
 if [ "$DOTS_USE_OLD_SETTINGS" = true ] ; then
     source ~/src/dotfiles/zsh-settings/old-settings.zsh
+fi
+
+if [ "$ZSH_PROFILE" = true ] ; then
+    zprof
 fi
