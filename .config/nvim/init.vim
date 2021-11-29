@@ -26,10 +26,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim'
 Plug 'hrsh7th/nvim-compe'
-Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
-Plug 'onsails/lspkind-nvim'
-Plug 'folke/trouble.nvim'
 
 Plug 'itchyny/lightline.vim'
 
