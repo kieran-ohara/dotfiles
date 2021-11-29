@@ -32,11 +32,6 @@ Plug 'onsails/lspkind-nvim'
 Plug 'folke/trouble.nvim'
 
 Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-obsession'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-speeddating'
 
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'

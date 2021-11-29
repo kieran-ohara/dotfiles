@@ -54,3 +54,15 @@
 [submodule "tokyonight.nvim"]
 	path = .config/nvim/pack/ui/start/tokyonight.nvim
 	url = https://github.com/folke/tokyonight.nvim
+[submodule "vim-abolish"]
+	path = .vim/pack/packages/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish
+[submodule "vim-dispatch"]
+	path = .vim/pack/packages/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "vim-obsession"]
+	path = .vim/pack/packages/start/vim-obsession
+	url = https://github.com/tpope/vim-obsession
+[submodule "vim-projectionist"]
+	path = .vim/pack/packages/start/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist
