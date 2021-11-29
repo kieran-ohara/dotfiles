@@ -81,3 +81,9 @@
 [submodule "lspkind-nvim"]
 	path = .config/nvim/pack/lsp/start/lspkind-nvim
 	url = https://github.com/onsails/lspkind-nvim
+[submodule "nvim-web-devicons"]
+	path = .config/nvim/pack/ui/start/nvim-web-devicons
+	url = https://github.com/kyazdani42/nvim-web-devicons
+[submodule "lightline.vim"]
+	path = .config/nvim/pack/ui/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim

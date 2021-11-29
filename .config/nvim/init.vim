@@ -27,13 +27,9 @@ Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim'
 Plug 'hrsh7th/nvim-compe'
 
-Plug 'itchyny/lightline.vim'
 
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
-
-" Has to be loaded at the end
-Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 " }}}
 
