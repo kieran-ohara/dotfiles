@@ -28,8 +28,6 @@ Plug 'mattn/emmet-vim'
 Plug 'hrsh7th/nvim-compe'
 
 
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
 call plug#end()
 " }}}
 
