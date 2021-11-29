@@ -1,6 +1,8 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
 # Allow changing directories without `cd`.
 setopt AUTOCD
+# Allow comments with hash character
+setopt interactivecomments
 # Give Autosuggest a more readable colour.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 # Set prompts
