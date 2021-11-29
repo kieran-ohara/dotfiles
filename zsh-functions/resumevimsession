@@ -1,10 +1,10 @@
 resumevimsession() {
     FILENAME=~/src/$1/Session.vim
-    echo $FILENAME
     if [ -f $FILENAME ]; then
-        nvim -S $FILENAME;
-        return
+        COMMAND="nvim -S $FILENAME";
+    else
+        COMMAND="nvim -c 'cd ~/src/$1 | :Obsess'"
     fi
-    nvim -c "cd ~/src/$1 | :Obsess"
+    zsh -c "$COMMAND"
 }
 
