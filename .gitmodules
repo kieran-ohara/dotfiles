@@ -87,3 +87,9 @@
 [submodule "lightline.vim"]
 	path = .config/nvim/pack/ui/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+[submodule "nvim-cmp"]
+	path = .config/nvim/pack/autocomplete/start/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp
+[submodule "cmp-buffer"]
+	path = .config/nvim/pack/autocomplete/start/cmp-buffer
+	url = https://github.com/hrsh7th/cmp-buffer
