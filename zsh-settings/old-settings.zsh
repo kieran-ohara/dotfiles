@@ -12,9 +12,6 @@ bindkey -M vicmd ':' vi-add-next
 # }}}
 # Plugins. {{{
 
-# Asdf.
-source /usr/local/opt/asdf/asdf.sh
-
 # Direnv.
 eval "$(direnv hook zsh)"
 
