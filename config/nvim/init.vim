@@ -5,32 +5,6 @@ set directory=$XDG_CACHE_HOME/nvim/swapfiles//
 set backupdir=$XDG_CACHE_HOME/nvim/backupfiles//
 set undodir=$XDG_CACHE_HOME/nvim/undodir
 
-" Plugins {{{
-
-function! Cond(cond, ...)
-  let opts = get(a:000, 0, {})
-  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
-endfunction
-
-call plug#begin('~/.config/nvim/bundle')
-
-
-" Pickers
-Plug 'nvim-lua/popup.nvim'
-
-
-Plug 'Yggdroot/indentLine'
-Plug 'direnv/direnv.vim'
-Plug 'edkolev/tmuxline.vim'
-Plug 'janko-m/vim-test'
-Plug 'junegunn/vim-easy-align'
-Plug 'kshenoy/vim-signature'
-Plug 'mattn/emmet-vim'
-
-
-call plug#end()
-" }}}
-
 luafile ~/.config/nvim/initlua.lua
 luafile ~/.config/nvim/lsp.lua
 

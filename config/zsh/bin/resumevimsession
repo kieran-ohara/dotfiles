@@ -1,8 +1,36 @@
 #!/bin/bash
-FILENAME=~/src/$1/Session.vim
-if [ -f $FILENAME ]; then
-    COMMAND="nvim -S $FILENAME";
+POSITIONAL=()
+while [[ $# -gt 0 ]]; do
+    key="$1"
+
+    case $key in
+        -c|--use-container)
+            USE_CONTAINER=true
+            shift # past argument
+            shift # past value
+            ;;
+        *)    # unknown option
+            POSITIONAL+=("$1") # save it in an array for later
+            shift # past argument
+            ;;
+    esac
+done
+
+set -- "${POSITIONAL[@]}" # restore positional parameters
+
+HOST_MOUNT="${HOME}/src/$@"
+FILENAME="${HOST_MOUNT}/Session.vim"
+
+if [ ! -z ${USE_CONTAINER} ]; then
+    CONTAINER_MOUNT="/Users/kieran/src/$1"
+    docker run -it --rm -v ${HOST_MOUNT}:${CONTAINER_MOUNT} -w ${CONTAINER_MOUNT} kieranbamforth/nvim:latest /bin/sh -c "nvim";
 else
-    COMMAND="nvim -c 'cd ~/src/$1 | :Obsess'"
+    if [ -f $FILENAME ]; then
+        COMMAND="nvim -S $FILENAME";
+    else
+        cd ${HOST_MOUNT}
+        COMMAND="nvim -c ':Obsess'"
+    fi
+    set -x
+    /bin/zsh -c "$COMMAND";
 fi
-zsh -c "$COMMAND"
