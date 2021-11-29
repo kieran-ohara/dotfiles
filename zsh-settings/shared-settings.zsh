@@ -54,6 +54,7 @@ autoload -Uz fancyctrlz
 autoload -Uz http
 autoload -Uz httpieprofileset
 autoload -Uz launchkind
+autoload -Uz nvimpackage
 autoload -Uz opensrcdir
 autoload -Uz pullsecrets
 autoload -Uz resumevimsession

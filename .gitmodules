@@ -39,3 +39,18 @@
 [submodule "targets.vim"]
 	path = .vim/pack/packages/start/targets.vim
 	url = https://github.com/wellle/targets.vim
+[submodule "plenary.nvim"]
+	path = .config/nvim/pack/helpers/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "nvim-treesitter"]
+	path = .config/nvim/pack/treesitter/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "gitsigns.nvim"]
+	path = .config/nvim/pack/ui/start/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim
+[submodule "telescope.nvim"]
+	path = .config/nvim/pack/ui/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule "tokyonight.nvim"]
+	path = .config/nvim/pack/ui/start/tokyonight.nvim
+	url = https://github.com/folke/tokyonight.nvim

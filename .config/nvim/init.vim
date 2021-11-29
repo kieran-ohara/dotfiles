@@ -1,6 +1,7 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline
 set runtimepath^=~/.vim
 let &packpath = &runtimepath
+set packpath^=~/.config/nvim
 source ~/.vimrc
 
 " Plugins {{{
@@ -12,21 +13,12 @@ endfunction
 
 call plug#begin('~/.config/nvim/bundle')
 
-" Syntax plugins.
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-Plug 'nvim-treesitter/playground', Cond(0)
 
 " Pickers
 Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 
-" Colour schemes
-Plug 'folke/tokyonight.nvim'
 
 Plug 'Yggdroot/indentLine'
-Plug 'lewis6991/gitsigns.nvim'
 Plug 'direnv/direnv.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'janko-m/vim-test'
