@@ -66,3 +66,6 @@
 [submodule "vim-projectionist"]
 	path = .vim/pack/packages/start/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist
+[submodule "nvim-treesitter-textobjects"]
+	path = .config/nvim/pack/treesitter/start/nvim-treesitter-textobjects
+	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects
