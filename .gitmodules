@@ -40,19 +40,19 @@
 	path = .vim/pack/packages/start/targets.vim
 	url = https://github.com/wellle/targets.vim
 [submodule "plenary.nvim"]
-	path = .config/nvim/pack/helpers/start/plenary.nvim
+	path = config/nvim/pack/helpers/start/plenary.nvim
 	url = https://github.com/nvim-lua/plenary.nvim
 [submodule "nvim-treesitter"]
-	path = .config/nvim/pack/treesitter/start/nvim-treesitter
+	path = config/nvim/pack/treesitter/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
 [submodule "gitsigns.nvim"]
-	path = .config/nvim/pack/ui/start/gitsigns.nvim
+	path = config/nvim/pack/ui/start/gitsigns.nvim
 	url = https://github.com/lewis6991/gitsigns.nvim
 [submodule "telescope.nvim"]
-	path = .config/nvim/pack/ui/start/telescope.nvim
+	path = config/nvim/pack/ui/start/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim
 [submodule "tokyonight.nvim"]
-	path = .config/nvim/pack/ui/start/tokyonight.nvim
+	path = config/nvim/pack/ui/start/tokyonight.nvim
 	url = https://github.com/folke/tokyonight.nvim
 [submodule "vim-abolish"]
 	path = .vim/pack/packages/start/vim-abolish
@@ -67,26 +67,26 @@
 	path = .vim/pack/packages/start/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist
 [submodule "nvim-treesitter-textobjects"]
-	path = .config/nvim/pack/treesitter/start/nvim-treesitter-textobjects
+	path = config/nvim/pack/treesitter/start/nvim-treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 [submodule "trouble.nvim"]
-	path = .config/nvim/pack/lsp/start/trouble.nvim
+	path = config/nvim/pack/lsp/start/trouble.nvim
 	url = https://github.com/folke/trouble.nvim
 [submodule "lspsaga.nvim"]
-	path = .config/nvim/pack/lsp/start/lspsaga.nvim
+	path = config/nvim/pack/lsp/start/lspsaga.nvim
 	url = https://github.com/glepnir/lspsaga.nvim
 [submodule "nvim-lspconfig"]
-	path = .config/nvim/pack/lsp/start/nvim-lspconfig
+	path = config/nvim/pack/lsp/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
 [submodule "lspkind-nvim"]
-	path = .config/nvim/pack/lsp/start/lspkind-nvim
+	path = config/nvim/pack/lsp/start/lspkind-nvim
 	url = https://github.com/onsails/lspkind-nvim
 [submodule "lightline.vim"]
-	path = .config/nvim/pack/ui/start/lightline.vim
+	path = config/nvim/pack/ui/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
 [submodule "nvim-cmp"]
-	path = .config/nvim/pack/autocomplete/start/nvim-cmp
+	path = config/nvim/pack/autocomplete/start/nvim-cmp
 	url = https://github.com/hrsh7th/nvim-cmp
 [submodule "cmp-buffer"]
-	path = .config/nvim/pack/autocomplete/start/cmp-buffer
+	path = config/nvim/pack/autocomplete/start/cmp-buffer
 	url = https://github.com/hrsh7th/cmp-buffer
