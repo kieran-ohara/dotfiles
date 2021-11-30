@@ -1,0 +1,5 @@
+#!/bin/bash
+DIR=.config/nvim/pack/$1/start/$(basename $2)
+if [ ! -d "$DIR" ]; then
+    git submodule add --name $(basename $2) --force https://github.com/$2 $DIR
+fi
