@@ -10,4 +10,5 @@
 /config/zsh/.zim/*
 !/config/zsh/.zim/zimfw.zsh
 /config/zsh/*.zwc
+/config/zsh/*.zwc.old
 /config/zsh/.zcompdump
