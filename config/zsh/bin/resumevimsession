@@ -1,0 +1,8 @@
+#!/bin/bash
+FILENAME=~/src/$1/Session.vim
+if [ -f $FILENAME ]; then
+    COMMAND="nvim -S $FILENAME";
+else
+    COMMAND="nvim -c 'cd ~/src/$1 | :Obsess'"
+fi
+zsh -c "$COMMAND"

@@ -71,7 +71,6 @@ autoload -Uz fancyctrlz
 autoload -Uz http
 autoload -Uz nvimpackage
 autoload -Uz opensrcdir
-autoload -Uz resumevimsession
 autoload -Uz sethttpieprofile
 autoload -Uz tldr
 autoload -Uz vimpackage
