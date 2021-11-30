@@ -1,0 +1,2 @@
+#compdef sethttpieprofile
+_files -/ -W ${XDG_CONFIG_HOME}/httpie/profiles

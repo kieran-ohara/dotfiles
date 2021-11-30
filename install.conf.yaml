@@ -8,6 +8,7 @@
     ~/.config/alacritty: config/alacritty
     ~/.config/git: config/git
     ~/.config/homebrew: config/homebrew
+    ~/.config/httpie: config/httpie
     ~/.config/karabiner: config/karabiner
     ~/.config/nvim: config/nvim
     ~/.config/skhd: config/skhd

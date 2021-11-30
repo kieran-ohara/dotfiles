@@ -71,7 +71,6 @@ autoload -Uz colourgrid
 autoload -Uz dot
 autoload -Uz fancyctrlz
 autoload -Uz http
-autoload -Uz httpieprofileset
 autoload -Uz launchkind
 autoload -Uz nvimpackage
 autoload -Uz opensrcdir
@@ -94,7 +93,7 @@ alias dkrmi="docker rmi"
 alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias dkrmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
 alias g=git
-alias hps=httpieprofileset
+alias hps=sethttpieprofile
 alias j=opensrcdir
 alias k=kubectl
 alias m=make

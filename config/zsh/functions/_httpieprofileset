@@ -1,2 +1,0 @@
-#compdef httpieprofileset
-_files -/ -W ~/src/dotfiles/httpie-profiles

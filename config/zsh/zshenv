@@ -1,8 +1,7 @@
 # This file is always sourced, so it should set environment variables which
 # need to be updated frequently
-export ZDOTDIR=$HOME/.config/zsh
-
-# Define Zim location
+export XDG_CONFIG_HOME=$HOME/.config
+export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 export ZIM_HOME=${ZDOTDIR}/.zim
 
 # Stop macOS messing with the PATH variable.
@@ -26,8 +25,11 @@ if type volta &>/dev/null; then
     path=($VOLTA_HOME/bin $path)
 fi
 
-fpath=($ZDOTDIR/functions $fpath)
+path=($ZDOTDIR/bin $path)
 export path
+
+fpath=($ZDOTDIR/autoload $fpath)
+fpath=($ZDOTDIR/functions $fpath)
 export fpath
 
 export HOMEBREW_BUNDLE_FILE=~/.config/homebrew/Brewfile
