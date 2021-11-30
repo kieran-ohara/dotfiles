@@ -4,19 +4,33 @@
 # Define Zim location
 : ${ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim}
 
-if type brew &>/dev/null; then
-  BREW_PREFIX=$(brew --prefix)
-  PATH=$BREW_PREFIX/bin:$PATH
-  FPATH=$BREW_PREFIX/share/zsh/site-functions:$FPATH
+# Stop macOS messing with the PATH variable.
+unsetopt GLOBALRCS
+if [ -x /usr/libexec/path_helper ]; then
+    eval `/usr/libexec/path_helper`
 fi
 
+# Setup homebrew paths
+if [ -d /opt/homebrew ] ; then
+    BREW_PREFIX=/opt/homebrew
+fi
+if [ ! -z ${BREW_PREFIX} ]; then
+    path=($BREW_PREFIX/bin $path)
+    fpath=($BREW_PREFIX/share/zsh/site-functions $fpath)
+fi
+
+# Add shims to path.
 if type volta &>/dev/null; then
     export VOLTA_HOME=$HOME/.volta
-    PATH=$VOLTA_HOME/bin:$PATH
+    path=($VOLTA_HOME/bin $path)
 fi
+
+export path
+export fpath
 
 # Use vim where possible.
 export EDITOR='vim'
+
 # Use vim as man pager
 export PAGER="col -b | view -c 'set ft=man nomod nolist' - "
 
