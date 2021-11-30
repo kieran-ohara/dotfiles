@@ -11,7 +11,7 @@
     ~/.config/nvim: .config/nvim
     ~/.config/git: config/git
     ~/.docker/config.json: .docker/config.json
-    ~/.skhdrc: .skhdrc
+    ~/.config/skhd: config/skhd
     ~/.tmux.conf: .tmux.conf
     ~/.tmux: .tmux
     ~/.vim: .vim
