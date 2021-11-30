@@ -17,6 +17,8 @@ fi
 
 # Use vim where possible.
 export EDITOR='vim'
+
+# Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false
 
