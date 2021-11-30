@@ -1,7 +1,0 @@
-{
-  "policies": {
-    "Certificates": {
-      "ImportEnterpriseRoots": true
-    }
-  }
-}
