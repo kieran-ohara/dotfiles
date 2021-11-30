@@ -11,9 +11,9 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/nvim: config/nvim
     ~/.config/skhd: config/skhd
+    ~/.config/tmux/theme: config/tmux/theme
     ~/.docker/config.json: .docker/config.json
-    ~/.tmux.conf: .tmux.conf
-    ~/.tmux: .tmux
+    ~/.tmux.conf: config/tmux/tmux.conf
     ~/.vim: .vim
     ~/.vimrc: .vimrc
     ~/.zim: .zim
@@ -24,6 +24,7 @@
 
 - create:
   - ~/.config
+  - ~/.config/tmux
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
