@@ -1,9 +1,0 @@
-global:
-  survey:
-    last-prompted: "2021-10-01T10:25:41+01:00"
-  collect-metrics: true
-  update:
-    last-prompted: "2021-10-03T15:46:42+01:00"
-kubeContexts:
-- kube-context: kind-kind
-  default-repo: localhost:5000
