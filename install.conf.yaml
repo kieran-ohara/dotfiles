@@ -6,11 +6,11 @@
 
 - link:
     ~/.Brewfile: .Brewfile
-    ~/.alacritty.yml: .alacritty.yml
+    ~/.config/alacritty: config/alacritty
     ~/.config/karabiner: .config/karabiner
     ~/.config/nvim: .config/nvim
+    ~/.config/git: config/git
     ~/.docker/config.json: .docker/config.json
-    ~/.gitignore-global: .gitignore-global
     ~/.skaffold: .skaffold
     ~/.skhdrc: .skhdrc
     ~/.tmux.conf: .tmux.conf
