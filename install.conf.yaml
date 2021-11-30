@@ -5,7 +5,7 @@
 - clean: ['~']
 
 - link:
-    ~/.Brewfile: .Brewfile
+    ~/.config/homebrew: config/homebrew
     ~/.config/alacritty: config/alacritty
     ~/.config/karabiner: .config/karabiner
     ~/.config/nvim: .config/nvim

@@ -28,6 +28,8 @@ fi
 export path
 export fpath
 
+export HOMEBREW_BUNDLE_FILE=~/.config/homebrew/Brewfile
+
 # Use vim where possible.
 export EDITOR='vim'
 
