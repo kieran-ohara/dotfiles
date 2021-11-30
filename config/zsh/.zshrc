@@ -66,15 +66,12 @@ setopt HIST_IGNORE_SPACE
 # Note they are not called, so it is up to us to call the function inside the file after defining it.
 #
 # Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
-autoload -Uz colourbar
-autoload -Uz colourgrid
 autoload -Uz dot
 autoload -Uz fancyctrlz
 autoload -Uz http
 autoload -Uz launchkind
 autoload -Uz nvimpackage
 autoload -Uz opensrcdir
-autoload -Uz pullsecrets
 autoload -Uz resumevimsession
 autoload -Uz tldr
 autoload -Uz vimpackage
