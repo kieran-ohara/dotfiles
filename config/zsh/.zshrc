@@ -69,7 +69,6 @@ setopt HIST_IGNORE_SPACE
 autoload -Uz dot
 autoload -Uz fancyctrlz
 autoload -Uz http
-autoload -Uz launchkind
 autoload -Uz nvimpackage
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
