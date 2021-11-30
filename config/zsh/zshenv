@@ -26,6 +26,7 @@ if type volta &>/dev/null; then
     path=($VOLTA_HOME/bin $path)
 fi
 
+fpath=($ZDOTDIR/functions $fpath)
 export path
 export fpath
 

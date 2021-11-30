@@ -47,8 +47,6 @@ setopt HIST_IGNORE_SPACE
 # Note they are not called, so it is up to us to call the function inside the file after defining it.
 #
 # Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
-
-fpath=($fpath ~/src/dotfiles/zsh-functions)
 autoload -Uz colourbar
 autoload -Uz colourgrid
 autoload -Uz dot
