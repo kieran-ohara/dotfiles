@@ -1,4 +1,2 @@
 #!/bin/bash
-dot () {
-    docker run --rm -v $(PWD):/ws -w /ws kieranbamforth:dotfiledeps dot $@
-}
+docker run --rm -v $(PWD):/ws -w /ws kieranbamforth:dotfiledeps dot $@
