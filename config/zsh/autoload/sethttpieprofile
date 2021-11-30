@@ -1,0 +1,4 @@
+#!/bin/bash
+sethttpieprofile () {
+    export HTTPIE_CONFIG_DIR=$XDG_CONFIG_HOME/httpie/profiles/$1
+}

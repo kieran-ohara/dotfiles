@@ -73,6 +73,7 @@ autoload -Uz launchkind
 autoload -Uz nvimpackage
 autoload -Uz opensrcdir
 autoload -Uz resumevimsession
+autoload -Uz sethttpieprofile
 autoload -Uz tldr
 autoload -Uz vimpackage
 
