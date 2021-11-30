@@ -97,6 +97,7 @@ alias k=kubectl
 alias m=make
 alias md='mkdir -p'
 alias o=open
+alias pullsecrets="git clone https://github.com/kieran-ohara/secrets.git ~/src/secrets"
 alias v=resumevimsession
 alias x=exit
 #  }}}
