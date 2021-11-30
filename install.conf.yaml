@@ -5,13 +5,13 @@
 - clean: ['~']
 
 - link:
-    ~/.config/homebrew: config/homebrew
     ~/.config/alacritty: config/alacritty
+    ~/.config/git: config/git
+    ~/.config/homebrew: config/homebrew
     ~/.config/karabiner: .config/karabiner
     ~/.config/nvim: .config/nvim
-    ~/.config/git: config/git
-    ~/.docker/config.json: .docker/config.json
     ~/.config/skhd: config/skhd
+    ~/.docker/config.json: .docker/config.json
     ~/.tmux.conf: .tmux.conf
     ~/.tmux: .tmux
     ~/.vim: .vim
