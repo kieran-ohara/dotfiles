@@ -1,4 +1,4 @@
-/.config/karabiner/automatic_backups
+/config/karabiner/automatic_backups
 /dep_graph.*
 /dotfiledeps
 /.jira.d/*
@@ -7,5 +7,7 @@
 /.vim/spell/en.utf-8.add.spl
 /.vim/swapfiles
 /keyboards/layout/*
-/.zim/*
-!/.zim/zimfw.zsh
+/config/zsh/.zim/*
+!/config/zsh/.zim/zimfw.zsh
+/config/zsh/*.zwc
+/config/zsh/.zcompdump

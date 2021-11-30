@@ -12,15 +12,12 @@
     ~/.config/nvim: config/nvim
     ~/.config/skhd: config/skhd
     ~/.config/tmux/theme: config/tmux/theme
+    ~/.config/zsh: config/zsh
     ~/.docker/config.json: .docker/config.json
     ~/.tmux.conf: config/tmux/tmux.conf
     ~/.vim: .vim
     ~/.vimrc: .vimrc
-    ~/.zim: .zim
-    ~/.zimrc: .zimrc
-    ~/.zlogin: .zlogin
-    ~/.zshenv: .zshenv
-    ~/.zshrc: .zshrc
+    ~/.zshenv: config/zsh/zshenv
 
 - create:
   - ~/.config
