@@ -5,9 +5,6 @@ ergodox_ez_default.hex: keyboards/ergodox_ez/default
 	docker cp qmk-build:/qmk_firmware/$@ $@
 	docker rm qmk-build
 
-flash_keyboard: ergodox_ez_default.hex
-	teensy_loader_cli -mmcu=atmega32u4 -w -v $<
-
 dep_graph.dot: .Brewfile
 	brew graph --installed > $@
 
