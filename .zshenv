@@ -17,6 +17,8 @@ fi
 
 # Use vim where possible.
 export EDITOR='vim'
+# Use vim as man pager
+export PAGER="col -b | view -c 'set ft=man nomod nolist' - "
 
 # Custom behaviour.
 export ZSH_PROFILE=false
