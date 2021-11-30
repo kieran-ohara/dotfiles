@@ -1,3 +1,4 @@
+#!/bin/bash
 fancyctrlz () {
   if [[ $#BUFFER -eq 0 ]]; then
     BUFFER="fg"
