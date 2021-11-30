@@ -8,6 +8,7 @@
 [core]
     excludesFile = ~/.gitignore-global
     filemode = true
+    pager = less -F -X
 [mergetool "Kaleidoscope"]
     cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
     trustexitcode = true
