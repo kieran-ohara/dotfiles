@@ -1,6 +1,7 @@
 # This file is always sourced, so it should set environment variables which
 # need to be updated frequently
 export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 export ZIM_HOME=${ZDOTDIR}/.zim
 export DOTFILES=${HOME}/src/dotfiles

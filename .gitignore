@@ -1,10 +1,7 @@
 /.jira.d/*
 !/.jira.d/config.yml
 /.skaffold/cache
-/config/vim/backupfiles
 /config/vim/spell/en.utf-8.add.spl
-/config/vim/swapfiles
-/config/vim/undodir
 /config/nvim/backupfiles
 /config/nvim/swapfiles
 /config/nvim/undodir

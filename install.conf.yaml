@@ -26,9 +26,9 @@
     ~/.zshenv: config/zsh/zshenv
 
 - create:
-  - ~/.config/vim/backupfiles
-  - ~/.config/vim/swapfiles
-  - ~/.config/vim/undodir
+  - ~/.cache/vim/backupfiles
+  - ~/.cache/vim/swapfiles
+  - ~/.cache/vim/undodir
   - ~/.config/nvim/backupfiles
   - ~/.config/nvim/swapfiles
   - ~/.config/nvim/undodir
