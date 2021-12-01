@@ -2,9 +2,6 @@
 !/.jira.d/config.yml
 /.skaffold/cache
 /config/vim/spell/en.utf-8.add.spl
-/config/nvim/backupfiles
-/config/nvim/swapfiles
-/config/nvim/undodir
 /config/karabiner/automatic_backups
 /config/zsh/*.zwc
 /config/zsh/*.zwc.old

@@ -29,9 +29,9 @@
   - ~/.cache/vim/backupfiles
   - ~/.cache/vim/swapfiles
   - ~/.cache/vim/undodir
-  - ~/.config/nvim/backupfiles
-  - ~/.config/nvim/swapfiles
-  - ~/.config/nvim/undodir
+  - ~/.cache/nvim/backupfiles
+  - ~/.cache/nvim/swapfiles
+  - ~/.cache/nvim/undodir
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

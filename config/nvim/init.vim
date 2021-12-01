@@ -1,9 +1,9 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline
 source $XDG_CONFIG_HOME/vim/universal.vim
 
-set directory=$XDG_CONFIG_HOME/nvim/swapfiles//
-set backupdir=$XDG_CONFIG_HOME/nvim/backupfiles//
-set undodir=$XDG_CONFIG_HOME/nvim/undodir
+set directory=$XDG_CACHE_HOME/nvim/swapfiles//
+set backupdir=$XDG_CACHE_HOME/nvim/backupfiles//
+set undodir=$XDG_CACHE_HOME/nvim/undodir
 
 " Plugins {{{
 
