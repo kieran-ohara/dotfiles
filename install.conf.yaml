@@ -10,6 +10,7 @@
 
 - link:
     ~/.config/alacritty: config/alacritty
+    ~/.config/docker: config/docker
     ~/.config/git: config/git
     ~/.config/homebrew: config/homebrew
     ~/.config/httpie: config/httpie
@@ -19,7 +20,6 @@
     ~/.config/skhd: config/skhd
     ~/.config/tmux/theme: config/tmux/theme
     ~/.config/zsh: config/zsh
-    ~/.docker/config.json: .docker/config.json
     ~/.tmux.conf: config/tmux/tmux.conf
     ~/.vim: .vim
     ~/.vimrc: .vimrc
