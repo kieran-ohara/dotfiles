@@ -18,5 +18,8 @@
   "homepage": "https://github.com/kieran-ohara/dotfiles#readme",
   "dependencies": {
     "tldr": "^3.3.7"
+  },
+  "volta": {
+    "node": "14.18.2"
   }
 }
