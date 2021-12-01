@@ -9,7 +9,7 @@ message:
 .PRECIOUS: src/%.git
 
 # The repo + tag to build. Default to Javascript Treesitter.
-REPO := tree-sitter/tree-sitter-javascript.git
+REPO := tree-sitter/tree-sitter-$(LANG).git
 TAG := v0.19.0
 
 src/%.git:
@@ -27,7 +27,10 @@ src/%.git:
 src/$(REPO)/src/scanner.c:
 	touch $@
 
-%.so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c
+src/$(REPO)/src/scanner.cc:
+	touch $@
+
+$(LANG).so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c src/$(REPO)/src/scanner.cc
 # %.so: src/$(REPO)/src/scanner.c
 	# -o: output
 	# -I: add to search path for include files
