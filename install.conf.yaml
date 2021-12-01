@@ -4,6 +4,10 @@
 
 - clean: ['~']
 
+- create:
+  - ~/.config
+  - ~/.config/tmux
+
 - link:
     ~/.config/alacritty: config/alacritty
     ~/.config/git: config/git
@@ -20,9 +24,6 @@
     ~/.vimrc: .vimrc
     ~/.zshenv: config/zsh/zshenv
 
-- create:
-  - ~/.config
-  - ~/.config/tmux
-
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [make venv/installed]

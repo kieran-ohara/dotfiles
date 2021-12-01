@@ -16,3 +16,10 @@ dep_graph.png: dep_graph.dot
 dotfiledeps: Dockerfile
 	docker build -t kieranbamforth:dotfiledeps .
 	docker save kieranbamforth:dotfiledeps > $@
+
+venv:
+	python3 -m virtualenv venv
+
+venv/installed: requirements.txt venv
+	venv/bin/pip install -r $<
+	touch $@

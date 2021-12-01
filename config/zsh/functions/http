@@ -1,4 +1,0 @@
-
-http () {
-    docker run -t --rm --add-host localhost:192.168.65.2 kieranbamforth:dotfiledeps http $@
-}

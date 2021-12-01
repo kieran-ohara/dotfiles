@@ -67,7 +67,6 @@ setopt HIST_IGNORE_SPACE
 #
 # Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
 autoload -Uz fancyctrlz
-autoload -Uz http
 autoload -Uz opensrcdir
 autoload -Uz sethttpieprofile
 autoload -Uz tldr

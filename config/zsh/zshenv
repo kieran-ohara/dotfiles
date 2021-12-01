@@ -26,6 +26,7 @@ if type volta &>/dev/null; then
 fi
 
 path=($ZDOTDIR/bin $path)
+path=($HOME/src/dotfiles/venv/bin $path)
 export path
 
 fpath=($ZDOTDIR/autoload $fpath)
