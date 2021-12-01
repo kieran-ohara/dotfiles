@@ -14,6 +14,7 @@
     ~/.config/homebrew: config/homebrew
     ~/.config/httpie: config/httpie
     ~/.config/karabiner: config/karabiner
+    ~/.config/mycli: config/mycli
     ~/.config/nvim: config/nvim
     ~/.config/skhd: config/skhd
     ~/.config/tmux/theme: config/tmux/theme
