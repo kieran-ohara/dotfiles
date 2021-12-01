@@ -1,0 +1,2 @@
+#!/bin/bash
+tree -aC -I '.git|node_modules' --dirsfirst "$@" | less -FRNX;

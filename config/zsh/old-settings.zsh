@@ -104,9 +104,3 @@ compdef _docker docker_env=_docker_complete_containers \
 
 compdef '_files -/ -W ~/.docker/hosts' docker_set_host
 # }}}
-# Kitchen Sink. {{{
-
-function nice_tree() {
-    tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
-}
-# }}}
