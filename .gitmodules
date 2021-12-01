@@ -90,3 +90,6 @@
 [submodule "cmp-buffer"]
 	path = config/nvim/pack/autocomplete/start/cmp-buffer
 	url = https://github.com/hrsh7th/cmp-buffer
+[submodule "playground"]
+	path = config/nvim/pack/treesitter/start/playground
+	url = https://github.com/nvim-treesitter/playground
