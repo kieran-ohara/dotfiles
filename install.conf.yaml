@@ -31,5 +31,5 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [make node_modules]
+  - [make dependencies/node_modules]
   - [make venv/installed]
