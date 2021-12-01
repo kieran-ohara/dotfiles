@@ -1,0 +1,22 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "Global NodeJS dependencies for my developer machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kieran-ohara/dotfiles.git"
+  },
+  "author": "Kieran O'Hara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kieran-ohara/dotfiles/issues"
+  },
+  "homepage": "https://github.com/kieran-ohara/dotfiles#readme",
+  "dependencies": {
+    "tldr": "^3.3.7"
+  }
+}

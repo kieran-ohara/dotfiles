@@ -3,6 +3,7 @@
 export XDG_CONFIG_HOME=$HOME/.config
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 export ZIM_HOME=${ZDOTDIR}/.zim
+export DOTFILES=${HOME}/src/dotfiles
 
 # Stop macOS messing with the PATH variable.
 unsetopt GLOBALRCS
@@ -26,11 +27,11 @@ if type volta &>/dev/null; then
 fi
 
 path=($ZDOTDIR/bin $path)
-path=($HOME/src/dotfiles/venv/bin $path)
+path=(${DOTFILES}/node_modules/.bin $path)
+path=(${DOTFILES}/venv/bin $path)
 export path
 
 fpath=($ZDOTDIR/autoload $fpath)
-fpath=($ZDOTDIR/functions $fpath)
 export fpath
 
 export HOMEBREW_BUNDLE_FILE=~/.config/homebrew/Brewfile

@@ -13,6 +13,10 @@ dep_graph.dot: config/homebrew/Brewfile
 dep_graph.png: dep_graph.dot
 	dot -Tpng $< -o $@
 
+node_modules: package.json package-lock.json
+	npm install
+	touch $@
+
 venv:
 	python3 -m virtualenv venv
 

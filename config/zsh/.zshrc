@@ -69,7 +69,6 @@ setopt HIST_IGNORE_SPACE
 autoload -Uz fancyctrlz
 autoload -Uz opensrcdir
 autoload -Uz sethttpieprofile
-autoload -Uz tldr
 
 zle -N fancyctrlz
 bindkey '^Z' fancyctrlz

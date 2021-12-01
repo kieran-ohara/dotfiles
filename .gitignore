@@ -12,4 +12,5 @@
 /dep_graph.*
 /dotfiledeps
 /keyboards/layout/*
+/node_modules
 /venv
