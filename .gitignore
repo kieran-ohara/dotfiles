@@ -5,6 +5,9 @@
 /config/vim/spell/en.utf-8.add.spl
 /config/vim/swapfiles
 /config/vim/undodir
+/config/nvim/backupfiles
+/config/nvim/swapfiles
+/config/nvim/undodir
 /config/karabiner/automatic_backups
 /config/zsh/*.zwc
 /config/zsh/*.zwc.old

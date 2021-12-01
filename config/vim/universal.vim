@@ -1,11 +1,9 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline
-" Text Editing {{{
-set cdpath+=~/src
-set directory=$XDG_CONFIG_HOME/vim/swapfiles//
-set backupdir=$XDG_CONFIG_HOME/vim/backupfiles//
-set undodir=$XDG_CONFIG_HOME/vim/undodir
 set runtimepath^=$XDG_CONFIG_HOME/vim
 set packpath^=$XDG_CONFIG_HOME/vim
+" Text Editing {{{
+set cdpath+=~/src
+
 set undofile          " Persist undo
 
 set clipboard=unnamed " Yank to * register (system clipboard)

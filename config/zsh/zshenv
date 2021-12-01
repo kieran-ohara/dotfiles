@@ -42,9 +42,6 @@ export EDITOR='vim'
 # Use vim as man pager
 export PAGER="col -b | view -c 'set ft=man nomod nolist' - "
 
-# Move vim to XDG
-export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/.vimrc" | source $MYVIMRC'
-
 # Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false

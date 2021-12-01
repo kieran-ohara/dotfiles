@@ -22,12 +22,16 @@
     ~/.config/vim: config/vim
     ~/.config/zsh: config/zsh
     ~/.tmux.conf: config/tmux/tmux.conf
+    ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/zshenv
 
 - create:
   - ~/.config/vim/backupfiles
   - ~/.config/vim/swapfiles
   - ~/.config/vim/undodir
+  - ~/.config/nvim/backupfiles
+  - ~/.config/nvim/swapfiles
+  - ~/.config/nvim/undodir
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

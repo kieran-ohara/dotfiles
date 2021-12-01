@@ -1,0 +1,5 @@
+source $XDG_CONFIG_HOME/vim/universal.vim
+
+set directory=$XDG_CONFIG_HOME/vim/swapfiles//
+set backupdir=$XDG_CONFIG_HOME/vim/backupfiles//
+set undodir=$XDG_CONFIG_HOME/vim/undodir

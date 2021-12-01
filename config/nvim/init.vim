@@ -1,8 +1,9 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline
-set runtimepath^=~/.vim
-let &packpath = &runtimepath
-set packpath^=~/.config/nvim
-source $XDG_CONFIG_HOME/vim/.vimrc
+source $XDG_CONFIG_HOME/vim/universal.vim
+
+set directory=$XDG_CONFIG_HOME/nvim/swapfiles//
+set backupdir=$XDG_CONFIG_HOME/nvim/backupfiles//
+set undodir=$XDG_CONFIG_HOME/nvim/undodir
 
 " Plugins {{{
 
