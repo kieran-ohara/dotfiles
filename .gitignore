@@ -15,5 +15,5 @@
 /dotfiledeps
 /keyboards/layout/*
 /dependencies/node_modules
-/venv
+/dependencies/venv
 

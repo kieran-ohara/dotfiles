@@ -27,8 +27,8 @@ if type volta &>/dev/null; then
 fi
 
 path=($ZDOTDIR/bin $path)
-path=(${DOTFILES}/dependencies/node_modules/.bin $path)
-path=(${DOTFILES}/venv/bin $path)
+path+=(${DOTFILES}/dependencies/node_modules/.bin)
+path+=(${DOTFILES}/dependencies/venv/bin)
 export path
 
 fpath=($ZDOTDIR/autoload $fpath)

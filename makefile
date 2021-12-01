@@ -18,9 +18,8 @@ $(DEPS)/node_modules: $(DEPS)/package.json $(DEPS)/package-lock.json
 	npm install --prefix $(@D)
 	touch $@
 
-venv:
-	python3 -m virtualenv venv
+$(DEPS)/venv:
+	python3 -m virtualenv $@
 
-venv/installed: requirements.txt venv
-	venv/bin/pip install -r $<
-	touch $@
+$(DEPS)/venv/bin: $(DEPS)/venv $(DEPS)/requirements.txt
+	$</bin/pip install -r $(DEPS)/requirements.txt

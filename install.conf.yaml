@@ -32,4 +32,5 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [make dependencies/node_modules]
-  - [make venv/installed]
+  - [make dependencies/venv/bin]
+  - [cd config/nvim/parser && ./build-parsers.sh]
