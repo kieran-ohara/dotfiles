@@ -1,8 +1,10 @@
 /.jira.d/*
 !/.jira.d/config.yml
 /.skaffold/cache
-/.vim/spell/en.utf-8.add.spl
-/.vim/swapfiles
+/config/vim/backupfiles
+/config/vim/spell/en.utf-8.add.spl
+/config/vim/swapfiles
+/config/vim/undodir
 /config/karabiner/automatic_backups
 /config/zsh/*.zwc
 /config/zsh/*.zwc.old
@@ -14,3 +16,4 @@
 /keyboards/layout/*
 /node_modules
 /venv
+

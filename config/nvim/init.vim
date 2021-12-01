@@ -2,7 +2,7 @@
 set runtimepath^=~/.vim
 let &packpath = &runtimepath
 set packpath^=~/.config/nvim
-source ~/.vimrc
+source $XDG_CONFIG_HOME/vim/.vimrc
 
 " Plugins {{{
 

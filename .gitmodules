@@ -4,40 +4,40 @@
 	ignore = dirty
 
 [submodule "vim-tmux-navigator"]
-	path = .vim/pack/packages/start/vim-tmux-navigator
+	path = config/vim/pack/packages/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
 [submodule "vim-sneak"]
-	path = .vim/pack/packages/start/vim-sneak
+	path = config/vim/pack/packages/start/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
 [submodule "vim-dirvish"]
-	path = .vim/pack/packages/start/vim-dirvish
+	path = config/vim/pack/packages/start/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
 [submodule "vim-commentary"]
-	path = .vim/pack/packages/start/vim-commentary
+	path = config/vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
 [submodule "vim-eunuch"]
-	path = .vim/pack/packages/start/vim-eunuch
+	path = config/vim/pack/packages/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
 [submodule "vim-fugitive"]
-	path = .vim/pack/packages/start/vim-fugitive
+	path = config/vim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "vim-repeat"]
-	path = .vim/pack/packages/start/vim-repeat
+	path = config/vim/pack/packages/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
 [submodule "vim-rhubarb"]
-	path = .vim/pack/packages/start/vim-rhubarb
+	path = config/vim/pack/packages/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
 [submodule "vim-surround"]
-	path = .vim/pack/packages/start/vim-surround
+	path = config/vim/pack/packages/start/vim-surround
 	url = https://github.com/tpope/vim-surround
 [submodule "vim-unimpaired"]
-	path = .vim/pack/packages/start/vim-unimpaired
+	path = config/vim/pack/packages/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
 [submodule "undotree"]
-	path = .vim/pack/packages/start/undotree
+	path = config/vim/pack/packages/start/undotree
 	url = https://github.com/mbbill/undotree
 [submodule "targets.vim"]
-	path = .vim/pack/packages/start/targets.vim
+	path = config/vim/pack/packages/start/targets.vim
 	url = https://github.com/wellle/targets.vim
 [submodule "plenary.nvim"]
 	path = config/nvim/pack/helpers/start/plenary.nvim
@@ -55,16 +55,16 @@
 	path = config/nvim/pack/ui/start/tokyonight.nvim
 	url = https://github.com/folke/tokyonight.nvim
 [submodule "vim-abolish"]
-	path = .vim/pack/packages/start/vim-abolish
+	path = config/vim/pack/packages/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish
 [submodule "vim-dispatch"]
-	path = .vim/pack/packages/start/vim-dispatch
+	path = config/vim/pack/packages/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
 [submodule "vim-obsession"]
-	path = .vim/pack/packages/start/vim-obsession
+	path = config/vim/pack/packages/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession
 [submodule "vim-projectionist"]
-	path = .vim/pack/packages/start/vim-projectionist
+	path = config/vim/pack/packages/start/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist
 [submodule "nvim-treesitter-textobjects"]
 	path = config/nvim/pack/treesitter/start/nvim-treesitter-textobjects

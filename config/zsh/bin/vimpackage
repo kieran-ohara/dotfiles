@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR=.vim/pack/packages/start/$(basename $1)
+DIR=config/vim/pack/packages/start/$(basename $1)
 if [ ! -d "$DIR" ]; then
     git submodule add --name $(basename $1) --force https://github.com/$1 $DIR
 fi
