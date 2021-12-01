@@ -1,2 +1,3 @@
+ansible==5.0.0
 httpie==2.6.0
 mycli==1.24.1
