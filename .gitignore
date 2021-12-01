@@ -1,6 +1,3 @@
-/.jira.d/*
-!/.jira.d/config.yml
-/.skaffold/cache
 /config/vim/spell/en.utf-8.add.spl
 /config/karabiner/automatic_backups
 /config/zsh/*.zwc
@@ -9,8 +6,6 @@
 /config/zsh/.zim/*
 !/config/zsh/.zim/zimfw.zsh
 /dep_graph.*
-/dotfiledeps
 /keyboards/layout/*
 /dependencies/node_modules
 /dependencies/venv
-
