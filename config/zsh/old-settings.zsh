@@ -109,19 +109,4 @@ compdef '_files -/ -W ~/.docker/hosts' docker_set_host
 function nice_tree() {
     tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
-
-function nice_which {
-    WHICH=`which $1`
-
-    if [ ! -L $WHICH ]; then
-        echo $WHICH
-        return
-    fi
-
-    READLINK=`readlink $WHICH`
-    READLINK_COLOUR=`test -f $(dirname $WHICH)/$READLINK && echo ${fg[green]} || echo ${fg[red]}`
-
-    echo "$WHICH -> $READLINK_COLOUR$READLINK"
-}
-compdef nice_which=which
 # }}}

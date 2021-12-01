@@ -92,6 +92,7 @@ alias md='mkdir -p'
 alias o=open
 alias pullsecrets="git clone https://github.com/kieran-ohara/secrets.git ~/src/secrets"
 alias v=resumevimsession
+alias w=nicewhich
 alias x=exit
 #  }}}
 # zim-fw {{{
