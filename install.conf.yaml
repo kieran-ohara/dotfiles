@@ -8,6 +8,7 @@
   - ~/.config
 
 - link:
+    ~/.aws: config/aws
     ~/.config/alacritty: config/alacritty
     ~/.config/docker: config/docker
     ~/.config/git: config/git
