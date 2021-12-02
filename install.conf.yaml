@@ -22,7 +22,7 @@
     ~/.config/vim: config/vim
     ~/.config/zsh: config/zsh
     ~/.vimrc: config/vim/vimrc
-    ~/.zshenv: config/zsh/zshenv
+    ~/.zshenv: config/zsh/.zshenv
 
 - create:
   - ~/.cache/vim/backupfiles
