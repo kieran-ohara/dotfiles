@@ -10,7 +10,7 @@ cmd + alt + ctrl + shift - j : sleep 0.1 && pmset sleepnow
 cmd + alt + ctrl + shift - k : open -a Slack
 cmd + alt + ctrl + shift - l : open -a Lens
 cmd + alt + ctrl + shift - m : open -a MindNode
-cmd + alt + ctrl + shift - o : open -a Firefox
+cmd + alt + ctrl + shift - o : open -a Safari
 cmd + alt + ctrl + shift - p : open -a Spotify
 cmd + alt + ctrl + shift - r : open -a OmniFocus
 cmd + alt + ctrl + shift - s : open -a "System Preferences"

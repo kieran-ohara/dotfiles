@@ -26,9 +26,13 @@ cask 'whatsapp'
 cask 'zoom'
 cask 'zotero'
 
+mas 'Honey for Safari', id: 1472777122
+mas 'Hush Nag Blocker', id: 1544743900
 mas 'MindNode', id: 1289197285
 mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
+mas 'Save to Pocket', id: 14773852133
+mas 'Vimari', id: 1480933944
 
 brew 'direnv'
 brew 'dive'
