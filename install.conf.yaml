@@ -6,7 +6,6 @@
 
 - create:
   - ~/.config
-  - ~/.config/tmux
 
 - link:
     ~/.config/alacritty: config/alacritty
@@ -18,10 +17,9 @@
     ~/.config/mycli: config/mycli
     ~/.config/nvim: config/nvim
     ~/.config/skhd: config/skhd
-    ~/.config/tmux/theme: config/tmux/theme
+    ~/.config/tmux: config/tmux
     ~/.config/vim: config/vim
     ~/.config/zsh: config/zsh
-    ~/.tmux.conf: config/tmux/tmux.conf
     ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/zshenv
 
