@@ -29,7 +29,7 @@
 [rebase]
     instructionFormat = "%s (%an)"
     autosquash = true
-    autostash = true
+    autoStash = true
 [gpg]
     format = ssh
 [pull]
