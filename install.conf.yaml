@@ -24,7 +24,7 @@
     ~/.config/zsh: config/zsh
     ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/.zshenv
-    ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/me.kieranbamforth.on-login.plist
+    ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/darwin/me.kieranbamforth.on-login.plist
 
 - create:
   - ~/.cache/vim/backupfiles
