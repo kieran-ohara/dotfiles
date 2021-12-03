@@ -1,0 +1,3 @@
+#!/bin/sh -e
+ssh-add -q ${HOME}/.ssh/keys/personal/git-signing-key
+echo 'on-login finished'
