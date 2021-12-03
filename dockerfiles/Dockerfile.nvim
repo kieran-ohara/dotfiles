@@ -9,14 +9,9 @@ RUN git clone https://github.com/tree-sitter/tree-sitter.git \
 RUN cd tree-sitter \
         && cargo build \
         && cargo install tree-sitter-cli
-RUN mkdir /parser \
-        && git clone https://github.com/tree-sitter/tree-sitter-javascript.git \
-            --branch v0.19.0\
-            --depth 1 \
-        && cd tree-sitter-javascript \
-        && tree-sitter generate \
-        && cc -o javascript.so -I ./src -lstdc++ -Os -shared src/parser.c src/scanner.c \
-        && cp javascript.so /parser/javascript.so
+
+COPY config/nvim/parser /parser
+RUN cd /parser && ./build-parsers.sh
 
 # Editor Environment
 FROM debian:bookworm-slim

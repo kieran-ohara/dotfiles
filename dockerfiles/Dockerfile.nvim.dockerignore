@@ -1,1 +1,2 @@
-config/nvim/parser
+config/nvim/parser/*.so
+config/nvim/parser/src
