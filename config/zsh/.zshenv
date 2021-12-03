@@ -46,6 +46,10 @@ export PAGER="col -b | view -c 'set ft=man nomod nolist' - "
 # Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false
+FILE="${HOME}/.zshenv.local"
+if test -f "$FILE"; then
+    source $FILE;
+fi
 
 if [ "$ZSH_ORDER" = true ] ; then
     echo "zshenv"
