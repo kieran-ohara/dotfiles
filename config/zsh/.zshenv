@@ -43,6 +43,9 @@ export EDITOR='vim'
 # Use vim as man pager
 export PAGER="col -b | view -c 'set ft=man nomod nolist' - "
 
+# Ansible
+export ANSIBLE_CONFIG=${XDG_CONFIG_HOME}/ansible/ansible.cfg
+
 # Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false

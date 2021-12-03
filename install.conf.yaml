@@ -10,6 +10,7 @@
 - link:
     ~/.aws: config/aws
     ~/.config/alacritty: config/alacritty
+    ~/.config/ansible: config/ansible
     ~/.config/docker: config/docker
     ~/.config/git: config/git
     ~/.config/homebrew: config/homebrew
