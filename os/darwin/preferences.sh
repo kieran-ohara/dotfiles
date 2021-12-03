@@ -23,7 +23,11 @@ defaults write com.apple.dock no-bouncing -bool TRUE
 
 chflags nohidden ~/Library
 
-sudo killall Dock Finder SystemUIServer
-
 defaults write io.alacritty CGFontRenderingFontSmoothingDisabled 1
 defaults write org.p0deje.Maccy pasteByDefault 1
+
+defaults write com.amethyst.Amethyst window-margins 1
+defaults write com.amethyst.Amethyst window-margin-size 6
+
+sudo killall Dock Finder SystemUIServer
+
