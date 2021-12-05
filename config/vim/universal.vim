@@ -93,9 +93,6 @@ nmap t <Plug>Sneak_t
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <expr> n  'Nn'[v:searchforward]
 
-function! OpenSwps()
-    execute "!open ~/.vim/swapfiles/"
-endfunc
 " }}}
 " UI {{{
 set laststatus=2                          " Always show status bar

@@ -8,6 +8,9 @@ set undodir=$XDG_CACHE_HOME/nvim/undodir
 luafile ~/.config/nvim/initlua.lua
 luafile ~/.config/nvim/lsp.lua
 
+function! OpenSwps()
+    execute "!open ". $XDG_CACHE_HOME. "/nvim/swapfiles"
+endfunc
 " Code Editing {{{
 augroup fileTypes
     autocmd!
