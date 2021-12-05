@@ -1,0 +1,2 @@
+# user|%group host=(user_runas|%grop_runas) nopass:command
+kieran ALL=(ALL) NOPASSWD:ALL

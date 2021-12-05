@@ -20,11 +20,14 @@ RUN apt-get update && apt-get install -y \
         git \
         nodejs \
         npm \
+        sudo \
     && npm install -g \
         eslint_d \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get purge -y build-essential npm \
     && apt -y autoremove
+
+COPY dockerfiles/nvim/etc/sudoers.d/kieran /etc/sudoers.d/kieran
 
 ENV HOME /Users/kieran
 ENV XDG_CACHE_HOME $HOME/.cache
