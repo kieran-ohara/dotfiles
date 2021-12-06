@@ -2,6 +2,7 @@
 FROM rust:bullseye AS treesitter
 RUN apt-get update && apt-get install -y \
         git \
+        jq \
         nodejs \
         build-essential
 RUN git clone https://github.com/tree-sitter/tree-sitter.git \
@@ -11,6 +12,9 @@ RUN cd tree-sitter \
         && cargo install tree-sitter-cli
 
 COPY config/nvim/parser /parser
+COPY config/nvim/pack/treesitter/start/nvim-treesitter/lockfile.json \
+    /nvim/pack/treesitter/start/nvim-treesitter/lockfile.json
+
 RUN cd /parser && ./build-parsers.sh
 
 # Editor Environment

@@ -10,14 +10,13 @@ message:
 
 # The repo + tag to build. Default to Javascript Treesitter.
 REPO := tree-sitter/tree-sitter-$(LANG).git
-TAG := v0.19.0
+REVISION := master
 
 src/%.git:
 	git clone \
-		--branch $(TAG) \
-		--depth 1 \
 		https://github.com/$*.git \
 		$@
+	cd $@ && git checkout $(REVISION)
 	rm -rf $./.git
 
 

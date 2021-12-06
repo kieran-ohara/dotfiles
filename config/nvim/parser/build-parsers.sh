@@ -1,8 +1,24 @@
 #!/bin/bash
+if ! type jq &> /dev/null
+then
+    echo 'jq not installed'
+    exit 1
+fi
+
+LOCKFILE="$XDG_CONFIG_HOME/nvim/pack/treesitter/start/nvim-treesitter/lockfile.json"
+if [ ! -f $LOCKFILE ]; then
+    echo "Lockfile not found (searched $LOCKFILE)"
+    exit 1
+fi
+
+function get_revision() {
+    LANGUAGE=$1;
+    jq -r ".$LANGUAGE.revision" < $LOCKFILE
+}
+
 for LANG in \
     bash \
     c \
-    cpp \
     css \
     html \
     javascript \
@@ -12,15 +28,15 @@ for LANG in \
     regex \
     ruby
 do
-    make $LANG.so LANG=$LANG
+    make $LANG.so LANG=$LANG REVISION=$(get_revision $LANG)
 done
 
 make dockerfile.so \
     LANG=dockerfile \
     REPO=camdencheek/tree-sitter-dockerfile.git \
-    TAG=v0.1.0
+    REVISION=$(get_revision dockerfile)
 
 make yaml.so \
     LANG=yaml \
     REPO=ikatyang/tree-sitter-yaml.git \
-    TAG=v0.5.0
+    REVISION=$(get_revision yaml)
