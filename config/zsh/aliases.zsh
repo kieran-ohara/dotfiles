@@ -1,3 +1,9 @@
+alias bci='brew install --cask'
+alias bcu='brew uninstall --cask'
+alias bi='brew info'
+alias bi='brew install'
+alias bs='brew search'
+alias bu='brew uninstall'
 alias d='docker'
 alias dkb="docker build"
 alias dki="docker images"
