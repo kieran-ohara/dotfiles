@@ -49,7 +49,7 @@ RUN mkdir -p \
 COPY config/vim/vimrc $HOME/.vimrc
 COPY config/vim $XDG_CONFIG_HOME/vim
 COPY config/nvim $XDG_CONFIG_HOME/nvim
-COPY --from=treesitter /parser .config/nvim/parser
+COPY --from=treesitter /parser/*.so .config/nvim/parser
 COPY config/git $XDG_CONFIG_HOME/git
 
 CMD ["nvim"]
