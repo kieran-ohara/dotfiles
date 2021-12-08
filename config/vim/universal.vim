@@ -146,8 +146,6 @@ nnoremap <leader>l :setlocal list!<CR>
 " Mappings {{{
 
 " Easy edit / source VIMRC
-nnoremap <leader>ve :vsplit ~/src/dotfiles/.vimrc<CR>
-nnoremap <leader>va :vsplit ~/src/dotfiles/.vim/bundle/vim-kieran/plugin/abbreviations.vim<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 
 " Git shortcuts
