@@ -1,4 +1,4 @@
-" vim: set foldmethod=marker foldlevel=0 nomodeline
+" vim: set foldmethod=marker foldlevel=0 nomodeline:
 set runtimepath^=$XDG_CONFIG_HOME/vim
 set packpath^=$XDG_CONFIG_HOME/vim
 " Text Editing {{{

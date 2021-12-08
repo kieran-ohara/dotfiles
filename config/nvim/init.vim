@@ -1,4 +1,4 @@
-" vim: set foldmethod=marker foldlevel=0 nomodeline
+" vim: set foldmethod=marker foldlevel=0 nomodeline:
 source $XDG_CONFIG_HOME/vim/universal.vim
 
 set directory=$XDG_CACHE_HOME/nvim/swapfiles//
