@@ -25,18 +25,11 @@ augroup SetupIndents
     autocmd FileType gitcommit,markdown,conf setlocal linebreak
     autocmd FileType gitcommit,markdown,conf setlocal textwidth=80 colorcolumn=80
 augroup end
-" Dont conceal quotes when viewing JSON
-let g:vim_json_syntax_conceal=0
-" Do not overwrite makefile.
-let plantuml_set_makeprg=0
 
 " Don't show indent lines by default.
 let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┊']
 
-" Test strategy is Dispatch
-let test#ruby#use_binstubs = 0
-let test#strategy = "dispatch"
 " }}}
 
 colorscheme tokyonight
