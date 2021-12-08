@@ -17,7 +17,6 @@ augroup SetupIndents
 
     autocmd BufWinLeave * call clearmatches()
 
-    autocmd FileType python setlocal tabstop=4 expandtab
     autocmd FileType json,ruby,yaml setlocal tabstop=2 expandtab
     autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal tabstop=2 expandtab
 augroup end
