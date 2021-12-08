@@ -149,7 +149,7 @@ nnoremap <leader>l :setlocal list!<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 
 " Git shortcuts
-nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gc :Git commit -v -q<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
