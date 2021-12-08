@@ -12,14 +12,6 @@ function! OpenSwps()
     execute "!open ". $XDG_CACHE_HOME. "/nvim/swapfiles"
 endfunc
 " Code Editing {{{
-augroup SetupIndents
-    autocmd!
-
-    autocmd BufWinLeave * call clearmatches()
-
-    autocmd FileType json,ruby,yaml setlocal tabstop=2 expandtab
-    autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal tabstop=2 expandtab
-augroup end
 
 " Don't show indent lines by default.
 let g:indentLine_enabled = 0

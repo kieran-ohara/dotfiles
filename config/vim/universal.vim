@@ -21,7 +21,7 @@ set nobinary
 
 set spelllang=en_gb   " English dictionary
 
-set tabstop=4         " Use 4 spaces to indent
+set tabstop=2         " Use 4 spaces to indent
 set shiftwidth=0      " No. of spaces to use for each indent (<<, >>, etc, 0 = tabstop).
 set softtabstop=0     " What the tabs 'feel' like (0 = feature off)
 set expandtab         " Use spaces to pad out a tab
