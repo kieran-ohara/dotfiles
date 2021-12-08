@@ -20,10 +20,6 @@ augroup SetupIndents
     autocmd FileType python setlocal tabstop=4 expandtab
     autocmd FileType json,ruby,yaml setlocal tabstop=2 expandtab
     autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal tabstop=2 expandtab
-
-    autocmd FileType gitcommit,markdown,conf setlocal spell
-    autocmd FileType gitcommit,markdown,conf setlocal linebreak
-    autocmd FileType gitcommit,markdown,conf setlocal textwidth=80 colorcolumn=80
 augroup end
 
 " Don't show indent lines by default.
