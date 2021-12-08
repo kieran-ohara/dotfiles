@@ -148,13 +148,15 @@ let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
-
 nnoremap <leader>l :setlocal list!<CR>
+
+" Get the highlight colours under the cursor
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 " }}}
-" Mappings {{{
+" Git shortcuts {{{
 
-
-" Git shortcuts
 nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gc :Git commit -v -q<CR>
 nnoremap <leader>gd :Gdiff<CR>
@@ -162,12 +164,8 @@ nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>ggp :Git push<CR>
 nnoremap <leader>gst :Git<CR>
 
+" }}}
+
 " Kube tools
 nnoremap <leader>kk :!kubectl apply -f %<CR>
 nnoremap <leader>kd :!kubectl delete -f %<CR>
-
-" Get the highlight colours under the cursor
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-" }}}
