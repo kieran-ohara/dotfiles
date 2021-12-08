@@ -1,6 +1,10 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline:
 set runtimepath^=$XDG_CONFIG_HOME/vim
 set packpath^=$XDG_CONFIG_HOME/vim
+
+" Source VIMRC
+nnoremap <leader>vs :source $MYVIMRC<CR>
+
 " Text Editing {{{
 set cdpath+=~/src
 
@@ -145,8 +149,6 @@ nnoremap <leader>l :setlocal list!<CR>
 " }}}
 " Mappings {{{
 
-" Easy edit / source VIMRC
-nnoremap <leader>vs :source $MYVIMRC<CR>
 
 " Git shortcuts
 nnoremap <leader>gb :Git blame<CR>
