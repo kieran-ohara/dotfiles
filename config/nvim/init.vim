@@ -12,32 +12,18 @@ function! OpenSwps()
     execute "!open ". $XDG_CACHE_HOME. "/nvim/swapfiles"
 endfunc
 " Code Editing {{{
-augroup fileTypes
+augroup SetupIndents
     autocmd!
-
-    autocmd BufNewFile,BufRead *.conf setfiletype nginx
-    autocmd BufNewFile,BufRead *.jsx setfiletype typescriptreact
-    autocmd BufNewFile,BufRead *.puml setfiletype plantuml
-    autocmd BufNewFile,BufRead .Brewfile setfiletype ruby
-    autocmd BufNewFile,BufRead .env.* setfiletype sh
-    autocmd BufNewFile,BufRead .npmrc setfiletype dosini
-    autocmd BufNewFile,BufRead Dockerfile.* setfiletype dockerfile
-    autocmd BufNewFile,BufRead hub setfiletype yaml
 
     autocmd BufWinLeave * call clearmatches()
 
-    " Override tabs/spaces.
     autocmd FileType python setlocal tabstop=4 expandtab
     autocmd FileType json,ruby,yaml setlocal tabstop=2 expandtab
     autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal tabstop=2 expandtab
-    autocmd FileType yaml let b:indentLine_enabled = 1
 
     autocmd FileType gitcommit,markdown,conf setlocal spell
     autocmd FileType gitcommit,markdown,conf setlocal linebreak
     autocmd FileType gitcommit,markdown,conf setlocal textwidth=80 colorcolumn=80
-
-    autocmd FileType json setlocal formatprg='jq'
-
 augroup end
 " Dont conceal quotes when viewing JSON
 let g:vim_json_syntax_conceal=0
