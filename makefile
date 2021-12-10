@@ -34,3 +34,9 @@ $(DEPS)/aws/contents/aws-cli.pkg/Payload/aws-cli: $(DEPS)/aws/install.pkg
 
 $(DEPS)/aws/cli: $(DEPS)/aws/contents/aws-cli.pkg/Payload/aws-cli
 	ln -s ../../$< $@
+
+config/zsh/bin/ksdiff.zip:
+	curl https://updates.kaleidoscope.app/v2/prod/ksdiff-2.4.2-126-sep-7-2021.zip -o $@
+
+config/zsh/bin/ksdiff.unzip: config/zsh/bin/ksdiff.zip
+	unzip $< -d $@

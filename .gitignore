@@ -10,6 +10,8 @@
 /config/zsh/.zcompcache
 /config/zsh/.zcompdump
 /config/zsh/.zim/*
+/config/zsh/bin/ksdiff
+/config/zsh/bin/ksdiff.*
 !/config/zsh/.zim/zimfw.zsh
 /dep_graph.*
 /keyboards/layout/*
