@@ -4,6 +4,7 @@
 /config/karabiner/automatic_backups
 /config/nvim/parser/*.so
 /config/nvim/parser/src
+/config/vim/.netrwhist
 /config/zsh/*.zwc
 /config/zsh/*.zwc.old
 /config/zsh/.zcompdump
