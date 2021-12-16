@@ -13,6 +13,7 @@ alias dkr="dk run"
 alias dkrmi="docker rmi"
 alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias dkrmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
+alias fpath="echo $FPATH | sed -r 's/:/\n/g'"
 alias g=git
 alias hps=sethttpieprofile
 alias j=opensrcdir
@@ -20,6 +21,7 @@ alias k=kubectl
 alias m=make
 alias md='mkdir -p'
 alias o=open
+alias path="echo $PATH | sed -r 's/:/\n/g'"
 alias pullsecrets="git clone https://github.com/kieran-ohara/secrets.git ~/src/secrets"
 alias rmf='rm -rf'
 alias tree='nicetree'
