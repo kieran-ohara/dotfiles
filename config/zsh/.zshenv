@@ -18,6 +18,7 @@ if [ -d /opt/homebrew ] ; then
 fi
 if [ ! -z ${BREW_PREFIX} ]; then
     path=($BREW_PREFIX/bin $path)
+    path=($BREW_PREFIX/opt/make/libexec/gnubin $path)
     fpath=($BREW_PREFIX/share/zsh/site-functions $fpath)
 fi
 
