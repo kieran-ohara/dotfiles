@@ -27,7 +27,7 @@ if type volta &>/dev/null; then
     path=($VOLTA_HOME/bin $path)
 fi
 
-path=($ZDOTDIR/bin $path)
+path+=($ZDOTDIR/bin)
 path+=(${DOTFILES}/dependencies/node_modules/.bin)
 path+=(${DOTFILES}/dependencies/venv/bin)
 export path
