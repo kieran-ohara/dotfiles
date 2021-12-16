@@ -7,6 +7,7 @@
 /config/vim/.netrwhist
 /config/zsh/*.zwc
 /config/zsh/*.zwc.old
+/config/zsh/.zcompcache
 /config/zsh/.zcompdump
 /config/zsh/.zim/*
 !/config/zsh/.zim/zimfw.zsh
