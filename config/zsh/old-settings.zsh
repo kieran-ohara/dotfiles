@@ -11,10 +11,6 @@ export KEYTIMEOUT=1
 bindkey -M vicmd -r ':'
 bindkey -M vicmd ':' vi-add-next
 # }}}
-
-# Direnv.
-eval "$(direnv hook zsh)"
-
 # Aliases. {{{
 alias -g G='| grep'
 alias -g GBR='() {local x=`git symbolic-ref HEAD 2>/dev/null`; echo ${x##refs/heads/}}'
