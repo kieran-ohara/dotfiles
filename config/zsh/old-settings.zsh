@@ -1,8 +1,3 @@
-# vim: set foldmethod=marker foldlevel=0 nomodeline:
-# Load colours into shell variables https://github.com/ninrod/dotfiles/issues/134
-autoload -U colors
-colors
-
 # Shorter key timeout
 export KEYTIMEOUT=1
 # Mappings. {{{
