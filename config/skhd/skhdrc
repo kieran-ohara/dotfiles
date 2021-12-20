@@ -5,6 +5,7 @@ cmd + alt + ctrl + shift - b : open -a Obsidian
 cmd + alt + ctrl + shift - c : open -a Calendar
 cmd + alt + ctrl + shift - e : open -a Preview
 cmd + alt + ctrl + shift - f : open -a Finder
+cmd + alt + ctrl + shift - g : open -a UTM
 cmd + alt + ctrl + shift - i : open -a Alacritty
 cmd + alt + ctrl + shift - k : open -a Slack
 cmd + alt + ctrl + shift - l : open -a Lens
