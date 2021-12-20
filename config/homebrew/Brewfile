@@ -33,7 +33,6 @@ mas 'Hush Nag Blocker', id: 1544743900
 mas 'MindNode', id: 1289197285
 mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
-mas 'Save to Pocket', id: 14773852133
 mas 'Vimari', id: 1480933944
 
 brew 'direnv'
@@ -49,7 +48,6 @@ brew 'kubectl'
 brew 'make'
 brew 'nvim'
 brew 'python@3.9'
-brew 'reg'
 brew 'rg'
 brew 'skaffold'
 brew 'tmux'
