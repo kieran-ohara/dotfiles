@@ -101,6 +101,9 @@ nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <leader>fn :!open .<CR>
 " Open swapfile directory
 nnoremap <leader>fs :call OpenSwps()<CR>
+
+" Easy kill buffer
+nnoremap <leader>x :bd<CR>
 " }}}
 " UI {{{
 set laststatus=2                          " Always show status bar
