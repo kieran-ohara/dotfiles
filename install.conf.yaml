@@ -24,8 +24,8 @@
     ~/.config/tmux: config/tmux
     ~/.config/vim: config/vim
     ~/.config/zsh: config/zsh
-    ~/.vimrc: config/vim/vimrc
     ~/.vim/after: config/vim/after
+    ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/.zshenv
     ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/darwin/me.kieranbamforth.on-login.plist
 
