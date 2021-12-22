@@ -18,6 +18,7 @@ alias g=git
 alias hps=sethttpieprofile
 alias j=opensrcdir
 alias k=kubectl
+alias lgfs="libguestfs"
 alias m=make
 alias md='mkdir -p'
 alias o=open

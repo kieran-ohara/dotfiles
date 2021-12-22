@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --rm -v $(PWD):/ws -w /ws kieranbamforth/libguestfs:1 $@
