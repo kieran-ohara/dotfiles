@@ -5,14 +5,9 @@ alias bi='brew install'
 alias bs='brew search'
 alias bu='brew uninstall'
 alias d='docker'
-alias dkb="docker build"
-alias dki="docker images"
-alias dkl="docker logs"
 alias dkp="docker ps -a"
-alias dkr="dk run"
-alias dkrmi="docker rmi"
-alias dkrmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
-alias dkrmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
+alias drmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
+alias drmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
 alias fpath="echo $FPATH | sed -r 's/:/\n/g'"
 alias g=git
 alias hps=sethttpieprofile
