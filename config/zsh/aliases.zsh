@@ -18,7 +18,6 @@ alias m=make
 alias md='mkdir -p'
 alias o=open
 alias path="echo $PATH | sed -r 's/:/\n/g'"
-alias pullsecrets="git clone https://github.com/kieran-ohara/secrets.git ~/src/secrets"
 alias rmf='rm -rf'
 alias tree='nicetree'
 alias v=resumevimsession
