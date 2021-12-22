@@ -1,0 +1,13 @@
+region: eu
+tunnels:
+
+  kb7443:
+    addr: 7443
+    proto: tls
+    hostname: ngrok.kieranbamforth.me
+
+  kb7080:
+    addr: 7080
+    proto: http
+    hostname: ngrok.kieranbamforth.me
+    bind_tls: false
