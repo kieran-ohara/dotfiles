@@ -13,5 +13,6 @@
 !/config/zsh/.zim/zimfw.zsh
 /dep_graph.*
 /keyboards/layout/*
+/dependencies/aws
 /dependencies/node_modules
 /dependencies/venv
