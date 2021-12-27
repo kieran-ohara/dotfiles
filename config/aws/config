@@ -4,3 +4,4 @@ sso_region = eu-west-1
 sso_account_id = 855277617897
 sso_role_name = Administrator
 output = text
+region = eu-west-1
