@@ -12,10 +12,10 @@ fi
 setopt AUTOCD
 # Allow comments with hash character
 setopt interactivecomments
+# Allow running commands in PS1 with single quotes.
+setopt PROMPT_SUBST
 # Give Autosuggest a more readable colour.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
-# Set prompts
-PS1=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b %% '
 # Allow shift-tab in ZSH suggestions
 bindkey '^[[Z' reverse-menu-complete
 
@@ -67,12 +67,15 @@ setopt HIST_IGNORE_SPACE
 #
 # Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
 autoload -Uz fancyctrlz
+autoload -Uz gitbranch
 autoload -Uz opensrcdir
 autoload -Uz sethttpieprofile
 
 zle -N fancyctrlz
 bindkey '^Z' fancyctrlz
 # }}}
+# Set prompts
+PS1=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b%F{blue}$(gitbranch)%f %% '
 source $XDG_CONFIG_HOME/zsh/aliases.zsh
 # Allow direnv to set env vars and so on.
 eval "$(direnv hook zsh)"
