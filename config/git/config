@@ -54,6 +54,7 @@
     rbc = rebase --continue
     rbi = rebase --interactive
     rbim = rebase master --interactive
+    rh = reset --hard
     rs = restore
     s = status
     smu =  submodule update --recursive --remote
