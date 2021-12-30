@@ -1,9 +1,8 @@
 tap 'martido/homebrew-graph'
-
-# brew 'rustup'
-# cask 'alacritty'
+tap 'koekeishiya/formulae'
 
 cask '1password'
+cask 'alacritty'
 cask 'amethyst'
 cask 'daisydisk'
 cask 'docker'
