@@ -34,6 +34,7 @@ mas 'MindNode', id: 1289197285
 mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
 mas 'Vimari', id: 1480933944
+mas 'Octotree', id: 1480933944
 
 brew 'direnv'
 brew 'dive'
