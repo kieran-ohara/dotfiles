@@ -41,6 +41,25 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Disable sysdiagnose.",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "period",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "shift",
+                      "option",
+                      "control"
+                    ]
+                  }
+                },
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
