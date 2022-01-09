@@ -8,6 +8,7 @@ alias d='docker'
 alias dkp="docker ps -a"
 alias drmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias drmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
+alias dvm="docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh"
 alias fpath="echo $FPATH | sed -r 's/:/\n/g'"
 alias g=git
 alias hps=sethttpieprofile
