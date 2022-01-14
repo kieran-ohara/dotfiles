@@ -25,6 +25,7 @@ fi
 # Add shims to path.
 if type volta &>/dev/null; then
     export VOLTA_HOME=$HOME/.volta
+    path+=($VOLTA_HOME/bin)
 fi
 
 if [ -d $DOTFILES/dependencies/aws/cli ] ; then
