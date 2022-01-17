@@ -20,6 +20,7 @@ alias md='mkdir -p'
 alias o=open
 alias path="echo $PATH | sed -r 's/:/\n/g'"
 alias rmf='rm -rf'
+alias t=terraform
 alias tree='nicetree'
 alias v=resumevimsession
 alias w=nicewhich

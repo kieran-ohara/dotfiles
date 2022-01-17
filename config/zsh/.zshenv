@@ -40,6 +40,11 @@ export path
 fpath=($ZDOTDIR/autoload $fpath)
 export fpath
 
+if type terraform &>/dev/null; then
+  export TF_CLI_CONFIG_FILE="$XDG_CONFIG_HOME/.terraform.d/terraformrc"
+  export TF_PLUGIN_CACHE_DIR="$XDG_CACHE_HOME/.terraform.d/plugin-cache"
+fi
+
 export HOMEBREW_BUNDLE_FILE=~/.config/homebrew/Brewfile
 
 # Use vim where possible.
