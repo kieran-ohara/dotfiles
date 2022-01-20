@@ -58,6 +58,7 @@
     rs = restore
     s = status
     smu =  submodule update --recursive --remote
-    st = stash
+    st = status
+    sta = status
     stp = stash pop
     unstage = restore --staged
