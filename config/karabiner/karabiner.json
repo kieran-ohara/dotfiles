@@ -43,7 +43,26 @@
             ]
           },
           {
-            "description": "Disable sysdiagnose.",
+            "description": "Disable sysdiagnose (,)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "shift",
+                      "option",
+                      "control"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "description": "Disable sysdiagnose (.)",
             "manipulators": [
               {
                 "from": {
