@@ -13,6 +13,12 @@ cmp.setup({
     })
 })
 
+cmp.setup.cmdline(':', {
+  sources = cmp.config.sources({
+    { name = 'path' }
+  })
+})
+
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {},
     incremental_selection = {
