@@ -56,6 +56,9 @@ export PAGER="col -b | view -c 'set ft=man nomod nolist' - "
 # Ansible
 export ANSIBLE_CONFIG=${XDG_CONFIG_HOME}/ansible/ansible.cfg
 
+# Docker
+export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
+
 # Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false
