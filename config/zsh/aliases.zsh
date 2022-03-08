@@ -5,7 +5,7 @@ alias bi='brew install'
 alias bs='brew search'
 alias bu='brew uninstall'
 alias d='docker'
-alias dc='docker-composes'
+alias dc='docker-compose'
 alias dkp="docker ps -a"
 alias drmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias drmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
