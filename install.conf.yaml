@@ -24,6 +24,7 @@
     ~/.config/tmux: config/tmux
     ~/.config/vim: config/vim
     ~/.config/zsh: config/zsh
+    ~/.ngrok2: config/ngrok2
     ~/.vim/after: config/vim/after
     ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/.zshenv
