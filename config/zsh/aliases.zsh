@@ -19,6 +19,7 @@ alias k=kubectl
 alias lgfs="libguestfs"
 alias m=make
 alias md='mkdir -p'
+alias npmi="npm install"
 alias o=open
 alias path="echo $PATH | sed -r 's/:/\n/g'"
 alias rmf='rm -rf'
