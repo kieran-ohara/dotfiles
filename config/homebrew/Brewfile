@@ -34,7 +34,6 @@ cask 'whatsapp'
 cask 'zoom'
 cask 'zotero'
 
-mas 'MindNode', id: 1289197285
 mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
 
