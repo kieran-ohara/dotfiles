@@ -21,3 +21,19 @@ sso_account_id = 731641166661
 sso_role_name = MakeItCheaperPowerUserAccess
 output = json
 region = eu-west-1
+
+[profile bionic-dev]
+sso_start_url = https://bionic-sso.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 373124806600
+sso_role_name = BG-Development-DeveloperAccess
+output = json
+region = eu-west-1
+
+[profile bionic-cicd]
+sso_start_url = https://bionic-sso.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 421173879275
+sso_role_name = BG-CICD-Prod-DeveloperAccess
+output = json
+region = eu-west-1
