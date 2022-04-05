@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/kieran-ohara/dotfiles#readme",
   "dependencies": {
+    "aws-cdk": "^2.17.0",
+    "pnpm": "^6.32.4",
     "tldr": "^3.3.7"
   },
   "volta": {
