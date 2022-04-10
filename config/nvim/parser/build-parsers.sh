@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 if ! type jq &> /dev/null
 then
     echo 'jq not installed'
