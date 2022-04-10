@@ -6,6 +6,14 @@ sso_role_name = Administrator
 output = json
 region = eu-west-1
 
+[profile alternative-curriculum]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 051127158334
+sso_role_name = Administrator
+output = json
+region = eu-west-1
+
 [profile staging]
 sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
