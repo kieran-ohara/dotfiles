@@ -40,3 +40,8 @@ make yaml.so \
     LANG=yaml \
     REPO=ikatyang/tree-sitter-yaml.git \
     REVISION=$(get_revision yaml)
+
+make hcl.so \
+    LANG=hcl \
+    REPO=MichaHoffmann/tree-sitter-hcl.git \
+    REVISION=$(get_revision hcl)
