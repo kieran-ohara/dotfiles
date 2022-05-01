@@ -4,10 +4,12 @@ root-markers:
   - package.json
 lint-debounce: 1s
 tools:
+
   dockerfile-hadolint: &dockerfile-hadolint
     lint-command: 'hadolint'
     lint-formats:
       - '%f:%l %m'
+
   javascript-eslint: &javascript-eslint
     lint-command: 'npx eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}'
     lint-source: 'eslint_d'
@@ -16,6 +18,7 @@ tools:
     lint-formats:
       - "%f(%l,%c): %tarning %m"
       - "%f(%l,%c): %rror %m"
+
   sh-shellcheck: &sh-shellcheck
     lint-command: 'shellcheck -f gcc -x'
     lint-source: 'shellcheck'
@@ -23,10 +26,14 @@ tools:
       - '%f:%l:%c: %trror: %m'
       - '%f:%l:%c: %tarning: %m'
       - '%f:%l:%c: %tote: %m'
+
 languages:
+
   dockerfile:
     - <<: *dockerfile-hadolint
+
   javascript:
     - <<: *javascript-eslint
+
   sh:
     - <<: *sh-shellcheck
