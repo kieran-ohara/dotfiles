@@ -50,12 +50,13 @@ endif
 nnoremap Q @q
 nnoremap Y y$
 vnoremap <leader>s :sort u<CR>
-nnoremap <space>bd :bdelete<CR>
 cnoremap <expr> %% getcmdtype() == ':' ? './'.fnameescape(expand('%:h')).'/' : '%%'
 nmap <space>sa :saveas %%
-
-
 nnoremap <leader>w :w<CR>
+
+" Use tab/shift+tab to navigate the popup window.
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 function! StripTrailingWhitespaces()
     "Preparation: save last search, and cursor position.
@@ -76,6 +77,22 @@ augroup stripspaces
     autocmd InsertEnter * match ErrorMsg /\s\+\%#\@<!$/
     autocmd BufWinEnter,InsertLeave * match ErrorMsg /\s\+$/
 augroup end
+" }}}
+" Code Editing {{{
+" Git shortcuts
+nnoremap <leader>gb :Git blame<CR>
+nnoremap <leader>gc :Git commit -v -q<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>ggp :Git push<CR>
+nnoremap <leader>gst :Git<CR>
+
+" Kube tools
+nnoremap <leader>kk :!kubectl apply -f %<CR>
+nnoremap <leader>kd :!kubectl delete -f %<CR>
+
+" Dispatch
+nnoremap <leader>df :Focus make<space>
 " }}}
 " Navigation {{{
 set mouse=a
@@ -101,9 +118,6 @@ nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <leader>fn :!open .<CR>
 " Open swapfile directory
 nnoremap <leader>fs :call OpenSwps()<CR>
-
-" Easy kill buffer
-nnoremap <leader>x :bd<CR>
 " }}}
 " UI {{{
 set laststatus=2                          " Always show status bar
@@ -158,17 +172,3 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 " }}}
-" Git shortcuts {{{
-
-nnoremap <leader>gb :Git blame<CR>
-nnoremap <leader>gc :Git commit -v -q<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>ge :Gedit<CR>
-nnoremap <leader>ggp :Git push<CR>
-nnoremap <leader>gst :Git<CR>
-
-" }}}
-
-" Kube tools
-nnoremap <leader>kk :!kubectl apply -f %<CR>
-nnoremap <leader>kd :!kubectl delete -f %<CR>
