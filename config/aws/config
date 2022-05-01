@@ -22,11 +22,19 @@ sso_role_name = Administrator
 output = json
 region = eu-west-1
 
-[profile bionic]
+[profile bionic-prod]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
-sso_account_id = 731641166661
-sso_role_name = MakeItCheaperPowerUserAccess
+sso_account_id = 896190025554
+sso_role_name = BG-Production-DeveloperAccess
+output = json
+region = eu-west-1
+
+[profile bionic-test]
+sso_start_url = https://bionic-sso.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 483531641442
+sso_role_name = BG-Testing-DeveloperAccess
 output = json
 region = eu-west-1
 
