@@ -14,6 +14,7 @@
     ~/.config/alacritty: config/alacritty
     ~/.config/ansible: config/ansible
     ~/.config/docker: config/docker
+    ~/.config/efm-langserver: config/efm-langserver
     ~/.config/git: config/git
     ~/.config/homebrew: config/homebrew
     ~/.config/httpie: config/httpie

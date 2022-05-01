@@ -28,7 +28,7 @@ require'lspconfig'.tsserver.setup{
 }
 
 require'lspconfig'.efm.setup{
-    filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'},
+    filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'sh'},
     init_options = {
         documentFormatting = true,
         documentSymbol = false,
