@@ -19,7 +19,8 @@
   "dependencies": {
     "aws-cdk": "^2.17.0",
     "pnpm": "^6.32.4",
-    "tldr": "^3.3.7"
+    "tldr": "^3.3.7",
+    "typescript-language-server": "^0.9.7"
   },
   "volta": {
     "node": "14.18.2"
