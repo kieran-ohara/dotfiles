@@ -51,7 +51,7 @@ nnoremap Q @q
 nnoremap Y y$
 vnoremap <leader>s :sort u<CR>
 nnoremap <space>bd :bdelete<CR>
-cnoremap <expr> %% getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
+cnoremap <expr> %% getcmdtype() == ':' ? './'.fnameescape(expand('%:h')).'/' : '%%'
 nmap <space>sa :saveas %%
 
 
