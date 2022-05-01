@@ -20,7 +20,14 @@ require'lspconfig'.tsserver.setup{
 }
 
 require'lspconfig'.efm.setup{
-    filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'sh'},
+    filetypes = {
+      'dockerfile',
+      'javascript',
+      'javascriptreact',
+      'sh',
+      'typescript',
+      'typescriptreact',
+    },
     -- sent in initializationOptions from nvim to lang server.
     -- see https://github.com/mattn/efm-langserver#configuration
     init_options = {
