@@ -1,6 +1,7 @@
 tap 'martido/homebrew-graph'
 tap 'koekeishiya/formulae'
 tap 'heroku/brew'
+tap 'lucagrulla/tap'
 
 cask '1password'
 cask 'alacritty'
@@ -67,3 +68,4 @@ brew 'tmux'
 brew 'tree'
 brew 'tree-sitter'
 brew 'volta'
+brew 'cw'
