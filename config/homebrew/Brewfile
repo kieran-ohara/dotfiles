@@ -42,6 +42,7 @@ mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
 
 brew 'ctop'
+brew 'cw'
 brew 'direnv'
 brew 'dive'
 brew 'docker-credential-helper'
@@ -68,4 +69,3 @@ brew 'tmux'
 brew 'tree'
 brew 'tree-sitter'
 brew 'volta'
-brew 'cw'
