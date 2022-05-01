@@ -11,16 +11,6 @@ vim.lsp.diagnostic.on_publish_diagnostics, {
 
 require'lspsaga'.init_lsp_saga()
 
-local eslint_d = {
-    lintCommand = 'eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}',
-    lintSource = 'eslint_d',
-    lintStdin = true,
-    lintFormats = { '%f(%l,%c): %tarning %m', '%f(%l,%c): %rror %m' },
-    lintIgnoreExitCode = true,
-    formatCommand = 'eslint_d --fix-to-stdout --stdin --stdin-filename ${INPUT}',
-    formatStdin = true,
-}
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 require'lspconfig'.tsserver.setup{
@@ -29,6 +19,8 @@ require'lspconfig'.tsserver.setup{
 
 require'lspconfig'.efm.setup{
     filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'sh'},
+    -- sent in initializationOptions from nvim to lang server.
+    -- see https://github.com/mattn/efm-langserver#configuration
     init_options = {
         documentFormatting = true,
         documentSymbol = false,
@@ -36,11 +28,7 @@ require'lspconfig'.efm.setup{
         codeAction = false,
         hover = false,
     },
-    settings = {
-        rootMarkers = { 'package.json', '.git/' },
-        languages = {
-            javascript = { eslint_d },
-            javascriptreact = { eslint_d },
-        },
-    },
+    -- sent in on_init via workspace/didChangeConfiguration from nvim to lang server.
+    -- overrides config.yaml https://github.com/mattn/efm-langserver#configuration
+    -- settings = {},
 }

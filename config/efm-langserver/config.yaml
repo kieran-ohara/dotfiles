@@ -4,6 +4,14 @@ root-markers:
   - package.json
 lint-debounce: 1s
 tools:
+  javascript-eslint: &javascript-eslint
+    lint-command: 'npx eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-source: 'eslint_d'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%f(%l,%c): %tarning %m"
+      - "%f(%l,%c): %rror %m"
   sh-shellcheck: &sh-shellcheck
     lint-command: 'shellcheck -f gcc -x'
     lint-source: 'shellcheck'
@@ -12,5 +20,7 @@ tools:
       - '%f:%l:%c: %tarning: %m'
       - '%f:%l:%c: %tote: %m'
 languages:
+  javascript:
+    - <<: *javascript-eslint
   sh:
     - <<: *sh-shellcheck
