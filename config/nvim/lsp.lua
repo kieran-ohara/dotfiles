@@ -1,3 +1,7 @@
+require'lspkind'.init{}
+require'lspsaga'.init_lsp_saga()
+require'trouble'.setup{ use_lsp_diagnostic_signs = true }
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 vim.lsp.diagnostic.on_publish_diagnostics, {
     -- Enable underline, use default values
@@ -8,8 +12,6 @@ vim.lsp.diagnostic.on_publish_diagnostics, {
     },
 }
 )
-
-require'lspsaga'.init_lsp_saga()
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true

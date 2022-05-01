@@ -12,7 +12,6 @@ cmp.setup({
       { name = 'buffer' },
     })
 })
-
 cmp.setup.cmdline(':', {
   sources = cmp.config.sources({
     { name = 'path' }
@@ -30,19 +29,9 @@ require'nvim-treesitter.configs'.setup {
     highlight = {
         enable = true,
     },
-}
-require "nvim-treesitter.configs".setup {
-  playground = {
-    enable = false,
-  }
-}
-require'lspkind'.init{}
-require'trouble'.setup{
-    use_lsp_diagnostic_signs = true
-}
-require('gitsigns').setup()
-
-require'nvim-treesitter.configs'.setup {
+    playground = {
+      enable = false,
+    },
     textobjects = {
         select = {
             enable = true,
@@ -85,3 +74,5 @@ require'nvim-treesitter.configs'.setup {
         },
     },
 }
+
+require('gitsigns').setup()
