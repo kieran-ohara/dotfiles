@@ -21,6 +21,7 @@
     "markdownlint-cli": "^0.31.1",
     "pnpm": "^6.32.4",
     "tldr": "^3.3.7",
+    "typescript": "^4.6.4",
     "typescript-language-server": "^0.9.7"
   },
   "volta": {
