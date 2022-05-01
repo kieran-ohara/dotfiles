@@ -30,6 +30,7 @@ sign define LspDiagnosticsSignHint text= texthl=LspDiagnosticsSignHint linehl
 " Navigation {{{
 nnoremap <leader>ff :Telescope git_files<CR>
 nnoremap <leader>fu :Telescope buffers<CR>
+nnoremap <leader>fg :Telescope live_grep<CR>
 " }}}
 " UI {{{
 colorscheme tokyonight
