@@ -30,6 +30,9 @@ sso_role_name = BG-Production-DeveloperAccess
 output = json
 region = eu-west-1
 
+[profile prod]
+credential_process = aws-vault exec bionic-prod --json
+
 [profile bionic-test]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
@@ -37,6 +40,9 @@ sso_account_id = 483531641442
 sso_role_name = BG-Testing-DeveloperAccess
 output = json
 region = eu-west-1
+
+[profile test]
+credential_process = aws-vault exec bionic-test --json
 
 [profile bionic-dev]
 sso_start_url = https://bionic-sso.awsapps.com/start
@@ -46,6 +52,9 @@ sso_role_name = BG-Development-DeveloperAccess
 output = json
 region = eu-west-1
 
+[profile dev]
+credential_process = aws-vault exec bionic-dev --json
+
 [profile bionic-cicd]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
@@ -53,3 +62,5 @@ sso_account_id = 421173879275
 sso_role_name = BG-CICD-Prod-DeveloperAccess
 output = json
 region = eu-west-1
+
+
