@@ -27,6 +27,12 @@ tools:
       - '%f:%l:%c: %tarning: %m'
       - '%f:%l:%c: %tote: %m'
 
+  yaml-yamllint: &yaml-yamllint
+    lint-command: 'yamllint -f parsable -'
+    lint-source: 'yamllint'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+
 languages:
 
   dockerfile:
@@ -37,3 +43,6 @@ languages:
 
   sh:
     - <<: *sh-shellcheck
+
+  yaml:
+    - <<: *yaml-yamllint

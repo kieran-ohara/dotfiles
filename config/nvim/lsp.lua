@@ -27,6 +27,7 @@ require'lspconfig'.efm.setup{
       'sh',
       'typescript',
       'typescriptreact',
+      'yaml'
     },
     -- sent in initializationOptions from nvim to lang server.
     -- see https://github.com/mattn/efm-langserver#configuration
