@@ -24,6 +24,7 @@ require'lspconfig'.efm.setup{
       'dockerfile',
       'javascript',
       'javascriptreact',
+      'markdown',
       'sh',
       'typescript',
       'typescriptreact',

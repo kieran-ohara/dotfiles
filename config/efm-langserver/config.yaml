@@ -1,3 +1,4 @@
+---
 version: 2
 root-markers:
   - .git/
@@ -18,6 +19,15 @@ tools:
     lint-formats:
       - "%f(%l,%c): %tarning %m"
       - "%f(%l,%c): %rror %m"
+
+  markdown-markdownlint: &markdown-markdownlint
+    lint-command: 'markdownlint -s'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l %m'
+      - '%f:%l:%c %m'
+      - '%f: %l: %m'
 
   sh-shellcheck: &sh-shellcheck
     lint-command: 'shellcheck -f gcc -x'
@@ -40,6 +50,9 @@ languages:
 
   javascript:
     - <<: *javascript-eslint
+
+  markdown:
+    - <<: *markdown-markdownlint
 
   sh:
     - <<: *sh-shellcheck
