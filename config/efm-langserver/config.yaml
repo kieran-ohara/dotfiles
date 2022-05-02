@@ -3,6 +3,8 @@ version: 2
 root-markers:
   - .git/
   - package.json
+log-level: 5
+
 lint-debounce: 1s
 tools:
 
