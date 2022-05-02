@@ -45,3 +45,8 @@ make hcl.so \
     LANG=hcl \
     REPO=MichaHoffmann/tree-sitter-hcl.git \
     REVISION=$(get_revision hcl)
+
+make lua.so \
+    LANG=lua \
+    REPO=MunifTanjim/tree-sitter-lua.git \
+    REVISION="$(get_revision lua)"
