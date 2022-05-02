@@ -38,14 +38,13 @@
 
     a = add
     b = branch
+    br = "!gh browse"
     c = commit
     co = checkout
     cp = cherry-pick
     d = diff
     dc = diff --cached
     f = fetch
-    gl = pull
-    gp = push
     l = pull
     p = push
     pf = push --force-with-lease origin HEAD
@@ -57,8 +56,8 @@
     rh = reset --hard
     rs = restore
     s = status
-    smu =  submodule update --recursive --remote
-    st = status
-    sta = status
+    smur =  submodule update --recursive
+    smurr =  submodule update --recursive --remote
+    sta = stash
     stp = stash pop
     unstage = restore --staged
