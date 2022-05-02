@@ -37,4 +37,4 @@ $(LANG).so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c src/$(REPO)/src/s
 	# -Os: optimisation
 	# -shared: create shared object (.so)
 	cc -o $@ -I./src/$(REPO)/src -lstdc++ -Os -shared $^
-	rm -rf ./src/$(REPO)
+	# rm -rf ./src/$(REPO)
