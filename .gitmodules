@@ -96,3 +96,6 @@
 [submodule "cmp-path"]
 	path = config/nvim/pack/autocomplete/start/cmp-path
 	url = https://github.com/hrsh7th/cmp-path
+[submodule "cmp-nvim-lsp"]
+	path = config/nvim/pack/autocomplete/start/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp
