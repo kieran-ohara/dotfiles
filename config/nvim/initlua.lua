@@ -30,7 +30,7 @@ require'nvim-treesitter.configs'.setup {
         enable = true,
     },
     playground = {
-      enable = false,
+      enable = true,
     },
     textobjects = {
         select = {
