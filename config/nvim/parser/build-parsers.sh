@@ -50,3 +50,8 @@ make lua.so \
     LANG=lua \
     REPO=MunifTanjim/tree-sitter-lua.git \
     REVISION="$(get_revision lua)"
+
+make markdown.so \
+    LANG=markdown \
+    REPO=MDeiml/tree-sitter-markdown.git \
+    REVISION="$(get_revision markdown)"
