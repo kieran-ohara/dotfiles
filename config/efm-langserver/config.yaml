@@ -24,6 +24,15 @@ tools:
       - "%f(%l,%c): %tarning %m"
       - "%f(%l,%c): %rror %m"
 
+  lua-luacheck: &lua-luacheck
+    lint-command: 'luacheck --formatter visual_studio --filename ${INPUT} -'
+    lint-source: 'luacheck'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%f(%l,%c) : %tarning %m"
+      - "%f(%l,%c) : %rror %m"
+
   markdown-markdownlint: &markdown-markdownlint
     lint-command: 'markdownlint -s'
     lint-ignore-exit-code: true
@@ -54,6 +63,9 @@ languages:
 
   javascript:
     - <<: *javascript-eslint
+
+  lua:
+    - <<: *lua-luacheck
 
   markdown:
     - <<: *markdown-markdownlint
