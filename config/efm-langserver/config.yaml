@@ -4,6 +4,7 @@ root-markers:
   - .git/
   - package.json
 log-level: 5
+log-file: /Users/kieranohara/.cache/nvim/efm-langserver.log
 
 lint-debounce: 1s
 tools:
