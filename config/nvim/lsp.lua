@@ -33,7 +33,7 @@ require'lspconfig'.efm.setup{
     -- sent in initializationOptions from nvim to lang server.
     -- see https://github.com/mattn/efm-langserver#configuration
     init_options = {
-        documentFormatting = true,
+        documentFormatting = false,
         documentSymbol = false,
         completion = false,
         codeAction = false,
@@ -43,6 +43,7 @@ require'lspconfig'.efm.setup{
     -- overrides config.yaml https://github.com/mattn/efm-langserver#configuration
     -- settings = {},
 }
+
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
