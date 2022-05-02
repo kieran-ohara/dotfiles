@@ -73,3 +73,16 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+require('lspconfig').yamlls.setup {
+  filetypes = {
+    'json'
+  },
+  settings = {
+    yaml = {
+      schemas = {
+        ["https://json.schemastore.org/package.json"] = "package.json"
+      },
+    },
+  }
+}
