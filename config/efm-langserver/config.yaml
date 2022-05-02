@@ -14,7 +14,8 @@ tools:
       - '%f:%l %m'
 
   javascript-eslint: &javascript-eslint
-    lint-command: 'npx eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-command: |
+      'npx eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}'
     lint-source: 'eslint_d'
     lint-ignore-exit-code: true
     lint-stdin: true
