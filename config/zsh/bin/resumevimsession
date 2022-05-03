@@ -23,12 +23,12 @@ FILENAME="${HOST_MOUNT}/Session.vim"
 
 if [ ! -z ${USE_CONTAINER} ]; then
     CONTAINER_MOUNT="/Users/kieran/src/$1"
-    docker run -it --rm -v ${HOST_MOUNT}:${CONTAINER_MOUNT} -w ${CONTAINER_MOUNT} kieranbamforth/nvim:latest /bin/sh -c "nvim";
+    docker run -it --rm -v "${HOST_MOUNT}":"${CONTAINER_MOUNT}" -w "${CONTAINER_MOUNT}" kieranbamforth/nvim:latest /bin/sh -c "nvim";
 else
-    if [ -f $FILENAME ]; then
+    if [ -f "$FILENAME" ]; then
         COMMAND="nvim -S $FILENAME";
     else
-        cd ${HOST_MOUNT}
+        cd "${HOST_MOUNT}" || exit
         COMMAND="nvim -c ':Obsess'"
     fi
     set -x

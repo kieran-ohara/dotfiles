@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run --rm -v "$(PWD)":/ws -w /ws kieranbamforth/graphviz:1 dot $@
+docker run --rm -v "$(PWD)":/ws -w /ws kieranbamforth/graphviz:1 dot "$@"

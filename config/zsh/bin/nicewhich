@@ -1,11 +1,11 @@
 #!/bin/bash
-WHICH=`which $1`
-if [ ! -L $WHICH ]; then
-    echo $WHICH
+WHICH=$(which "$1")
+if [ ! -L "$WHICH" ]; then
+    echo "$WHICH"
     exit
 fi
 
-READLINK=`readlink $WHICH`
-READLINK_COLOUR=`test -f $(dirname $WHICH)/$READLINK && echo ${fg[green]} || echo ${fg[red]}`
+READLINK=$(readlink "$WHICH")
+READLINK_COLOUR=$(test -f $(dirname "$WHICH")/"$READLINK" && echo "${fg[green]}" || echo "${fg[red]}")
 
 echo "$WHICH -> $READLINK_COLOUR$READLINK"
