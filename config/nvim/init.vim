@@ -23,10 +23,6 @@ nnoremap <silent> gs :Lspsaga signature_help<CR>
 nnoremap <silent> ga :Lspsaga code_action<CR>
 nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
 nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
-
-sign define LspDiagnosticsSignError text= texthl=LspDiagnosticsSignError linehl= numhl=
-sign define LspDiagnosticsSignWarning text= texthl=LspDiagnosticsSignWarning linehl= numhl=
-sign define LspDiagnosticsSignHint text= texthl=LspDiagnosticsSignHint linehl= numhl=
 " }}}
 " Navigation {{{
 nnoremap <leader>ff :Telescope git_files<CR>
