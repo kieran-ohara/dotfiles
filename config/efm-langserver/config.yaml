@@ -54,6 +54,10 @@ tools:
       - '%f:%l:%c: %tarning: %m'
       - '%f:%l:%c: %tote: %m'
 
+  sh-shfmt: &sh-shfmt
+    format-command: 'shfmt -filename ${INPUT} -i 2 -'
+    format-stdin: true
+
   yaml-yamllint: &yaml-yamllint
     lint-command: 'yamllint -f parsable -'
     lint-source: 'yamllint'
@@ -77,6 +81,7 @@ languages:
 
   sh:
     - <<: *sh-shellcheck
+    - <<: *sh-shfmt
 
   yaml:
     - <<: *yaml-yamllint
