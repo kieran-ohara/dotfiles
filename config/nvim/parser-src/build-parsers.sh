@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash -xe
 if ! type jq &> /dev/null
 then
     echo 'jq not installed'
@@ -55,3 +55,25 @@ make build/markdown.so \
     LANG=markdown \
     REPO=MDeiml/tree-sitter-markdown.git \
     REVISION="$(get_revision markdown)"
+
+declare extras
+extras=(
+  dot rydesun/tree-sitter-dot
+  make alemuller/tree-sitter-make
+  vim vigoux/tree-sitter-viml
+  vue ikatyang/tree-sitter-vue
+)
+
+# Requires bash 5...
+# for key value in "$[  (@kv)extras  ]"; do
+#   make build/$key.so LANG=$key REPO=$value.git REVISION="$(get_revision $key)"
+# done
+
+length=$(( ${#extras[@]} / 2 ))
+for ((i=0; i<length; i++)); do
+  keyIndex=$(( i * 2 ))
+  valueIndex=$(( keyIndex + 1 ))
+  key=${extras[keyIndex]}
+  value=${extras[valueIndex]}
+  make build/"$key".so LANG="$key" REPO="$value".git REVISION="$(get_revision "$key")"
+done
