@@ -14,8 +14,11 @@ dep_graph.dot: config/homebrew/Brewfile
 dep_graph.png: dep_graph.dot
 	dot -Tpng $< -o $@
 
-$(DEPS)/node_modules: $(DEPS)/package.json $(DEPS)/package-lock.json
-	npm install --prefix $(@D)
+$(DEPS)/node_modules/.bin/pnpm:
+	npm install pnpm --prefix $(DEPS)
+
+$(DEPS)/node_modules: $(DEPS)/node_modules/.bin/pnpm $(DEPS)/package.json $(DEPS)/package-lock.json
+	$< install --prefix $(@D)
 	touch $@
 
 $(DEPS)/venv:

@@ -20,7 +20,7 @@
     "aws-cdk": "^2.17.0",
     "lua-fmt": "^2.6.0",
     "markdownlint-cli": "^0.31.1",
-    "pnpm": "^6.32.4",
+    "pnpm": "^6.32.11",
     "tldr": "^3.3.7",
     "typescript": "^4.6.4",
     "typescript-language-server": "^0.9.7",
