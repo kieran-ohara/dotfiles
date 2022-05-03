@@ -28,23 +28,23 @@ for LANG in \
     regex \
     ruby
 do
-    make $LANG.so LANG=$LANG REVISION=$(get_revision $LANG)
+    make $LANG.so LANG=$LANG REVISION="$(get_revision $LANG)"
 done
 
 make dockerfile.so \
     LANG=dockerfile \
     REPO=camdencheek/tree-sitter-dockerfile.git \
-    REVISION=$(get_revision dockerfile)
+    REVISION="$(get_revision dockerfile)"
 
 make yaml.so \
     LANG=yaml \
     REPO=ikatyang/tree-sitter-yaml.git \
-    REVISION=$(get_revision yaml)
+    REVISION="$(get_revision yaml)"
 
 make hcl.so \
     LANG=hcl \
     REPO=MichaHoffmann/tree-sitter-hcl.git \
-    REVISION=$(get_revision hcl)
+    REVISION="$(get_revision hcl)"
 
 make lua.so \
     LANG=lua \
