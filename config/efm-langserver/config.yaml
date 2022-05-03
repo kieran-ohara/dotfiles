@@ -39,6 +39,7 @@ tools:
 
   markdown-markdownlint: &markdown-markdownlint
     lint-command: 'markdownlint -s'
+    lint-source: 'markdownlint'
     lint-ignore-exit-code: true
     lint-stdin: true
     lint-formats:
@@ -49,6 +50,7 @@ tools:
   sh-shellcheck: &sh-shellcheck
     lint-command: 'shellcheck -f gcc -x'
     lint-source: 'shellcheck'
+    lint-ignore-exit-code: true
     lint-formats:
       - '%f:%l:%c: %trror: %m'
       - '%f:%l:%c: %tarning: %m'
