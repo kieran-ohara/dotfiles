@@ -33,7 +33,7 @@ require'lspconfig'.efm.setup{
     -- sent in initializationOptions from nvim to lang server.
     -- see https://github.com/mattn/efm-langserver#configuration
     init_options = {
-        documentFormatting = false,
+        documentFormatting = true,
         documentSymbol = false,
         completion = false,
         codeAction = false,
