@@ -17,7 +17,7 @@ dep_graph.png: dep_graph.dot
 $(DEPS)/node_modules/.bin/pnpm:
 	npm install pnpm --prefix $(DEPS)
 
-$(DEPS)/node_modules: $(DEPS)/node_modules/.bin/pnpm $(DEPS)/package.json $(DEPS)/package-lock.json
+$(DEPS)/node_modules: $(DEPS)/node_modules/.bin/pnpm $(DEPS)/package.json $(DEPS)/pnpm-lock.yaml
 	$< install --prefix $(@D)
 	touch $@
 
