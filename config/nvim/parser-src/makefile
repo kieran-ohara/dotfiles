@@ -29,7 +29,8 @@ src/$(REPO)/src/scanner.c:
 src/$(REPO)/src/scanner.cc:
 	touch $@
 
-$(LANG).so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c src/$(REPO)/src/scanner.cc
+build/$(LANG).so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c src/$(REPO)/src/scanner.cc
+	mkdir -p $(@D)
 # %.so: src/$(REPO)/src/scanner.c
 	# -o: output
 	# -I: add to search path for include files
