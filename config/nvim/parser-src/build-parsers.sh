@@ -1,34 +1,32 @@
 #!/bin/bash -e
-if ! type jq &> /dev/null
-then
-    echo 'jq not installed'
-    exit 1
+if ! type jq &>/dev/null; then
+  echo 'jq not installed'
+  exit 1
 fi
 
 LOCKFILE="$XDG_CONFIG_HOME/nvim/pack/treesitter/start/nvim-treesitter/lockfile.json"
 if [ ! -f "$LOCKFILE" ]; then
-    echo "Lockfile not found (searched $LOCKFILE)"
-    exit 1
+  echo "Lockfile not found (searched $LOCKFILE)"
+  exit 1
 fi
 
 function get_revision() {
-    LANGUAGE=$1;
-    jq -r ".$LANGUAGE.revision" < "$LOCKFILE"
+  LANGUAGE=$1
+  jq -r ".$LANGUAGE.revision" <"$LOCKFILE"
 }
 
 for LANG in \
-    bash \
-    c \
-    css \
-    html \
-    javascript \
-    json \
-    php \
-    python \
-    regex \
-    ruby
-do
-    make build/$LANG.so LANG=$LANG REVISION="$(get_revision $LANG)"
+  bash \
+  c \
+  css \
+  html \
+  javascript \
+  json \
+  php \
+  python \
+  regex \
+  ruby; do
+  make build/$LANG.so LANG=$LANG REVISION="$(get_revision $LANG)"
 done
 
 declare extras
@@ -49,10 +47,10 @@ extras=(
 #   make build/$key.so LANG=$key REPO=$value.git REVISION="$(get_revision $key)"
 # done
 
-length=$(( ${#extras[@]} / 2 ))
-for ((i=0; i<length; i++)); do
-  keyIndex=$(( i * 2 ))
-  valueIndex=$(( keyIndex + 1 ))
+length=$((${#extras[@]} / 2))
+for ((i = 0; i < length; i++)); do
+  keyIndex=$((i * 2))
+  valueIndex=$((keyIndex + 1))
   key=${extras[keyIndex]}
   value=${extras[valueIndex]}
   make build/"$key".so LANG="$key" REPO="$value".git REVISION="$(get_revision "$key")"
