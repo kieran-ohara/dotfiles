@@ -96,3 +96,6 @@
 [submodule "cmp-nvim-lsp"]
 	path = config/nvim/pack/autocomplete/start/cmp-nvim-lsp
 	url = https://github.com/hrsh7th/cmp-nvim-lsp
+[submodule "nvim-web-devicons"]
+	path = config/nvim/pack/ui/start/nvim-web-devicons
+	url = https://github.com/kyazdani42/nvim-web-devicons

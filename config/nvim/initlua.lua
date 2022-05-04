@@ -82,3 +82,5 @@ require('gitsigns').setup({
     map('n', '<leader>hd', gs.toggle_deleted)
   end
 })
+
+require'nvim-web-devicons'.setup({})
