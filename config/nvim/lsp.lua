@@ -76,12 +76,14 @@ require 'lspconfig'.sumneko_lua.setup {
 
 require('lspconfig').yamlls.setup {
   filetypes = {
-    'json'
+    'json',
+    'yaml'
   },
   settings = {
     yaml = {
       schemas = {
-        ["https://json.schemastore.org/package.json"] = "package.json"
+        ["https://json.schemastore.org/package.json"] = "package.json",
+        ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.20.9-standalone/all.json"] = "/infrastructure/kubernetes/**/*.yml",
       },
     },
   }
