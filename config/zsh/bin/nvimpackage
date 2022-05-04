@@ -1,7 +1,11 @@
-#!/bin/bash
-DIR=config/nvim/pack/$1/start/$(basename $2)
+#!/bin/bash -xe
+NAMESPACE="$1"
+URI="$2"
+REPO_NAME=$(basename "$URI")
+
+DIR=config/nvim/pack/$NAMESPACE/start/"$REPO_NAME"
 if [ ! -d "$DIR" ]; then
-    git submodule add --name $(basename $2) --force https://github.com/$2 $DIR
-    # Index the help docs.
-    nvim -c ':helptags ALL' -c 'qa'
+  git submodule add --name "$REPO_NAME" --force https://github.com/"$URI" "$DIR"
+  # Index the help docs.
+  nvim -c ':helptags ALL' -c 'qa'
 fi
