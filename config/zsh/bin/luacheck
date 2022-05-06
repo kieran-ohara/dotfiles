@@ -1,2 +1,6 @@
-#!/bin/bash
-docker run --rm -i -v "$(PWD)":/ws -w /ws kieranbamforth/luacheck:1 "$@"
+#!/bin/bash -xe
+docker run --rm -i \
+  -v "$XDG_CONFIG_HOME":"$XDG_CONFIG_HOME" -e XDG_CONFIG_HOME="$XDG_CONFIG_HOME" \
+  -v "$HOME"/src/dotfiles:"$HOME"/src/dotfiles \
+  -v "$(PWD)":/ws -w /ws \
+  kieranbamforth/luacheck:1 "$@"
