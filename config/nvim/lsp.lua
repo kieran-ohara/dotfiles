@@ -1,3 +1,4 @@
+-- vim: set foldmethod=marker foldlevel=0 modeline:
 require "lspkind".init {}
 require "lspsaga".init_lsp_saga()
 
@@ -20,6 +21,7 @@ require "lspconfig".tsserver.setup {
   capabilities = capabilities
 }
 
+-- EFM {{{
 local lspconfig = require "lspconfig"
 local util = require "lspconfig.util"
 local configs = require "lspconfig.configs"
@@ -68,7 +70,8 @@ configs.efmNoFormat = {
   }
 }
 lspconfig.efmNoFormat.setup {}
-
+-- }}}
+-- Lua {{{
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
@@ -97,7 +100,8 @@ require "lspconfig".sumneko_lua.setup {
     }
   }
 }
-
+-- }}}
+-- YAML {{{
 require("lspconfig").yamlls.setup {
   filetypes = {
     "json",
@@ -112,3 +116,4 @@ require("lspconfig").yamlls.setup {
     }
   }
 }
+-- }}}
