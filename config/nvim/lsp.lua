@@ -18,31 +18,54 @@ require 'lspconfig'.tsserver.setup {
   capabilities = capabilities
 }
 
-require 'lspconfig'.efm.setup {
-  filetypes = {
-    'dockerfile',
-    'javascript',
-    'javascriptreact',
-    'lua',
-    'markdown',
-    'sh',
-    'typescript',
-    'typescriptreact',
-    'yaml',
+local lspconfig = require 'lspconfig'
+local util = require 'lspconfig.util'
+local configs = require 'lspconfig.configs'
+
+configs.efmWithFormat = {
+  default_config = {
+    cmd = { 'efm-langserver' },
+    root_dir = util.find_git_ancestor,
+    single_file_support = true,
+    filetypes = {
+      'lua',
+      'sh',
+    },
+    init_options = {
+      documentFormatting = true,
+      hover = true,
+      documentSymbol = true,
+      codeAction = true,
+      completion = true
+    },
   },
-  -- sent in initializationOptions from nvim to lang server.
-  -- see https://github.com/mattn/efm-langserver#configuration
-  init_options = {
-    documentFormatting = true,
-    documentSymbol = false,
-    completion = false,
-    codeAction = false,
-    hover = false,
-  },
-  -- sent in on_init via workspace/didChangeConfiguration from nvim to lang server.
-  -- overrides config.yaml https://github.com/mattn/efm-langserver#configuration
-  -- settings = {},
 }
+lspconfig.efmWithFormat.setup{}
+
+configs.efmNoFormat = {
+  default_config = {
+    cmd = { 'efm-langserver' },
+    root_dir = util.find_git_ancestor,
+    single_file_support = true,
+    filetypes = {
+      'dockerfile',
+      'javascript',
+      'javascriptreact',
+      'markdown',
+      'typescript',
+      'typescriptreact',
+      'yaml',
+    },
+    init_options = {
+      documentFormatting = false,
+      hover = true,
+      documentSymbol = true,
+      codeAction = true,
+      completion = true
+    },
+  },
+}
+lspconfig.efmNoFormat.setup{}
 
 
 local runtime_path = vim.split(package.path, ';')
