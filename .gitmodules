@@ -99,3 +99,6 @@
 [submodule "nvim-web-devicons"]
 	path = config/nvim/pack/ui/start/nvim-web-devicons
 	url = https://github.com/kyazdani42/nvim-web-devicons
+[submodule "nightfox.nvim"]
+	path = config/nvim/pack/ui/start/nightfox.nvim
+	url = https://github.com/EdenEast/nightfox.nvim

@@ -31,7 +31,7 @@ nnoremap <leader>fu :Telescope buffers<CR>
 nnoremap <leader>fg :Telescope live_grep<CR>
 " }}}
 " UI {{{
-colorscheme tokyonight
+colorscheme nightfox
 let g:lightline = {}
-let g:lightline.colorscheme = 'tokyonight'
+let g:lightline.colorscheme = 'nightfox'
 " }}}
