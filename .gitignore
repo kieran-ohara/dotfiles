@@ -16,5 +16,6 @@
 /dep_graph.*
 /keyboards/layout/*
 /dependencies/aws
+/dependencies/brew
 /dependencies/node_modules
 /dependencies/venv

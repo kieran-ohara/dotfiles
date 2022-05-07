@@ -42,6 +42,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [make dependencies/brew]
   - [make dependencies/node_modules]
   - [make dependencies/venv/bin]
   - [make dependencies/aws/cli]

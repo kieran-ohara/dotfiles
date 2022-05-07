@@ -14,6 +14,10 @@ dep_graph.dot: config/homebrew/Brewfile
 dep_graph.png: dep_graph.dot
 	dot -Tpng $< -o $@
 
+$(DEPS)/brew: config/homebrew/Brewfile.lock.json
+	brew bundle
+	touch $@
+
 $(DEPS)/node_modules/.bin/pnpm:
 	npm install pnpm --prefix $(DEPS)
 
