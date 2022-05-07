@@ -21,7 +21,7 @@ $(DEPS)/brew: config/homebrew/Brewfile.lock.json
 $(DEPS)/node_modules/.bin/pnpm:
 	npm install pnpm --prefix $(DEPS)
 
-$(DEPS)/node_modules: $(DEPS)/node_modules/.bin/pnpm $(DEPS)/package.json $(DEPS)/pnpm-lock.yaml
+$(DEPS)/node_modules: $(DEPS)/node_modules/.bin/pnpm $(DEPS)/pnpm-lock.yaml
 	$< install --prefix $(@D)
 	touch $@
 
