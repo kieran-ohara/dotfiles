@@ -85,7 +85,7 @@ nnoremap <leader>gc :Git commit -v -q<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>ggp :Git push<CR>
-nnoremap <leader>gst :Git<CR>
+nnoremap <leader>gst :vertical Git<CR>
 
 " Kube tools
 nnoremap <leader>kk :!kubectl apply -f %<CR>
