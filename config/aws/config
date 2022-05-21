@@ -1,10 +1,13 @@
 [profile default]
+credential_process = aws-vault exec defaultx --json
+region = eu-west-1
+output = json
+
+[profile defaultx]
 sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 855277617897
 sso_role_name = Administrator
-output = json
-region = eu-west-1
 
 [profile alternative-curriculum]
 sso_start_url = https://kieran.awsapps.com/start
