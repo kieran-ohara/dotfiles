@@ -102,3 +102,6 @@
 [submodule "nightfox.nvim"]
 	path = config/nvim/pack/ui/start/nightfox.nvim
 	url = https://github.com/EdenEast/nightfox.nvim
+[submodule "trouble.nvim"]
+	path = config/nvim/pack/lsp/start/trouble.nvim
+	url = https://github.com/folke/trouble.nvim
