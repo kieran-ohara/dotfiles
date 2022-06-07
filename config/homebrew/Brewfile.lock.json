@@ -12,6 +12,9 @@
       },
       "lucagrulla/tap": {
         "revision": "618c5a5e0b2a03b39bdf859f1227a78b34198194"
+      },
+      "ankitpokhrel/jira-cli": {
+        "revision": "76a4bc21992c45c8fb52921ad23aaf1d35d7b5fb"
       }
     },
     "cask": {

@@ -1,0 +1,67 @@
+board:
+  id: 100
+  name: Telco Squad Board
+  type: simple
+epic:
+  name: ""
+  link: ""
+installation: Cloud
+issue:
+  fields:
+    custom:
+    - name: Sprint
+      key: customfield_10008
+      schema:
+        datatype: array
+        items: json
+    - name: Rank
+      key: customfield_10009
+      schema:
+        datatype: any
+    - name: Story point estimate
+      key: customfield_10084
+      schema:
+        datatype: number
+    - name: Development
+      key: customfield_10000
+      schema:
+        datatype: any
+    - name: Flagged
+      key: customfield_10079
+      schema:
+        datatype: array
+        items: option
+    - name: Start date
+      key: customfield_10081
+      schema:
+        datatype: date
+    - name: Issue color
+      key: customfield_10085
+      schema:
+        datatype: string
+  types:
+  - id: "10162"
+    name: Story
+    handle: Story
+    subtask: false
+  - id: "10163"
+    name: Task
+    handle: Task
+    subtask: false
+  - id: "10164"
+    name: Bug
+    handle: Bug
+    subtask: false
+  - id: "10165"
+    name: Epic
+    handle: Epic
+    subtask: false
+  - id: "10166"
+    name: Subtask
+    handle: Subtask
+    subtask: true
+login: kieran.o'hara@bionic.co.uk
+project:
+  key: TS
+  type: next-gen
+server: https://makeitcheaper.atlassian.net
