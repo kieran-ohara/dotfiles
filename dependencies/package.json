@@ -24,6 +24,7 @@
     "tldr": "^3.3.7",
     "typescript": "^4.6.4",
     "typescript-language-server": "^0.9.7",
+    "vls": "^0.7.6",
     "yaml-language-server": "^1.7.0"
   },
   "volta": {
