@@ -33,6 +33,9 @@
     format = ssh
 [pull]
     rebase = true
+[fetch]
+    prune = true
+
 [alias]
 
     a = add
