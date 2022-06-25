@@ -29,5 +29,8 @@ defaults write org.p0deje.Maccy pasteByDefault 1
 defaults write com.amethyst.Amethyst window-margins 1
 defaults write com.amethyst.Amethyst window-margin-size 6
 
+# Disable Magic Mouse Zoom feature.
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseOneFingerDoubleTapGesture 0
+
 sudo killall Dock Finder SystemUIServer
 
