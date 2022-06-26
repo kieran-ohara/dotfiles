@@ -34,21 +34,25 @@ sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 421173879275
 sso_role_name = BG-CICD-Prod-DeveloperAccess
+region = eu-west-1
 
 [profile dev-sso]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 373124806600
 sso_role_name = BG-Development-DeveloperAccess
+region = eu-west-1
 
 [profile test-sso]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 483531641442
 sso_role_name = BG-Testing-DeveloperAccess
+region = eu-west-1
 
 [profile prod-sso]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 896190025554
 sso_role_name = BG-Production-DeveloperAccess
+region = eu-west-1
