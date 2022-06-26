@@ -1,5 +1,6 @@
 [diff]
     tool = Kaleidoscope
+    colorMoved = zebra
 [user]
     name = Kieran Bamforth
     email = hello@kieranbamforth.me
