@@ -1,8 +1,8 @@
 alias av="aws-vault"
 alias ave="aws-vault exec"
+alias b='brew'
 alias bci='brew install --cask'
 alias bcu='brew uninstall --cask'
-alias bi='brew info'
 alias bi='brew install'
 alias bs='brew search'
 alias bu='brew uninstall'
