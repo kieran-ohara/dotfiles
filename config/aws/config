@@ -1,8 +1,13 @@
 [profile default]
-credential_process = aws-vault exec defaultx --json
+credential_process = aws-vault exec kieran --json
 region = eu-west-1
 output = json
 
+[profile ac]
+credential_process = aws-vault exec kieran-ac --json
+region = eu-west-1
+
+output = json
 [profile cicd]
 credential_process = aws-vault exec cicd-sso --json
 output = json
@@ -23,10 +28,16 @@ credential_process = aws-vault exec prod-sso --json
 output = json
 region = eu-west-1
 
-[profile defaultx]
+[profile kieran]
 sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 855277617897
+sso_role_name = Administrator
+
+[profile kieran-ac]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 051127158334
 sso_role_name = Administrator
 
 [profile cicd-sso]
