@@ -24,6 +24,7 @@ require "lspconfig".tsserver.setup {
   capabilities = capabilities
 }
 require'lspconfig'.vuels.setup{}
+require'lspconfig'.terraformls.setup{}
 
 -- EFM {{{
 local lspconfig = require "lspconfig"
