@@ -24,6 +24,7 @@
     ui = auto
 [push]
     default = upstream
+    autoSetupRemote = true
 [commit]
     gpgsign = true
 [rebase]
