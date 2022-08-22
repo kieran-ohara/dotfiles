@@ -2,6 +2,7 @@
 credential_process = aws-vault exec kieran --json
 region = eu-west-1
 output = json
+use_accelerate_endpoint = true
 
 [profile ac]
 credential_process = aws-vault exec kieran-ac --json
@@ -33,6 +34,7 @@ sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 855277617897
 sso_role_name = Administrator
+use_accelerate_endpoint = true
 
 [profile kieran-ac]
 sso_start_url = https://kieran.awsapps.com/start
