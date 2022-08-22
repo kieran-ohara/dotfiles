@@ -31,6 +31,7 @@ fi
 
 if [ -d $DOTFILES/dependencies/aws/cli ] ; then
   path+=($DOTFILES/dependencies/aws/cli)
+  export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
 fi
 
 path+=($ZDOTDIR/bin)

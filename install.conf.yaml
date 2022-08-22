@@ -10,7 +10,7 @@
   - ~/Library/LaunchAgents
 
 - link:
-    ~/.aws: config/aws
+    ~/.config/aws: config/aws
     ~/.config/.jira: config/jira
     ~/.config/alacritty: config/alacritty
     ~/.config/ansible: config/ansible
