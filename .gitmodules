@@ -6,9 +6,6 @@
 [submodule "vim-tmux-navigator"]
 	path = config/vim/pack/packages/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
-[submodule "vim-sneak"]
-	path = config/vim/pack/packages/start/vim-sneak
-	url = https://github.com/justinmk/vim-sneak
 [submodule "vim-dirvish"]
 	path = config/vim/pack/packages/start/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
