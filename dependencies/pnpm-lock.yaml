@@ -6,7 +6,7 @@ specifiers:
   create-vue: ^3.2.0
   lua-fmt: ^2.6.0
   markdownlint-cli: ^0.31.1
-  pnpm: ^6.32.11
+  pnpm: ^6.34.0
   tldr: ^3.3.7
   typescript: ^4.6.4
   typescript-language-server: ^0.9.7
@@ -19,7 +19,7 @@ dependencies:
   create-vue: 3.2.2
   lua-fmt: 2.6.0
   markdownlint-cli: 0.31.1
-  pnpm: 6.32.12
+  pnpm: 6.34.0
   tldr: 3.3.7
   typescript: 4.6.4
   typescript-language-server: 0.9.7
@@ -2133,8 +2133,8 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /pnpm/6.32.12:
-    resolution: {integrity: sha512-3stwiL0eQtcwVcWv0S7JWm2j681me7J98b052wHdV0pi4zlUL9lp20yRSdodX5tYKRs5WBmK6LJT7b9QjuC6gQ==}
+  /pnpm/6.34.0:
+    resolution: {integrity: sha512-K79DAT5WtGjrUyLtxAyehtN8uy5cXkzT1v+7RIJ3gygCffoLaLlBoG5gcfjfnX7oZH5rxznv/v8tlMIMfZyzTA==}
     engines: {node: '>=12.17'}
     hasBin: true
     dev: false
