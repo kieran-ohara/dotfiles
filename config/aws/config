@@ -35,6 +35,7 @@ sso_region = eu-west-1
 sso_account_id = 855277617897
 sso_role_name = Administrator
 use_accelerate_endpoint = true
+region = eu-west-2
 
 [profile kieran-ac]
 sso_start_url = https://kieran.awsapps.com/start
