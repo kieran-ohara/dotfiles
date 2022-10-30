@@ -1,8 +1,31 @@
+-- vim: set foldmethod=marker foldlevel=0 modeline:
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
--- vim: set foldmethod=marker foldlevel=0 modeline:
+-- Nice icons
 require "lspkind".init {}
+
+-- LSP Saga {{{
 require "lspsaga".init_lsp_saga()
+vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
+
+-- code action.
+vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+
+-- hover documentation.
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+
+-- peek definition
+vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+
+-- jump forward/back through errors.
+vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+
+-- shows the references.
+vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+
+-- }}}
 
 require("trouble").setup {}
 
@@ -10,12 +33,9 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
-    -- Enable underline, use default values
     underline = true,
-    -- Enable virtual text, override spacing to 4
-    virtual_text = {
-      spacing = 4
-    }
+    signs = true,
+    virtual_text = false
   }
 )
 
