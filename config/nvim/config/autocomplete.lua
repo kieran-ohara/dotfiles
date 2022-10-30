@@ -8,10 +8,13 @@ cmp.setup(
         vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
       end,
     },
-    mapping = cmp.mapping.preset.insert({}),
+    mapping = cmp.mapping.preset.insert({
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    }),
     sources = cmp.config.sources(
       {
         { name = "nvim_lsp" },
+        { name = "vsnip" },
         { name = "buffer" }
       }
     ),
@@ -44,3 +47,10 @@ cmp.event:on(
   'confirm_done',
   cmp_autopairs.on_confirm_done()
 )
+-- }}}
+-- Vsnips {{{
+vim.cmd([[
+  let g:vsnip_snippet_dirs = [ '~/.config/nvim/pack/autocomplete/start/friendly-snippets' ]
+  let g:vsnip_filetypes = {}
+]])
+-- }}}
