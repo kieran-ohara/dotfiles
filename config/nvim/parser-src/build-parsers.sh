@@ -36,7 +36,7 @@ extras=(
   hcl MichaHoffmann/tree-sitter-hcl
   lua MunifTanjim/tree-sitter-lua
   make alemuller/tree-sitter-make
-  # markdown MDeiml/tree-sitter-markdown
+  markdown MDeiml/tree-sitter-markdown
   vim vigoux/tree-sitter-viml
   vue ikatyang/tree-sitter-vue
   yaml ikatyang/tree-sitter-yaml
