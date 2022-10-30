@@ -17,29 +17,28 @@ function get_revision() {
 
 for LANG in \
   bash \
-  c \
   css \
   html \
   javascript \
   json \
-  php \
   python \
   regex \
-  ruby; do
+  ; do
   make build/$LANG.so LANG=$LANG REVISION="$(get_revision $LANG)"
 done
 
 declare extras
 extras=(
-  dockerfile camdencheek/tree-sitter-dockerfile
-  dot rydesun/tree-sitter-dot
-  hcl MichaHoffmann/tree-sitter-hcl
-  lua MunifTanjim/tree-sitter-lua
-  make alemuller/tree-sitter-make
-  # markdown MDeiml/tree-sitter-markdown
-  vim vigoux/tree-sitter-viml
-  vue ikatyang/tree-sitter-vue
-  yaml ikatyang/tree-sitter-yaml
+  dockerfile camdencheek/tree-sitter-dockerfile . false
+  dot rydesun/tree-sitter-dot . false
+  hcl MichaHoffmann/tree-sitter-hcl . false
+  lua MunifTanjim/tree-sitter-lua . false
+  make alemuller/tree-sitter-make . false
+  markdown MDeiml/tree-sitter-markdown tree-sitter-markdown false
+  vim vigoux/tree-sitter-viml . false
+  vue ikatyang/tree-sitter-vue . false
+  yaml ikatyang/tree-sitter-yaml . false
+  typescript tree-sitter/tree-sitter-typescript typescript true
 )
 
 # Requires bash 5...
@@ -47,11 +46,19 @@ extras=(
 #   make build/$key.so LANG=$key REPO=$value.git REVISION="$(get_revision $key)"
 # done
 
-length=$((${#extras[@]} / 2))
+length=$((${#extras[@]} / 4))
 for ((i = 0; i < length; i++)); do
-  keyIndex=$((i * 2))
-  valueIndex=$((keyIndex + 1))
+  keyIndex=$((i * 4))
   key=${extras[keyIndex]}
+
+  valueIndex=$((keyIndex + 1))
   value=${extras[valueIndex]}
-  make build/"$key".so LANG="$key" REPO="$value".git REVISION="$(get_revision "$key")"
+
+  locationIndex=$((keyIndex + 2))
+  location=${extras[locationIndex]}
+
+  useNpmIndex=$((keyIndex + 3))
+  useNpm=${extras[useNpmIndex]}
+
+  make build/"$key".so LANG="$key" REPO="$value".git REVISION="$(get_revision "$key")" LOCATION="$location" USE_NPM="$useNpm"
 done

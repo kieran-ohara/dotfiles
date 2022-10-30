@@ -11,6 +11,15 @@ message:
 # The repo + tag to build. Default to Javascript Treesitter.
 REPO := tree-sitter/tree-sitter-$(LANG).git
 REVISION := master
+LOCATION := .
+REPOLOCATION := $(REPO)/$(LOCATION)
+USE_NPM := false
+
+ifeq ($(USE_NPM),true)
+	cmd=cd $* && npm install
+else
+	cmd=echo 'no npm install'
+endif
 
 src/%.git:
 	git clone \
@@ -19,17 +28,17 @@ src/%.git:
 	cd $@ && git checkout $(REVISION)
 	rm -rf $./.git
 
+%/$(LOCATION)/src/parser.c:  $$*
+	$(cmd)
+	cd $*/$(LOCATION) && tree-sitter generate
 
-%/src/parser.c:  $$*
-	cd $* && tree-sitter generate
-
-src/$(REPO)/src/scanner.c:
+src/$(REPOLOCATION)/src/scanner.c:
 	touch $@
 
-src/$(REPO)/src/scanner.cc:
+src/$(REPOLOCATION)/src/scanner.cc:
 	touch $@
 
-build/$(LANG).so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c src/$(REPO)/src/scanner.cc
+build/$(LANG).so: src/$(REPOLOCATION)/src/parser.c src/$(REPOLOCATION)/src/scanner.c src/$(REPOLOCATION)/src/scanner.cc
 	mkdir -p $(@D)
 # %.so: src/$(REPO)/src/scanner.c
 	# -o: output
@@ -37,5 +46,5 @@ build/$(LANG).so: src/$(REPO)/src/parser.c src/$(REPO)/src/scanner.c src/$(REPO)
 	# -lstdc++: link stdc++ library
 	# -Os: optimisation
 	# -shared: create shared object (.so)
-	cc -o $@ -I./src/$(REPO)/src -lstdc++ -Os -shared $^
+	cc -o $@ -I./src/$(REPOLOCATION)/src -lstdc++ -Os -shared $^
 	# rm -rf ./src/$(REPO)
