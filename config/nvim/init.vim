@@ -5,11 +5,10 @@ set directory=$XDG_CACHE_HOME/nvim/swapfiles//
 set backupdir=$XDG_CACHE_HOME/nvim/backupfiles//
 set undodir=$XDG_CACHE_HOME/nvim/undodir
 
-luafile ~/.config/nvim/initlua.lua
-
 luafile ~/.config/nvim/autocomplete.lua
 luafile ~/.config/nvim/lsp.lua
 luafile ~/.config/nvim/treesitter.lua
+luafile ~/.config/nvim/ui.lua
 
 function! OpenSwps()
     execute "!open ". $XDG_CACHE_HOME. "/nvim/swapfiles"
