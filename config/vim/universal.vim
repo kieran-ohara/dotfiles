@@ -87,10 +87,6 @@ nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>ggp :Git push<CR>
 nnoremap <leader>gst :vertical Git<CR>
 
-" Kube tools
-nnoremap <leader>kk :!kubectl apply -f %<CR>
-nnoremap <leader>kd :!kubectl delete -f %<CR>
-
 " Dispatch
 nnoremap <leader>df :Focus make<space>
 " }}}
