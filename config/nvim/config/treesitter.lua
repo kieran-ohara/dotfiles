@@ -19,7 +19,7 @@ require 'nvim-treesitter.configs'.setup {
       keymaps = {
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
-        -- ["aa"] = "@parameter.outer", it does not work!
+        ["aa"] = "@parameter.outer",
         ["ia"] = "@parameter.inner",
       },
     },
