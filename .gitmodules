@@ -102,6 +102,6 @@
 [submodule "trouble.nvim"]
 	path = config/nvim/pack/lsp/start/trouble.nvim
 	url = https://github.com/folke/trouble.nvim
-[submodule "leap.nvim"]
-	path = config/nvim/pack/ui/start/leap.nvim
-	url = https://github.com/ggandor/leap.nvim
+[submodule "vim-sneak"]
+	path = config/vim/pack/packages/start/vim-sneak
+	url = https://github.com/justinmk/vim-sneak
