@@ -25,12 +25,6 @@ nnoremap <silent> ga :Lspsaga code_action<CR>
 nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
 nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
 " }}}
-" Navigation {{{
-nnoremap <leader>fh :Telescope command_history<CR>
-nnoremap <leader>ff :Telescope git_files<CR>
-nnoremap <leader>fu :Telescope buffers<CR>
-nnoremap <leader>fg :Telescope live_grep<CR>
-" }}}
 " UI {{{
 colorscheme nightfox
 let g:lightline = {}
