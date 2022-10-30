@@ -1,3 +1,5 @@
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 -- vim: set foldmethod=marker foldlevel=0 modeline:
 require "lspkind".init {}
 require "lspsaga".init_lsp_saga()
@@ -17,14 +19,15 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   }
 )
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
 require "lspconfig".tsserver.setup {
   capabilities = capabilities
 }
-require'lspconfig'.vuels.setup{}
-require'lspconfig'.terraformls.setup{}
+require'lspconfig'.vuels.setup{
+  capabilities = capabilities
+}
+require'lspconfig'.terraformls.setup{
+  capabilities = capabilities
+}
 
 -- EFM {{{
 local lspconfig = require "lspconfig"
@@ -49,7 +52,9 @@ configs.efmWithFormat = {
     }
   }
 }
-lspconfig.efmWithFormat.setup {}
+lspconfig.efmWithFormat.setup {
+  capabilities = capabilities
+}
 
 configs.efmNoFormat = {
   default_config = {
@@ -74,7 +79,9 @@ configs.efmNoFormat = {
     }
   }
 }
-lspconfig.efmNoFormat.setup {}
+lspconfig.efmNoFormat.setup {
+  capabilities = capabilities
+}
 -- }}}
 -- Lua {{{
 local runtime_path = vim.split(package.path, ";")
@@ -82,6 +89,7 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 require "lspconfig".sumneko_lua.setup {
+  capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -108,6 +116,7 @@ require "lspconfig".sumneko_lua.setup {
 -- }}}
 -- YAML {{{
 require("lspconfig").yamlls.setup {
+  capabilities = capabilities,
   filetypes = {
     "json",
     "yaml"
