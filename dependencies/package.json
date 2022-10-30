@@ -25,8 +25,5 @@
     "typescript-language-server": "2.1.0",
     "vls": "^0.7.6",
     "yaml-language-server": "^1.10.0"
-  },
-  "volta": {
-    "node": "14.18.2"
   }
 }
