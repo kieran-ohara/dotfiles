@@ -108,3 +108,6 @@
 [submodule "vim-vsnip"]
 	path = config/nvim/pack/autocomplete/start/vim-vsnip
 	url = https://github.com/hrsh7th/vim-vsnip
+[submodule "nvim-autopairs"]
+	path = config/nvim/pack/autocomplete/start/nvim-autopairs
+	url = https://github.com/windwp/nvim-autopairs
