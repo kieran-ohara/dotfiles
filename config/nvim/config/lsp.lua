@@ -60,8 +60,7 @@ configs.efmWithFormat = {
     root_dir = util.find_git_ancestor,
     single_file_support = true,
     filetypes = {
-      "lua",
-      "sh"
+      "sh",
     },
     init_options = {
       documentFormatting = true,
@@ -85,6 +84,7 @@ configs.efmNoFormat = {
       "dockerfile",
       "javascript",
       "javascriptreact",
+      "lua",
       "markdown",
       "typescript",
       "typescriptreact",

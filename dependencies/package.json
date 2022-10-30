@@ -18,7 +18,6 @@
   "homepage": "https://github.com/kieran-ohara/dotfiles#readme",
   "dependencies": {
     "@nestjs/cli": "^8.2.8",
-    "lua-fmt": "^2.6.0",
     "markdownlint-cli": "^0.31.1",
     "pnpm": "^6.35.0",
     "tldr": "^3.3.8",

@@ -24,10 +24,6 @@ tools:
       - "%f(%l,%c): %tarning %m"
       - "%f(%l,%c): %rror %m"
 
-  lua-luafmt: &lua-luafmt
-    format-command: 'luafmt -i 2 -l 120 --stdin'
-    format-stdin: true
-
   lua-luacheck: &lua-luacheck
     lint-command: 'luacheck --formatter visual_studio --filename ${INPUT} -'
     lint-source: 'luacheck'
@@ -75,7 +71,6 @@ languages:
     - <<: *javascript-eslint
 
   lua:
-    - <<: *lua-luafmt
     - <<: *lua-luacheck
 
   markdown:
