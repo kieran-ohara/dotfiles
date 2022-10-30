@@ -26,8 +26,16 @@ vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = tr
 vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 
 -- }}}
+-- Trouble {{{
+require"trouble".setup {
+  auto_preview = false,
+}
 
-require("trouble").setup {}
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true}
+)
+-- }}}
+
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.with(
