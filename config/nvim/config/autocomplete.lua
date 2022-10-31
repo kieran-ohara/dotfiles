@@ -53,7 +53,6 @@ cmp.event:on(
 -- }}}
 -- Vsnips {{{
 vim.cmd([[
-  let g:vsnip_snippet_dirs = [ '~/.config/nvim/pack/autocomplete/start/friendly-snippets' ]
-  let g:vsnip_filetypes = {}
+  let g:vsnip_snippet_dirs = [ '~/.config/nvim/pack/snippets/start/friendly-snippets' ]
 ]])
 -- }}}

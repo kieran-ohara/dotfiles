@@ -112,7 +112,7 @@
 	path = config/nvim/pack/autocomplete/start/nvim-autopairs
 	url = https://github.com/windwp/nvim-autopairs
 [submodule "friendly-snippets"]
-	path = config/nvim/pack/autocomplete/start/friendly-snippets
+	path = config/nvim/pack/snippets/start/friendly-snippets
 	url = https://github.com/rafamadriz/friendly-snippets
 [submodule "cmp-vsnip"]
 	path = config/nvim/pack/autocomplete/start/cmp-vsnip
