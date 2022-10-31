@@ -41,3 +41,12 @@ $(DEPS)/aws/contents/aws-cli.pkg/Payload/aws-cli: $(DEPS)/aws/install.pkg
 
 $(DEPS)/aws/cli: $(DEPS)/aws/contents/aws-cli.pkg/Payload/aws-cli
 	ln -s ../../$< $@
+
+$(DEPS)/vscode-js-debug/package.json:
+	git clone -b 'v1.72.1' --single-branch --depth 1 https://github.com/microsoft/vscode-js-debug $(@D)
+
+$(DEPS)/vscode-js-debug/node_modules: $(DEPS)/vscode-js-debug/package.json
+	cd $(<D) && npm install --legacy-peer-deps
+
+$(DEPS)/vscode-js-debug/out/src/vsDebugServer.js: $(DEPS)/vscode-js-debug/package.json $(DEPS)/vscode-js-debug/node_modules
+	cd $(<D) && npm run compile
