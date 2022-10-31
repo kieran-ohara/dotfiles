@@ -43,7 +43,7 @@
             ]
           },
           {
-            "description": "Disable sysdiagnose (,)",
+            "description": "Disable sysdiagnose (,).",
             "manipulators": [
               {
                 "type": "basic",
@@ -51,10 +51,10 @@
                   "key_code": "comma",
                   "modifiers": {
                     "mandatory": [
-                      "command",
-                      "shift",
-                      "option",
-                      "control"
+                      "left_command",
+                      "left_shift",
+                      "left_option",
+                      "left_control"
                     ]
                   }
                 }
@@ -62,21 +62,21 @@
             ]
           },
           {
-            "description": "Disable sysdiagnose (.)",
+            "description": "Disable sysdiagnose (.).",
             "manipulators": [
               {
+                "type": "basic",
                 "from": {
                   "key_code": "period",
                   "modifiers": {
                     "mandatory": [
-                      "command",
-                      "shift",
-                      "option",
-                      "control"
+                      "left_command",
+                      "left_shift",
+                      "left_option",
+                      "left_control"
                     ]
                   }
                 },
-                "type": "basic"
               }
             ]
           }
