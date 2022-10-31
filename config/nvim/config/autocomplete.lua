@@ -1,5 +1,5 @@
 -- vim: set foldmethod=marker foldlevel=0 modeline:
-
+-- {{{ cmp
 local lspkind = require("lspkind")
 local cmp = require "cmp"
 cmp.setup(
@@ -40,6 +40,7 @@ cmp.setup.cmdline(
     )
   }
 )
+-- }}}
 -- Autopairs {{{
 require("nvim-autopairs").setup {
   check_ts = true

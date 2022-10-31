@@ -7,6 +7,7 @@ set undodir=$XDG_CACHE_HOME/nvim/undodir
 
 luafile ~/.config/nvim/config/autocomplete.lua
 luafile ~/.config/nvim/config/lsp.lua
+luafile ~/.config/nvim/config/lsp-servers.lua
 luafile ~/.config/nvim/config/treesitter.lua
 luafile ~/.config/nvim/config/ui.lua
 
