@@ -19,6 +19,7 @@
             "description": "Caps lock to hyper key.",
             "manipulators": [
               {
+                "type": "basic",
                 "from": {
                   "key_code": "caps_lock"
                 },
@@ -37,32 +38,12 @@
                   {
                     "key_code": "escape"
                   }
-                ],
-                "type": "basic"
+                ]
               }
             ]
           },
           {
-            "description": "Disable sysdiagnose (,).",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "comma",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_command",
-                      "left_shift",
-                      "left_option",
-                      "left_control"
-                    ]
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "description": "Disable sysdiagnose (.).",
+            "description": "Disable Sysdiagnose (.)",
             "manipulators": [
               {
                 "type": "basic",
@@ -70,13 +51,51 @@
                   "key_code": "period",
                   "modifiers": {
                     "mandatory": [
-                      "left_command",
-                      "left_shift",
-                      "left_option",
-                      "left_control"
+                      "command",
+                      "shift",
+                      "option",
+                      "control"
                     ]
                   }
-                },
+                }
+              }
+            ]
+          },
+          {
+            "description": "Disable Sysdiagnose (,)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "shift",
+                      "option",
+                      "control"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "description": "Disable Sysdiagnose (/)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "slash",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "shift",
+                      "option",
+                      "control"
+                    ]
+                  }
+                }
               }
             ]
           }
