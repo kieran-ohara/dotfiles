@@ -23,6 +23,19 @@ alacritty-inline-direct|alacritty with direct color indexing,
           %/%{255}%&%d\:%p1%{255}%&%d%;m,
     setb@, setf@,
 
+# Alacritty supports coloured underlines (/E58)
+#
+# In order to show them in tmux, we need to specify the `Setulc` capability.
+#
+# Sources:
+# - https://github.com/tmux/tmux/pull/1771/files
+# - https://sw.kovidgoyal.net/kitty/underlines/
+# - https://github.com/alacritty/alacritty/pull/5935
+alacritty-kieran|alacritty-inline-direct plus mods,
+    use=alacritty-inline-direct,
+    Setulc=\E[%?%p1%{8}%<%t3%p1%d%e58\:2\:\:%p1%{65536}%/%d\:%p1%{256}
+          %/%{255}%&%d\:%p1%{255}%&%d%;m,
+
 alacritty-inline+common|base fragment for alacritty,
     OTbs, am, bce, km, mir, msgr, xenl, AX, XT,
     colors#8, cols#80, it#8, lines#24, pairs#64,

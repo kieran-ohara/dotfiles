@@ -1,6 +1,6 @@
 ---
 env:
-  TERM: alacritty-inline-direct
+  TERM: alacritty-kieran
 
 window:
   decorations: transparent

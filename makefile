@@ -51,5 +51,5 @@ $(DEPS)/vscode-js-debug/node_modules: $(DEPS)/vscode-js-debug/package.json
 $(DEPS)/vscode-js-debug/out/src/vsDebugServer.js: $(DEPS)/vscode-js-debug/package.json $(DEPS)/vscode-js-debug/node_modules
 	cd $(<D) && npm run compile
 
-config/terminfo/db/61: config/terminfo/src/alacritty-inline.terminfo
+config/terminfo/db/61/alacritty-kieran: config/terminfo/src/alacritty-inline.terminfo
 	tic -x $<
