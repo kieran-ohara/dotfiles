@@ -23,12 +23,6 @@ if [ ! -z ${BREW_PREFIX} ]; then
     fpath=($BREW_PREFIX/share/zsh/site-functions $fpath)
 fi
 
-# Add shims to path.
-if type volta &>/dev/null; then
-    export VOLTA_HOME=$HOME/.volta
-    path+=($VOLTA_HOME/bin)
-fi
-
 if [ -d $DOTFILES/dependencies/aws/cli ] ; then
   path+=($DOTFILES/dependencies/aws/cli)
   export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
