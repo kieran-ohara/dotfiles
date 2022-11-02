@@ -1,34 +1,3 @@
-[profile default]
-credential_process = aws-vault exec kieran --json
-region = eu-west-1
-output = json
-use_accelerate_endpoint = true
-
-[profile ac]
-credential_process = aws-vault exec kieran-ac --json
-region = eu-west-1
-
-output = json
-[profile cicd]
-credential_process = aws-vault exec cicd-sso --json
-output = json
-region = eu-west-1
-
-[profile dev]
-credential_process = aws-vault exec dev-sso --json
-output = json
-region = eu-west-1
-
-[profile test]
-credential_process = aws-vault exec test-sso --json
-output = json
-region = eu-west-1
-
-[profile prod]
-credential_process = aws-vault exec prod-sso --json
-output = json
-region = eu-west-1
-
 [profile kieran]
 sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
@@ -37,34 +6,34 @@ sso_role_name = Administrator
 use_accelerate_endpoint = true
 region = eu-west-2
 
-[profile kieran-ac]
+[profile ac]
 sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 051127158334
 sso_role_name = Administrator
 
-[profile cicd-sso]
+[profile cicd]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 421173879275
 sso_role_name = BG-CICD-Prod-DeveloperAccess
 region = eu-west-1
 
-[profile dev-sso]
+[profile dev]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 373124806600
 sso_role_name = BG-Development-DeveloperAccess
 region = eu-west-1
 
-[profile test-sso]
+[profile test]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 483531641442
 sso_role_name = BG-Testing-DeveloperAccess
 region = eu-west-1
 
-[profile prod-sso]
+[profile prod]
 sso_start_url = https://bionic-sso.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 896190025554

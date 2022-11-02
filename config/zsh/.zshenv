@@ -23,11 +23,6 @@ if [ ! -z ${BREW_PREFIX} ]; then
     fpath=($BREW_PREFIX/share/zsh/site-functions $fpath)
 fi
 
-if [ -d $DOTFILES/dependencies/aws/cli ] ; then
-  path+=($DOTFILES/dependencies/aws/cli)
-  export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
-fi
-
 path+=($ZDOTDIR/bin)
 path+=(${DOTFILES}/dependencies/node_modules/.bin)
 path+=(${DOTFILES}/dependencies/venv/bin)
