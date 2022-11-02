@@ -1,6 +1,5 @@
 cmd + alt + ctrl + shift - 0 : open -a Zotero
 cmd + alt + ctrl + shift - 9 : open -a "Microsoft Word"
-cmd + alt + ctrl + shift - a : open -a Reeder
 cmd + alt + ctrl + shift - b : open -a Obsidian
 cmd + alt + ctrl + shift - c : open -a Calendar
 cmd + alt + ctrl + shift - e : open -a Preview
