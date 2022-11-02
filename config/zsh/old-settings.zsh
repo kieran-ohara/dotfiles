@@ -14,7 +14,6 @@ alias -g T='| tail'
 alias -g UP='| up'
 alias :q="exit"
 alias :qa="tmux kill-window"
-alias acps="aws_cli_profile_set"
 alias ag="ag --hidden"
 alias as -='aws-shell'
 alias cdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"

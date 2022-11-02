@@ -1,3 +1,4 @@
+alias acps='() { export AWS_PROFILE="${1}" }'
 alias av="aws-vault"
 alias ave="aws-vault exec"
 alias b='brew'
