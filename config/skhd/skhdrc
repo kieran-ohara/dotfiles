@@ -3,6 +3,7 @@ cmd + alt + ctrl + shift - 9 : open -a "Microsoft Word"
 cmd + alt + ctrl + shift - b : open -a Obsidian
 cmd + alt + ctrl + shift - c : open -a Calendar
 cmd + alt + ctrl + shift - e : open -a Preview
+cmd + alt + ctrl + shift - h : open -a "Visual Studio Code"
 cmd + alt + ctrl + shift - f : open -a Finder
 cmd + alt + ctrl + shift - g : open -a UTM
 cmd + alt + ctrl + shift - i : open -a Alacritty
