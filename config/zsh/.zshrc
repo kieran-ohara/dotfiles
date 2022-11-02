@@ -75,7 +75,13 @@ zle -N fancyctrlz
 bindkey '^Z' fancyctrlz
 # }}}
 # Set prompts
-PS1=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b%F{blue}$(gitbranch)%f %% '
+aws_prompt() {
+  if [[ -v AWS_PROFILE ]]; then
+    echo "  ${AWS_PROFILE}"
+  fi
+}
+PROMPT=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b%F{blue}$(gitbranch)%f %% '
+RPROMPT='%F{yellow}$(aws_prompt)%f'
 source $XDG_CONFIG_HOME/zsh/aliases.zsh
 # Allow direnv to set env vars and so on.
 eval "$(direnv hook zsh)"
