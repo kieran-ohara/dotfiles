@@ -6,6 +6,7 @@
 /config/karabiner/automatic_backups
 /config/nvim/parser-src/build
 /config/nvim/parser-src/src
+/config/terminfo/db
 /config/vim/.netrwhist
 /config/zsh/*.zwc
 /config/zsh/*.zwc.old
