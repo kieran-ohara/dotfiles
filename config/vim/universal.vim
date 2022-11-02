@@ -86,6 +86,7 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>ggp :Git push<CR>
 nnoremap <leader>gst :vertical Git<CR>
+nnoremap <leader>gsT :Git<CR>
 
 " Dispatch
 nnoremap <leader>df :Focus make<space>
