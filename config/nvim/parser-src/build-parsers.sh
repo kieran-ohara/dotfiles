@@ -18,6 +18,7 @@ function get_revision() {
 for LANG in \
   bash \
   css \
+  go \
   html \
   javascript \
   json \
