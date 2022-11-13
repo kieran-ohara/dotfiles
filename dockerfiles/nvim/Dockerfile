@@ -1,25 +1,26 @@
 # Treesitter Shared Objects
 FROM rust:bullseye AS treesitter
-RUN apt-get update && apt-get install -y \
+RUN apt-get update --no-install-recommends && apt-get install  -y \
         git \
         jq \
         nodejs \
         build-essential
 RUN git clone https://github.com/tree-sitter/tree-sitter.git \
-        --branch v0.20.1
-RUN cd tree-sitter \
-        && cargo build \
-        && cargo install tree-sitter-cli
+        --branch v0.20.1 /treesitter
+WORKDIR treesitter
+RUN cargo build && cargo install tree-sitter-cli
 
-COPY config/nvim/parser /parser
+WORKDIR /parser
+COPY config/nvim/parser-src/build-parsers.sh .
+COPY config/nvim/parser-src/makefile .
 COPY config/nvim/pack/treesitter/start/nvim-treesitter/lockfile.json \
     /nvim/pack/treesitter/start/nvim-treesitter/lockfile.json
 
-RUN cd /parser && ./build-parsers.sh
+RUN ./build-parsers.sh
 
 # Editor Environment
 FROM debian:bookworm-slim
-RUN apt-get update && apt-get install -y \
+RUN apt-get update --no-install-recommends && apt-get install -y \
         neovim \
         git \
         nodejs \
@@ -44,7 +45,10 @@ USER kieran
 RUN mkdir -p \
     $XDG_CACHE_HOME/vim/backupfiles \
     $XDG_CACHE_HOME/vim/swapfiles \
-    $XDG_CACHE_HOME/vim/undodir
+    $XDG_CACHE_HOME/vim/undodir \
+    $XDG_CACHE_HOME/nvim/backupfiles \
+    $XDG_CACHE_HOME/nvim/swapfiles \
+    $XDG_CACHE_HOME/nvim/undodir
 
 COPY config/vim/vimrc $HOME/.vimrc
 COPY config/vim $XDG_CONFIG_HOME/vim
