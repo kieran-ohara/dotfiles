@@ -18,7 +18,6 @@
   "homepage": "https://github.com/kieran-ohara/dotfiles#readme",
   "dependencies": {
     "markdownlint-cli": "^0.31.1",
-    "pnpm": "^6.35.0",
     "tldr": "^3.3.8",
     "typescript": "^4.8.4",
     "typescript-language-server": "2.1.0",

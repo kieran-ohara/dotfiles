@@ -1,8 +1,8 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   markdownlint-cli: ^0.31.1
-  pnpm: ^6.35.0
+  pnpm: ^7.15.0
   tldr: ^3.3.8
   typescript: ^4.8.4
   typescript-language-server: 2.1.0
@@ -11,7 +11,7 @@ specifiers:
 
 dependencies:
   markdownlint-cli: 0.31.1
-  pnpm: 6.35.0
+  pnpm: 7.15.0
   tldr: 3.3.8
   typescript: 4.8.4
   typescript-language-server: 2.1.0
@@ -1144,9 +1144,9 @@ packages:
       find-up: 6.3.0
     dev: false
 
-  /pnpm/6.35.0:
-    resolution: {integrity: sha512-XKAxyK1weNV0x8Ip8/beHY1JGcO8c8fnYNL4yzZx3TxZjYOYY6r2ltrUM2R8vCD+Vmjtbq1YAKhIT7Q4Q79XSg==}
-    engines: {node: '>=12.17'}
+  /pnpm/7.15.0:
+    resolution: {integrity: sha512-GGQ5+MCwD0bpq+65uitpgO1+ZusZ1keO5ebG/CH6ciu1ohnZj5Y3X374Ow/CBApa+Jw2/NUifVRz2fW4JChftA==}
+    engines: {node: '>=14.6'}
     hasBin: true
     dev: false
 
