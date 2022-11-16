@@ -1,0 +1,5 @@
+#!/bin/bash -e
+docker run --rm -it \
+  -v "$(pwd)":/root \
+  -w /root \
+  znly/protoc "$@"
