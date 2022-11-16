@@ -62,6 +62,7 @@
     rs = restore
     s = status
     sl = "!git branch --merged | grep  -v '\\*\\|master\\|main' | xargs -n 1 -r git branch -d"
+    sml= "!git-branchless smartlog"
     smur =  submodule update --recursive
     smurr =  submodule update --recursive --remote
     sta = stash
