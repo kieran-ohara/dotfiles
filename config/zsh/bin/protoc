@@ -2,4 +2,4 @@
 docker run --rm -it \
   -v "$(pwd)":/root \
   -w /root \
-  kieranbamforth/protoc:1 "$@"
+  kieranbamforth/protoc:2 "$@"
