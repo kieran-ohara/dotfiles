@@ -10,6 +10,9 @@ require'lspconfig'.vuels.setup{
 require'lspconfig'.terraformls.setup{
   capabilities = capabilities
 }
+require'lspconfig'.gopls.setup {
+  capabilities = capabilities
+}
 -- EFM {{{
 local lspconfig = require "lspconfig"
 local util = require "lspconfig.util"
