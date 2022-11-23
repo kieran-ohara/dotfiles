@@ -40,6 +40,14 @@
 
 [alias]
 
+    ll = "!git-branchless smartlog"
+    mov = "!git-branchless move"
+    nn = "!git-branchless next"
+    np = "!git-branchless prev"
+    ra = "!git-branchless amend"
+    rr = "!git-branchless reword"
+    syn = "!git-branchless sync"
+
     a = add
     b = branch
     br = "!gh browse"
@@ -62,7 +70,6 @@
     rs = restore
     s = status
     sl = "!git branch --merged | grep  -v '\\*\\|master\\|main' | xargs -n 1 -r git branch -d"
-    sml= "!git-branchless smartlog"
     smur =  submodule update --recursive
     smurr =  submodule update --recursive --remote
     sta = stash
