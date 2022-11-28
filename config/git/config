@@ -53,6 +53,8 @@
     cp = cherry-pick
     d = diff
     dc = diff --cached
+    dt = difftool
+    dtc = difftool --cached
     f = fetch
     l = pull
     p = push
