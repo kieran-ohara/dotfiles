@@ -19,6 +19,7 @@ alias hps=sethttpieprofile
 alias j=opensrcdir
 alias k=kubectl
 alias lgfs="libguestfs"
+alias ll='ls -al'
 alias m=make
 alias md='mkdir -p'
 alias npmi="npm install"
