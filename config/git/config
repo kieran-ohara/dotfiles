@@ -1,6 +1,10 @@
 [diff]
-    tool = Kaleidoscope
+    tool = nvimdiff
     colorMoved = zebra
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[difftool]
+    prompt = false
 [user]
     name = Kieran Bamforth
     email = hello@kieranbamforth.me
@@ -9,15 +13,7 @@
 [core]
     filemode = true
     pager = less -F -X
-[mergetool "Kaleidoscope"]
-    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-    trustexitcode = true
 [merge]
-    tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-    prompt = false
 [mergetool]
     prompt = false
 [color]
