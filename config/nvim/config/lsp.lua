@@ -27,7 +27,7 @@ vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent
 vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
 -- peek definition
-vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+vim.keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
 
 -- jump forward/back through errors.
 vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })

@@ -20,4 +20,4 @@ colorscheme nightfox
 let g:lightline = {}
 let g:lightline.colorscheme = 'nightfox'
 
-nnoremap <silent> gD :lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
