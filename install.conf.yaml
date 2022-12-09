@@ -13,7 +13,8 @@
     ~/.config/.jira: config/jira
     ~/.config/alacritty: config/alacritty
     ~/.config/ansible: config/ansible
-    ~/.config/aws: config/aws
+    # Aws vault isn't clever enough :(
+    ~/.aws: config/aws
     ~/.config/docker: config/docker
     ~/.config/efm-langserver: config/efm-langserver
     ~/.config/git: config/git
