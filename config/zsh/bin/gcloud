@@ -1,0 +1,8 @@
+#!/bin/bash -e
+docker run --rm -it \
+  --platform linux/amd64 \
+  --entrypoint gcloud \
+  -e CLOUDSDK_CONFIG=/config \
+  -v $HOME/.config/gcloud:/config \
+  -v $HOME/Desktop/certs:/certs \
+  google/cloud-sdk "$@"
