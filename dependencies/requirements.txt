@@ -2,3 +2,5 @@ ansible==5.1.0
 httpie==3.1.0
 mycli==1.24.1
 yamllint==1.26.3
+dvc==2.38.1
+dvc-s3==2.21.0
