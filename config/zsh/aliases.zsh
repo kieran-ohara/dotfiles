@@ -29,6 +29,7 @@ alias p="aws-vault exec kieran -- packer"
 alias path="echo $PATH | sed -r 's/:/\n/g'"
 alias rmf='rm -rf'
 alias s=sfdx
+alias ssha="TERM=alacritty ssh"
 alias t="aws-vault exec kieran -- terraform"
 alias tree='nicetree'
 alias v=resumevimsession
