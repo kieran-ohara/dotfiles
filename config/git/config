@@ -74,3 +74,5 @@
     sta = stash
     stp = stash pop
     unstage = restore --staged
+[init]
+	defaultBranch = main
