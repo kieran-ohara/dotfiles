@@ -24,6 +24,7 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/luacheck: config/luacheck
     ~/.config/mycli: config/mycli
+    ~/.config/npm: config/npm
     ~/.config/nvim: config/nvim
     ~/.config/skhd: config/skhd
     ~/.config/terminfo: config/terminfo

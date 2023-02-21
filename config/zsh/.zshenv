@@ -52,6 +52,9 @@ export ANSIBLE_HOME=${XDG_CONFIG_HOME}/ansible
 # Docker
 export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
 
+# Node
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
 # Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false
