@@ -85,6 +85,8 @@ RPROMPT='%F{yellow}$(aws_prompt)%f'
 source $XDG_CONFIG_HOME/zsh/aliases.zsh
 # Allow direnv to set env vars and so on.
 eval "$(direnv hook zsh)"
+# Better asdf.
+eval "$(rtx activate zsh)"
 # zim-fw {{{
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   # Update static initialization script if it does not exist or it's outdated, before sourcing it
