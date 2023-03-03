@@ -8,8 +8,11 @@ cmd + alt + ctrl + shift - f : open -a Finder
 cmd + alt + ctrl + shift - g : open -a UTM
 cmd + alt + ctrl + shift - i : open -a Alacritty
 cmd + alt + ctrl + shift - k : open -a Slack
+cmd + alt + ctrl + shift - m : open -a Simulator
+cmd + alt + ctrl + shift - n : open -a Flipper
 cmd + alt + ctrl + shift - o : open -a Firefox
 cmd + alt + ctrl + shift - p : open -a Spotify
+cmd + alt + ctrl + shift - q : open -a Xcode
 cmd + alt + ctrl + shift - r : open -a OmniFocus
 cmd + alt + ctrl + shift - s : open -a "System Preferences"
 cmd + alt + ctrl + shift - u : open -a "Mail"
