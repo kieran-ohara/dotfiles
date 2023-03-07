@@ -16,5 +16,26 @@ sso_role_name = Administrator
 sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 739745939445
-sso_role_name = Administrator
+sso_role_name = PowerUserAccess
+region = eu-west-2
+
+[profile staging]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 232042150830
+sso_role_name = PowerUserAccess
+region = eu-west-2
+
+[profile production]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 645614495521
+sso_role_name = PowerUserAccess
+region = eu-west-2
+
+[profile deployments]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 517021885339
+sso_role_name = PowerUserAccess
 region = eu-west-2
