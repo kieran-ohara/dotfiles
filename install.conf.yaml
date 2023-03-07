@@ -26,6 +26,7 @@
     ~/.config/mycli: config/mycli
     ~/.config/npm: config/npm
     ~/.config/nvim: config/nvim
+    ~/.config/rtx: config/rtx
     ~/.config/skhd: config/skhd
     ~/.config/terminfo: config/terminfo
     ~/.config/tmux: config/tmux
@@ -48,6 +49,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [make dependencies/brew]
+  - [/opt/homebrew/bin/rtx install]
   - [make dependencies/node_modules]
   - [make dependencies/venv/bin]
   - [make config/terminfo/db/61/alacritty-kieran]
