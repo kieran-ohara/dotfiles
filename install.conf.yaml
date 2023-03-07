@@ -17,8 +17,8 @@
     ~/.aws: config/aws
     ~/.config/docker: config/docker
     ~/.config/efm-langserver: config/efm-langserver
-    ~/.config/git: config/git
     ~/.config/gcloud: config/gcloud
+    ~/.config/git: config/git
     ~/.config/homebrew: config/homebrew
     ~/.config/httpie: config/httpie
     ~/.config/karabiner: config/karabiner
