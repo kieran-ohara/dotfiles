@@ -22,7 +22,7 @@ $(DEPS)/node_modules/.bin/pnpm:
 	npm install pnpm --prefix $(DEPS)
 
 $(DEPS)/node_modules: $(DEPS)/node_modules/.bin/pnpm $(DEPS)/pnpm-lock.yaml $(DEPS)/package.json
-	$< install --prefix $(@D)
+	$< install --prefix $(@D) --prod --no-optional --frozen-lockfile
 	touch $@
 
 $(DEPS)/venv:
