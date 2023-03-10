@@ -26,4 +26,4 @@ experimental = false # enable experimental features such as shims
 shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
 [tools]
-nodejs = '18'
+nodejs = '18.15.0'
