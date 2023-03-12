@@ -35,3 +35,5 @@ alias tree='nicetree'
 alias v=resumevimsession
 alias w=nicewhich
 alias x=exit
+alias y='yarn'
+alias ywr='() { yarn workspace $1 run $2}'
