@@ -18,11 +18,8 @@ $(DEPS)/brew: config/homebrew/Brewfile.lock.json
 	brew bundle
 	touch $@
 
-$(DEPS)/node_modules/.bin/pnpm:
-	npm install pnpm --prefix $(DEPS)
-
-$(DEPS)/node_modules: $(DEPS)/node_modules/.bin/pnpm $(DEPS)/pnpm-lock.yaml $(DEPS)/package.json
-	$< install --prefix $(@D) --prod --no-optional --frozen-lockfile
+$(DEPS)/node_modules: $(DEPS)/package-lock.json $(DEPS)/package.json
+	npm ci --prefix $(@D) --omit=dev --omit=optional $(@D)
 	touch $@
 
 $(DEPS)/venv:

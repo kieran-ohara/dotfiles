@@ -23,6 +23,5 @@
 /dependencies/aws
 /dependencies/brew
 /dependencies/node_modules
-/dependencies/package-lock.json
 /dependencies/venv
 /dependencies/vscode-js-debug
