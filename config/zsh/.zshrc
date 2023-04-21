@@ -104,3 +104,8 @@ if [ "$ZSH_PROFILE" = true ] ; then
     zprof
 fi
 # }}}
+# {{{ Linuxbrew 
+if [ -f /home/linuxbrew/.linuxbrew/bin/brew ] ; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+# }}}
