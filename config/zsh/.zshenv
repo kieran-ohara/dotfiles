@@ -64,6 +64,9 @@ export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
 # Node
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
+# Go.
+export GOPATH=$HOME
+
 # Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false
