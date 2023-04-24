@@ -126,3 +126,6 @@
 [submodule "nvim-dap"]
 	path = config/nvim/pack/dap/start/nvim-dap
 	url = https://github.com/mfussenegger/nvim-dap
+[submodule "nvim-treesitter-context"]
+	path = config/nvim/pack/treesitter/start/nvim-treesitter-context
+	url = https://github.com/nvim-treesitter/nvim-treesitter-context
