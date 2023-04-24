@@ -46,5 +46,6 @@ build/$(LANG).so: src/$(REPOLOCATION)/src/parser.c src/$(REPOLOCATION)/src/scann
 	# -lstdc++: link stdc++ library
 	# -Os: optimisation
 	# -shared: create shared object (.so)
-	cc -o $@ -I./src/$(REPOLOCATION)/src -lstdc++ -Os -shared $^
+	#  -fPIC: emit position independent code suitable for dynamic linking (apparently)
+	cc -o $@ -I./src/$(REPOLOCATION)/src -lstdc++ -Os -shared $^ -fPIC -std=c99
 	# rm -rf ./src/$(REPO)
