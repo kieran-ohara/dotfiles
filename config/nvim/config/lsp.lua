@@ -17,7 +17,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
 )
 
 -- LSP Saga {{{
-require "lspsaga".init_lsp_saga()
+require "lspsaga".setup({})
 vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
 
 -- code action.
