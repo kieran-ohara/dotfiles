@@ -54,3 +54,8 @@ require 'nvim-treesitter.configs'.setup {
     },
   },
 }
+
+require("aerial").setup({
+  backends = { "treesitter" },
+  manage_folds = false,
+})

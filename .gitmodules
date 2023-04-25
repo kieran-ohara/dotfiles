@@ -129,3 +129,6 @@
 [submodule "nvim-treesitter-context"]
 	path = config/nvim/pack/treesitter/start/nvim-treesitter-context
 	url = https://github.com/nvim-treesitter/nvim-treesitter-context
+[submodule "aerial.nvim"]
+	path = config/nvim/pack/treesitter/start/aerial.nvim
+	url = https://github.com/stevearc/aerial.nvim
