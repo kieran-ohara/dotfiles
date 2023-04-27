@@ -46,6 +46,7 @@
     syn = "!git-branchless sync"
 
     pr = "!gh pr create"
+    mr = "!glab mr"
 
     a = add
     b = branch
