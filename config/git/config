@@ -45,6 +45,8 @@
     sw = "!git-branchless switch"
     syn = "!git-branchless sync"
 
+    pr = "!gh pr create"
+
     a = add
     b = branch
     br = "!gh browse"
@@ -59,7 +61,6 @@
     l = pull
     p = push
     pf = push --force-with-lease origin HEAD
-    pr = "!gh pr create"
     rb = rebase
     rba = rebase --abort
     rbc = rebase --continue
