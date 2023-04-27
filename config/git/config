@@ -41,7 +41,7 @@
     nn = "!git-branchless next"
     np = "!git-branchless prev"
     ra = "!git-branchless amend"
-    rr = "!git-branchless reword"
+    rw = "!git-branchless reword"
     sw = "!git-branchless switch"
     syn = "!git-branchless sync"
 
