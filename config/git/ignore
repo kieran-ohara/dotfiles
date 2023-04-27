@@ -7,6 +7,7 @@
 Session.vim
 __pycache__
 dive.log
+lefthook.yml
 node_modules
 npm-debug.log
 tags
