@@ -132,3 +132,6 @@
 [submodule "aerial.nvim"]
 	path = config/nvim/pack/treesitter/start/aerial.nvim
 	url = https://github.com/stevearc/aerial.nvim
+[submodule "nvim-colorizer.lua"]
+	path = config/nvim/pack/ui/start/nvim-colorizer.lua
+	url = https://github.com/norcalli/nvim-colorizer.lua
