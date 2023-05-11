@@ -33,6 +33,20 @@ sso_account_id = 645614495521
 sso_role_name = PowerUserAccess
 region = eu-west-2
 
+[profile network]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 233228151417
+sso_role_name = Administrator
+region = eu-west-2
+
+[profile development]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 226045122934
+sso_role_name = Administrator
+region = eu-west-2
+
 [profile deployments]
 sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
