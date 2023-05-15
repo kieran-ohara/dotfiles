@@ -16,13 +16,13 @@
 	path = config/vim/pack/packages/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
 [submodule "vim-fugitive"]
-	path = config/vim/pack/packages/start/vim-fugitive
+	path = config/nvim/pack/vcs/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "vim-repeat"]
 	path = config/vim/pack/packages/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
 [submodule "vim-rhubarb"]
-	path = config/vim/pack/packages/start/vim-rhubarb
+	path = config/nvim/pack/vcs/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
 [submodule "vim-surround"]
 	path = config/vim/pack/packages/start/vim-surround
@@ -43,7 +43,7 @@
 	path = config/nvim/pack/treesitter/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
 [submodule "gitsigns.nvim"]
-	path = config/nvim/pack/ui/start/gitsigns.nvim
+	path = config/nvim/pack/vcs/start/gitsigns.nvim
 	url = https://github.com/lewis6991/gitsigns.nvim
 [submodule "telescope.nvim"]
 	path = config/nvim/pack/ui/start/telescope.nvim

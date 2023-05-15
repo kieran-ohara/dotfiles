@@ -78,19 +78,11 @@ augroup stripspaces
     autocmd BufWinEnter,InsertLeave * match ErrorMsg /\s\+$/
 augroup end
 " }}}
-" Code Editing {{{
-" Git shortcuts
-nnoremap <leader>gb :Git blame<CR>
-nnoremap <leader>gc :Git commit -v -q<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>ge :Gedit<CR>
-nnoremap <leader>ggp :Git push<CR>
-nnoremap <leader>gst :vertical Git<CR>
-nnoremap <leader>gsT :Git<CR>
 
-" Dispatch
+" Dispatch {{{
 nnoremap <leader>df :Focus make<space>
 " }}}
+
 " Navigation {{{
 set mouse=a
 
