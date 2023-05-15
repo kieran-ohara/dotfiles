@@ -135,3 +135,6 @@
 [submodule "nvim-colorizer.lua"]
 	path = config/nvim/pack/ui/start/nvim-colorizer.lua
 	url = https://github.com/norcalli/nvim-colorizer.lua
+[submodule "fugitive-gitlab.vim"]
+	path = config/nvim/pack/vcs/start/fugitive-gitlab.vim
+	url = https://github.com/shumphrey/fugitive-gitlab.vim
