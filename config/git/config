@@ -36,6 +36,7 @@
 
 [alias]
 
+    hide = "!git-branchless hide"
     ll = "!git-branchless smartlog"
     mov = "!git-branchless move"
     nn = "!git-branchless next"
