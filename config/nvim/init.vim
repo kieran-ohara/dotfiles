@@ -27,6 +27,6 @@ nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gc :Git commit -v -q<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
-nnoremap <leader>ggp :Git push<CR>
+nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gsT :Git<CR>
 nnoremap <leader>gst :vertical Git<CR>
