@@ -28,7 +28,9 @@ elif [ -d /home/linuxbrew/.linuxbrew ] ; then
     BREW_PREFIX=/home/linuxbrew/.linuxbrew
 fi
 if [ ! -z ${BREW_PREFIX} ]; then
-    export BREW_PREFIX=$BREW_PREFIX
+    export HOMEBREW_PREFIX=$BREW_PREFIX
+    export HOMEBREW_CELLAR=$BREW_PREFIX/Cellar
+    export HOMEBREW_REPOSITORY=$BREW_PREFIX/Homebrew
     path=($BREW_PREFIX/bin $path)
     path=($BREW_PREFIX/opt/make/libexec/gnubin $path)
     path=($BREW_PREFIX/opt/openssl@3/bin $path)
