@@ -138,3 +138,6 @@
 [submodule "fugitive-gitlab.vim"]
 	path = config/nvim/pack/vcs/start/fugitive-gitlab.vim
 	url = https://github.com/shumphrey/fugitive-gitlab.vim
+[submodule "copilot.vim"]
+	path = config/nvim/pack/autocomplete/start/copilot.vim
+	url = https://github.com/github/copilot.vim
