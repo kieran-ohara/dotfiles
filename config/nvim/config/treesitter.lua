@@ -59,3 +59,4 @@ require("aerial").setup({
   backends = { "treesitter" },
   manage_folds = false,
 })
+vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle<cr>")
