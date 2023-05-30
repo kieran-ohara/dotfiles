@@ -2,9 +2,6 @@
 set runtimepath^=$XDG_CONFIG_HOME/vim
 set packpath^=$XDG_CONFIG_HOME/vim
 
-" Source VIMRC
-nnoremap <leader>vs :source $MYVIMRC<CR>
-
 " Text Editing {{{
 set cdpath+=~/src
 
