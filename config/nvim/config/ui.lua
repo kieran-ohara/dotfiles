@@ -29,13 +29,13 @@ require('gitsigns').setup({
 require'nvim-web-devicons'.setup({})
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fF', builtin.git_status, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fc', builtin.git_commits, {})
-vim.keymap.set('n', '<leader>fC', builtin.git_bcommits, {})
-vim.keymap.set('n', '<leader>fu', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.command_history, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find Files' })
+vim.keymap.set('n', '<leader>fF', builtin.git_status, { desc = 'Git Status' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live Grep' })
+vim.keymap.set('n', '<leader>fc', builtin.git_commits, { desc = 'Git Commits' })
+vim.keymap.set('n', '<leader>fC', builtin.git_bcommits, { desc = 'Git BCommits' })
+vim.keymap.set('n', '<leader>fu', builtin.buffers, { desc = 'Buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.command_history, {  desc = 'Command History' })
 
 require'colorizer'.setup()
 
