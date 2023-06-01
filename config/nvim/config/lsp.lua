@@ -42,7 +42,7 @@ require"trouble".setup {
   auto_preview = false,
 }
 
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}
 )
 -- }}}
