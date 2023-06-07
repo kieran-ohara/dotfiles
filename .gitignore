@@ -23,5 +23,6 @@
 /dependencies/aws
 /dependencies/brew
 /dependencies/node_modules
+/dependencies/node_modules.zip
 /dependencies/venv
 /dependencies/vscode-js-debug
