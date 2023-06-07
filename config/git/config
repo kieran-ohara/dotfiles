@@ -80,3 +80,5 @@
     unstage = restore --staged
 [init]
 	defaultBranch = main
+[status]
+	submodulesummary = 1
