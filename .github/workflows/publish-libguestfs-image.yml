@@ -1,4 +1,4 @@
-name: Docker
+name: Libguestfs Image
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Docker
+name: Mysql Client Image
 
 on:
   push:

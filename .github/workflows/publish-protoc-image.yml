@@ -1,4 +1,4 @@
-name: Docker
+name: Protoc Image
 
 on:
   push:
