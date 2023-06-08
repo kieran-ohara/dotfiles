@@ -106,7 +106,7 @@
 	path = config/vim/pack/packages/start/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
 [submodule "vim-vsnip"]
-	path = config/nvim/pack/autocomplete/start/vim-vsnip
+	path = config/nvim/pack/snippets/start/vim-vsnip
 	url = https://github.com/hrsh7th/vim-vsnip
 [submodule "nvim-autopairs"]
 	path = config/nvim/pack/autocomplete/start/nvim-autopairs
