@@ -73,6 +73,7 @@
     rs = restore
     s = status
     sl = "!git branch --merged | grep  -v '\\*\\|master\\|main' | xargs -n 1 -r git branch -d"
+    sm = submodule
     smur =  submodule update --recursive
     smuri =  submodule update --recursive --init
     smurr =  submodule update --recursive --remote
