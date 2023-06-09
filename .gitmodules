@@ -147,3 +147,6 @@
 [submodule "if-platform"]
 	path = dotbot/if-platform
 	url = https://github.com/kieran-ohara/dotbot-ifplatform.git
+[submodule "diffview.nvim"]
+	path = config/nvim/pack/vcs/start/diffview.nvim
+	url = https://github.com/sindrets/diffview.nvim
