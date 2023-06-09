@@ -70,7 +70,7 @@ export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # Go.
-export GOPATH=$HOME
+export GOPATH=$HOME/src/go
 
 # Custom behaviour.
 export ZSH_PROFILE=false
