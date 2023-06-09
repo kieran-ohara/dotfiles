@@ -65,3 +65,4 @@
   # not installing? consult the value of GO111MODULES
   - go:
     - golang.org/x/tools/gopls@v0.9.5
+    - github.com/go-delve/delve/cmd/dlv@v1.6.0
