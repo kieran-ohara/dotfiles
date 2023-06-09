@@ -60,3 +60,8 @@
         - [cd config/nvim/parser-src && ./build-parsers.sh]
         - [ launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist ]
         - [./os/darwin/preferences.sh]
+
+- ifcentos:
+  # not installing? consult the value of GO111MODULES
+  - go:
+    - golang.org/x/tools/gopls@v0.9.5
