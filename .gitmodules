@@ -150,3 +150,6 @@
 [submodule "golang"]
 	path = dotbot/golang
 	url = https://github.com/delicb/dotbot-golang
+[submodule "diffview.nvim"]
+	path = config/nvim/pack/vcs/start/diffview.nvim
+	url = https://github.com/sindrets/diffview.nvim
