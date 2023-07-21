@@ -40,6 +40,7 @@ extras=(
   vue ikatyang/tree-sitter-vue . false
   yaml ikatyang/tree-sitter-yaml . false
   typescript tree-sitter/tree-sitter-typescript typescript true
+  hurl pfeiferj/tree-sitter-hurl . false
 )
 
 # Requires bash 5...
