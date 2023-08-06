@@ -60,3 +60,10 @@ sso_region = eu-west-1
 sso_account_id = 546525711454
 sso_role_name = Administrator
 region = eu-west-2
+
+[profile security]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 155793639566
+sso_role_name = Administrator
+region = eu-west-2
