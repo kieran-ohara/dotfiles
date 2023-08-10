@@ -14,8 +14,7 @@ cask 'firefox'
 cask 'flipper'
 cask 'gas-mask'
 cask 'google-chrome'
-cask 'google-drive-file-stream'
-cask 'homebrew/cask-drivers/zsa-wally'
+cask 'google-drive'
 cask 'karabiner-elements'
 cask 'krisp'
 cask 'launchcontrol'
@@ -36,6 +35,7 @@ cask 'suspicious-package'
 cask 'tower'
 cask 'visual-studio-code'
 cask 'whatsapp'
+cask 'zsa-wally'
 
 mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
