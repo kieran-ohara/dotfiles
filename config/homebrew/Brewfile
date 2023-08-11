@@ -35,6 +35,7 @@ cask 'tower'
 cask 'visual-studio-code'
 cask 'whatsapp'
 cask 'zsa-wally'
+cask 'zoom'
 
 mas '1Password Safari', id: 1569813296
 mas 'OmniFocus', id: 1346203938
