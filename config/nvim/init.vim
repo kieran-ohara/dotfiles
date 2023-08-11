@@ -16,9 +16,9 @@ function! OpenSwps()
     execute "!open ". $XDG_CACHE_HOME. "/nvim/swapfiles"
 endfunc
 
-colorscheme nightfox
+colorscheme terafox
 let g:lightline = {}
-let g:lightline.colorscheme = 'nightfox'
+let g:lightline.colorscheme = 'terafox'
 
 nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
 

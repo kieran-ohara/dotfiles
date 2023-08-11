@@ -87,3 +87,5 @@ fi
 # terminfo
 export TERMINFO="$XDG_CONFIG_HOME"/terminfo/db
 export TERMINFO_DIRS="$XDG_CONFIG_HOME"/terminfo/db:$TERMINFO_DIRS""
+
+source ~/.config/tmux/theme/terafox.sh
