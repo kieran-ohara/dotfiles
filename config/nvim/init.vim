@@ -17,8 +17,6 @@ function! OpenSwps()
 endfunc
 
 colorscheme terafox
-let g:lightline = {}
-let g:lightline.colorscheme = 'terafox'
 
 nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
 

@@ -75,9 +75,6 @@
 [submodule "lspkind-nvim"]
 	path = config/nvim/pack/lsp/start/lspkind-nvim
 	url = https://github.com/onsails/lspkind-nvim
-[submodule "lightline.vim"]
-	path = config/nvim/pack/ui/start/lightline.vim
-	url = https://github.com/itchyny/lightline.vim
 [submodule "nvim-cmp"]
 	path = config/nvim/pack/autocomplete/start/nvim-cmp
 	url = https://github.com/hrsh7th/nvim-cmp
@@ -153,3 +150,6 @@
 [submodule "diffview.nvim"]
 	path = config/nvim/pack/vcs/start/diffview.nvim
 	url = https://github.com/sindrets/diffview.nvim
+[submodule "config/nvim/pack/ui/start/lualine.nvim"]
+	path = config/nvim/pack/ui/start/lualine.nvim
+	url = https://github.com/nvim-lualine/lualine.nvim

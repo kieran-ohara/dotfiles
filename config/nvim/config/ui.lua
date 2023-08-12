@@ -74,3 +74,27 @@ require("which-key").setup({
   show_help = true, -- show help message on the command line when the popup is visible
   triggers = "auto", -- automatically setup triggers
 })
+
+require('lualine').setup({
+  options = {
+    section_separators = '',
+    component_separators = '',
+    icons_enabled = true,
+  },
+  sections = {
+    lualine_a = { 'mode' },
+    lualine_b = { 'filename' },
+    lualine_c = { 'diff' },
+    lualine_x = { 'encoding', 'fileformat', 'filetype' },
+    lualine_y = { 'diagnostics' },
+    lualine_z = { '' },
+  },
+  inactive_sections = {
+    lualine_a = { 'filename' },
+    lualine_b = { '' },
+    lualine_c = { '' },
+    lualine_x = { '' },
+    lualine_y = { '' },
+    lualine_z = { '' },
+  },
+})
