@@ -17,7 +17,7 @@
         "revision": "111f8161e97ba6755e5f47fa039f07befd785acf"
       },
       "hashicorp/tap": {
-        "revision": "9fd4648803b4ca8f7156fe81bf336b0716842383"
+        "revision": "047e0e35e133c77c1bf6fc5468bde7dc272500b0"
       },
       "macos-fuse-t/cask": {
         "revision": "ec8ad3feca426499ee23271d1351af157de02118"
@@ -145,7 +145,7 @@
         }
       },
       "zoom": {
-        "version": "5.15.6.21146",
+        "version": "5.15.7.21404",
         "options": {
           "full_name": "zoom"
         }
@@ -247,7 +247,7 @@
         }
       },
       "ngrok": {
-        "version": "3.3.2,ktMDMTZpQoX,a",
+        "version": "3.3.3,cfNBjG6xAbr,a",
         "options": {
           "full_name": "ngrok"
         }
@@ -289,7 +289,7 @@
         }
       },
       "orbstack": {
-        "version": "0.15.1_2284",
+        "version": "0.16.0_2454",
         "options": {
           "full_name": "orbstack"
         }
@@ -2730,7 +2730,7 @@
         "macOS": "11.6"
       },
       "ventura": {
-        "HOMEBREW_VERSION": "4.1.4-30-g1a8f1be-dirty",
+        "HOMEBREW_VERSION": "4.1.4",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.1.0.1.1683849156",
