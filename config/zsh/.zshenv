@@ -80,12 +80,14 @@ if test -f "$FILE"; then
     source $FILE;
 fi
 
-if [ "$ZSH_ORDER" = true ] ; then
-    echo "zshenv"
-fi
-
 # terminfo
 export TERMINFO="$XDG_CONFIG_HOME"/terminfo/db
 export TERMINFO_DIRS="$XDG_CONFIG_HOME"/terminfo/db:$TERMINFO_DIRS""
 
 source ~/.config/tmux/theme/terafox.sh
+
+if [ "$ZSH_ORDER" = true ] ; then
+    echo "zshenv"
+fi
+
+export OPENAI_API_HOST=https://chat.openai.com
