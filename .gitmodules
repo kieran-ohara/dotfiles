@@ -153,3 +153,9 @@
 [submodule "config/nvim/pack/ui/start/lualine.nvim"]
 	path = config/nvim/pack/ui/start/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim
+[submodule "config/nvim/pack/ui/start/ChatGPT.nvim"]
+	path = config/nvim/pack/ui/start/ChatGPT.nvim
+	url = https://github.com/jackMort/ChatGPT.nvim
+[submodule "config/nvim/pack/helpers/start/nui.nvim"]
+	path = config/nvim/pack/helpers/start/nui.nvim
+	url = https://github.com/MunifTanjim/nui.nvim
