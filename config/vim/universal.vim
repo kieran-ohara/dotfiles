@@ -7,7 +7,7 @@ set cdpath+=~/src
 
 set undofile          " Persist undo
 
-set clipboard=unnamed " Yank to * register (system clipboard)
+set clipboard=unnamedplus " Yank to system clipboard
 
 set autoread          " Reload on external change.
 set autowrite         " Auto write when navigating to different buffers.
