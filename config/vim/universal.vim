@@ -50,6 +50,7 @@ vnoremap <leader>s :sort u<CR>
 cnoremap <expr> %% getcmdtype() == ':' ? './'.fnameescape(expand('%:h')).'/' : '%%'
 nmap <space>sa :saveas %%
 nnoremap <leader>w :w<CR>
+nnoremap <space>y :let @+=expand("%")<CR>
 
 " Use tab/shift+tab to navigate the popup window.
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
