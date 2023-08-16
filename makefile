@@ -42,3 +42,9 @@ $(DEPS)/vscode-js-debug/out/src/vsDebugServer.js: $(DEPS)/vscode-js-debug/packag
 
 config/terminfo/db/61/alacritty-kieran: config/terminfo/src/alacritty-inline.terminfo
 	tic -x $<
+
+prompts/prompts.csv: prompts/prompts prompts/mkprompts.sh
+	./prompts/mkprompts.sh $< $@
+
+prompts/prompts:
+	touch $@
