@@ -99,5 +99,7 @@ require('lualine').setup({
   },
 })
 
-require("chatgpt").setup()
+require("chatgpt").setup({
+      predefined_chat_gpt_prompts = "https://raw.githubusercontent.com/kieran-ohara/dotfiles/main/prompts/prompts.csv",
+})
 vim.keymap.set('n', '<leader>c', '<cmd>ChatGPT<CR>', {  desc = 'ChatGPT' })
