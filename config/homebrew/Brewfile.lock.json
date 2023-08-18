@@ -311,6 +311,12 @@
         "options": {
           "full_name": "fuse-t"
         }
+      },
+      "session-manager-plugin": {
+        "version": "1.2.463.0",
+        "options": {
+          "full_name": "session-manager-plugin"
+        }
       }
     },
     "mas": {
