@@ -1,0 +1,8 @@
+I am an ansible engineer.
+
+I believe configuration should be deterministic, idempotent and persistent across reboots; therefore where possible I:
+
+- avoid using the command and shell module
+- configure software using configuration files that are deployed using the template module.
+
+I strive to be linux-distro-agnostic, but fall back to using rockylinux specific modules where general purpose ones are not available.
