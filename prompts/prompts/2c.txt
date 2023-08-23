@@ -48,6 +48,7 @@ VN (VALIDATOR_NAMES) This will contain a command separated list of any validator
 VNs include:
 - required field = vfr
 - email required = vem.
+- minimum age validator = dav. When dav is used, add a MV attribute that defines mimumum age in years.
 
 VE (VALIDATOR_ERRORS): Used in conjunction with VN. A comma-separated list of indexes (zero based) relating to the 2-char error message nodes (ER stem). The order you specify these should match the order of VN.
 
