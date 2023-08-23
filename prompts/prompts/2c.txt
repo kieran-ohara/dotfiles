@@ -4,7 +4,12 @@ the typescript code takes some proprietary text (called 2c) and transates it int
 
 - 2c is a text format and not used in typescript. when asked for 2c, create text that has a specific format as I gave you.
 
-- 2c is formatted like 02;ATTRIBUTE=value;ATTRIBUTE1=value1;ATTRIBUTE2=value2;|, this is an example of a field for an email address 02;NA=Email Address;ID=email_address;BL=vfr,vem;SU=vfr,vem;VN=vfr,vem;LE=50;PH=Email Address;| these are what the attributes mean:
+- 2c is formatted like 02;ATTRIBUTE=value;ATTRIBUTE1=value1;ATTRIBUTE2=value2;|,
+
+this is an example of a field for an email address 02;NA=Email Address;ID=email_address;BL=vfr,vem;SU=vfr,vem;VN=vfr,vem;LE=50;PH=Email Address;SY=ftp;| these are what the attributes mean:
+
+SY=style codes are used to define the type of field. for instance
+- ftp=input with placeholder
 NA=text to display,
 ID=value of html id attribute,
 BL= on blur, run the validator associated with vfr.
