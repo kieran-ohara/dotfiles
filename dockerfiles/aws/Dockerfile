@@ -13,5 +13,7 @@ RUN curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux
     yum install -y session-manager-plugin.rpm && \
     rm session-manager-plugin.rpm
 
+RUN yum install -y less
+
 # Set the entrypoint to the AWS CLI
 ENTRYPOINT ["aws"]
