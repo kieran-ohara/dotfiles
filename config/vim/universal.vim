@@ -154,6 +154,8 @@ let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
+let g:tmux_navigator_disable_when_zoomed = 1
+
 nnoremap <leader>l :setlocal list!<CR>
 
 " Get the highlight colours under the cursor
