@@ -90,4 +90,4 @@ if [ "$ZSH_ORDER" = true ] ; then
     echo "zshenv"
 fi
 
-export OPENAI_API_HOST=https://chat.openai.com
+export OPENAI_API_HOST=api.openai.com
