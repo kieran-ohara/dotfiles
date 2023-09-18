@@ -159,3 +159,6 @@
 [submodule "config/nvim/pack/helpers/start/nui.nvim"]
 	path = config/nvim/pack/helpers/start/nui.nvim
 	url = https://github.com/MunifTanjim/nui.nvim
+[submodule "config/vim/pack/packages/start/vim-easy-align"]
+	path = config/vim/pack/packages/start/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align
