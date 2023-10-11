@@ -6,12 +6,10 @@
 [difftool]
     prompt = false
 [user]
-    signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDfcNEZH0rCjIGeWtno5Ld2k0sKYyQfiqnbI7fs2ORb1rFx11DHSwjerlBkPoUN9nAVBb3LMXeQnwzJ2uZvo+i6TkDg2qw1vgLcHnA956/hEm8pIX1tEiANxhwaSXMYqOjY/Wmm/Q+nu3RSiUT3teG9mPTpKlxODpv0RqgEQ06j+7BcN6SoDcIevvgNjbRVdWsVd9sEwmKlMEL3m1AgNkqQOcGhvYl5nDLsLfmr4dFKjcYUfR+fDZIy4m/4hhk9wEoFKYiKfk9MUMe0QegpMPFUEU+WE6hxsloSRNlrsj5IMiwxTiq3MXLAnyedxM9tlLfRIX3p5cZrsTdxGnFludKCfdDJ95WJIfnVIjjJ4r8YfpmfKBerG/eOyjra8rr4kxrW65/uB5Uwad6CZo3nB4Kk8Avy8pHGWID8xGuAqnFC4mMCbkRTAHGoxvUv1ovE0xl+ClND9NBzVMWEkInXEFnV8qBCXdV8rp9WEDzkYTYB+yGGCMMlyEKOwWVmpbUOKTU= kieranohara@Kierans-iMac-2.lan
     name = Kieran O'Hara
-    email = hello@kieranohara.me
 [credential]
 [core]
-    filemode = true
+    filemode = false
     pager = less -F -X
 [merge]
 [mergetool]
@@ -21,14 +19,10 @@
 [push]
     default = upstream
     autoSetupRemote = true
-[commit]
-    gpgsign = true
 [rebase]
     instructionFormat = "%s (%an)"
     autosquash = true
     autoStash = true
-[gpg]
-    format = ssh
 [pull]
     rebase = true
 [fetch]
@@ -100,3 +94,6 @@
 [credential "https://spt-git-prod.lb.local/"]
  helper =
  helper = !glab auth git-credential
+
+[includeIf "hasconfig:remote.*.url:hub:kieran-ohara/*"]
+	path = personal
