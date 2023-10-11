@@ -43,7 +43,7 @@
     np = "!git-branchless prev"
     ra = "!git-branchless amend"
     rw = "!git-branchless reword"
-    sw = "!git-branchless switch"
+    sw = "!git-branchless switch -i"
     syn = "!git-branchless sync"
 
     pr = "!gh pr create"
