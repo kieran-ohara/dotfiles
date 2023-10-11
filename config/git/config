@@ -47,11 +47,11 @@
     syn = "!git-branchless sync"
 
     pr = "!gh pr create"
+    br = "!gh browse"
     mr = "!glab mr"
 
     a = add
     b = branch
-    br = "!gh browse"
     c = commit
     co = checkout
     cp = cherry-pick
