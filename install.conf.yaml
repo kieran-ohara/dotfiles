@@ -9,7 +9,6 @@
     - ~/.config
     - ~/.local/share
     - ~/.vim
-    - ~/Library/LaunchAgents
 
 - link:
     ~/.config/.jira: config/jira
@@ -38,7 +37,6 @@
     ~/.vim/after: config/vim/after
     ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/.zshenv
-    ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/darwin/me.kieranbamforth.on-login.plist
 
 - create:
     - ~/.cache/vim/backupfiles
@@ -49,17 +47,21 @@
     - ~/.cache/nvim/undodir
 
 - shell:
+    - [make dependencies/brew]
     - [git submodule update --init --recursive, Installing submodules]
     - [make config/terminfo/db/61/alacritty-kieran]
 
 - ifmacos:
+    - create:
+        - ~/Library/LaunchAgents
+    - link:
+        ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/darwin/me.kieranbamforth.on-login.plist
     - shell:
-        - [make dependencies/brew]
         - [/opt/homebrew/bin/rtx install]
         - [make dependencies/node_modules]
         - [make dependencies/venv/bin]
         - [cd config/nvim/parser-src && ./build-parsers.sh]
-        - [ launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist ]
+        - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist ]
         - [./os/darwin/preferences.sh]
 
 - ifcentos:
