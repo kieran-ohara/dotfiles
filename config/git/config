@@ -94,3 +94,9 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !gh auth git-credential
+
+[url "https://spt-git-prod.lb.local/"]
+	insteadOf = bet:
+[credential "https://spt-git-prod.lb.local/"]
+ helper =
+ helper = !glab auth git-credential
