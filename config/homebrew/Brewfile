@@ -68,6 +68,13 @@ brew 'shellcheck'
 brew 'shfmt'
 brew 'tree-sitter'
 
-# Available in pkgx, keeping because eval'd in shell.
+# Available in pkgx, keeping because eval'd in shell so wanting perf.
+brew "zoxide"
 brew 'direnv'
 brew 'rtx'
+
+# Available in pkgx, keeping because wanted in git.
+brew "gh"
+brew "git"
+brew "git-branchless"
+brew "glab"

@@ -2,10 +2,6 @@ tools=(
   "ansible-playbook"
   "ansible"
   "cw"
-  "gh"
-  "git-branchless"
-  "git"
-  "glab"
   "hurl"
   "jq"
   "kubectl"
@@ -15,7 +11,6 @@ tools=(
   "packer"
   "rg"
   "tree"
-  "zoxide"
 )
 for tool in "${tools[@]}"
 do
