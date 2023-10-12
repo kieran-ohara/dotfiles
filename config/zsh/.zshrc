@@ -83,6 +83,7 @@ aws_prompt() {
 PROMPT=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b%F{blue}$(gitbranch)%f %% '
 RPROMPT='%F{yellow}$(aws_prompt)%f'
 source $XDG_CONFIG_HOME/zsh/aliases.zsh
+source $XDG_CONFIG_HOME/zsh/tools.zsh
 # Allow direnv to set env vars and so on.
 eval "$(direnv hook zsh)"
 # Better asdf.
