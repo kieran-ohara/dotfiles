@@ -8,7 +8,6 @@ tools=(
   "make"
   "ncdu"
   "packer"
-  "rg"
   "tree"
 )
 for tool in "${tools[@]}"

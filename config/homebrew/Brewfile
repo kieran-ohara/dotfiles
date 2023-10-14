@@ -83,3 +83,7 @@ brew "glab"
 
 # Available in pkgx, needed for building parsers.
 brew 'jq'
+
+# Available in pkgx, needed in telescope.nvim
+brew 'fd'
+brew 'rg'
