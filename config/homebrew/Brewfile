@@ -42,6 +42,8 @@ mas '1Password Safari', id: 1569813296
 mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
 
+brew 'pkgxdev/made/pkgx'
+
 brew 'dive'
 brew 'doctl'
 brew 'efm-langserver'
@@ -78,3 +80,6 @@ brew "gh"
 brew "git"
 brew "git-branchless"
 brew "glab"
+
+# Available in pkgx, needed for building parsers.
+brew 'jq'

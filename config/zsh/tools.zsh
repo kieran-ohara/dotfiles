@@ -3,7 +3,6 @@ tools=(
   "ansible"
   "cw"
   "hurl"
-  "jq"
   "kubectl"
   "lefthook"
   "make"
