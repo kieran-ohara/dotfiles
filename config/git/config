@@ -97,3 +97,5 @@
 
 [includeIf "hasconfig:remote.*.url:hub:kieran-ohara/*"]
 	path = personal
+[includeIf "hasconfig:remote.*.url:bet:**/**"]
+	path = work
