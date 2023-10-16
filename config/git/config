@@ -30,6 +30,8 @@
 
 [alias]
 
+    ab = "!git absorb"
+
     hide = "!git-branchless hide"
     ll = "!git-branchless smartlog"
     mov = "!git-branchless move"
