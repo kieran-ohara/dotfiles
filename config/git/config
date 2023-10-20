@@ -95,7 +95,7 @@
  helper =
  helper = !glab auth git-credential
 
-[includeIf "hasconfig:remote.*.url:hub:kieran-ohara/*"]
+[includeIf "hasconfig:remote.*.url:hub:**/**"]
 	path = personal
 [includeIf "hasconfig:remote.*.url:bet:**/**"]
 	path = work
