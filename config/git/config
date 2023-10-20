@@ -38,7 +38,7 @@
     ra = "!git-branchless amend"
     rci = "git-branchless record -i"
     rw = "!git-branchless reword"
-    sw = "!git-branchless switch -i"
+    swi = "!git-branchless switch -i"
     syn = "!git-branchless sync"
 
     pr = "!gh pr create"
