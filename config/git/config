@@ -36,7 +36,7 @@
     nn = "!git-branchless next"
     np = "!git-branchless prev"
     ra = "!git-branchless amend"
-    rci = "git-branchless record -i"
+    rci = "!git-branchless record -i"
     rw = "!git-branchless reword"
     swi = "!git-branchless switch -i"
     syn = "!git-branchless sync"
