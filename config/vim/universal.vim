@@ -14,7 +14,7 @@ set autowrite         " Auto write when navigating to different buffers.
 
 set encoding=utf-8
 set fixendofline      " Restore EOL if missing
-set nobinary
+set binary
 
 set spelllang=en_gb   " English dictionary
 
