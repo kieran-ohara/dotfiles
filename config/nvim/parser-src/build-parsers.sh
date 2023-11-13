@@ -41,6 +41,9 @@ extras=(
   yaml ikatyang/tree-sitter-yaml . false
   typescript tree-sitter/tree-sitter-typescript typescript true
   hurl pfeiferj/tree-sitter-hurl . false
+  ssh_config ObserverOfTime/tree-sitter-ssh-config . false
+  gitcommit gbprod/tree-sitter-gitcommit . false
+  git_rebase the-mikedavis/tree-sitter-git-rebase . false
 )
 
 # Requires bash 5...
