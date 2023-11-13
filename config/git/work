@@ -1,2 +1,4 @@
 [user]
 	email = kieran.ohara@bet365.com
+[http]
+	sslVerify = false
