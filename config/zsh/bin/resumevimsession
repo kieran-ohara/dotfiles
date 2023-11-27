@@ -32,5 +32,5 @@ else
         COMMAND="nvim -c ':Obsess'"
     fi
     set -x
-    /bin/zsh -c "$COMMAND";
+    $SHELL -c "$COMMAND";
 fi
