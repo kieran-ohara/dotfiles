@@ -2,6 +2,7 @@ alias ap='() { export AWS_PROFILE="${1}" }'
 alias av="aws-vault"
 alias ave="aws-vault exec"
 alias b='brew'
+alias bb='brew bundle'
 alias bci='brew install --cask'
 alias bcu='brew uninstall --cask'
 alias bi='brew install'
