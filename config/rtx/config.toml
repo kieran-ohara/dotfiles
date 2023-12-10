@@ -22,4 +22,4 @@ shorthands_file = '~/.config/rtx/shorthands.toml' # path to the shorthands file,
 disable_default_shorthands = false # disable the default shorthands, see `RTX_DISABLE_DEFAULT_SHORTHANDS`
 
 [tools]
-nodejs = '18.15.0'
+nodejs = '18.17.0'
