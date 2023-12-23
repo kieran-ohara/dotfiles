@@ -36,6 +36,7 @@ extras=(
   lua MunifTanjim/tree-sitter-lua . false
   make alemuller/tree-sitter-make . false
   markdown MDeiml/tree-sitter-markdown tree-sitter-markdown false
+  markdown_inline MDeiml/tree-sitter-markdown tree-sitter-markdown-inline false
   vim vigoux/tree-sitter-viml . false
   vue ikatyang/tree-sitter-vue . false
   yaml ikatyang/tree-sitter-yaml . false
