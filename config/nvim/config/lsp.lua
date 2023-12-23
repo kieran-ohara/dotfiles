@@ -34,7 +34,7 @@ vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "LSP
 vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "LSP Jump Next"})
 
 -- shows the references.
-vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", { desc = "LSP References" })
+vim.keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", { desc = "LSP References" })
 
 -- }}}
 -- Trouble {{{
