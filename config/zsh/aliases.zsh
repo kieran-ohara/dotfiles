@@ -17,6 +17,7 @@ alias dv="aws-vault exec kieran -- dvc"
 alias dvm="docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh"
 alias fpath="echo $FPATH | sed -r 's/:/\n/g'"
 alias g="git"
+alias h="cd -"
 alias hps=sethttpieprofile
 alias j=opensrcdir
 alias k=kubectl
