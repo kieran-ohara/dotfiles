@@ -8,6 +8,7 @@ alias bcu='brew uninstall --cask'
 alias bi='brew install'
 alias bs='brew search'
 alias bu='brew uninstall'
+alias cpr='cp -r'
 alias d='docker'
 alias dc='docker-compose'
 alias dkp="docker ps -a"
