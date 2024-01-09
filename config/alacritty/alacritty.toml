@@ -1,0 +1,62 @@
+[[colors.indexed_colors]]
+color = "0xff8349"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xcb7985"
+index = 17
+
+[colors.bright]
+black = "0x4e5157"
+blue = "0x73a3b7"
+cyan = "0xafd4de"
+green = "0x8eb2af"
+magenta = "0xb97490"
+red = "0xeb746b"
+white = "0xeeeeee"
+yellow = "0xfdb292"
+
+[colors.normal]
+black = "0x2f3239"
+blue = "0x5a93aa"
+cyan = "0xa1cdd8"
+green = "0x7aa4a1"
+magenta = "0xad5c7c"
+red = "0xe85c51"
+white = "0xebebeb"
+yellow = "0xfda47f"
+
+[colors.primary]
+background = "0x152528"
+foreground = "0xe6eaea"
+
+[env]
+TERM = "alacritty-kieran"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "PragmataPro Liga"
+style = "Bold"
+
+[font.italic]
+family = "PragmataPro Liga"
+style = "Italic"
+
+[font.normal]
+family = "PragmataPro Liga"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "#"
+key = "Key3"
+mods = "Alt"
+
+[window]
+decorations = "transparent"
+dynamic_padding = true
+
+[window.padding]
+x = 16
+y = 22
