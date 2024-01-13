@@ -86,7 +86,7 @@ source $XDG_CONFIG_HOME/zsh/aliases.zsh
 # Allow direnv to set env vars and so on.
 eval "$(direnv hook zsh)"
 # Better asdf.
-eval "$(rtx activate zsh)"
+eval "$(mise activate zsh)"
 # Jump around
 eval "$(zoxide init zsh)"
 # Orbstack

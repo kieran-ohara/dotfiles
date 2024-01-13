@@ -28,7 +28,7 @@
     ~/.config/mycli: config/mycli
     ~/.config/npm: config/npm
     ~/.config/nvim: config/nvim
-    ~/.config/rtx: config/rtx
+    ~/.config/mise: config/mise
     ~/.config/skhd: config/skhd
     ~/.config/terminfo: config/terminfo
     ~/.config/tmux: config/tmux
@@ -55,7 +55,7 @@
 - ifmacos:
     - shell:
         - [make dependencies/brew]
-        - [/opt/homebrew/bin/rtx install]
+        - [/opt/homebrew/bin/mise install]
         - [make dependencies/node_modules]
         - [make dependencies/venv/bin]
         - [cd config/nvim/parser-src && ./build-parsers.sh]
