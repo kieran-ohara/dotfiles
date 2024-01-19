@@ -26,6 +26,7 @@ cask 'microsoft-teams'
 cask 'navicat-for-mysql'
 cask 'ngrok'
 cask 'obsidian'
+cask 'omnifocus'
 cask 'orbstack'
 cask 'qbittorrent'
 cask 'session-manager-plugin'
@@ -39,7 +40,6 @@ cask 'whatsapp'
 cask 'zoom'
 
 mas '1Password Safari', id: 1569813296
-mas 'OmniFocus', id: 1346203938
 mas 'Reeder', id: 1449412482
 
 brew 'cw'
