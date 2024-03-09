@@ -41,6 +41,7 @@
     rc = "!git-branchless record"
     rci = "!git-branchless record -i"
     rr = "!git-branchless reword"
+    rs = "!git-branchless restack"
     rw = "!git-branchless reword"
     swi = "!git-branchless switch -i"
     syn = "!git-branchless sync"
