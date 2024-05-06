@@ -17,5 +17,5 @@ cmd + alt + ctrl + shift - r : open -a OmniFocus
 cmd + alt + ctrl + shift - s : open -a "System Preferences"
 cmd + alt + ctrl + shift - u : open -a "Mail"
 cmd + alt + ctrl + shift - q : open -a "1Password"
-cmd + alt + ctrl + shift - x : open -a Tower
+cmd + alt + ctrl + shift - x : open -a GitX
 cmd + alt + ctrl + shift - z : open -a "Microsoft Teams"
