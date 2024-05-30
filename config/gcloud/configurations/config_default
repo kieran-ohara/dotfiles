@@ -1,2 +1,2 @@
 [auth]
-credential_file_override = /certs/key.json
+credential_file_override = /certs/core.json

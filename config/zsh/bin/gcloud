@@ -3,6 +3,6 @@ docker run --rm -it \
   --platform linux/amd64 \
   --entrypoint gcloud \
   -e CLOUDSDK_CONFIG=/config \
-  -v $HOME/.config/gcloud:/config \
-  -v $HOME/Desktop/certs:/certs \
+  -v $XDG_CONFIG_HOME/gcloud:/config \
+  -v $XDG_CONFIG_HOME/gcloud/certs:/certs \
   google/cloud-sdk "$@"
