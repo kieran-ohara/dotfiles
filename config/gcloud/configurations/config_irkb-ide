@@ -1,2 +1,5 @@
 [auth]
 credential_file_override = /certs/irkb-IDE.json
+
+[core]
+project = irkb-ide
