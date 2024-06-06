@@ -40,6 +40,7 @@
     ra = "!git-branchless amend"
     rc = "!git-branchless record"
     rci = "!git-branchless record -i"
+    restack = "!git-branchless restack"
     rr = "!git-branchless reword"
     rs = "!git-branchless restack"
     rw = "!git-branchless reword"
