@@ -68,3 +68,10 @@ sso_region = eu-west-1
 sso_account_id = 586070651450
 sso_role_name = Administrator
 region = eu-west-2
+
+[profile mag]
+sso_start_url = https://mag-it.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 767397731974
+sso_role_name = Devops-Restricted
+region = eu-west-1
