@@ -92,4 +92,6 @@
 	path = personal
 
 [includeIf "hasconfig:remote.*.url:mag:**/**"]
+	path = sign-commit
+[includeIf "hasconfig:remote.*.url:mag:**/**"]
 	path = mag
