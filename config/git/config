@@ -86,14 +86,6 @@
 [status]
 	submodulesummary = 1
 
-[url "https://github.com/"]
-	insteadOf = hub:
-[credential "https://github.com"]
- helper =
- helper = !gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !gh auth git-credential
 [includeIf "hasconfig:remote.*.url:hub:**/**"]
 	path = personal
 
