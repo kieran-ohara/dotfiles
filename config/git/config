@@ -87,6 +87,8 @@
 	submodulesummary = 1
 
 [includeIf "hasconfig:remote.*.url:hub:**/**"]
+	path = sign-commit
+[includeIf "hasconfig:remote.*.url:hub:**/**"]
 	path = personal
 
 [includeIf "hasconfig:remote.*.url:mag:**/**"]
