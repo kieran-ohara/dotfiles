@@ -30,12 +30,12 @@
     ~/.config/npm: config/npm
     ~/.config/nvim: config/nvim
     ~/.config/skhd: config/skhd
-    ~/.config/ssh/config: config/ssh/config
     ~/.config/terminfo: config/terminfo
     ~/.config/tmux: config/tmux
     ~/.config/vim: config/vim
     ~/.config/zsh: config/zsh
     ~/.ngrok2: config/ngrok2
+    ~/.ssh/config: config/ssh/config
     ~/.vim/after: config/vim/after
     ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/.zshenv
