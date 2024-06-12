@@ -30,6 +30,7 @@
     ~/.config/nvim: config/nvim
     ~/.config/mise: config/mise
     ~/.config/skhd: config/skhd
+    ~/.config/ssh/config: config/ssh/config
     ~/.config/terminfo: config/terminfo
     ~/.config/tmux: config/tmux
     ~/.config/vim: config/vim

@@ -1,0 +1,12 @@
+[user]
+	email = kieran.ohara@magairports.com
+  signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDPbx3CEoafw/gO6IA5Fpj/e3GiHG4Zmn+nvRZtxaz2swlNKrG2s3Ors2EMlzjdlo12+m1cs4YoHdb7/Q1mj6IarXkO4FUNeg2YbYbrlE7BLUCl7egTc1QRKNbeRx8buJ22rRL8itUB274Q+p/BR329Z3CP0BtWQPeynGMNWW93/4YOWOmaWzZ/VZgPv1WXYspOWUDmm2GfBSAu4SbNKtJBV0xleMxionD6fungMBTIxzxnwEUWuci1k8t00zR+BTHkAESrab6pV0jt80JoErOjDxSTH82j9rK4FbIyDQYyzalMA3cUx36M8bVZtd5cVfNKniuBLRCQuurdKvSwGsRx0P1Kfp/nLf+I5aBoLjGJMRBFBos4fsQogJchUYEFTcJPEe3MQ/cVJIsOtpbynUl1FO7bkc3YbOosgwklL9IRYghteSLUbyYIJwsEeWw1VXfDcp9z9xJIeKo07PsqHYQY3xO4e/cEe7OBtpuFRqfSswLXh4f7brLhox/BAaHfyAs=
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true

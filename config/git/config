@@ -94,14 +94,8 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !gh auth git-credential
-
-[url "https://spt-git-prod.lb.local/"]
-	insteadOf = bet:
-[credential "https://spt-git-prod.lb.local/"]
- helper =
- helper = !glab auth git-credential
-
 [includeIf "hasconfig:remote.*.url:hub:**/**"]
 	path = personal
-[includeIf "hasconfig:remote.*.url:bet:**/**"]
-	path = work
+
+[includeIf "hasconfig:remote.*.url:mag:**/**"]
+	path = mag
