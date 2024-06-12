@@ -25,10 +25,10 @@
     ~/.config/httpie: config/httpie
     ~/.config/karabiner: config/karabiner
     ~/.config/luacheck: config/luacheck
+    ~/.config/mise: config/mise
     ~/.config/mycli: config/mycli
     ~/.config/npm: config/npm
     ~/.config/nvim: config/nvim
-    ~/.config/mise: config/mise
     ~/.config/skhd: config/skhd
     ~/.config/ssh/config: config/ssh/config
     ~/.config/terminfo: config/terminfo
