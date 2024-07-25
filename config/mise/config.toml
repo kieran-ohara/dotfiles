@@ -1,8 +1,14 @@
 [tools]
 node = "lts"
+
 "npm:markdownlint-cli" = "latest"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
+
+python = "3.11"
+
+"pipx:mycli" = "1.27.0"
+"pipx:yamllint" = "1.26.3"
 
 [settings]
 legacy_version_file = true
