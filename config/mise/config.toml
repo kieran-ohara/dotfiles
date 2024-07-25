@@ -1,8 +1,10 @@
 [tools]
 node = "lts"
+"npm:markdownlint-cli" = "latest"
 
 [settings]
 legacy_version_file = true
 legacy_version_file_disable_tools = ['python']
 asdf_compat = false
 env_file = '.env'
+experimental = true
