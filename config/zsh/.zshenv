@@ -38,7 +38,6 @@ if [ ! -z ${BREW_PREFIX} ]; then
 fi
 
 path+=($ZDOTDIR/bin)
-path+=(${DOTFILES}/dependencies/node_modules/.bin)
 path+=(${DOTFILES}/dependencies/venv/bin)
 export path
 
@@ -71,6 +70,9 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # Go.
 export GOPATH=$HOME/src/go
+
+# Mise.
+export MISE_NODE_DEFAULT_PACKAGES_FILE=$XDG_CONFIG_HOME/mise/node-packages.txt
 
 # Custom behaviour.
 export ZSH_PROFILE=false

@@ -4,9 +4,6 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require "lspconfig".tsserver.setup {
   capabilities = capabilities
 }
-require'lspconfig'.vuels.setup{
-  capabilities = capabilities
-}
 require'lspconfig'.terraformls.setup{
   capabilities = capabilities
 }

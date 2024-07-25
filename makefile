@@ -18,13 +18,6 @@ $(DEPS)/brew: config/homebrew/Brewfile.lock.json
 	brew bundle
 	touch $@
 
-$(DEPS)/node_modules: $(DEPS)/package-lock.json $(DEPS)/package.json
-	npm ci --prefix $(@D) --omit=dev --omit=optional $(@D)
-	touch $@
-
-$(DEPS)/node_modules.zip: $(DEPS)/node_modules
-	tar -czf $@ $<
-
 $(DEPS)/venv:
 	python3 -m virtualenv $@
 
