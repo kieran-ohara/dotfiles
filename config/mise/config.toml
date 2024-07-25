@@ -14,8 +14,11 @@ python = "3.11"
 "pipx:yamllint" = "1.35.1"
 
 [settings]
+experimental = true
+
+env_file = '.env'
+
 legacy_version_file = true
 legacy_version_file_disable_tools = ['python']
+
 asdf_compat = false
-env_file = '.env'
-experimental = true
