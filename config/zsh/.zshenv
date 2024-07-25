@@ -38,7 +38,6 @@ if [ ! -z ${BREW_PREFIX} ]; then
 fi
 
 path+=($ZDOTDIR/bin)
-path+=(${DOTFILES}/dependencies/venv/bin)
 export path
 
 fpath=($ZDOTDIR/autoload $fpath)

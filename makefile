@@ -18,12 +18,6 @@ $(DEPS)/brew: config/homebrew/Brewfile.lock.json
 	brew bundle
 	touch $@
 
-$(DEPS)/venv:
-	python3 -m virtualenv $@
-
-$(DEPS)/venv/bin: $(DEPS)/venv $(DEPS)/requirements.txt
-	$</bin/pip install -r $(DEPS)/requirements.txt
-
 $(DEPS)/vscode-js-debug/package.json:
 	git clone -b 'v1.72.1' --single-branch --depth 1 https://github.com/microsoft/vscode-js-debug $(@D)
 

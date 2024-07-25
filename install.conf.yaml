@@ -57,7 +57,6 @@
     - shell:
         - [make dependencies/brew]
         - [/opt/homebrew/bin/mise install]
-        - [make dependencies/venv/bin]
         - [cd config/nvim/parser-src && ./build-parsers.sh]
         - [ launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist ]
         - [./os/darwin/preferences.sh]
