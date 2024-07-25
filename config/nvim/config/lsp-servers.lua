@@ -40,12 +40,8 @@ configs.efmNoFormat = {
     single_file_support = true,
     filetypes = {
       "dockerfile",
-      "javascript",
-      "javascriptreact",
       "lua",
       "markdown",
-      "typescript",
-      "typescriptreact",
       "yaml"
     },
     init_options = {

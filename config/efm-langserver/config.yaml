@@ -14,16 +14,6 @@ tools:
     lint-formats:
       - '%f:%l %m'
 
-  javascript-eslint: &javascript-eslint
-    lint-command: |
-      'npx eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}'
-    lint-source: 'eslint_d'
-    lint-ignore-exit-code: true
-    lint-stdin: true
-    lint-formats:
-      - "%f(%l,%c): %tarning %m"
-      - "%f(%l,%c): %rror %m"
-
   lua-luacheck: &lua-luacheck
     lint-command: 'luacheck --formatter visual_studio --filename ${INPUT} -'
     lint-source: 'luacheck'
@@ -66,9 +56,6 @@ languages:
 
   dockerfile:
     - <<: *dockerfile-hadolint
-
-  javascript:
-    - <<: *javascript-eslint
 
   lua:
     - <<: *lua-luacheck
