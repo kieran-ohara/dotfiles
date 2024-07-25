@@ -4,6 +4,7 @@ node = "lts"
 "npm:markdownlint-cli" = "latest"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
+"npm:yaml-language-server" = "latest"
 
 python = "3.11"
 
