@@ -1,6 +1,8 @@
 [tools]
 node = "lts"
 "npm:markdownlint-cli" = "latest"
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
 
 [settings]
 legacy_version_file = true
