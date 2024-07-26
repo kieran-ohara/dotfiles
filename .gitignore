@@ -1,5 +1,3 @@
-/config/nvim/parser-src/build
-/config/nvim/parser-src/src
 /config/terminfo/db
 /dep_graph.*
 /keyboards/layout/*
