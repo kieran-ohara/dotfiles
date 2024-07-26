@@ -8,6 +8,7 @@
 - create:
     - ~/.config
     - ~/.local/share
+    - ~/.local/state
     - ~/.vim
     - ~/Library/LaunchAgents
 
