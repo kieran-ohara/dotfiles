@@ -40,7 +40,7 @@ if [ ! -z ${BREW_PREFIX} ]; then
     fpath=($BREW_PREFIX/share/zsh/site-functions $fpath)
 fi
 
-path+=($ZDOTDIR/bin)
+path+=($XDG_DATA_HOME/scripts)
 export path
 
 fpath=($XDG_DATA_HOME/functions $fpath)
