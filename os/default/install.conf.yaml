@@ -6,6 +6,7 @@
 - clean: ['~']
 
 - create:
+    - ~/.cache
     - ~/.cache/nvim/backupfiles
     - ~/.cache/nvim/swapfiles
     - ~/.cache/nvim/undodir
