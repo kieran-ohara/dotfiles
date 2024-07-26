@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Usage ./install [os1] [os2] ...
+#
+# Installs the dotfiles for the specified operating systems.
+# Note that ./os/default will always be installed first.
+
 set -e
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
