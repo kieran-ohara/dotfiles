@@ -1,6 +1,7 @@
 *.orig
 .DS_Store
 .classpath
+.gpteng
 .idea
 .project
 .tern-project
@@ -10,5 +11,6 @@ dive.log
 lefthook.yml
 node_modules
 npm-debug.log
+prompt
 tags
 venv
