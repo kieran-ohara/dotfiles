@@ -1,6 +1,4 @@
 /config/vim/spell/en.utf-8.add.spl
-/config/gcloud/*
-!/config/gcloud/configurations
 /config/karabiner/automatic_backups
 /config/nvim/parser-src/build
 /config/nvim/parser-src/src
