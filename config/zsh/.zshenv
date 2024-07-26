@@ -17,7 +17,6 @@ export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 # ZIM
 export ZIM_HOME=${XDG_CONFIG_HOME}/zim
 export ZIM_CONFIG_FILE=${ZIM_HOME}/zimrc
-export DOTFILES=${HOME}/src/dotfiles
 
 # Stop macOS messing with the PATH variable.
 unsetopt GLOBALRCS
