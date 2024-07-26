@@ -15,8 +15,8 @@ export XDG_STATE_HOME=$HOME/.local/state
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
 # ZIM
-export ZIM_HOME=${XDG_CONFIG_HOME}/zim
-export ZIM_CONFIG_FILE=${ZIM_HOME}/zimrc
+export ZIM_HOME=${XDG_DATA_HOME}/zim
+export ZIM_CONFIG_FILE=${XDG_CONFIG_HOME}/zim/zimrc
 
 # Stop macOS messing with the PATH variable.
 unsetopt GLOBALRCS
