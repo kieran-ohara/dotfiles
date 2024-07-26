@@ -44,7 +44,6 @@ mas '1Password Safari', id: 1569813296
 mas 'Reeder', id: 1449412482
 
 brew 'cw'
-brew 'direnv'
 brew 'dive'
 brew 'doctl'
 brew 'efm-langserver'
