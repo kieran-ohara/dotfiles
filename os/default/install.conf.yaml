@@ -13,6 +13,7 @@
     - ~/.cache/vim/backupfiles
     - ~/.cache/vim/swapfiles
     - ~/.cache/vim/undodir
+    - ~/.cache/zsh
     - ~/.config
     - ~/.local/share
     - ~/.local/state

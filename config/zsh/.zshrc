@@ -92,6 +92,9 @@ eval "$(zoxide init zsh)"
 # Orbstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 # zim-fw {{{
+# Set location of zcompdump
+zstyle ':zim:completion' dumpfile ${XDG_CACHE_HOME}/zsh/zcompdump
+# Load it
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   # Update static initialization script if it does not exist or it's outdated, before sourcing it
   source ${ZIM_HOME}/zimfw.zsh init -q
