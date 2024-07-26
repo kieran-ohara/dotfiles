@@ -8,6 +8,7 @@ alias bcu='brew uninstall --cask'
 alias bi='brew install'
 alias bs='brew search'
 alias bu='brew uninstall'
+alias cdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 alias cpr='cp -r'
 alias d='docker'
 alias dc='docker-compose'
@@ -16,6 +17,7 @@ alias drmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker r
 alias drmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
 alias dv="aws-vault exec kieran -- dvc"
 alias dvm="docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh"
+alias e="echo"
 alias fpath="echo $FPATH | sed -r 's/:/\n/g'"
 alias g="git"
 alias h="cd -"
