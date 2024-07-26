@@ -141,9 +141,6 @@
 [submodule "which-key.nvim"]
 	path = config/nvim/pack/ui/start/which-key.nvim
 	url = https://github.com/folke/which-key.nvim
-[submodule "if-platform"]
-	path = dotbot/if-platform
-	url = https://github.com/kieran-ohara/dotbot-ifplatform.git
 [submodule "diffview.nvim"]
 	path = config/nvim/pack/vcs/start/diffview.nvim
 	url = https://github.com/sindrets/diffview.nvim

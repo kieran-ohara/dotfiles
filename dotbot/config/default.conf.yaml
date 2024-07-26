@@ -6,11 +6,16 @@
 - clean: ['~']
 
 - create:
+    - ~/.cache/nvim/backupfiles
+    - ~/.cache/nvim/swapfiles
+    - ~/.cache/nvim/undodir
+    - ~/.cache/vim/backupfiles
+    - ~/.cache/vim/swapfiles
+    - ~/.cache/vim/undodir
     - ~/.config
     - ~/.local/share
     - ~/.local/state
     - ~/.vim
-    - ~/Library/LaunchAgents
 
 - link:
     ~/.config/.jira: config/jira
@@ -40,27 +45,7 @@
     ~/.vim/after: config/vim/after
     ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/.zshenv
-    ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/darwin/me.kieranbamforth.on-login.plist
-
-- create:
-    - ~/.cache/vim/backupfiles
-    - ~/.cache/vim/swapfiles
-    - ~/.cache/vim/undodir
-    - ~/.cache/nvim/backupfiles
-    - ~/.cache/nvim/swapfiles
-    - ~/.cache/nvim/undodir
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [make config/terminfo/db/61/alacritty-kieran]
-
-- ifmacos:
-    - create:
-        - ~/.local/share/ollama
-
-    - shell:
-        - [make dependencies/brew]
-        - [/opt/homebrew/bin/mise install]
-        - [cd config/nvim/parser-src && ./build-parsers.sh]
-        - [ launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist ]
-        - [./os/darwin/preferences.sh]

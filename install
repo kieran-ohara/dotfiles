@@ -2,7 +2,10 @@
 
 set -e
 
-CONFIG="install.conf.yaml"
+DEFAULT_CONFIG_PREFIX="default"
+CONFIG_SUFFIX=".conf.yaml"
+
+CONFIG_DIR="dotbot/config"
 DOTBOT_DIR="dotbot/dotbot"
 
 DOTBOT_BIN="bin/dotbot"
@@ -12,4 +15,6 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}" --plugin-dir dotbot/if-platform
+for conf in ${DEFAULT_CONFIG_PREFIX} ${@}; do
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_DIR}/${conf}${CONFIG_SUFFIX}"
+done
