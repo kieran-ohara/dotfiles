@@ -10,11 +10,11 @@
     - ~/.local/share/ollama
 
 - link:
-    ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/darwin/me.kieranbamforth.on-login.plist
+    ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/macos/me.kieranbamforth.on-login.plist
 
 - shell:
     - [make dependencies/brew]
     - [/opt/homebrew/bin/mise install]
     - [cd config/nvim/parser-src && ./build-parsers.sh]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist]
-    - [./os/darwin/preferences.sh]
+    - [./os/macos/preferences.sh]
