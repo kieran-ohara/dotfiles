@@ -74,6 +74,7 @@ autoload -Uz sethttpieprofile
 zle -N fancyctrlz
 bindkey '^Z' fancyctrlz
 # }}}
+# Prompt {{{
 # Set prompts
 aws_prompt() {
   if [[ -v AWS_PROFILE ]]; then
@@ -82,7 +83,10 @@ aws_prompt() {
 }
 PROMPT=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b%F{blue}$(gitbranch)%f %% '
 RPROMPT='%F{yellow}$(aws_prompt)%f'
+# --- }}}
+# Aliases {{{
 source $XDG_CONFIG_HOME/zsh/aliases.zsh
+# }}}
 # Better asdf.
 eval "$(mise activate zsh)"
 # Jump around
