@@ -44,7 +44,7 @@
     ~/.ssh/config: config/ssh/config
     ~/.vim/after: config/vim/after
     ~/.vimrc: config/vim/vimrc
-    ~/.zshenv: config/zsh/.zshenv
+    ~/.zshenv: config/zsh/zshenv
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
