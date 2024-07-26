@@ -1,3 +1,5 @@
+Include ~/.orbstack/ssh/config
+
 Host hub
     HostName github.com
     User git
