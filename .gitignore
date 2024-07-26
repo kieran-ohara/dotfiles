@@ -1,8 +1,6 @@
-/config/vim/spell/en.utf-8.add.spl
 /config/nvim/parser-src/build
 /config/nvim/parser-src/src
 /config/terminfo/db
-/config/vim/.netrwhist
 /dep_graph.*
 /keyboards/layout/*
 /dependencies/brew
