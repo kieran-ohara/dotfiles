@@ -29,7 +29,7 @@ bindkey '^[[Z' reverse-menu-complete
 zstyle ':completion:*' menu select=1
 # }}}
 # History {{{
-HISTFILE=~/.zsh_history
+HISTFILE="${XDG_STATE_HOME}"/zsh/history
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 

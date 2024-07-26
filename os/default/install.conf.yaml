@@ -16,6 +16,7 @@
     - ~/.config
     - ~/.local/share
     - ~/.local/state
+    - ~/.local/state/zsh
     - ~/.vim
 
 - link:
