@@ -1,4 +1,3 @@
-/config/terminfo/db
 /dep_graph.*
 /keyboards/layout/*
 /dependencies/brew
