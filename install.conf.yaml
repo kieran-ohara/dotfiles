@@ -55,6 +55,9 @@
     - [make config/terminfo/db/61/alacritty-kieran]
 
 - ifmacos:
+    - create:
+        - ~/.local/share/ollama
+
     - shell:
         - [make dependencies/brew]
         - [/opt/homebrew/bin/mise install]

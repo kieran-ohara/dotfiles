@@ -79,6 +79,9 @@ export GOPATH=$HOME/src/go
 export MISE_NODE_DEFAULT_PACKAGES_FILE=$XDG_CONFIG_HOME/mise/node-packages.txt
 export MISE_PYTHON_DEFAULT_PACKAGES_FILE=$XDG_CONFIG_HOME/mise/python-packages.txt
 
+# Ollama
+export OLLAMA_MODELS=$XDG_DATA_HOME/ollama/models
+
 # Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false
