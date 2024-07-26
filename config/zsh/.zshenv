@@ -43,7 +43,7 @@ fi
 path+=($ZDOTDIR/bin)
 export path
 
-fpath=($ZDOTDIR/autoload $fpath)
+fpath=($XDG_DATA_HOME/functions $fpath)
 export fpath
 
 if type terraform &>/dev/null; then

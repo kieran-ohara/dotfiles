@@ -42,6 +42,7 @@
     ~/.config/vim: config/vim
     ~/.config/zim: config/zim
     ~/.config/zsh: config/zsh
+    ~/.local/share/functions: local/share/functions
     ~/.ngrok2: config/ngrok2
     ~/.ssh/config: config/ssh/config
     ~/.vim/after: config/vim/after
