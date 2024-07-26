@@ -12,7 +12,8 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
-export ZIM_HOME=${ZDOTDIR}/.zim
+export ZIM_HOME=${XDG_CONFIG_HOME}/zim
+export ZIM_CONFIG_FILE=${ZIM_HOME}/zimrc
 export DOTFILES=${HOME}/src/dotfiles
 
 # Stop macOS messing with the PATH variable.

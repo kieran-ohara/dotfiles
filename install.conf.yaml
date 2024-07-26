@@ -33,6 +33,7 @@
     ~/.config/terminfo: config/terminfo
     ~/.config/tmux: config/tmux
     ~/.config/vim: config/vim
+    ~/.config/zim: config/zim
     ~/.config/zsh: config/zsh
     ~/.ngrok2: config/ngrok2
     ~/.ssh/config: config/ssh/config
@@ -48,6 +49,7 @@
     - ~/.cache/nvim/backupfiles
     - ~/.cache/nvim/swapfiles
     - ~/.cache/nvim/undodir
+    - ~/.cache/zim
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
