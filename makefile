@@ -18,14 +18,5 @@ $(DEPS)/brew: config/homebrew/Brewfile.lock.json
 	brew bundle
 	touch $@
 
-$(DEPS)/vscode-js-debug/package.json:
-	git clone -b 'v1.72.1' --single-branch --depth 1 https://github.com/microsoft/vscode-js-debug $(@D)
-
-$(DEPS)/vscode-js-debug/node_modules: $(DEPS)/vscode-js-debug/package.json
-	cd $(<D) && npm install --legacy-peer-deps
-
-$(DEPS)/vscode-js-debug/out/src/vsDebugServer.js: $(DEPS)/vscode-js-debug/package.json $(DEPS)/vscode-js-debug/node_modules
-	cd $(<D) && npm run compile
-
 config/terminfo/db/61/alacritty-kieran: config/terminfo/src/alacritty-inline.terminfo
 	tic -x $<
