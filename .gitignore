@@ -1,5 +1,3 @@
-/config/ansible
-!/config/ansible/config
 /config/aws/*
 !/config/aws/config
 /config/docker/*
