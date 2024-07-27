@@ -44,6 +44,7 @@ path+=($XDG_DATA_HOME/scripts)
 export path
 
 fpath=($XDG_DATA_HOME/functions $fpath)
+fpath=($XDG_CACHE_HOME/zsh/site-functions $fpath)
 export fpath
 
 if type terraform &>/dev/null; then
