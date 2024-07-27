@@ -31,13 +31,11 @@
     ~/.config/git: config/git
     ~/.config/homebrew: config/homebrew
     ~/.config/httpie: config/httpie
-    ~/.config/karabiner: config/karabiner
     ~/.config/luacheck: config/luacheck
     ~/.config/mise: config/mise
     ~/.config/mycli: config/mycli
     ~/.config/npm: config/npm
     ~/.config/nvim: config/nvim
-    ~/.config/skhd: config/skhd
     ~/.config/terminfo: config/terminfo
     ~/.config/tmux: config/tmux
     ~/.config/vim: config/vim

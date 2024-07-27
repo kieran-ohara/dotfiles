@@ -10,6 +10,8 @@
     - ~/.local/share/ollama
 
 - link:
+    ~/.config/karabiner: config/karabiner
+    ~/.config/skhd: config/skhd
     ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/macos/me.kieranbamforth.on-login.plist
 
 - shell:
