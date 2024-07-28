@@ -23,5 +23,3 @@ nnoremap <leader>gl :Git pull<CR>
 nnoremap <leader>gsT :Git<CR>
 nnoremap <leader>gst :vertical Git<CR>
 nmap <leader>gm :GMove %%
-
-let g:fugitive_gitlab_domains = [ 'https://spt-git-prod.lb.local' ]
