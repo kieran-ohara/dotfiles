@@ -16,7 +16,7 @@
 
 - shell:
     - [make dependencies/brew]
-    - [./local/share/scripts/build-completions.sh]
+    - [./local/share/scripts/build-completions]
     - [/opt/homebrew/bin/mise install]
     - [cd config/nvim/parser-src && ./build-parsers.sh]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist]
