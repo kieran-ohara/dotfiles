@@ -1,0 +1,140 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Set/create the source and build directories
+PARSER_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/parsers"
+SRC_DIR="$PARSER_CACHE_DIR/src"
+BUILD_DIR="$PARSER_CACHE_DIR/lib"
+
+mkdir -p "$SRC_DIR" "$BUILD_DIR"
+
+# Help text.
+show_help() {
+    echo "Usage: $0 <language> <repository_url> <revision> [--subdirectory=<dir>] [--npm-install]"
+    echo
+    echo "Parameters:"
+    echo "  language     The programming language for the parser"
+    echo "  repository_url The full URL of the Git repository for the parser"
+    echo "  revision     The Git revision (commit hash, branch, or tag) to use"
+    echo "  --subdirectory=<dir> Optional: The subdirectory containing the parser source (default: '.')"
+    echo "  --npm-install Optional: Whether to run 'npm install'"
+    echo
+    echo "Example:"
+    echo "  $0 bash https://github.com/tree-sitter/tree-sitter-bash.git main"
+    echo "  $0 typescript https://github.com/tree-sitter/tree-sitter-typescript.git main --subdirectory=typescript --npm-install"
+}
+
+# Ensure CLI tools are installed.
+check_dependencies() {
+    if ! command -v tree-sitter &> /dev/null; then
+        echo "tree-sitter not installed"
+        exit 1
+    fi
+    if ! command -v cc &> /dev/null; then
+        echo "cc (C compiler) not installed"
+        exit 1
+    fi
+    if ! command -v npm &> /dev/null; then
+        echo "npm not installed"
+        exit 1
+    fi
+}
+
+# Get the source code and install dependencies.
+get_source() {
+    local repo_url="$1"
+    local revision="$2"
+    local npm_install="$3"
+
+    # Extract repo name from URL
+    local repo_name
+    repo_name=$(basename "$repo_url" .git)
+
+    # Clone repo if it doesn't exist
+    if [[ ! -d "$SRC_DIR/$repo_name" ]]; then
+        git clone "$repo_url" "$SRC_DIR/$repo_name"
+    fi
+
+    # Checkout correct revision
+    (cd "$SRC_DIR/$repo_name" && git checkout "$revision")
+
+    # Run npm install if required
+    if [[ "$npm_install" == true ]]; then
+        (cd "$SRC_DIR/$repo_name" && npm install)
+    fi
+}
+
+# Function to prepare compilation command
+prepare_compile_command() {
+    local lang="$1"
+    local repo="$2"
+    local subdirectory="$3"
+
+    local cmd="cc -o $BUILD_DIR/$lang.so -I$SRC_DIR/$repo/$subdirectory/src -lstdc++ -Os -shared $SRC_DIR/$repo/$subdirectory/src/parser.c"
+
+    # Some parsers require more advanced scanners.
+    if [[ -f "$SRC_DIR/$repo/$subdirectory/src/scanner.c" ]]; then
+        cmd+=" $SRC_DIR/$repo/$subdirectory/src/scanner.c"
+    fi
+    if [[ -f "$SRC_DIR/$repo/$subdirectory/src/scanner.cc" ]]; then
+        cmd+=" $SRC_DIR/$repo/$subdirectory/src/scanner.cc"
+    fi
+
+    echo "$cmd"
+}
+
+# Function to build a parser
+build_parser() {
+    local lang="$1"
+    local repo_url="$2"
+    local revision="$3"
+    local subdirectory="."
+    local npm_install=false
+
+    # Parse optional arguments
+    shift 3
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            --subdirectory=*)
+                subdirectory="${1#*=}"
+                shift
+                ;;
+            --npm-install)
+                npm_install=true
+                shift
+                ;;
+            *)
+                echo "Unknown option: $1"
+                show_help
+                exit 1
+                ;;
+        esac
+    done
+
+    echo "Building parser for $lang..."
+
+    # Extract repo name from URL
+    local repo_name
+    repo_name=$(basename "$repo_url" .git)
+
+    # Get source code
+    get_source "$repo_url" "$revision" "$npm_install"
+
+    # Generate parser.c
+    (cd "$SRC_DIR/$repo_name/$subdirectory" && tree-sitter generate)
+
+    # Prepare and execute compilation command
+    compile_cmd=$(prepare_compile_command "$lang" "$repo_name" "$subdirectory")
+    eval "$compile_cmd"
+
+    echo "Parser for $lang built successfully and placed in $BUILD_DIR."
+}
+
+# Check if correct number of parameters are provided
+if [ $# -lt 3 ]; then
+    show_help
+    exit 1
+fi
+
+# Call the build_parser function with provided arguments
+build_parser "$@"
