@@ -83,6 +83,37 @@ prepare_compile_command() {
     echo "$cmd"
 }
 
+# Function to check if build is up-to-date
+is_build_up_to_date() {
+    local lang="$1"
+    local repo_name="$2"
+    local subdirectory="$3"
+
+    local so_file="$BUILD_DIR/$lang.so"
+
+    # If .so file doesn't exist, build is not up-to-date
+    [[ ! -f "$so_file" ]] && return 1
+
+    local parser_dir="$SRC_DIR/$repo_name/$subdirectory"
+
+    # Array of files to check for updates
+    local files_to_check=("grammar.js" "scanner.c" "scanner.cc")
+
+    # Prepare the find command arguments using files_to_check
+    local find_args=()
+    for file in "${files_to_check[@]}"; do
+        find_args+=(-o -name "$file")
+    done
+    unset 'find_args[0]'
+
+    # Find any files newer than the .so.
+    if find "$parser_dir" -type f \( "${find_args[@]}" \) -newer "$so_file" | grep -q .; then
+        return 1
+    fi
+
+    return 0
+}
+
 # Function to build a parser
 build_parser() {
     local lang="$1"
@@ -111,14 +142,20 @@ build_parser() {
         esac
     done
 
-    echo "Building parser for $lang..."
-
     # Extract repo name from URL
     local repo_name
     repo_name=$(basename "$repo_url" .git)
 
     # Get source code
     get_source "$repo_url" "$revision" "$npm_install"
+
+    # Check if build is up-to-date
+    if is_build_up_to_date "$lang" "$repo_name" "$subdirectory"; then
+        echo "Parser for $lang is already up-to-date."
+        return 0
+    fi
+
+    echo "Building parser for $lang..."
 
     # Generate parser.c
     (cd "$SRC_DIR/$repo_name/$subdirectory" && tree-sitter generate)
