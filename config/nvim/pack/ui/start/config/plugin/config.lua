@@ -29,7 +29,8 @@ require('gitsigns').setup({
 require'nvim-web-devicons'.setup({})
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find Files' })
+vim.keymap.set('n', '<leader>fa', builtin.find_files, { desc = 'Find all files' })
+vim.keymap.set('n', '<leader>ff', builtin.git_files, { desc = 'Find git files' })
 vim.keymap.set('n', '<leader>fF', builtin.git_status, { desc = 'Git Status' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live Grep' })
 vim.keymap.set('n', '<leader>fc', builtin.git_commits, { desc = 'Git Commits' })
