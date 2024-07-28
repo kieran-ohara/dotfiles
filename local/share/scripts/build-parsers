@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Check if lockfile parameter is provided
+if [ $# -eq 0 ]; then
+  echo "Error: Lockfile parameter is required."
+  echo "Usage: $0 <lockfile>"
+  exit 1
+fi
+
+LOCKFILE="$1"
+
+# Check if lockfile exists
+if [ ! -f "$LOCKFILE" ]; then
+  echo "Error: Lockfile not found: $LOCKFILE"
+  exit 1
+fi
+
+# Function to build parser
+build_parser_with_revision() {
+  local lang="$1"
+  local repo_url="$2"
+
+  echo "Building parser for $lang..."
+
+  # Remove first two arguments so that "$@" contains user's remaining arguments.
+  shift 2
+
+  # Get revision from lockfile
+  local revision
+  revision=$(jq -r ".$lang.revision" < "$LOCKFILE")
+
+  build-parser "$lang" "$repo_url" "$revision" "$@"
+}
+
+build_parser_with_revision bash "https://github.com/tree-sitter/tree-sitter-bash.git"
+build_parser_with_revision css "https://github.com/tree-sitter/tree-sitter-css.git"
+build_parser_with_revision dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile.git"
+build_parser_with_revision dot "https://github.com/rydesun/tree-sitter-dot.git"
+build_parser_with_revision git_rebase "https://github.com/the-mikedavis/tree-sitter-git-rebase.git"
+build_parser_with_revision gitcommit "https://github.com/gbprod/tree-sitter-gitcommit.git"
+build_parser_with_revision go "https://github.com/tree-sitter/tree-sitter-go.git"
+build_parser_with_revision hcl "https://github.com/MichaHoffmann/tree-sitter-hcl.git"
+build_parser_with_revision html "https://github.com/tree-sitter/tree-sitter-html.git"
+build_parser_with_revision hurl "https://github.com/pfeiferj/tree-sitter-hurl.git"
+build_parser_with_revision javascript "https://github.com/tree-sitter/tree-sitter-javascript.git"
+build_parser_with_revision json "https://github.com/tree-sitter/tree-sitter-json.git"
+build_parser_with_revision lua "https://github.com/MunifTanjim/tree-sitter-lua.git"
+build_parser_with_revision make "https://github.com/alemuller/tree-sitter-make.git"
+build_parser_with_revision markdown "https://github.com/MDeiml/tree-sitter-markdown.git" --subdirectory="tree-sitter-markdown"
+build_parser_with_revision markdown_inline "https://github.com/MDeiml/tree-sitter-markdown.git" --subdirectory="tree-sitter-markdown-inline"
+build_parser_with_revision python "https://github.com/tree-sitter/tree-sitter-python.git"
+build_parser_with_revision regex "https://github.com/tree-sitter/tree-sitter-regex.git"
+build_parser_with_revision ssh_config "https://github.com/ObserverOfTime/tree-sitter-ssh-config.git"
+build_parser_with_revision typescript "https://github.com/tree-sitter/tree-sitter-typescript.git" --subdirectory="typescript" --npm-install
+build_parser_with_revision yaml "https://github.com/ikatyang/tree-sitter-yaml.git"
+build_parser_with_revision vim "https://github.com/vigoux/tree-sitter-viml.git"
+build_parser_with_revision vue "https://github.com/ikatyang/tree-sitter-vue.git"
