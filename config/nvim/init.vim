@@ -9,7 +9,7 @@ luafile ~/.config/nvim/config/autocomplete.lua
 luafile ~/.config/nvim/config/dap.lua
 luafile ~/.config/nvim/config/lsp-servers.lua
 luafile ~/.config/nvim/config/lsp.lua
-luafile ~/.config/nvim/config/treesitter.lua
+luafile ~/.config/nvim/pack/treesitter/start/config.lua
 luafile ~/.config/nvim/config/ui.lua
 
 function! OpenSwps()
