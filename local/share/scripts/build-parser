@@ -4,7 +4,7 @@ set -euo pipefail
 # Set/create the source and build directories
 PARSER_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/parsers"
 SRC_DIR="$PARSER_CACHE_DIR/src"
-BUILD_DIR="$PARSER_CACHE_DIR/lib"
+BUILD_DIR="$PARSER_CACHE_DIR/lib/parser"
 
 mkdir -p "$SRC_DIR" "$BUILD_DIR"
 
