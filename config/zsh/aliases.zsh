@@ -36,7 +36,7 @@ alias rmf='rm -rf'
 alias s=sfdx
 alias ssha="TERM=alacritty ssh"
 alias t="aws-vault exec kieran -- terraform"
-alias tree='nicetree'
+alias tree='() {tree -aC -I ".git|node_modules" --dirsfirst "$@" | less -FRNX;}'
 alias v=resumevimsession
 alias w=nicewhich
 alias x=exit
