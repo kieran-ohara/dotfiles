@@ -16,13 +16,13 @@
 	path = config/vim/pack/packages/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
 [submodule "vim-fugitive"]
-	path = config/nvim/pack/vcs/start/vim-fugitive
+	path = config/vim/pack/vcs/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "vim-repeat"]
 	path = config/vim/pack/packages/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
 [submodule "vim-rhubarb"]
-	path = config/nvim/pack/vcs/start/vim-rhubarb
+	path = config/vim/pack/vcs/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
 [submodule "vim-surround"]
 	path = config/vim/pack/packages/start/vim-surround
@@ -133,7 +133,7 @@
 	path = config/nvim/pack/ui/start/nvim-colorizer.lua
 	url = https://github.com/norcalli/nvim-colorizer.lua
 [submodule "fugitive-gitlab.vim"]
-	path = config/nvim/pack/vcs/start/fugitive-gitlab.vim
+	path = config/vim/pack/vcs/start/fugitive-gitlab.vim
 	url = https://github.com/shumphrey/fugitive-gitlab.vim
 [submodule "copilot.vim"]
 	path = config/nvim/pack/autocomplete/start/copilot.vim
