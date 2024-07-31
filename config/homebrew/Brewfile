@@ -83,4 +83,5 @@ brew 'terraform'
 brew 'tmux'
 brew 'tree'
 brew 'tree-sitter'
+brew 'xdg-ninja', head: true
 brew 'zoxide'
