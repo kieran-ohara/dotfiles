@@ -10,6 +10,7 @@
     - ~/.cache/zsh
     - ~/.config
     - ~/.local/share
+    - ~/.local/share/nvim/site
     - ~/.local/state
     - ~/.local/state/nvim/backupfiles
     - ~/.local/state/nvim/swapfiles
@@ -44,6 +45,7 @@
     ~/.local/share/functions: local/share/functions
     ~/.local/share/scripts: local/share/scripts
     ~/.local/share/zim: local/share/zim
+    ~/.local/share/nvim/site/pack: local/share/nvim/site/pack
     ~/.ssh/config: config/ssh/config
     ~/.vim/after: config/vim/after
     ~/.vimrc: config/vim/vimrc
