@@ -1,5 +1,5 @@
 # I install my parsers outside of nvim.
-vim.opt.runtimepath:append(vim.env.XDG_CACHE_HOME .. "/parsers/lib")
+vim.opt.runtimepath:append(vim.env.XDG_STATE_HOME .. "/parsers")
 
 require 'nvim-treesitter.configs'.setup {
   ensure_installed = {},
