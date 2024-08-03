@@ -66,6 +66,8 @@ setopt HIST_IGNORE_SPACE
 # Note they are not called, so it is up to us to call the function inside the file after defining it.
 #
 # Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
+#
+autoload -Uz awsprompt
 autoload -Uz fancyctrlz
 autoload -Uz gitbranch
 autoload -Uz opensrcdir
@@ -76,13 +78,8 @@ bindkey '^Z' fancyctrlz
 # }}}
 # Prompt {{{
 # Set prompts
-aws_prompt() {
-  if [[ -v AWS_PROFILE ]]; then
-    echo "  ${AWS_PROFILE}"
-  fi
-}
 PROMPT=' %(1j.%F{yellow}%j%f .)%B%F{cyan}%~%f%b%F{blue}$(gitbranch)%f %% '
-RPROMPT='%F{yellow}$(aws_prompt)%f'
+RPROMPT='%F{yellow}$(awsprompt)%f'
 # --- }}}
 # Aliases {{{
 source $XDG_CONFIG_HOME/zsh/aliases.zsh

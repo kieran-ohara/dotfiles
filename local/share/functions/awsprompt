@@ -1,0 +1,3 @@
+if [[ -v AWS_PROFILE ]]; then
+  echo "  ${AWS_PROFILE}"
+fi
