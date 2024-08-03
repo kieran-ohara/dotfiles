@@ -44,10 +44,10 @@
     ~/.config/zim: config/zim
     ~/.config/zsh: config/zsh
     ~/.local/share/functions: local/share/functions
+    ~/.local/share/nvim/site/pack: local/share/nvim/site/pack
     ~/.local/share/scripts: local/share/scripts
     ~/.local/share/vim/site/pack: local/share/vim/site/pack
     ~/.local/share/zim: local/share/zim
-    ~/.local/share/nvim/site/pack: local/share/nvim/site/pack
     ~/.ssh/config: config/ssh/config
     ~/.vim/after: config/vim/after
     ~/.vimrc: config/vim/vimrc
