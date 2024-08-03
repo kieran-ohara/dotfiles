@@ -1,6 +1,6 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline:
 set runtimepath^=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after
-set packpath^=$XDG_CONFIG_HOME/vim
+set packpath^=$XDG_DATA_HOME/vim/site
 
 " Text Editing {{{
 set cdpath+=~/src

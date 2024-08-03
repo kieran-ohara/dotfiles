@@ -4,37 +4,37 @@
 	ignore = dirty
 
 [submodule "vim-tmux-navigator"]
-	path = config/vim/pack/packages/start/vim-tmux-navigator
+	path = local/share/vim/site/pack/packages/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
 [submodule "vim-dirvish"]
-	path = config/vim/pack/ui/start/vim-dirvish
+	path = local/share/vim/site/pack/ui/start/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
 [submodule "vim-commentary"]
-	path = config/vim/pack/edit-ux/start/vim-commentary
+	path = local/share/vim/site/pack/edit-ux/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
 [submodule "vim-eunuch"]
-	path = config/vim/pack/packages/start/vim-eunuch
+	path = local/share/vim/site/pack/packages/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
 [submodule "vim-fugitive"]
-	path = config/vim/pack/vcs/start/vim-fugitive
+	path = local/share/vim/site/pack/vcs/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "vim-repeat"]
-	path = config/vim/pack/edit-ux/start/vim-repeat
+	path = local/share/vim/site/pack/edit-ux/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
 [submodule "vim-rhubarb"]
-	path = config/vim/pack/vcs/start/vim-rhubarb
+	path = local/share/vim/site/pack/vcs/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
 [submodule "vim-surround"]
-	path = config/vim/pack/edit-ux/start/vim-surround
+	path = local/share/vim/site/pack/edit-ux/start/vim-surround
 	url = https://github.com/tpope/vim-surround
 [submodule "vim-unimpaired"]
-	path = config/vim/pack/edit-ux/start/vim-unimpaired
+	path = local/share/vim/site/pack/edit-ux/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
 [submodule "undotree"]
-	path = config/vim/pack/ui/start/undotree
+	path = local/share/vim/site/pack/ui/start/undotree
 	url = https://github.com/mbbill/undotree
 [submodule "targets.vim"]
-	path = config/vim/pack/edit-ux/start/targets.vim
+	path = local/share/vim/site/pack/edit-ux/start/targets.vim
 	url = https://github.com/wellle/targets.vim
 [submodule "plenary.nvim"]
 	path = local/share/nvim/site/pack/helpers/start/plenary.nvim
@@ -52,16 +52,16 @@
 	path = local/share/nvim/site/pack/ui/start/tokyonight.nvim
 	url = https://github.com/folke/tokyonight.nvim
 [submodule "vim-abolish"]
-	path = config/vim/pack/edit-ux/start/vim-abolish
+	path = local/share/vim/site/pack/edit-ux/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish
 [submodule "vim-dispatch"]
-	path = config/vim/pack/packages/start/vim-dispatch
+	path = local/share/vim/site/pack/packages/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
 [submodule "vim-obsession"]
-	path = config/vim/pack/packages/start/vim-obsession
+	path = local/share/vim/site/pack/packages/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession
 [submodule "vim-projectionist"]
-	path = config/vim/pack/packages/start/vim-projectionist
+	path = local/share/vim/site/pack/packages/start/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist
 [submodule "nvim-treesitter-textobjects"]
 	path = local/share/nvim/site/pack/treesitter/start/nvim-treesitter-textobjects
@@ -100,7 +100,7 @@
 	path = local/share/nvim/site/pack/lsp/start/trouble.nvim
 	url = https://github.com/folke/trouble.nvim
 [submodule "vim-sneak"]
-	path = config/vim/pack/edit-ux/start/vim-sneak
+	path = local/share/vim/site/pack/edit-ux/start/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
 [submodule "vim-vsnip"]
 	path = local/share/nvim/site/pack/snippets/start/vim-vsnip
@@ -133,7 +133,7 @@
 	path = local/share/nvim/site/pack/ui/start/nvim-colorizer.lua
 	url = https://github.com/norcalli/nvim-colorizer.lua
 [submodule "fugitive-gitlab.vim"]
-	path = config/vim/pack/vcs/start/fugitive-gitlab.vim
+	path = local/share/vim/site/pack/vcs/start/fugitive-gitlab.vim
 	url = https://github.com/shumphrey/fugitive-gitlab.vim
 [submodule "copilot.vim"]
 	path = local/share/nvim/site/pack/autocomplete/start/copilot.vim
@@ -154,5 +154,5 @@
 	path = local/share/nvim/site/pack/helpers/start/nui.nvim
 	url = https://github.com/MunifTanjim/nui.nvim
 [submodule "config/vim/pack/packages/start/vim-easy-align"]
-	path = config/vim/pack/edit-ux/start/vim-easy-align
+	path = local/share/vim/site/pack/edit-ux/start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
