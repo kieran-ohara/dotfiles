@@ -7,16 +7,16 @@
 
 - create:
     - ~/.cache
-    - ~/.cache/nvim/backupfiles
-    - ~/.cache/nvim/swapfiles
-    - ~/.cache/nvim/undodir
-    - ~/.cache/vim/backupfiles
-    - ~/.cache/vim/swapfiles
-    - ~/.cache/vim/undodir
     - ~/.cache/zsh
     - ~/.config
     - ~/.local/share
     - ~/.local/state
+    - ~/.local/state/nvim/backupfiles
+    - ~/.local/state/nvim/swapfiles
+    - ~/.local/state/nvim/undodir
+    - ~/.local/state/vim/backupfiles
+    - ~/.local/state/vim/swapfiles
+    - ~/.local/state/vim/undodir
     - ~/.local/state/zsh
     - ~/.vim
 
