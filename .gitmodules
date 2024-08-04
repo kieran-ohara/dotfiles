@@ -4,7 +4,7 @@
 	ignore = dirty
 
 [submodule "vim-tmux-navigator"]
-	path = local/share/vim/site/pack/packages/start/vim-tmux-navigator
+	path = local/share/vim/site/pack/navigation/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
 [submodule "vim-dirvish"]
 	path = local/share/vim/site/pack/ui/start/vim-dirvish
@@ -46,7 +46,7 @@
 	path = local/share/nvim/site/pack/vcs/start/gitsigns.nvim
 	url = https://github.com/lewis6991/gitsigns.nvim
 [submodule "telescope.nvim"]
-	path = local/share/nvim/site/pack/ui/start/telescope.nvim
+	path = local/share/nvim/site/pack/navigation/start/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim
 [submodule "tokyonight.nvim"]
 	path = local/share/nvim/site/pack/ui/start/tokyonight.nvim
@@ -100,7 +100,7 @@
 	path = local/share/nvim/site/pack/lsp/start/trouble.nvim
 	url = https://github.com/folke/trouble.nvim
 [submodule "vim-sneak"]
-	path = local/share/vim/site/pack/edit-ux/start/vim-sneak
+	path = local/share/vim/site/pack/navigation/start/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
 [submodule "vim-vsnip"]
 	path = local/share/nvim/site/pack/snippets/start/vim-vsnip
@@ -139,7 +139,7 @@
 	path = local/share/nvim/site/pack/autocomplete/start/copilot.vim
 	url = https://github.com/github/copilot.vim
 [submodule "which-key.nvim"]
-	path = local/share/nvim/site/pack/ui/start/which-key.nvim
+	path = local/share/nvim/site/pack/navigation/start/which-key.nvim
 	url = https://github.com/folke/which-key.nvim
 [submodule "diffview.nvim"]
 	path = local/share/nvim/site/pack/vcs/start/diffview.nvim
