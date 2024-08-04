@@ -3,7 +3,3 @@ source $XDG_CONFIG_HOME/vim/universal.vim
 set directory=$XDG_STATE_HOME/vim/swapfiles//
 set backupdir=$XDG_STATE_HOME/vim/backupfiles//
 set undodir=$XDG_STATE_HOME/vim/undodir
-
-function! OpenSwps()
-    execute "!open ". $XDG_STATE_HOME. "/vim/swapfiles"
-endfunc

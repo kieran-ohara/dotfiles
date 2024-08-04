@@ -5,10 +5,6 @@ set directory=$XDG_STATE_HOME/nvim/swapfiles//
 set backupdir=$XDG_STATE_HOME/nvim/backupfiles//
 set undodir=$XDG_STATE_HOME/nvim/undodir
 
-function! OpenSwps()
-    execute "!open ". $XDG_STATE_HOME. "/nvim/swapfiles"
-endfunc
-
 colorscheme terafox
 
 nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>

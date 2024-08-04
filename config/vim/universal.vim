@@ -89,10 +89,6 @@ set incsearch
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <expr> n  'Nn'[v:searchforward]
 
-" Open current directory
-nnoremap <leader>fn :!open .<CR>
-" Open swapfile directory
-nnoremap <leader>fs :call OpenSwps()<CR>
 " }}}
 " UI {{{
 set laststatus=2                          " Always show status bar
