@@ -31,7 +31,7 @@
 	path = local/share/vim/site/pack/edit-ux/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
 [submodule "undotree"]
-	path = local/share/vim/site/pack/ui/start/undotree
+	path = local/share/vim/site/pack/ui/opt/undotree
 	url = https://github.com/mbbill/undotree
 [submodule "targets.vim"]
 	path = local/share/vim/site/pack/edit-ux/start/targets.vim
