@@ -39,6 +39,7 @@ end
 -- Always attach this
 vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<CR>", { desc="Info" })
 
+-- Conditionally attach when a client supports a capability.
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local bufnr = args.buf
