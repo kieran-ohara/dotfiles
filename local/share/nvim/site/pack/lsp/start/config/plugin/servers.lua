@@ -45,7 +45,6 @@ configs.efmNoFormat = {
     single_file_support = true,
     filetypes = {
       "dockerfile",
-      "lua",
       "markdown",
       "yaml"
     },
@@ -61,12 +60,6 @@ configs.efmNoFormat = {
 lspconfig.efmNoFormat.setup {
   capabilities = capabilities
 }
--- }}}
--- Lua {{{
-local runtime_path = vim.split(package.path, ";")
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-
 -- }}}
 -- YAML {{{
 require("lspconfig").yamlls.setup {

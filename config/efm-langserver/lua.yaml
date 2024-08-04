@@ -1,0 +1,24 @@
+---
+version: 2
+root-markers:
+  - .git/
+  - package.json
+log-level: 5
+log-file: /Users/kieranohara/.local/state/efm-langserver/logs/lua.log
+
+lint-debounce: 1s
+tools:
+
+  lua-luacheck: &lua-luacheck
+    lint-command: 'luacheck --formatter visual_studio --filename ${INPUT} -'
+    lint-source: 'luacheck'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%f(%l,%c) : %tarning %m"
+      - "%f(%l,%c) : %rror %m"
+
+languages:
+
+  lua:
+    - <<: *lua-luacheck
