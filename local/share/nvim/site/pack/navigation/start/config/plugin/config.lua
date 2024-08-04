@@ -8,7 +8,9 @@ vim.keymap.set('n', '<leader>fC', builtin.git_bcommits, { desc = 'Git BCommits' 
 vim.keymap.set('n', '<leader>fu', builtin.buffers, { desc = 'Buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.command_history, {  desc = 'Command History' })
 
-require("which-key").setup({
+local wk = require('which-key')
+wk.setup({
+  preset = "helix",
   plugins = {
     marks = false, -- shows a list of your marks on ' and `
     registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -25,13 +27,13 @@ require("which-key").setup({
       z = false, -- bindings for folds, spelling and others prefixed with z
       g = true, -- bindings for prefixed with g
     },
-  },
-  layout = {
-    height = { min = 4, max = 25 }, -- min and max height of the columns
-    width = { min = 20, max = 50 }, -- min and max width of the columns
-    spacing = 3, -- spacing between columns
-    align = "center", -- align columns left, center or right
-  },
+ },
   show_help = true, -- show help message on the command line when the popup is visible
 })
-
+wk.add({
+  { "<leader>c", group = "ChatGPT" },
+  { "<leader>f", group = "Find" },
+  { "<leader>g", group = "Git" },
+  { "<leader>l", group = "LSP" },
+  { "<leader>t", group = "Treesitter" },
+})

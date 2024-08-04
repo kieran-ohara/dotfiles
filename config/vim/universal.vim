@@ -147,7 +147,7 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 let g:tmux_navigator_disable_when_zoomed = 1
 
-nnoremap <leader>l :setlocal list!<CR>
+" nnoremap <leader>l :setlocal list!<CR>
 
 " Get the highlight colours under the cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

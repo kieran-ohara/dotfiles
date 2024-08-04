@@ -16,7 +16,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   }
 )
 
--- LSP Saga {{{
 require "lspsaga".setup({
   finder = {
     keys = {
@@ -26,31 +25,27 @@ require "lspsaga".setup({
     }
   }
 })
-vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", { desc = "LSP Rename" })
+vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
 
 -- code action.
-vim.keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>", { desc = "LSP Code Action"})
+vim.keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Code Action"})
 
 -- hover documentation.
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "LSP Hover Doc" })
+-- vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "LSP Hover Doc" })
 
 -- peek definition
-vim.keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", { desc = "LSP Peek Def" })
+vim.keymap.set("n", "<leader>lD", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek Definition" })
 
 -- jump forward/back through errors.
-vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "LSP Jump Prev"})
-vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "LSP Jump Next"})
+vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "Next LSP Warning"})
+vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "Previous LSP Warning"})
 
 -- shows the references.
-vim.keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", { desc = "LSP References" })
+vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", { desc = "References" })
 
--- }}}
 -- Trouble {{{
 require"trouble".setup {
   auto_preview = false,
 }
 
-vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
 -- }}}
