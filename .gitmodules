@@ -154,5 +154,5 @@
 	path = local/share/nvim/site/pack/helpers/start/nui.nvim
 	url = https://github.com/MunifTanjim/nui.nvim
 [submodule "config/vim/pack/packages/start/vim-easy-align"]
-	path = local/share/vim/site/pack/edit-ux/start/vim-easy-align
+	path = local/share/vim/site/pack/edit-ux/opt/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
