@@ -136,7 +136,7 @@
 	path = local/share/vim/site/pack/vcs/start/fugitive-gitlab.vim
 	url = https://github.com/shumphrey/fugitive-gitlab.vim
 [submodule "copilot.vim"]
-	path = local/share/nvim/site/pack/autocomplete/start/copilot.vim
+	path = local/share/nvim/site/pack/ai/start/copilot.vim
 	url = https://github.com/github/copilot.vim
 [submodule "which-key.nvim"]
 	path = local/share/nvim/site/pack/navigation/start/which-key.nvim
@@ -148,7 +148,7 @@
 	path = local/share/nvim/site/pack/ui/start/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim
 [submodule "config/nvim/pack/ui/start/ChatGPT.nvim"]
-	path = local/share/nvim/site/pack/ui/start/ChatGPT.nvim
+	path = local/share/nvim/site/pack/ai/start/ChatGPT.nvim
 	url = https://github.com/jackMort/ChatGPT.nvim
 [submodule "config/nvim/pack/helpers/start/nui.nvim"]
 	path = local/share/nvim/site/pack/helpers/start/nui.nvim
