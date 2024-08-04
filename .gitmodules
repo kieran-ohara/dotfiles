@@ -55,13 +55,13 @@
 	path = local/share/vim/site/pack/edit-ux/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish
 [submodule "vim-dispatch"]
-	path = local/share/vim/site/pack/packages/start/vim-dispatch
+	path = local/share/vim/site/pack/packages/opt/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
 [submodule "vim-obsession"]
 	path = local/share/vim/site/pack/packages/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession
 [submodule "vim-projectionist"]
-	path = local/share/vim/site/pack/packages/start/vim-projectionist
+	path = local/share/vim/site/pack/packages/opt/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist
 [submodule "nvim-treesitter-textobjects"]
 	path = local/share/nvim/site/pack/treesitter/start/nvim-treesitter-textobjects
