@@ -79,10 +79,6 @@ augroup stripspaces
 augroup end
 " }}}
 
-" Dispatch {{{
-nnoremap <leader>df :Focus make<space>
-" }}}
-
 " Navigation {{{
 set mouse=a
 
