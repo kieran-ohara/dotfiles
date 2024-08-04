@@ -49,7 +49,6 @@
     ~/.local/share/vim/site/pack: local/share/vim/site/pack
     ~/.local/share/zim: local/share/zim
     ~/.ssh/config: config/ssh/config
-    ~/.vim/after: config/vim/after
     ~/.vimrc: config/vim/vimrc
     ~/.zshenv: config/zsh/.zshenv
 
