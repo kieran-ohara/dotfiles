@@ -37,3 +37,11 @@ wk.add({
   { "<leader>l", group = "LSP" },
   { "<leader>t", group = "Treesitter" },
 })
+
+require("oil").setup({
+  use_default_keymaps = false,
+  keymaps = {
+    ["i"] = "actions.select",
+  },
+})
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

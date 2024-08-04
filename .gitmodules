@@ -7,7 +7,7 @@
 	path = local/share/vim/site/pack/navigation/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
 [submodule "vim-dirvish"]
-	path = local/share/vim/site/pack/ui/start/vim-dirvish
+	path = local/share/vim/site/pack/ui/opt/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
 [submodule "vim-commentary"]
 	path = local/share/vim/site/pack/edit-ux/start/vim-commentary
@@ -150,3 +150,6 @@
 [submodule "config/vim/pack/packages/start/vim-easy-align"]
 	path = local/share/vim/site/pack/edit-ux/opt/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
+[submodule "local/share/nvim/site/pack/navigation/start/oil.nvim"]
+	path = local/share/nvim/site/pack/navigation/start/oil.nvim
+	url = https://github.com/stevearc/oil.nvim
