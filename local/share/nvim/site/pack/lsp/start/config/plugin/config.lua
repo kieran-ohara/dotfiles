@@ -7,7 +7,7 @@ for type, icon in pairs(signs) do
 end
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
-  vim.lsp.with(
+vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
     underline = true,
@@ -25,26 +25,53 @@ require "lspsaga".setup({
     }
   }
 })
-vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
 
--- code action.
-vim.keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", { desc = "Code Action"})
+-- Only attach if lsp server supports capability
+local function any_client_supports(capability)
+  for _, client in ipairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
+    if client.supports_method(capability) then
+      return true
+    end
+  end
+  return false
+end
 
--- hover documentation.
--- vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "LSP Hover Doc" })
+-- Always attach this
+vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<CR>", { desc="Info" })
 
--- peek definition
-vim.keymap.set("n", "<leader>lD", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek Definition" })
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+    local bufnr = args.buf
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
 
--- jump forward/back through errors.
-vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "Next LSP Warning"})
-vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "Previous LSP Warning"})
+    local default_opts = { noremap = true, silent = true, buffer = bufnr }
+    local function merge_opts(desc)
+      return vim.tbl_extend('force', default_opts, { desc = desc })
+    end
 
--- shows the references.
-vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", { desc = "References" })
+    if (any_client_supports("textDocument/rename")) then
+      vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", merge_opts("Rename"))
+    end
 
--- set up definition.
-vim.keymap.set("n", "<leader>ld", ":lua vim.lsp.buf.definition()<CR>", { desc = "Goto Definition" })
+    if (any_client_supports("textDocument/codeAction")) then
+      vim.keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", merge_opts("Code Action"))
+    end
+
+    if (any_client_supports("textDocument/definition")) then
+      vim.keymap.set("n", "<leader>lD", "<cmd>Lspsaga peek_definition<CR>", merge_opts("Peek Definition"))
+      vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, merge_opts("Goto Definition"))
+    end
+
+    if (any_client_supports("textDocument/publishDiagnostics")) then
+      vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>", merge_opts("Next LSP Warning"))
+      vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>", merge_opts("Previous LSP Warning"))
+    end
+
+    if (any_client_supports("textDocument/references")) then
+      vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", merge_opts("References"))
+    end
+  end,
+})
 
 -- Trouble {{{
 require"trouble".setup {
