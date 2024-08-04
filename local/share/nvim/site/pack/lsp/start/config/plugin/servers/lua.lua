@@ -15,8 +15,8 @@ configs.efmLua = {
     init_options = {
       codeAction = false,
       completion = false,
-      documentFormatting = false,
-      documentRangeFormatting = false,
+      documentFormatting = true,
+      documentRangeFormatting = true,
       documentSymbol = true,
       hover = false
     }

@@ -18,7 +18,12 @@ tools:
       - "%f(%l,%c) : %tarning %m"
       - "%f(%l,%c) : %rror %m"
 
+  format: &format
+    format-command: 'lua-format -i'
+    format-stdin: true
+
 languages:
 
   lua:
     - <<: *lua-luacheck
+    - <<: *format
