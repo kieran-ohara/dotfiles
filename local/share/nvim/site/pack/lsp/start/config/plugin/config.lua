@@ -43,6 +43,9 @@ vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "Pre
 -- shows the references.
 vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", { desc = "References" })
 
+-- set up definition.
+vim.keymap.set("n", "<leader>ld", ":lua vim.lsp.buf.definition()<CR>", { desc = "Goto Definition" })
+
 -- Trouble {{{
 require"trouble".setup {
   auto_preview = false,
