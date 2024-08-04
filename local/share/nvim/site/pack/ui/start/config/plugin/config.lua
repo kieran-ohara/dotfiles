@@ -1,4 +1,11 @@
-require'nvim-web-devicons'.setup({})
+require'nvim-web-devicons'.setup({
+ override = {
+  dockerfile = {
+    icon = "",
+    name = "Dockerfile"
+  }
+ };
+})
 require'colorizer'.setup()
 require('lualine').setup({
   options = {
