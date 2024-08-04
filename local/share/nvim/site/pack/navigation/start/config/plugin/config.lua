@@ -41,7 +41,9 @@ wk.add({
 require("oil").setup({
   use_default_keymaps = false,
   keymaps = {
-    ["i"] = "actions.select",
+    ["g."] = "actions.toggle_hidden",
+    ["g?"] = "actions.show_help",
+    ["i"] = "actions.select"
   },
 })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
