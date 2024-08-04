@@ -13,6 +13,7 @@
     - ~/.local/share/nvim/site
     - ~/.local/share/vim/site
     - ~/.local/state
+    - ~/.local/state/efm-langserver/logs
     - ~/.local/state/nvim/backupfiles
     - ~/.local/state/nvim/swapfiles
     - ~/.local/state/nvim/undodir

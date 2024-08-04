@@ -4,7 +4,7 @@ root-markers:
   - .git/
   - package.json
 log-level: 5
-log-file: /Users/kieranohara/.cache/efm-langserver/efm-langserver.log
+log-file: /Users/kieranohara/.local/state/efm-langserver/logs/all.log
 
 lint-debounce: 1s
 tools:
