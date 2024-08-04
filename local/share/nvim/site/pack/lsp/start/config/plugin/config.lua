@@ -68,7 +68,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
 
     if (any_client_supports("textDocument/references")) then
-      vim.keymap.set("n", "<leader>lf", "<cmd>Lspsaga finder<CR>", merge_opts("References"))
+      vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga finder<CR>", merge_opts("References"))
+    end
+
+    local function format()
+      vim.lsp.buf.format({ async = true })
+    end
+
+    if (any_client_supports("textDocument/formatting")) then
+      vim.keymap.set("n", "<leader>lf", format, merge_opts("Format"))
     end
   end,
 })
