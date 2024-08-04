@@ -78,7 +78,6 @@ augroup stripspaces
     autocmd BufWinEnter,InsertLeave * match ErrorMsg /\s\+$/
 augroup end
 " }}}
-
 " Navigation {{{
 set mouse=a
 
