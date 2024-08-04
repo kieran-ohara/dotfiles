@@ -117,12 +117,6 @@
 [submodule "cmp-nvim-lsp-signature-help"]
 	path = local/share/nvim/site/pack/autocomplete/start/cmp-nvim-lsp-signature-help
 	url = https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
-[submodule "nvim-dap-vscode-js"]
-	path = local/share/nvim/site/pack/dap/start/nvim-dap-vscode-js
-	url = https://github.com/mxsdev/nvim-dap-vscode-js
-[submodule "nvim-dap"]
-	path = local/share/nvim/site/pack/dap/start/nvim-dap
-	url = https://github.com/mfussenegger/nvim-dap
 [submodule "nvim-treesitter-context"]
 	path = local/share/nvim/site/pack/treesitter/start/nvim-treesitter-context
 	url = https://github.com/nvim-treesitter/nvim-treesitter-context
