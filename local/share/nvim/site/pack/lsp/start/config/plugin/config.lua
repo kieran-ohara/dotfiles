@@ -43,7 +43,6 @@ vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<CR>", { desc="Info" })
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local bufnr = args.buf
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
 
     local default_opts = { noremap = true, silent = true, buffer = bufnr }
     local function merge_opts(desc)
