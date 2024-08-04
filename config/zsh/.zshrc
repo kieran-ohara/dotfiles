@@ -68,10 +68,11 @@ setopt HIST_IGNORE_SPACE
 # Autoload lazy loads. -U marks the function for autoloading, -z means use zsh style
 #
 autoload -Uz awsprompt
+autoload -Uz colourbar
+autoload -Uz colourgrid
 autoload -Uz fancyctrlz
 autoload -Uz gitbranch
-autoload -Uz opensrcdir
-autoload -Uz sethttpieprofile
+autoload -Uz resumevimsession
 
 zle -N fancyctrlz
 bindkey '^Z' fancyctrlz

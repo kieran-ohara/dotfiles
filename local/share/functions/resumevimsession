@@ -1,4 +1,5 @@
-#!/bin/bash
+emulate -L zsh
+
 POSITIONAL=()
 while [[ $# -gt 0 ]]; do
     key="$1"

@@ -1,10 +1,9 @@
-#!/bin/bash
-fancyctrlz () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line -w
-  else
-    zle push-input -w
-    zle clear-screen -w
-  fi
-}
+emulate -L zsh
+
+if [[ $#BUFFER -eq 0 ]]; then
+  BUFFER="fg"
+  zle accept-line -w
+else
+  zle push-input -w
+  zle clear-screen -w
+fi
