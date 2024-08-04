@@ -2,7 +2,12 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require "lspconfig".tsserver.setup {
-  capabilities = capabilities
+  capabilities = capabilities,
+  init_options = {
+    tsserver = {
+      fallbackPath = os.getenv("XDG_DATA_HOME") .. "/mise/installs/npm-typescript/latest/lib/node_modules/typescript/lib"
+    }
+  }
 }
 require'lspconfig'.terraformls.setup{
   capabilities = capabilities
