@@ -53,9 +53,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end
 
         if (any_client_supports("textDocument/publishDiagnostics")) then
-            vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>",
+            vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_prev<CR>",
                            merge_opts("Next LSP Warning"))
-            vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>",
+            vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_next<CR>",
                            merge_opts("Previous LSP Warning"))
         end
 
