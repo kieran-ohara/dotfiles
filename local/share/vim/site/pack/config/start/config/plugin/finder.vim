@@ -8,5 +8,10 @@ function! s:OpenSwaps()
   execute "!open " . l:swapfiles
 endfunction
 
-nnoremap <leader>o. :call <SID>OpenPWD()<CR>
-nnoremap <leader>os :call <SID>OpenSwaps()<CR>
+nnoremap <Plug>(my-plugin-do-something) :call MyPluginFunction()<CR>
+
+nnoremap <Plug>(open-pwd) :call <SID>OpenPWD()<CR>
+nnoremap <Plug>(open-swaps) :call <SID>OpenSwaps()<CR>
+
+nnoremap <leader>o. <Plug>(open-pwd)
+nnoremap <leader>os <Plug>(open-swaps)
