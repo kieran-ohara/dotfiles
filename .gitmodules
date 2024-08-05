@@ -28,7 +28,7 @@
 	path = local/share/vim/site/pack/edit-ux/start/vim-surround
 	url = https://github.com/tpope/vim-surround
 [submodule "vim-unimpaired"]
-	path = local/share/vim/site/pack/edit-ux/start/vim-unimpaired
+	path = local/share/vim/site/pack/edit-ux/opt/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
 [submodule "undotree"]
 	path = local/share/vim/site/pack/ui/opt/undotree
