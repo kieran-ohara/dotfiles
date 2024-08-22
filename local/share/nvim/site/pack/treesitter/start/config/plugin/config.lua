@@ -63,3 +63,4 @@ require("aerial").setup({
   manage_folds = false,
 })
 vim.keymap.set("n", "<leader>ta", "<cmd>AerialToggle<cr>", { desc = "Toggle Aerial" })
+vim.keymap.set("n", "<leader>tp", "<cmd>TSPlaygroundToggle<cr>", { desc = "Toggle Playground" })
