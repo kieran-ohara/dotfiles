@@ -9,3 +9,8 @@ Host mag
   HostName bitbucket.org
   User git
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Host maglab
+  HostName gitlab.com
+  User git
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

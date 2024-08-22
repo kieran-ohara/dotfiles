@@ -94,3 +94,5 @@
 
 [includeIf "hasconfig:remote.*.url:mag:**/**"]
 	path = mag
+[includeIf "hasconfig:remote.*.url:maglab:**/**"]
+	path = mag
