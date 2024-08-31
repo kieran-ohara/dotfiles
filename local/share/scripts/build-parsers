@@ -34,6 +34,7 @@ build_parser_with_revision() {
 }
 
 build_parser_with_revision bash "https://github.com/tree-sitter/tree-sitter-bash.git"
+build_parser_with_revision bicep "https://github.com/amaanq/tree-sitter-bicep"
 build_parser_with_revision css "https://github.com/tree-sitter/tree-sitter-css.git"
 build_parser_with_revision dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile.git"
 build_parser_with_revision dot "https://github.com/rydesun/tree-sitter-dot.git"
