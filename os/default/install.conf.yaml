@@ -28,6 +28,7 @@
     ~/.config/alacritty: config/alacritty
     ~/.config/ansible: config/ansible
     ~/.config/aws: config/aws
+    ~/.config/azure: config/azure
     ~/.config/docker: config/docker
     ~/.config/efm-langserver: config/efm-langserver
     ~/.config/gcloud: config/gcloud

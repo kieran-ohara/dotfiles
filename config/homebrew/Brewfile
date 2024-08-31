@@ -43,6 +43,7 @@ cask 'gitx'
 mas '1Password Safari', id: 1569813296
 mas 'Reeder', id: 1449412482
 
+brew 'azure-cli'
 brew 'cw'
 brew 'dive'
 brew 'doctl'
