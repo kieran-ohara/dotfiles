@@ -4,3 +4,7 @@ name = AzureCloud
 [defaults]
 location = uksouth
 group = uk-south
+
+[bicep]
+use_binary_from_path = false
+
