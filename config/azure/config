@@ -1,2 +1,6 @@
 [cloud]
 name = AzureCloud
+
+[defaults]
+location = uksouth
+group = uk-south
