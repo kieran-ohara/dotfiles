@@ -1,0 +1,5 @@
+#!/bin/bash -e
+docker run --rm -it \
+  -v "$(pwd)":/workdir \
+  -w /workdir \
+  kieranbamforth/pandoc "$@"
