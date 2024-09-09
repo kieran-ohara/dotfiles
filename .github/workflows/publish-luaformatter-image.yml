@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: kieranbamforth/luaformatter:latest
+  IMAGE_NAME: kieranbamforth/luaformatter
   DOCKER_USER_NAME: kieranbamforth
 
 jobs:
