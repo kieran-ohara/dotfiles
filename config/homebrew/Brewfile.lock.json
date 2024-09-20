@@ -133,7 +133,7 @@
         }
       },
       "utm": {
-        "version": "4.2.5",
+        "version": "4.5.4",
         "options": {
           "full_name": "utm"
         }
@@ -3220,7 +3220,7 @@
         "macOS": "13.3"
       },
       "sonoma": {
-        "HOMEBREW_VERSION": "4.3.20",
+        "HOMEBREW_VERSION": "4.3.21",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",
