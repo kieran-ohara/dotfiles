@@ -82,3 +82,6 @@ sso_region = eu-west-1
 sso_account_id = 141906675733
 sso_role_name = Devops-Restricted
 region = eu-west-1
+
+[profile ac]
+region = eu-west-1
