@@ -10,6 +10,7 @@
     - ~/.local/share/ollama
 
 - link:
+    ~/.config/1Password: config/1Password
     ~/.config/karabiner: config/karabiner
     ~/.config/skhd: config/skhd
     ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/macos/me.kieranbamforth.on-login.plist

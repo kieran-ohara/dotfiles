@@ -1,0 +1,8 @@
+[[ssh-keys]]
+vault = "Private"
+
+[[ssh-keys]]
+vault = "Employee"
+
+[[ssh-keys]]
+vault = "MAG"
