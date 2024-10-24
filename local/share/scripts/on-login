@@ -1,5 +1,3 @@
 #!/bin/sh -e
 ssh-add -q "${HOME}"/.ssh/keys/personal/git-signing-key
-open /Applications/Amethyst.app
-open /Applications/Maccy.app
 echo 'on-login finished'

@@ -22,3 +22,4 @@
     - [/opt/homebrew/bin/mise install]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist]
     - [./os/macos/preferences.sh]
+    - [./os/macos/startup-items.sh]
