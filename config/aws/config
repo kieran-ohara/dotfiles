@@ -83,5 +83,15 @@ sso_account_id = 141906675733
 sso_role_name = Devops-Restricted
 region = eu-west-1
 
+[profile mag-prod]
+sso_start_url = https://mag-it.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 333783873005
+sso_role_name = devops-restricted-production
+region = eu-west-1
+
 [profile ac]
 region = eu-west-1
+
+[profile personal]
+region = eu-west-2
