@@ -41,6 +41,7 @@ cask 'tower'
 cask 'utm'
 cask 'visual-studio-code'
 cask 'whatsapp'
+cask 'windsurf'
 cask 'zoom'
 
 mas '1Password Safari', id: 1569813296
