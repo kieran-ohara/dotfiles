@@ -1,5 +1,11 @@
-require("chatgpt").setup({
-      predefined_chat_gpt_prompts = "https://raw.githubusercontent.com/kieran-ohara/dotfiles/main/prompts/prompts.csv",
+require("codeium").setup({
+  virtual_text = {
+    enabled = true,
+    key_bindings = {
+      accept = "<Tab>",
+      accept_word = false,
+      accept_line = false,
+      clear = false,
+    }
+  }
 })
-vim.keymap.set('n', '<leader>cc', '<cmd>ChatGPT<CR>', {  desc = 'Chat' })
-vim.keymap.set('n', '<leader>ce', '<cmd>ChatGPTEditWithInstructions<CR>', {  desc = 'Edit' })
