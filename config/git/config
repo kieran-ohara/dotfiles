@@ -80,8 +80,8 @@
     smurr =  submodule update --recursive --remote
     sta = stash
     stp = stash pop
-    ui = "!gitx"
     unstage = restore --staged
+    x = "!gitx"
 [init]
 	defaultBranch = main
 [status]
