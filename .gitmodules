@@ -153,6 +153,6 @@
 [submodule "local/share/nvim/site/pack/navigation/start/oil.nvim"]
 	path = local/share/nvim/site/pack/navigation/start/oil.nvim
 	url = https://github.com/stevearc/oil.nvim
-[submodule "local/share/nvim/site/pack/ai/start/codium.nvim"]
-	path = local/share/nvim/site/pack/ai/start/codium.nvim
-	url = https://github.com/Exafunction/codeium.nvim.git
+[submodule "local/share/nvim/site/pack/ai/start/windsurf.nvim"]
+	path = local/share/nvim/site/pack/ai/start/windsurf.nvim
+	url = https://github.com/Exafunction/windsurf.nvim.git
