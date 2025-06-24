@@ -17,7 +17,7 @@
 
 - shell:
     - [make dependencies/brew]
-    - [./local/share/scripts/build-parsers ./config/nvim/pack/treesitter/start/nvim-treesitter/lockfile.json]
+    - [./local/share/scripts/build-parsers ./local/share/nvim/site/pack/treesitter/start/nvim-treesitter/lockfile.json]
     - [./local/share/scripts/build-completions]
     - [/opt/homebrew/bin/mise install]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist]
