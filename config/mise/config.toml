@@ -8,12 +8,8 @@ node = "lts"
 
 python = "3.11"
 uv = "latest"
-
-"pipx:aider-chat" = "0.56.0"
 "pipx:ansible-core" = "2.17.2"
-"pipx:gpt-engineer" = "latest"
 "pipx:httpie" = "3.2.3"
-"pipx:mycli" = "1.27.2"
 "pipx:yamllint" = "1.35.1"
 
 [settings]
