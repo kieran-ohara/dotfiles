@@ -33,13 +33,13 @@ build_parser_with_revision() {
   build-parser "$lang" "$repo_url" "$revision" "$@"
 }
 
-build_parser_with_revision bash "https://github.com/tree-sitter/tree-sitter-bash.git"
-build_parser_with_revision bicep "https://github.com/amaanq/tree-sitter-bicep"
+build_parser_with_revision bash "https://github.com/tree-sitter/tree-sitter-bash"
 build_parser_with_revision css "https://github.com/tree-sitter/tree-sitter-css.git"
 build_parser_with_revision dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile.git"
 build_parser_with_revision dot "https://github.com/rydesun/tree-sitter-dot.git"
 build_parser_with_revision git_rebase "https://github.com/the-mikedavis/tree-sitter-git-rebase.git"
 build_parser_with_revision gitcommit "https://github.com/gbprod/tree-sitter-gitcommit.git"
+build_parser_with_revision gitignore "https://github.com/shunsambongi/tree-sitter-gitignore"
 build_parser_with_revision go "https://github.com/tree-sitter/tree-sitter-go.git"
 build_parser_with_revision hcl "https://github.com/MichaHoffmann/tree-sitter-hcl.git"
 build_parser_with_revision html "https://github.com/tree-sitter/tree-sitter-html.git"
@@ -55,6 +55,5 @@ build_parser_with_revision python "https://github.com/tree-sitter/tree-sitter-py
 build_parser_with_revision regex "https://github.com/tree-sitter/tree-sitter-regex.git"
 build_parser_with_revision ssh_config "https://github.com/ObserverOfTime/tree-sitter-ssh-config.git"
 build_parser_with_revision typescript "https://github.com/tree-sitter/tree-sitter-typescript.git" --subdirectory="typescript" --npm-install
-build_parser_with_revision vim "https://github.com/vigoux/tree-sitter-viml.git"
-build_parser_with_revision vue "https://github.com/ikatyang/tree-sitter-vue.git"
-build_parser_with_revision yaml "https://github.com/ikatyang/tree-sitter-yaml.git"
+build_parser_with_revision vim "https://github.com/neovim/tree-sitter-vim"
+build_parser_with_revision yaml "https://github.com/tree-sitter-grammars/tree-sitter-yaml"

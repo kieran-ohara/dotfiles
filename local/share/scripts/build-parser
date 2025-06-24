@@ -56,11 +56,20 @@ get_source() {
     fi
 
     # Checkout correct revision
-    (cd "$SRC_DIR/$repo_name" && git checkout "$revision")
+    pwd=$(pwd)
+    cd "$SRC_DIR/$repo_name"
+    git fetch
+    git checkout .
+    rm tree-sitter.json || true
+    git checkout "$revision"
+    cd "$pwd"
 
     # Run npm install if required
     if [[ "$npm_install" == true ]]; then
-        (cd "$SRC_DIR/$repo_name" && npm install)
+      pwd=$(pwd)
+      cd "$SRC_DIR/$repo_name"
+      npm install
+      cd "$pwd"
     fi
 }
 
