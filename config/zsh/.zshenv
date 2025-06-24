@@ -88,6 +88,10 @@ export OLLAMA_MODELS=$XDG_DATA_HOME/ollama/models
 # Azure
 export AZURE_CONFIG_DIR=$XDG_CONFIG_HOME/azure
 
+# Bash history
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
+
 # Custom behaviour.
 export ZSH_PROFILE=false
 export ZSH_ORDER=false
