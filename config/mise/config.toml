@@ -21,6 +21,8 @@ experimental = true
 env_file = '.env'
 
 legacy_version_file = true
-legacy_version_file_disable_tools = ['python']
-
 asdf_compat = false
+
+python.uv_venv_auto = true
+
+idiomatic_version_file_enable_tools = ["python"]
