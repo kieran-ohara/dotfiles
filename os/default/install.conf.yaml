@@ -24,6 +24,7 @@
     - ~/.vim
 
 - link:
+    ~/.claude: config/claude
     ~/.config/.jira: config/jira
     ~/.config/alacritty: config/alacritty
     ~/.config/ansible: config/ansible
