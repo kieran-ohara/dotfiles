@@ -6,19 +6,19 @@
 - clean: ['~']
 
 - create:
-    - ~/Library/LaunchAgents
     - ~/.local/share/ollama
+    - ~/Library/Application Support/Claude
+    - ~/Library/LaunchAgents
 
 - link:
     ~/.config/1Password: config/1Password
     ~/.config/karabiner: config/karabiner
     ~/.config/skhd: config/skhd
+    ~/Library/Application Support/Claude/claude_desktop_config.json: config/claude-desktop/claude_desktop_config.json
     ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/macos/me.kieranbamforth.on-login.plist
 
 - shell:
     - [make dependencies/brew]
-    - [./local/share/scripts/build-parsers ./local/share/nvim/site/pack/treesitter/start/nvim-treesitter/lockfile.json]
-    - [./local/share/scripts/build-completions]
     - [/opt/homebrew/bin/mise install]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist]
     - [./os/macos/preferences.sh]
