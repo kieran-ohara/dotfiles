@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>on-login.local.job</string>
+	<string>1mcp.local.job</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/bin/sh</string>
-		<string>-c</string>
-		<string>${HOME}/.config/zsh/bin/on-login</string>
+		<string>/bin/zsh</string>
+		<string>-ic</string>
+    <string>1mcp --config ${HOME}/.config/1mcp/mcp.json</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardErrorPath</key>
-	<string>/tmp/on-login.err</string>
+	<string>/tmp/1mcp.err</string>
 	<key>StandardOutPath</key>
-	<string>/tmp/on-login.out</string>
+	<string>/tmp/1mcp.out</string>
 </dict>
 </plist>

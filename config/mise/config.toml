@@ -3,10 +3,12 @@ node = "lts"
 
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:markdownlint-cli" = "latest"
-"npm:mcp-remote" = "latest"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
+
+"npm:@1mcp/agent" = "latest"
+"npm:mcp-remote" = "latest"
 
 python = "3.11"
 uv = "latest"

@@ -26,6 +26,7 @@
 - link:
     ~/.claude: config/claude
     ~/.config/.jira: config/jira
+    ~/.config/1mcp: config/1mcp
     ~/.config/alacritty: config/alacritty
     ~/.config/ansible: config/ansible
     ~/.config/aws: config/aws

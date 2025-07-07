@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "mcp-atlassian": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "mcp-remote https://mcp.atlassian.com/v1/sse"
+      ]
+    },
+    "awslabs.core-mcp-server": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "uvx awslabs.core-mcp-server@latest"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    },
+    "awslabs.cloudwatch-logs-mcp-server": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "uvx awslabs.cloudwatch-logs-mcp-server@latest"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR",
+        "AWS_REGION": "eu-west-2",
+        "AWS_PROFILE": "development"
+      }
+    }
+  }
+}
