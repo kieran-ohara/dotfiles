@@ -16,13 +16,11 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/skhd: config/skhd
     ~/Library/Application Support/Claude/claude_desktop_config.json: config/claude-desktop/claude_desktop_config.json
-    ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist: os/macos/me.kieranbamforth.on-login.plist
     ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist: os/macos/me.kieranbamforth.1mcp.plist
 
 - shell:
     - [make dependencies/brew]
     - [/opt/homebrew/bin/mise install]
-    - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.on-login.plist]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist]
     - [./os/macos/preferences.sh]
     - [./os/macos/startup-items.sh]
