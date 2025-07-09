@@ -30,3 +30,9 @@ require('lualine').setup({
     lualine_z = { '' },
   },
 })
+require('render-markdown').setup({
+  heading = {
+    sign = false,
+    icons = { '  ', '  ', '  ', '  ', '  ', '  ' }
+  }
+})

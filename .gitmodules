@@ -156,3 +156,6 @@
 [submodule "local/share/nvim/site/pack/ai/start/windsurf.nvim"]
 	path = local/share/nvim/site/pack/ai/start/windsurf.nvim
 	url = https://github.com/Exafunction/windsurf.nvim.git
+[submodule "local/share/nvim/site/pack/ui/render-markdown.nvim"]
+	path = local/share/nvim/site/pack/ui/start/render-markdown.nvim
+	url = https://github.com/MeanderingProgrammer/render-markdown.nvim
