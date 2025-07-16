@@ -34,5 +34,13 @@ require('render-markdown').setup({
   heading = {
     sign = false,
     icons = { '  ', '  ', '  ', '  ', '  ', '  ' }
+  },
+  checkbox = {
+    unchecked = {
+      icon = ' ',
+    },
+    checked = {
+      icon = ' ',
+    }
   }
 })
