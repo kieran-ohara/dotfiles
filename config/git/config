@@ -8,6 +8,7 @@
 [user]
     name = Kieran O'Hara
 [credential]
+	helper = manager
 [core]
     filemode = false
     pager = less -F -X
