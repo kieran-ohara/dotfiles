@@ -87,11 +87,12 @@
 [status]
 	submodulesummary = 1
 
-[includeIf "hasconfig:remote.*.url:hub:**/**"]
+[includeIf "gitdir:~/src/dotfiles"]
 	path = personal
-[includeIf "hasconfig:remote.*.url:mag:**/**"]
+
+[includeIf "gitdir:~/src/personal/"]
+	path = personal
+[includeIf "gitdir:~/src/mag/"]
 	path = mag
-[includeIf "hasconfig:remote.*.url:maglab:**/**"]
-	path = mag
-[includeif "hasconfig:remote.*.url:journey:**/**"]
-  path = journey
+[includeIf "gitdir:~/src/journey/"]
+	path = journey
