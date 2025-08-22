@@ -6,3 +6,6 @@ vault = "Employee"
 
 [[ssh-keys]]
 vault = "MAG"
+
+[[ssh-keys]]
+vault = "Journey"
