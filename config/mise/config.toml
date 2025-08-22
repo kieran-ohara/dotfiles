@@ -3,6 +3,7 @@ node = "lts"
 
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:markdownlint-cli" = "latest"
+"npm:@playwright/mcp" = "latest"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
