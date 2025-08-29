@@ -5,15 +5,15 @@ claudeaddmcp() {
 
   typeset -A mcp_configs
   mcp_configs=(
-    jira "https://api.atlassian.com/ex/jira/mcp/v1/sse"
+    atlassian "https://mcp.atlassian.com/v1/sse"
   )
   typeset -A mcp_transports
   mcp_transports=(
-    jira "http"
+    atlassian "http"
   )
   typeset -A mcp_descriptions
   mcp_descriptions=(
-    jira "Jira MCP server"
+    atlassian "Jira MCP server"
   )
 
   if [[ -z "$server_name" ]]; then
