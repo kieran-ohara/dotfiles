@@ -7,8 +7,6 @@
     prompt = false
 [user]
     name = Kieran O'Hara
-[credential]
-	helper = manager
 [core]
     filemode = false
     pager = less -F -X
@@ -96,3 +94,8 @@
 	path = mag
 [includeIf "gitdir:~/src/journey/"]
 	path = journey
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
