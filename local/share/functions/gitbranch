@@ -1,9 +1,11 @@
-emulate -L zsh
+gitbranch() {
+  emulate -L zsh
 
-if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-    return
-fi
+  if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+      return
+  fi
 
-local=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD)
+  local=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD)
 
-echo " (${local})"
+  echo " (${local})"
+}

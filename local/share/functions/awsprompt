@@ -1,5 +1,7 @@
-emulate -L zsh
+awsprompt() {
+  emulate -L zsh
 
-if [[ -v AWS_PROFILE ]]; then
-  echo "  ${AWS_PROFILE}"
-fi
+  if [[ -v AWS_PROFILE ]]; then
+    echo "  ${AWS_PROFILE}"
+  fi
+}
