@@ -1,0 +1,7 @@
+#compdef claudeaddmcp
+
+local -a servers
+servers=(
+    'jira:Jira MCP server'
+    )
+_describe 'mcp server' servers

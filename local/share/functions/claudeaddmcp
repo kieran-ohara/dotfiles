@@ -1,0 +1,50 @@
+claudeaddmcp() {
+  emulate -L zsh
+
+  local server_name="$1"
+
+  typeset -A mcp_configs
+  mcp_configs=(
+    jira "https://api.atlassian.com/ex/jira/mcp/v1/sse"
+  )
+  typeset -A mcp_transports
+  mcp_transports=(
+    jira "http"
+  )
+  typeset -A mcp_descriptions
+  mcp_descriptions=(
+    jira "Jira MCP server"
+  )
+
+  if [[ -z "$server_name" ]]; then
+    echo "Usage: claudeaddmcp <server_name>"
+    echo "Available servers:"
+    for key in ${(k)mcp_descriptions}; do
+      printf "  %-12s - %s\n" "$key" "${mcp_descriptions[$key]}"
+    done
+    return 1
+  fi
+
+  if [[ -z "${mcp_transports[$server_name]}" ]]; then
+    echo "Error: Unknown MCP server '$server_name'"
+    echo "Run 'claudeaddmcp' without arguments to see available servers"
+    return 1
+  fi
+
+  local transport="${mcp_transports[$server_name]}"
+  local config="${mcp_configs[$server_name]}"
+
+  echo "Adding MCP server: $server_name"
+  echo "Transport: $transport"
+  echo "Config: $config"
+
+  claude mcp add --transport "$transport" "$server_name" "$config"
+
+  if [[ $? -eq 0 ]]; then
+    echo "Successfully added $server_name MCP server"
+  else
+    echo "Failed to add $server_name MCP server"
+    return 1
+  fi
+}
+
