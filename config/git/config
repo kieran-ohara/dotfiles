@@ -88,9 +88,8 @@
 [status]
 	submodulesummary = 1
 
-[includeIf "gitdir:~/src/dotfiles"]
+[includeIf "gitdir:~/src/dotfiles/"]
 	path = personal
-
 [includeIf "gitdir:~/src/personal/"]
 	path = personal
 [includeIf "gitdir:~/src/mag/"]
