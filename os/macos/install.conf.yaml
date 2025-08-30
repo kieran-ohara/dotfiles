@@ -24,3 +24,4 @@
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist]
     - [./os/macos/preferences.sh]
     - [./os/macos/startup-items.sh]
+    - [/opt/homebrew/bin/op inject -i ./config/zsh/.zshenv.secrets.tmpl -o ~/.zshenv.secrets]
