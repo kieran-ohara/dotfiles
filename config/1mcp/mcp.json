@@ -1,12 +1,5 @@
 {
   "mcpServers": {
-    "mcp-atlassian": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "mcp-remote https://mcp.atlassian.com/v1/sse"
-      ]
-    },
     "playwright": {
       "command": "/bin/zsh",
       "args": [

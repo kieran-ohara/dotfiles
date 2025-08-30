@@ -3,5 +3,6 @@
 local -a servers
 servers=(
     'atlassian:Jira MCP server'
+    'github:GitHub MCP server'
     )
 _describe 'mcp server' servers

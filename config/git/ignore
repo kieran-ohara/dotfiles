@@ -15,3 +15,4 @@ npm-debug.log
 prompt
 tags
 venv
+**/.claude/settings.local.json
