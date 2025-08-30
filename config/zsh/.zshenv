@@ -100,6 +100,11 @@ if test -f "$FILE"; then
     source $FILE;
 fi
 
+SECRETS_FILE="${HOME}/.zshenv.secrets"
+if test -f "$SECRETS_FILE"; then
+    source $SECRETS_FILE;
+fi
+
 # terminfo
 export TERMINFO="$XDG_CONFIG_HOME"/terminfo/db
 export TERMINFO_DIRS="${XDG_CONFIG_HOME}/terminfo:/usr/share/terminfo"
