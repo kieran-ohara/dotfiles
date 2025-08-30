@@ -6,21 +6,29 @@ claudeaddmcp() {
   typeset -A mcp_configs
   mcp_configs=(
     atlassian "https://mcp.atlassian.com/v1/sse"
+    playwright "mcp-server-playwright"
   )
   typeset -A mcp_transports
   mcp_transports=(
-    atlassian "http"
+    atlassian "sse"
+    playwright "stdio"
+  )
+  typeset -A mcp_scopes
+  mcp_scopes=(
+    atlassian "user"
+    playwright "user"
   )
   typeset -A mcp_descriptions
   mcp_descriptions=(
     atlassian "Jira MCP server"
+    playwright "Playwright browser automation server"
   )
 
   if [[ -z "$server_name" ]]; then
     echo "Usage: claudeaddmcp <server_name>"
     echo "Available servers:"
     for key in ${(k)mcp_descriptions}; do
-      printf "  %-12s - %s\n" "$key" "${mcp_descriptions[$key]}"
+      printf "  %-12s - %s (scope: %s)\n" "$key" "${mcp_descriptions[$key]}" "${mcp_scopes[$key]:-local}"
     done
     return 1
   fi
@@ -33,12 +41,18 @@ claudeaddmcp() {
 
   local transport="${mcp_transports[$server_name]}"
   local config="${mcp_configs[$server_name]}"
+  local scope="${mcp_scopes[$server_name]:-local}"
 
   echo "Adding MCP server: $server_name"
+  echo "Scope: $scope"
   echo "Transport: $transport"
   echo "Config: $config"
 
-  claude mcp add --transport "$transport" "$server_name" "$config"
+  if [[ "$transport" == "stdio" ]]; then
+    claude mcp add --scope "$scope" "$server_name" -- "$config"
+  else
+    claude mcp add --scope "$scope" --transport "$transport" "$server_name" "$config"
+  fi
 
   if [[ $? -eq 0 ]]; then
     echo "Successfully added $server_name MCP server"
