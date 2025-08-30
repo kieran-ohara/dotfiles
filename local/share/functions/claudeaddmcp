@@ -7,21 +7,29 @@ claudeaddmcp() {
   mcp_configs=(
     atlassian "https://mcp.atlassian.com/v1/sse"
     playwright "mcp-server-playwright"
+    context7 "https://mcp.context7.com/mcp"
   )
   typeset -A mcp_transports
   mcp_transports=(
     atlassian "sse"
     playwright "stdio"
+    context7 "http"
   )
   typeset -A mcp_scopes
   mcp_scopes=(
     atlassian "user"
     playwright "user"
+    context7 "user"
   )
   typeset -A mcp_descriptions
   mcp_descriptions=(
     atlassian "Jira MCP server"
     playwright "Playwright browser automation server"
+    context7 "Context7 server (requires API key)"
+  )
+  typeset -A mcp_auth_headers
+  mcp_auth_headers=(
+    context7 "CONTEXT7_API_KEY"
   )
 
   if [[ -z "$server_name" ]]; then
@@ -42,6 +50,22 @@ claudeaddmcp() {
   local transport="${mcp_transports[$server_name]}"
   local config="${mcp_configs[$server_name]}"
   local scope="${mcp_scopes[$server_name]:-local}"
+  local auth_header="${mcp_auth_headers[$server_name]}"
+
+  local api_key=""
+  if [[ -n "$auth_header" ]]; then
+    # Check for environment variable MCP_{header_name}
+    local env_var_name="MCP_${auth_header}"
+    api_key="${(P)env_var_name}"
+
+    if [[ -z "$api_key" ]]; then
+      echo "Error: Environment variable $env_var_name is not set"
+      echo "Please set it with: export $env_var_name='your-api-key'"
+      return 1
+    fi
+
+    echo "Using API key from environment variable $env_var_name"
+  fi
 
   echo "Adding MCP server: $server_name"
   echo "Scope: $scope"
@@ -50,6 +74,8 @@ claudeaddmcp() {
 
   if [[ "$transport" == "stdio" ]]; then
     claude mcp add --scope "$scope" "$server_name" -- "$config"
+  elif [[ -n "$auth_header" ]]; then
+    claude mcp add --scope "$scope" --transport "$transport"  "$server_name" "$config" --header "${auth_header}:${api_key}"
   else
     claude mcp add --scope "$scope" --transport "$transport" "$server_name" "$config"
   fi
