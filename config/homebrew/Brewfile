@@ -5,6 +5,7 @@ tap 'lucagrulla/tap'
 tap 'ankitpokhrel/jira-cli'
 tap 'hashicorp/tap'
 
+cask '1password-cli'
 cask '1password'
 cask 'alacritty'
 cask 'amethyst'
