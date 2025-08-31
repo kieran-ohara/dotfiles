@@ -8,24 +8,28 @@ claudeaddmcp() {
     atlassian "https://mcp.atlassian.com/v1/sse"
     playwright "mcp-server-playwright"
     context7 "https://mcp.context7.com/mcp"
+    aws-knowledge "https://knowledge-mcp.global.api.aws"
   )
   typeset -A mcp_transports
   mcp_transports=(
     atlassian "sse"
     playwright "stdio"
     context7 "http"
+    aws-knowledge "http"
   )
   typeset -A mcp_scopes
   mcp_scopes=(
     atlassian "user"
     playwright "user"
     context7 "user"
+    aws-knowledge "user"
   )
   typeset -A mcp_descriptions
   mcp_descriptions=(
     atlassian "Jira MCP server"
     playwright "Playwright browser automation server"
     context7 "Context7 server (requires API key)"
+    aws-knowledge "AWS Knowledge MCP server"
   )
   typeset -A mcp_auth_headers
   mcp_auth_headers=(

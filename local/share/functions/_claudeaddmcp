@@ -3,6 +3,8 @@
 local -a servers
 servers=(
     'atlassian:Jira MCP server'
-    'github:GitHub MCP server'
+    'playwright:Playwright browser automation server'
+    'context7:Context7 server (requires API key)'
+    'aws-knowledge:AWS Knowledge MCP server'
     )
 _describe 'mcp server' servers
