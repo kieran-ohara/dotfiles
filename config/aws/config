@@ -114,5 +114,5 @@ region = eu-west-2
 sso_start_url =  https://teamjourney.awsapps.com/start
 sso_region = eu-west-1
 sso_account_id = 470479007762
-sso_role_name = ProductDevelopersEnhanced
+sso_role_name = ProductDevelopers
 region = eu-west-1
