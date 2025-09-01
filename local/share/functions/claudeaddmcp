@@ -1,7 +1,31 @@
 claudeaddmcp() {
   emulate -L zsh
 
-  local server_name="$1"
+  local server_name=""
+  local cli_api_key=""
+
+  # Parse arguments
+  while [[ $# -gt 0 ]]; do
+    case $1 in
+      --api-key)
+        cli_api_key="$2"
+        shift 2
+        ;;
+      -*)
+        echo "Unknown option: $1"
+        return 1
+        ;;
+      *)
+        if [[ -z "$server_name" ]]; then
+          server_name="$1"
+          shift
+        else
+          echo "Too many arguments"
+          return 1
+        fi
+        ;;
+    esac
+  done
 
   typeset -A mcp_configs
   mcp_configs=(
@@ -9,6 +33,8 @@ claudeaddmcp() {
     playwright "mcp-server-playwright"
     context7 "https://mcp.context7.com/mcp"
     aws-knowledge "https://knowledge-mcp.global.api.aws"
+    github "https://api.githubcopilot.com/mcp/"
+    aws-diagram "uvx awslabs.aws-diagram-mcp-server"
   )
   typeset -A mcp_transports
   mcp_transports=(
@@ -16,6 +42,8 @@ claudeaddmcp() {
     playwright "stdio"
     context7 "http"
     aws-knowledge "http"
+    github "http"
+    aws-diagram "stdio"
   )
   typeset -A mcp_scopes
   mcp_scopes=(
@@ -23,6 +51,8 @@ claudeaddmcp() {
     playwright "user"
     context7 "user"
     aws-knowledge "user"
+    github "local"
+    aws-diagram "user"
   )
   typeset -A mcp_descriptions
   mcp_descriptions=(
@@ -30,14 +60,17 @@ claudeaddmcp() {
     playwright "Playwright browser automation server"
     context7 "Context7 server (requires API key)"
     aws-knowledge "AWS Knowledge MCP server"
+    github "GitHub MCP server (requires PAT)"
+    aws-diagram "AWS Diagram MCP server"
   )
   typeset -A mcp_auth_headers
   mcp_auth_headers=(
     context7 "CONTEXT7_API_KEY"
+    github "GITHUB_MCP_PAT"
   )
 
   if [[ -z "$server_name" ]]; then
-    echo "Usage: claudeaddmcp <server_name>"
+    echo "Usage: claudeaddmcp [--api-key <key>] <server_name>"
     echo "Available servers:"
     for key in ${(k)mcp_descriptions}; do
       printf "  %-12s - %s (scope: %s)\n" "$key" "${mcp_descriptions[$key]}" "${mcp_scopes[$key]:-local}"
@@ -58,17 +91,24 @@ claudeaddmcp() {
 
   local api_key=""
   if [[ -n "$auth_header" ]]; then
-    # Check for environment variable MCP_{header_name}
-    local env_var_name="MCP_${auth_header}"
-    api_key="${(P)env_var_name}"
+    # Prioritize CLI argument, then check environment variable
+    if [[ -n "$cli_api_key" ]]; then
+      api_key="$cli_api_key"
+      echo "Using API key from --api-key argument"
+    else
+      # Check for environment variable MCP_{header_name}
+      local env_var_name="MCP_${auth_header}"
+      api_key="${(P)env_var_name}"
 
-    if [[ -z "$api_key" ]]; then
-      echo "Error: Environment variable $env_var_name is not set"
-      echo "Please set it with: export $env_var_name='your-api-key'"
-      return 1
+      if [[ -z "$api_key" ]]; then
+        echo "Error: No API key provided"
+        echo "Either set environment variable $env_var_name or use --api-key <key>"
+        echo "Example: claudeaddmcp --api-key 'your-api-key' $server_name"
+        return 1
+      fi
+
+      echo "Using API key from environment variable $env_var_name"
     fi
-
-    echo "Using API key from environment variable $env_var_name"
   fi
 
   echo "Adding MCP server: $server_name"

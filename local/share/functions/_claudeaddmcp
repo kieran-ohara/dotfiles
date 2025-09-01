@@ -6,5 +6,7 @@ servers=(
     'playwright:Playwright browser automation server'
     'context7:Context7 server (requires API key)'
     'aws-knowledge:AWS Knowledge MCP server'
+    'github:GitHub MCP server (requires PAT)'
+    'aws-diagram:AWS Diagram MCP server'
     )
 _describe 'mcp server' servers
