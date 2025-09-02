@@ -1,16 +1,18 @@
 -- vim: set foldmethod=marker foldlevel=0 modeline:
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-require"lspconfig".tsserver.setup {
+-- Typescript {{{
+require"lspconfig".ts_ls.setup {
     capabilities = capabilities,
     init_options = {
-        tsserver = {
+        ts_ls = {
             fallbackPath = os.getenv("XDG_DATA_HOME") ..
                 "/mise/installs/npm-typescript/latest/lib/node_modules/typescript/lib"
         }
     }
 }
 require'lspconfig'.terraformls.setup {capabilities = capabilities}
+-- }}}
 -- EFM {{{
 local lspconfig = require "lspconfig"
 local util = require "lspconfig.util"
