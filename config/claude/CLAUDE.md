@@ -1,16 +1,17 @@
+# Claude
 
-# Development Principles
+## Development Principles
 
 These principles MUST be followed at all times.
 
-## Build one feature at a time.
+### Build one feature at a time.
 
 - Changes to the codebase should be small and
 - Changes should focused on a single purpose at a time.
 - Changes should be able to be committed to git as single, atomic commits.
 - Do NOT make sweeping changes across multiple parts of the codebase at once.
 
-## Use Test Driven Development (TDD)
+### Use Test Driven Development (TDD)
 
 Code should be delivered using a the Test Driven Development approach:
 
@@ -19,3 +20,23 @@ Code should be delivered using a the Test Driven Development approach:
 3. Implement the code to make the test pass
 4. Run the test to see that it passes.
 5. Suggest refactoring where necessary.
+
+## AWS CDK
+
+AWS CDK commands should be executed using `aws-vault` to pass credentials.
+
+## Usage Examples
+
+```bash
+# Deploy a CDK stack
+aws-vault exec profile-name -- cdk deploy
+# Synthesize CloudFormation templates
+aws-vault exec profile-name -- cdk synth
+# Destroy a stack
+aws-vault exec profile-name -- cdk destroy stack-name
+# List all stacks
+aws-vault exec profile-name -- cdk list
+```
+
+Replace `profile-name` with the profile name given in the instruction. If no
+profile name is given, ask the user.
