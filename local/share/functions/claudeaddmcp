@@ -68,6 +68,10 @@ claudeaddmcp() {
     context7 "CONTEXT7_API_KEY"
     github "GITHUB_MCP_PAT"
   )
+  typeset -A mcp_bearer_format
+  mcp_bearer_format=(
+    github true
+  )
 
   if [[ -z "$server_name" ]]; then
     echo "Usage: claudeaddmcp [--api-key <key>] <server_name>"
@@ -119,7 +123,13 @@ claudeaddmcp() {
   if [[ "$transport" == "stdio" ]]; then
     claude mcp add --scope "$scope" "$server_name" -- "$config"
   elif [[ -n "$auth_header" ]]; then
-    claude mcp add --scope "$scope" --transport "$transport"  "$server_name" "$config" --header "${auth_header}:${api_key}"
+    if [[ -n "${mcp_bearer_format[$server_name]}" ]]; then
+      # Use Authorization Bearer format for servers that require it
+      claude mcp add --scope "$scope" --transport "$transport" "$server_name" "$config" -H "Authorization: Bearer ${api_key}"
+    else
+      # Use custom header format for other servers
+      claude mcp add --scope "$scope" --transport "$transport" "$server_name" "$config" --header "${auth_header}:${api_key}"
+    fi
   else
     claude mcp add --scope "$scope" --transport "$transport" "$server_name" "$config"
   fi
