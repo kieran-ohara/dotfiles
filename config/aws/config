@@ -114,9 +114,9 @@ sso_account_id = 470479007762
 sso_role_name = ProductDevelopers
 region = eu-west-1
 
-[profile jny-staging]
+[profile jny-prod]
 sso_start_url =  https://teamjourney.awsapps.com/start
 sso_region = eu-west-1
-sso_account_id = 700724746943
+sso_account_id = 599893913316
 sso_role_name = ProductDevelopers
 region = eu-west-1
