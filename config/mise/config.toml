@@ -12,6 +12,7 @@ node = "lts"
 # NPM/MCP
 "npm:@1mcp/agent" = "latest"
 "npm:@playwright/mcp" = "latest"
+"npm:@xeroapi/xero-mcp-server" = "latest"
 "npm:mcp-remote" = "latest"
 
 python = "3.11"

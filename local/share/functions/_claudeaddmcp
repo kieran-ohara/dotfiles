@@ -8,5 +8,6 @@ servers=(
     'aws-knowledge:AWS Knowledge MCP server'
     'github:GitHub MCP server (requires PAT)'
     'aws-diagram:AWS Diagram MCP server'
+    'xero:Xero MCP server (requires client credentials)'
     )
 _describe 'mcp server' servers

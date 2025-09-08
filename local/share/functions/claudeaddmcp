@@ -35,6 +35,7 @@ claudeaddmcp() {
     aws-knowledge "https://knowledge-mcp.global.api.aws"
     github "https://api.githubcopilot.com/mcp/"
     aws-diagram "uvx awslabs.aws-diagram-mcp-server"
+    xero "xero-mcp-server"
   )
   typeset -A mcp_transports
   mcp_transports=(
@@ -44,6 +45,7 @@ claudeaddmcp() {
     aws-knowledge "http"
     github "http"
     aws-diagram "stdio"
+    xero "stdio"
   )
   typeset -A mcp_scopes
   mcp_scopes=(
@@ -53,6 +55,7 @@ claudeaddmcp() {
     aws-knowledge "user"
     github "local"
     aws-diagram "user"
+    xero "user"
   )
   typeset -A mcp_descriptions
   mcp_descriptions=(
@@ -62,6 +65,7 @@ claudeaddmcp() {
     aws-knowledge "AWS Knowledge MCP server"
     github "GitHub MCP server (requires PAT)"
     aws-diagram "AWS Diagram MCP server"
+    xero "Xero MCP server (requires client credentials)"
   )
   typeset -A mcp_auth_headers
   mcp_auth_headers=(
