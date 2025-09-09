@@ -21,11 +21,29 @@ Code should be delivered using a the Test Driven Development approach:
 4. Run the test to see that it passes.
 5. Suggest refactoring where necessary.
 
-## AWS CDK
+## AWS
 
-AWS CDK commands should be executed using `aws-vault` to pass credentials.
+### CLI
 
-## Usage Examples
+Standard AWS CLI commands should be executed directly with AWS_PROFILE environment variable.
+**DO NOT use aws-vault for standard AWS CLI commands.**
+
+#### Usage Examples
+
+```bash
+# List buckets
+AWS_PROFILE=profile-name aws s3 ls
+
+# Delete a bucket
+AWS_PROFILE=profile-name aws s3 rb bucket-name
+```
+
+### CDK
+
+AWS CDK commands **MUST** be executed using `aws-vault` to pass credentials.
+**ONLY use aws-vault for CDK commands, never for standard AWS CLI commands.**
+
+#### Usage Examples
 
 ```bash
 # Deploy a CDK stack
@@ -40,3 +58,7 @@ aws-vault exec profile-name -- cdk list
 
 Replace `profile-name` with the profile name given in the instruction. If no
 profile name is given, ask the user.
+
+## Git
+
+Never mention "created by claude]," when you are creating git commits.
