@@ -36,6 +36,7 @@ claudeaddmcp() {
     github "https://api.githubcopilot.com/mcp/"
     aws-diagram "uvx awslabs.aws-diagram-mcp-server"
     xero "xero-mcp-server"
+    supabase "https://mcp.supabase.com/mcp"
   )
   typeset -A mcp_transports
   mcp_transports=(
@@ -46,6 +47,7 @@ claudeaddmcp() {
     github "http"
     aws-diagram "stdio"
     xero "stdio"
+    supabase "http"
   )
   typeset -A mcp_scopes
   mcp_scopes=(
@@ -56,6 +58,7 @@ claudeaddmcp() {
     github "local"
     aws-diagram "user"
     xero "user"
+    supabase "user"
   )
   typeset -A mcp_descriptions
   mcp_descriptions=(
@@ -66,6 +69,7 @@ claudeaddmcp() {
     github "GitHub MCP server (requires PAT)"
     aws-diagram "AWS Diagram MCP server"
     xero "Xero MCP server (requires client credentials)"
+    supabase "Supabase MCP server"
   )
   typeset -A mcp_auth_headers
   mcp_auth_headers=(

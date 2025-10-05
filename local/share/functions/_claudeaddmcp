@@ -9,5 +9,6 @@ servers=(
     'github:GitHub MCP server (requires PAT)'
     'aws-diagram:AWS Diagram MCP server'
     'xero:Xero MCP server (requires client credentials)'
+    'supabase:Supabase MCP server'
     )
 _describe 'mcp server' servers
