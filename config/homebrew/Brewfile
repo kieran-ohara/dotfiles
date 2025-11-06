@@ -48,6 +48,7 @@ cask 'windsurf'
 cask 'zoom'
 
 mas '1Password Safari', id: 1569813296
+mas 'Noir Safari', id: 1592844577
 mas 'Reeder', id: 1449412482
 
 brew 'azure-cli'

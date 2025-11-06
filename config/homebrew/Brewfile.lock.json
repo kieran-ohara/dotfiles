@@ -396,25 +396,14 @@
         "id": "1289197285",
         "version": "2022.1"
       },
-      "OmniFocus": {
-        "id": "1346203938",
-        "version": "3.15.4"
-      },
       "Reeder": {
         "id": "1449412482",
         "version": "4.2.8"
       },
-      "Honey for Safari": null,
-      "Hush Nag Blocker": null,
       "Vimari": {
         "id": "1480933944",
         "version": "2.1.1"
-      },
-      "Octotree": {
-        "id": "1457450145",
-        "version": "7.3.0"
-      },
-      "1Password Safari": null
+      }
     },
     "brew": {
       "direnv": {
