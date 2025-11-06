@@ -15,11 +15,12 @@ These principles MUST be followed at all times.
 
 Code should be delivered using a the Test Driven Development approach:
 
-1. Write a single failing test first
-2. Run the test to see the failure.
-3. Implement the code to make the test pass
-4. Run the test to see that it passes.
-5. Suggest refactoring where necessary.
+1. Write ONE single failing test first
+2. Run the test to confirm it fails
+3. Implement minimal code to make that test pass
+4. Run the test to confirm it passes
+5. Move to the next test
+6. Suggest refactoring opportunities when appropriate
 
 ## AWS
 
