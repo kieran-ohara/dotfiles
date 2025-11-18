@@ -63,3 +63,4 @@ profile name is given, ask the user.
 ## Git
 
 Never mention "created by claude]," when you are creating git commits.
+- remember don't use angular commits
