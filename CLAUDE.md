@@ -77,5 +77,3 @@ The repository uses dotbot with OS-specific configuration files:
 - **mise**: Primary tool version manager (replaces asdf)
 - **Homebrew**: System package management with Brewfile
 - **npm/uv**: Language-specific package management
-
-This setup provides a fully reproducible development environment optimized for software engineering workflows.
