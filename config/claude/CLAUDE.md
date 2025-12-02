@@ -64,3 +64,10 @@ profile name is given, ask the user.
 
 Never mention "created by claude]," when you are creating git commits.
 - remember don't use angular commits
+
+## Code Comments
+
+- Code should be self-documenting. Reduce the need for comments.
+- Only add comments for complex procedures where the logic is not immediately obvious.
+- DO NOT add function documentation (JSDoc, docstrings, etc.) UNLESS that convention already exists in the codebase.
+- Avoid silly or unhelpful comments that restate what the code does.
