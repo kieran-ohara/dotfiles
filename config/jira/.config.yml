@@ -1,67 +1,78 @@
+auth_type: basic
 board:
-  id: 100
-  name: Telco Squad Board
-  type: simple
+    id: 2
+    name: STAR board
+    type: simple
 epic:
-  name: ""
-  link: ""
+    name: ""
+    link: ""
 installation: Cloud
 issue:
-  fields:
-    custom:
-    - name: Sprint
-      key: customfield_10008
-      schema:
-        datatype: array
-        items: json
-    - name: Rank
-      key: customfield_10009
-      schema:
-        datatype: any
-    - name: Story point estimate
-      key: customfield_10084
-      schema:
-        datatype: number
-    - name: Development
-      key: customfield_10000
-      schema:
-        datatype: any
-    - name: Flagged
-      key: customfield_10079
-      schema:
-        datatype: array
-        items: option
-    - name: Start date
-      key: customfield_10081
-      schema:
-        datatype: date
-    - name: Issue color
-      key: customfield_10085
-      schema:
-        datatype: string
-  types:
-  - id: "10162"
-    name: Story
-    handle: Story
-    subtask: false
-  - id: "10163"
-    name: Task
-    handle: Task
-    subtask: false
-  - id: "10164"
-    name: Bug
-    handle: Bug
-    subtask: false
-  - id: "10165"
-    name: Epic
-    handle: Epic
-    subtask: false
-  - id: "10166"
-    name: Subtask
-    handle: Subtask
-    subtask: true
-login: kieran.o'hara@bionic.co.uk
+    fields:
+        custom:
+            - name: Design
+              key: customfield_10030
+              schema:
+                datatype: array
+                items: design.field.name
+            - name: Vulnerability
+              key: customfield_10033
+              schema:
+                datatype: any
+            - name: Sprint
+              key: customfield_10020
+              schema:
+                datatype: array
+                items: json
+            - name: Flagged
+              key: customfield_10021
+              schema:
+                datatype: array
+                items: option
+            - name: Story point estimate
+              key: customfield_10016
+              schema:
+                datatype: number
+            - name: Issue color
+              key: customfield_10017
+              schema:
+                datatype: string
+            - name: Rank
+              key: customfield_10019
+              schema:
+                datatype: any
+            - name: Start date
+              key: customfield_10015
+              schema:
+                datatype: date
+            - name: Development
+              key: customfield_10000
+              schema:
+                datatype: any
+            - name: Team
+              key: customfield_10001
+              schema:
+                datatype: team
+    types:
+        - id: "10007"
+          name: Task
+          handle: Task
+          subtask: false
+        - id: "10008"
+          name: Epic
+          handle: Epic
+          subtask: false
+        - id: "10009"
+          name: Subtask
+          handle: Subtask
+          subtask: true
+        - id: "10010"
+          name: Bug
+          handle: Bug
+          subtask: false
+login: kieran.ohara@irkb.me
 project:
-  key: TS
-  type: next-gen
-server: https://makeitcheaper.atlassian.net
+    key: STAR
+    type: next-gen
+server: https://irkb-me.atlassian.net
+timezone: Europe/London
