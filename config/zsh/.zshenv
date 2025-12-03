@@ -57,8 +57,7 @@ export HOMEBREW_BUNDLE_FILE=~/.config/homebrew/Brewfile
 # Use vim where possible.
 export EDITOR='vim'
 
-# Use vim as man pager
-export PAGER="col -b | view -c 'set ft=man nomod nolist' - "
+export PAGER=""
 
 # Ansible
 export ANSIBLE_CONFIG=${XDG_CONFIG_HOME}/ansible/ansible.cfg
