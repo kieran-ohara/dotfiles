@@ -31,24 +31,20 @@
 
     ab = "!git absorb"
 
+    am = "!git-branchless amend"
     hide = "!git-branchless hide"
     ll = "!git-branchless smartlog"
     mov = "!git-branchless move"
     nn = "!git-branchless next"
     np = "!git-branchless prev"
-    ra = "!git-branchless amend"
     rc = "!git-branchless record"
     rci = "!git-branchless record -i"
-    restack = "!git-branchless restack"
-    rr = "!git-branchless reword"
-    rs = "!git-branchless restack"
     rw = "!git-branchless reword"
-    swi = "!git-branchless switch -i"
-    syn = "!git-branchless sync"
 
     pr = "!gh pr create"
+    prm = "!gh pr list --author='@me'"
+    pro = "!gh pr view --web"
     br = "!gh browse"
-    mr = "!glab mr"
 
     a = add
     b = branch
@@ -95,7 +91,7 @@
 [includeIf "gitdir:~/src/journey/"]
 	path = journey
 [credential]
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
