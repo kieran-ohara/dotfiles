@@ -1,8 +1,14 @@
 #compdef treefromport
+#
+# Zsh completion for treefromport
+#
+# After modifying this file, run `rm ~/.zcompdump*` and restart shell.
+# Zsh caches completions and won't see changes otherwise.
 
 _treefromport() {
   local state
 
+  # First arg: port number, second arg: pid from process tree
   _arguments \
     '1:port:' \
     '2:pid:->pids'
@@ -12,11 +18,15 @@ _treefromport() {
       local port="${words[2]}"
       if [[ -n "$port" ]]; then
         local -a procs
+        # Get the PID listening on the port
         local pid=$(lsof -i :"$port" -t 2>/dev/null | head -1)
 
+        # Walk up the process tree to init (PID 1)
         while [[ "$pid" != "1" ]] && [[ -n "$pid" ]]; do
+          # args= shows full command line (e.g. "npm run test" not just "npm")
           local args=$(ps -o args= -p "$pid" 2>/dev/null | xargs)
           if [[ -n "$args" ]]; then
+            # Format: "pid:description" - _describe shows pid, description after --
             procs+=("${pid}:${args}")
           fi
           pid=$(ps -o ppid= -p "$pid" 2>/dev/null | tr -d ' ')
