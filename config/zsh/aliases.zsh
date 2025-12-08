@@ -13,7 +13,9 @@ alias c="claude"
 alias cpr='cp -r'
 alias d='docker'
 alias dc='docker-compose'
-alias dkp="docker ps -a"
+alias dp="docker ps -a"
+alias dv="docker volume"
+alias dvp='docker volume prune'
 alias drmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker rm'
 alias drmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
 alias dvm="docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh"
