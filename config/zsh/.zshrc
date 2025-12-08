@@ -74,6 +74,7 @@ autoload -Uz colourgrid
 autoload -Uz fancyctrlz
 autoload -Uz gitbranch
 autoload -Uz resumevimsession
+autoload -Uz treefromport
 
 zle -N fancyctrlz
 bindkey '^Z' fancyctrlz

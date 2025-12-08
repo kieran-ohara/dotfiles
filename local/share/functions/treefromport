@@ -2,13 +2,13 @@ treefromport() {
   emulate -L zsh
 
   if [[ -z "$1" ]]; then
-    echo "Usage: treefromport <port> [-k]" >&2
-    echo "  -k  interactively select a process to kill" >&2
+    echo "Usage: treefromport <port> [pid]" >&2
+    echo "  pid  optional - kill this process (use tab completion)" >&2
     return 1
   fi
 
   local port="$1"
-  local kill_mode="$2"
+  local kill_pid="$2"
   local pid=$(lsof -i :"$port" -t 2>/dev/null | head -1)
 
   if [[ -z "$pid" ]]; then
@@ -16,26 +16,15 @@ treefromport() {
     return 1
   fi
 
-  local -a procs
+  if [[ -n "$kill_pid" ]]; then
+    echo "Killing PID $kill_pid..."
+    kill "$kill_pid"
+    return
+  fi
+
+  echo "Process tree for port $port:\n"
   while [[ "$pid" != "1" ]] && [[ -n "$pid" ]]; do
-    procs+=("$(ps -o pid=,ppid=,comm= -p "$pid" 2>/dev/null)")
+    ps -o pid=,ppid=,comm= -p "$pid" 2>/dev/null
     pid=$(ps -o ppid= -p "$pid" 2>/dev/null | tr -d ' ')
   done
-
-  if [[ "$kill_mode" == "-k" ]]; then
-    echo "Select process to kill:"
-    select choice in "${procs[@]}" "cancel"; do
-      if [[ "$choice" == "cancel" ]] || [[ -z "$choice" ]]; then
-        echo "Cancelled"
-        break
-      fi
-      local kill_pid=$(echo "$choice" | awk '{print $1}')
-      echo "Killing PID $kill_pid..."
-      kill "$kill_pid"
-      break
-    done
-  else
-    echo "Process tree for port $port:\n"
-    printf '%s\n' "${procs[@]}"
-  fi
 }

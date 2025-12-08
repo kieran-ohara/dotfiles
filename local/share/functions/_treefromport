@@ -1,0 +1,33 @@
+#compdef treefromport
+
+_treefromport() {
+  local state
+
+  _arguments \
+    '1:port:' \
+    '2:pid:->pids'
+
+  case $state in
+    pids)
+      local port="${words[2]}"
+      if [[ -n "$port" ]]; then
+        local -a procs
+        local pid=$(lsof -i :"$port" -t 2>/dev/null | head -1)
+
+        while [[ "$pid" != "1" ]] && [[ -n "$pid" ]]; do
+          local info=$(ps -o pid=,comm= -p "$pid" 2>/dev/null | xargs)
+          if [[ -n "$info" ]]; then
+            local p=$(echo "$info" | awk '{print $1}')
+            local cmd=$(echo "$info" | awk '{print $2}')
+            procs+=("${p}:${cmd}")
+          fi
+          pid=$(ps -o ppid= -p "$pid" 2>/dev/null | tr -d ' ')
+        done
+
+        _describe 'process' procs
+      fi
+      ;;
+  esac
+}
+
+_treefromport "$@"
