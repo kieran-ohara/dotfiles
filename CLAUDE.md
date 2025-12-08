@@ -77,3 +77,17 @@ The repository uses dotbot with OS-specific configuration files:
 - **mise**: Primary tool version manager (replaces asdf)
 - **Homebrew**: System package management with Brewfile
 - **npm/uv**: Language-specific package management
+
+### Zsh Functions
+
+Custom shell functions use zsh's autoload mechanism:
+
+1. Create the function file in `local/share/functions/<function_name>` (no extension)
+2. The function must be defined inside the file: `<function_name>() { ... }`
+3. Add `autoload -Uz <function_name>` to `config/zsh/.zshrc`
+
+For tab completions:
+1. Create `local/share/functions/_<function_name>` with `#compdef <function_name>` header
+2. Completions are autoloaded by `compinit` automatically (no manual autoload needed)
+
+The fpath is configured in `config/zsh/.zshenv` to include `$XDG_DATA_HOME/functions`.
