@@ -1,0 +1,23 @@
+treefromport() {
+  emulate -L zsh
+
+  if [[ -z "$1" ]]; then
+    echo "Usage: treefromport <port>" >&2
+    return 1
+  fi
+
+  local port="$1"
+  local pid=$(lsof -i :"$port" -t 2>/dev/null | head -1)
+
+  if [[ -z "$pid" ]]; then
+    echo "No process found listening on port $port" >&2
+    return 1
+  fi
+
+  echo "Process tree for port $port:\n"
+
+  while [[ "$pid" != "1" ]] && [[ -n "$pid" ]]; do
+    ps -o pid=,ppid=,comm= -p "$pid" 2>/dev/null
+    pid=$(ps -o ppid= -p "$pid" 2>/dev/null | tr -d ' ')
+  done
+}
