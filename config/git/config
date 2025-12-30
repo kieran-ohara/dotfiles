@@ -82,13 +82,11 @@
 [status]
 	submodulesummary = 1
 
-[includeIf "gitdir:~/src/dotfiles/"]
+[includeIf "gitdir:/Volumes/Source/dotfiles/"]
 	path = personal
-[includeIf "gitdir:~/src/personal/"]
+[includeIf "gitdir:/Volumes/Source/personal/"]
 	path = personal
-[includeIf "gitdir:~/src/mag/"]
-	path = mag
-[includeIf "gitdir:~/src/journey/"]
+[includeIf "gitdir:/Volumes/Source/journey/"]
 	path = journey
 [credential]
 	helper =
