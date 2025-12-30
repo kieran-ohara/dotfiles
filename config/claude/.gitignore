@@ -2,9 +2,13 @@
 debug
 file-history
 history.jsonl
+plans
 plugins
 projects
 settings.json
+settings.local.json
 shell-snapshots
+stats-cache.json
 statsig
+telemetry
 todos
