@@ -42,5 +42,15 @@ require('render-markdown').setup({
     checked = {
       icon = ' ',
     }
-  }
+  },
+  link = {
+    enabled = true,
+    render_modes = false,
+    footnote = {
+      enabled = false,
+    },
+    image = '󰥶 ',
+    email = '󰀓 ',
+    hyperlink = '󰌹 '
+  },
 })
