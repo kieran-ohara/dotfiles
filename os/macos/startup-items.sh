@@ -10,5 +10,4 @@ EOF
 }
 
 add_to_login_items "/Applications/Amethyst.app"
-add_to_login_items "/Applications/Maccy.app"
 add_to_login_items "/Applications/OrbStack.app"
