@@ -59,5 +59,3 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [make config/terminfo/db/61/alacritty-kieran]
-    - [./local/share/scripts/build-parsers ./local/share/nvim/site/pack/treesitter/start/nvim-treesitter/lockfile.json]
-    - [./local/share/scripts/build-completions]
