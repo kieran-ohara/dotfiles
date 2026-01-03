@@ -61,6 +61,7 @@ This is a comprehensive dotfiles repository using **dotbot** for deployment mana
 #### macOS Integration
 - **Window Management**: Amethyst, skhd, Karabiner Elements
 - **System Preferences**: Automated via `os/macos/preferences.sh`
+- **Startup Items**: Apps to launch at login via `os/macos/startup-items.sh`
 - **Launch Agents**: Custom on-login service
 
 ### Deployment System
