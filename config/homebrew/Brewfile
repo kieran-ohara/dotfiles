@@ -32,7 +32,6 @@ cask 'onedrive'
 cask 'omnifocus'
 cask 'orbstack'
 cask 'qbittorrent'
-cask 'rewind'
 cask 'session-manager-plugin'
 cask 'sizzy'
 cask 'slack'
@@ -48,7 +47,6 @@ cask 'zoom'
 
 mas '1Password Safari', id: 1569813296
 # mas 'Noir Safari', id: 1592844577
-mas 'Reeder', id: 1449412482
 
 brew 'azure-cli'
 brew 'cw'
@@ -80,7 +78,6 @@ brew 'mise'
 brew 'ncdu'
 brew 'nvim'
 brew 'openssl'
-brew 'packer'
 brew 'python@3.9'
 brew 'rg'
 brew 'shellcheck'
