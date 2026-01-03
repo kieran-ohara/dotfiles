@@ -32,5 +32,9 @@ defaults write com.amethyst.Amethyst window-margin-size 6
 # Disable Magic Mouse Zoom feature.
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseOneFingerDoubleTapGesture 0
 
-sudo killall Dock Finder SystemUIServer
+# Always show Screen Mirroring in menu bar.
+defaults -currentHost write com.apple.controlcenter ScreenMirroring -int 18
+defaults write com.apple.controlcenter "NSStatusItem VisibleCC ScreenMirroring" -bool true
+
+sudo killall Dock Finder SystemUIServer ControlCenter
 
