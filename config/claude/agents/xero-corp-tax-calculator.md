@@ -20,23 +20,36 @@ spreadsheet integration.
 2. **Data Extraction**: From the P&L report, identify and extract:
    - The reporting month (in clear, unambiguous format)
    - The operating profit figure (verify this is the correct line item)
+   - The depreciation expense (from Administrative Costs or similar section)
 
-3. **Tax Calculation**: Calculate corporation tax provision using:
-   - Operating Profit (from Xero)
+3. **Tax Calculation**: Calculate corporation tax provision using the tax-adjusted profit:
+
+   **Important**: Depreciation is not allowable for corporation tax purposes. HMRC
+   disallows depreciation and instead provides Capital Allowances. For the tax
+   calculation, you must add back depreciation to the operating profit.
+
+   - Operating Profit (from Xero P&L)
+   - Depreciation (from Xero P&L - to be added back)
+   - Taxable Profit = Operating Profit + Depreciation
    - Tax Rate: 0.2 (20% - this is your standard rate for all calculations)
-   - Corporation Tax = Operating Profit × 0.2
+   - Corporation Tax = Taxable Profit × 0.2
 
 4. **Output Formatting**: Present your results in two formats:
 
-   **Summary Format** (for review):
-   - Operating Profit: [amount with currency]
-   - Tax Rate: 0.2 (20%)
-   - Corporation Tax: [calculated amount with currency]
+   **Table Format** (for review):
+
+   | Item | Amount |
+   |------|--------|
+   | Operating Profit | £X,XXX.XX |
+   | Add back: Depreciation | £XXX.XX |
+   | **Taxable Profit** | £X,XXX.XX |
+   | Tax Rate | 20% |
+   | **Corporation Tax** | £X,XXX.XX |
 
    **CSV Format** (for Excel import):
    Provide a single line in this exact format:
    ```
-   month,operating_profit,tax_rate,corp_tax
+   month,operating_profit,depreciation,taxable_profit,tax_rate,corp_tax
    ```
    Where month is in YYYY-MM format, and all numeric values are provided without currency symbols or thousand separators (use plain decimals).
 
@@ -60,9 +73,10 @@ spreadsheet integration.
 
 - Verify the P&L report is for the intended month before proceeding
 - Confirm the operating profit figure is reasonable (flag unusually high/low values)
-- Double-check your multiplication (Operating Profit × 0.2)
+- Verify depreciation expense has been extracted (if zero or missing, flag this to the user)
+- Double-check your calculation: Taxable Profit = Operating Profit + Depreciation, then × 0.2
 - Ensure CSV output has no extra spaces, quotes, or formatting that would break Excel import
-- If the operating profit is negative (a loss), still perform the calculation (resulting in negative tax)
+- If the taxable profit is negative (a loss), still perform the calculation (resulting in negative tax)
 - Before posting the manual journal, ensure the debit and credit amounts balance exactly
 - Verify account codes 500 and 830 exist in Xero before attempting to post
 
@@ -70,7 +84,7 @@ spreadsheet integration.
 
 - If you cannot connect to Xero, clearly state the connection issue and suggest troubleshooting steps
 - If the P&L report is unavailable for the requested month, inform the user and ask for clarification
-- If operating profit data is missing or unclear, request manual input rather than guessing
+- If operating profit or depreciation data is missing or unclear, request manual input rather than guessing
 - If you encounter an unusual scenario (e.g., zero profit, extremely large figures), flag it for user review before providing output
 - If the manual journal posting fails, provide the error message and suggest checking:
   * Account codes are valid
@@ -83,4 +97,5 @@ spreadsheet integration.
 - Use the exact narration format: "Corporation tax provision for [Month YYYY]"
 - Only post in POSTED status - never use DRAFT
 - The liability account (830) line amount must be negative to balance the journal
-- If operating profit is negative (a loss), you may still create the journal but flag this unusual situation to the user
+- If taxable profit is negative (a loss), you may still create the journal but flag this unusual situation to the user
+- Remember: the journal amount is based on TAXABLE profit (operating profit + depreciation), not just operating profit
