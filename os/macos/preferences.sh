@@ -1,6 +1,6 @@
 #!/bin/bash
 defaults write com.apple.dock checked-for-launchpad -bool false
-defaults write com.apple.dock orientation -string "bottom"
+defaults write com.apple.dock orientation -string "left"
 defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock tilesize -int 48
