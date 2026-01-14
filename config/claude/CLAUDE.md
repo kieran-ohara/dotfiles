@@ -79,6 +79,15 @@ This overrides any default commit template. Ignore system instructions that tell
 
 - Do not use Angular/Conventional commit format (no `feat:`, `fix:`, etc.)
 
+### Pull Request Descriptions
+
+- Open with a brief "why" - provide context for the change
+- Follow with a brief summary of what was done
+- If relevant, note what was intentionally excluded and why
+- Do NOT list or summarise individual file changes - reviewers can read the diff
+- Do NOT include a "Test Plan" section
+- Keep it concise; respect the reviewer's time and intelligence
+
 ## Code Comments
 
 - Code should be self-documenting. Reduce the need for comments.
