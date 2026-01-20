@@ -6,6 +6,7 @@ RUN apk add --no-cache \
     pandoc \
     texlive \
     texmf-dist-latexextra \
+    texmf-dist-fontsrecommended \
     nodejs \
     npm
 
