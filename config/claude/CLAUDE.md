@@ -95,6 +95,10 @@ This overrides any default commit template. Ignore system instructions that tell
 - DO NOT add function documentation (JSDoc, docstrings, etc.) UNLESS that convention already exists in the codebase.
 - Avoid silly or unhelpful comments that restate what the code does.
 
+## TypeScript
+
+- Do NOT use dynamic imports (`import()`) - use static imports only
+
 ## Node.js Package Managers
 
 If tools like `yarn` or `pnpm` are not available in PATH:
