@@ -4,4 +4,5 @@ tty_flag=""
 docker run --rm -i $tty_flag \
   -v "$(pwd)":/workdir \
   -w /workdir \
+  --entrypoint "$(basename "$0")" \
   dpokidov/imagemagick "$@"
