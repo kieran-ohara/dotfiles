@@ -1,5 +1,7 @@
 #!/bin/bash
-docker run --rm -it \
+tty_flag=""
+[ -t 0 ] && tty_flag="-t"
+docker run --rm -i $tty_flag \
   -v "$(pwd)":/workdir \
   -w /workdir \
   dpokidov/imagemagick "$@"
