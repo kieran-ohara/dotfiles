@@ -27,6 +27,13 @@
         "-ic",
         "mcp-remote https://mcp.context7.com/mcp --header CONTEXT7_API_KEY:${MCP_CONTEXT7_API_KEY}"
       ]
+    },
+    "aws-knowledge": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "mcp-remote https://knowledge-mcp.global.api.aws"
+      ]
     }
   }
 }
