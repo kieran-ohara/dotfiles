@@ -1,8 +1,6 @@
 [tools]
 node = "lts"
 
-"npm:@anthropic-ai/claude-code" = "latest"
-
 # NPM/IDE
 "npm:markdownlint-cli" = "latest"
 "npm:typescript" = "latest"
