@@ -13,6 +13,13 @@
         "-ic",
         "mcp-obsidian /Users/kieranohara/Obsidian/Vault"
       ]
+    },
+    "xero": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "xero-mcp-server"
+      ]
     }
   }
 }
