@@ -6,6 +6,13 @@
         "-ic",
         "mcp-server-playwright"
       ]
+    },
+    "obsidian": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "mcp-obsidian /Users/kieranohara/Obsidian/Vault"
+      ]
     }
   }
 }
