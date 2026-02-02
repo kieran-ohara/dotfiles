@@ -27,6 +27,7 @@ cask 'microsoft-outlook'
 # cask 'microsoft-teams'
 # cask 'microsoft-word'
 # cask 'navicat-for-mysql' # download this
+cask 'mochi'
 cask 'obsidian'
 cask 'onedrive'
 cask 'omnifocus'
