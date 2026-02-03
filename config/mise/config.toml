@@ -9,6 +9,7 @@ node = "lts"
 
 # NPM/MCP
 "npm:@1mcp/agent" = "latest"
+"npm:@fredrika/mcp-mochi" = "latest"
 "npm:@playwright/mcp" = "latest"
 "npm:@xeroapi/xero-mcp-server" = "latest"
 "npm:@mauricio.wolff/mcp-obsidian" = "latest"
