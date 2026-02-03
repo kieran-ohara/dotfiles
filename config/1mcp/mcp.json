@@ -41,6 +41,13 @@
         "-ic",
         "mcp-remote https://knowledge-mcp.global.api.aws"
       ]
+    },
+    "omnifocus": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "omnifocus-mcp"
+      ]
     }
   }
 }

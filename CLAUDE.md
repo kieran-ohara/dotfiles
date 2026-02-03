@@ -64,6 +64,43 @@ This is a comprehensive dotfiles repository using **dotbot** for deployment mana
 - **Startup Items**: Apps to launch at login via `os/macos/startup-items.sh`
 - **Launch Agents**: Custom on-login service
 
+#### MCP (Model Context Protocol) Configuration
+
+Claude Desktop and other Claude tools connect to MCP servers via **1mcp** relay:
+
+```
+Claude Desktop / Windsurf / Claude Code
+            ↓
+    http://localhost:3050/sse
+            ↓
+         1mcp (relay)
+            ↓
+    MCP Servers (playwright, obsidian, mochi, xero, context7, etc.)
+```
+
+**Key files:**
+- `config/claude-desktop/claude_desktop_config.json` - Claude Desktop config
+- `config/1mcp/mcp.json` - 1mcp server configuration
+- `config/mise/config.toml` - MCP server dependencies (npm packages)
+- `config/zsh/.zshenv.secrets.tmpl` - Environment variable template
+- `os/macos/me.kieranbamforth.1mcp.plist` - Launch agent for 1mcp
+
+**Dependencies** are managed via mise in `config/mise/config.toml`:
+```toml
+"npm:@1mcp/agent" = "latest"
+"npm:@playwright/mcp" = "latest"
+"npm:@xeroapi/xero-mcp-server" = "latest"
+"npm:@mauricio.wolff/mcp-obsidian" = "latest"
+"npm:@fredrika/mcp-mochi" = "latest"
+```
+
+**Environment variables** use 1Password injection:
+1. Template at `config/zsh/.zshenv.secrets.tmpl` contains `op://` references
+2. During install, `op inject` generates `~/.zshenv.secrets` with actual values
+3. Shell sources secrets, 1mcp passes them to stdio-based MCP servers
+
+**Helper function:** `claudeaddmcp` adds MCP servers to Claude Code with built-in support for common servers.
+
 ### Deployment System
 The repository uses dotbot with OS-specific configuration files:
 - `os/default/install.conf.yaml` - Base configuration for all systems
