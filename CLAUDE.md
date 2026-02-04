@@ -101,6 +101,8 @@ Claude Desktop / Windsurf / Claude Code
 
 **Helper function:** `claudeaddmcp` adds MCP servers to Claude Code with built-in support for common servers.
 
+**Restart 1mcp:** `launchctl kickstart -k gui/$(id -u)/1mcp.local.job`
+
 ### Deployment System
 The repository uses dotbot with OS-specific configuration files:
 - `os/default/install.conf.yaml` - Base configuration for all systems
