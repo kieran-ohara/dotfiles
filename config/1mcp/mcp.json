@@ -53,7 +53,7 @@
       "command": "/bin/zsh",
       "args": [
         "-ic",
-        "ms-365-mcp-server --org-mode"
+        "ms-365-mcp-server --org-mode --enabled-tools 'mail|attachment|draft|calendar|event|contact|shared'"
       ]
     }
   }
