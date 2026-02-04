@@ -16,6 +16,7 @@ node = "lts"
 "npm:@xeroapi/xero-mcp-server" = "latest"
 "npm:mcp-remote" = "latest"
 "npm:omnifocus-mcp" = "latest"
+"npm:powerplatform-mcp" = "latest"
 
 python = "3.11"
 uv = "latest"

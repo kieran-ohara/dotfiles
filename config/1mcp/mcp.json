@@ -71,6 +71,14 @@
         "ms-365-mcp-server --org-mode --enabled-tools 'mail|attachment|draft|calendar|event|contact|shared|sharepoint|site|excel|worksheet|workbook|range|chart'"
       ],
       "tags": ["accounting"]
+    },
+    "powerplatform": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "powerplatform-mcp"
+      ],
+      "tags": ["business"]
     }
   }
 }
