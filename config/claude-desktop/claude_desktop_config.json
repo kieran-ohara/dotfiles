@@ -1,10 +1,24 @@
 {
   "mcpServers": {
-    "1cp": {
+    "1mcp-dev": {
       "command": "/bin/zsh",
       "args": [
         "-ic",
-        "mcp-remote http://localhost:3050/sse"
+        "mcp-remote 'http://localhost:3050/sse?tag-filter=core,dev'"
+      ]
+    },
+    "1mcp-business": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "mcp-remote 'http://localhost:3050/sse?tag-filter=core,business'"
+      ]
+    },
+    "1mcp-accounting": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "mcp-remote 'http://localhost:3050/sse?tag-filter=core,accounting'"
       ]
     }
   }

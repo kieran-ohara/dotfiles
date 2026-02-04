@@ -5,56 +5,72 @@
       "args": [
         "-ic",
         "mcp-server-playwright"
-      ]
+      ],
+      "tags": ["core"]
     },
     "obsidian": {
       "command": "/bin/zsh",
       "args": [
         "-ic",
         "mcp-obsidian /Users/kieranohara/Obsidian/Vault"
-      ]
+      ],
+      "tags": ["core"]
     },
     "mochi": {
       "command": "/bin/zsh",
       "args": [
         "-ic",
         "mcp-mochi"
-      ]
+      ],
+      "tags": ["core"]
     },
     "xero": {
       "command": "/bin/zsh",
       "args": [
         "-ic",
         "xero-mcp-server"
-      ]
+      ],
+      "tags": ["accounting"]
     },
     "context7": {
       "command": "/bin/zsh",
       "args": [
         "-ic",
         "mcp-remote https://mcp.context7.com/mcp --header CONTEXT7_API_KEY:${MCP_CONTEXT7_API_KEY}"
-      ]
+      ],
+      "tags": ["dev"]
     },
     "aws-knowledge": {
       "command": "/bin/zsh",
       "args": [
         "-ic",
         "mcp-remote https://knowledge-mcp.global.api.aws"
-      ]
+      ],
+      "tags": ["dev"]
     },
     "omnifocus": {
       "command": "/bin/zsh",
       "args": [
         "-ic",
         "omnifocus-mcp"
-      ]
+      ],
+      "tags": ["core"]
     },
     "ms365": {
       "command": "/bin/zsh",
       "args": [
         "-ic",
         "ms-365-mcp-server --org-mode --enabled-tools 'mail|attachment|draft|calendar|event|contact|shared'"
-      ]
+      ],
+      "tags": ["business"]
+    },
+    "ms365-accounting": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "ms-365-mcp-server --org-mode --enabled-tools 'mail|attachment|draft|calendar|event|contact|shared|sharepoint|site|excel|worksheet|workbook|range|chart'"
+      ],
+      "tags": ["accounting"]
     }
   }
 }
