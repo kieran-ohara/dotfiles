@@ -48,6 +48,13 @@
         "-ic",
         "omnifocus-mcp"
       ]
+    },
+    "ms365": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "ms-365-mcp-server --org-mode"
+      ]
     }
   }
 }
