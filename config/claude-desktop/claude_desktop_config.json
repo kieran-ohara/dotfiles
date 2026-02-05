@@ -1,5 +1,12 @@
 {
   "mcpServers": {
+    "1mcp-core": {
+      "command": "/bin/zsh",
+      "args": [
+        "-ic",
+        "mcp-remote 'http://localhost:3050/sse?tag-filter=core'"
+      ]
+    },
     "1mcp-dev": {
       "command": "/bin/zsh",
       "args": [
