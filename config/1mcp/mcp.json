@@ -1,83 +1,85 @@
 {
   "mcpServers": {
+    "browserbase": {
+      "command": "mcp-server-browserbase",
+      "args": [],
+      "env": {
+        "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+        "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}"
+      },
+      "tags": ["core"]
+    },
     "playwright": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "mcp-server-playwright"
-      ],
+      "command": "mcp-server-playwright",
+      "args": [],
       "tags": ["core"]
     },
     "obsidian": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "mcp-obsidian /Users/kieranohara/Obsidian/Vault"
-      ],
+      "command": "mcp-obsidian",
+      "args": ["/Users/kieranohara/Obsidian/Vault"],
       "tags": ["core"]
     },
     "mochi": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "mcp-mochi"
-      ],
+      "command": "mcp-mochi",
+      "args": [],
+      "env": {
+        "MOCHI_API_KEY": "${MOCHI_API_KEY}"
+      },
       "tags": ["core"]
     },
     "xero": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "xero-mcp-server"
-      ],
+      "command": "xero-mcp-server",
+      "args": [],
+      "env": {
+        "XERO_CLIENT_ID": "${XERO_CLIENT_ID}",
+        "XERO_CLIENT_SECRET": "${XERO_CLIENT_SECRET}"
+      },
       "tags": ["accounting"]
     },
     "context7": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "mcp-remote https://mcp.context7.com/mcp --header CONTEXT7_API_KEY:${MCP_CONTEXT7_API_KEY}"
-      ],
+      "command": "mcp-remote",
+      "args": ["https://mcp.context7.com/mcp", "--header", "CONTEXT7_API_KEY:${MCP_CONTEXT7_API_KEY}"],
       "tags": ["dev"]
     },
     "aws-knowledge": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "mcp-remote https://knowledge-mcp.global.api.aws"
-      ],
+      "command": "mcp-remote",
+      "args": ["https://knowledge-mcp.global.api.aws"],
       "tags": ["dev"]
     },
     "omnifocus": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "omnifocus-mcp"
-      ],
+      "command": "omnifocus-mcp",
+      "args": [],
       "tags": ["core"]
     },
     "ms365": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "ms-365-mcp-server --org-mode --enabled-tools 'mail|attachment|draft|calendar|event|contact|shared'"
-      ],
+      "command": "ms-365-mcp-server",
+      "args": ["--org-mode", "--enabled-tools", "mail|attachment|draft|calendar|event|contact|shared"],
+      "env": {
+        "MS365_MCP_CLIENT_ID": "${MS365_MCP_CLIENT_ID}",
+        "MS365_MCP_CLIENT_SECRET": "${MS365_MCP_CLIENT_SECRET}",
+        "MS365_MCP_TENANT_ID": "${MS365_MCP_TENANT_ID}"
+      },
       "tags": ["business"]
     },
     "ms365-accounting": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "ms-365-mcp-server --org-mode --enabled-tools 'mail|attachment|draft|calendar|event|contact|shared|sharepoint|site|excel|worksheet|workbook|range|chart|file'"
-      ],
+      "command": "ms-365-mcp-server",
+      "args": ["--org-mode", "--enabled-tools", "mail|attachment|draft|calendar|event|contact|shared|sharepoint|site|excel|worksheet|workbook|range|chart|file"],
+      "env": {
+        "MS365_MCP_CLIENT_ID": "${MS365_MCP_CLIENT_ID}",
+        "MS365_MCP_CLIENT_SECRET": "${MS365_MCP_CLIENT_SECRET}",
+        "MS365_MCP_TENANT_ID": "${MS365_MCP_TENANT_ID}"
+      },
       "tags": ["accounting"]
     },
     "powerplatform": {
-      "command": "/bin/zsh",
-      "args": [
-        "-ic",
-        "powerplatform-mcp"
-      ],
+      "command": "powerplatform-mcp",
+      "args": [],
+      "env": {
+        "POWERPLATFORM_URL": "${POWERPLATFORM_URL}",
+        "POWERPLATFORM_CLIENT_ID": "${POWERPLATFORM_CLIENT_ID}",
+        "POWERPLATFORM_CLIENT_SECRET": "${POWERPLATFORM_CLIENT_SECRET}",
+        "POWERPLATFORM_TENANT_ID": "${POWERPLATFORM_TENANT_ID}"
+      },
       "tags": ["business"]
     }
   }

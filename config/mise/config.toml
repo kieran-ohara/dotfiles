@@ -9,6 +9,7 @@ node = "lts"
 
 # NPM/MCP
 "npm:@1mcp/agent" = "latest"
+"npm:@browserbasehq/mcp-server-browserbase" = "latest"
 "npm:@fredrika/mcp-mochi" = "latest"
 "npm:@mauricio.wolff/mcp-obsidian" = "latest"
 "npm:@playwright/mcp" = "latest"
@@ -16,7 +17,7 @@ node = "lts"
 "npm:@xeroapi/xero-mcp-server" = "latest"
 "npm:mcp-remote" = "latest"
 "npm:omnifocus-mcp" = "latest"
-"npm:powerplatform-mcp" = "latest"
+"npm:@kieran-ohara/powerplatform-mcp" = "latest"
 
 python = "3.11"
 uv = "latest"
