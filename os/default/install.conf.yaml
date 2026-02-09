@@ -21,6 +21,7 @@
     - ~/.local/state/vim/swapfiles
     - ~/.local/state/vim/undodir
     - ~/.local/state/zsh
+    - ~/.ssh
     - ~/.vim
 
 - link:

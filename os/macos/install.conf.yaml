@@ -11,16 +11,12 @@
     - ~/Library/LaunchAgents
 
 - link:
-    ~/.codeium/windsurf/mcp_config.json: config/windsurf/mcp_config.json
     ~/.config/1Password: config/1Password
     ~/.config/karabiner: config/karabiner
     ~/.config/skhd: config/skhd
     ~/Library/Application Support/Claude/claude_desktop_config.json: config/claude-desktop/claude_desktop_config.json
     ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist: os/macos/me.kieranbamforth.1mcp.plist
-    ~/src/dotfiles: /Volumes/Source/dotfiles
-    ~/src/journey: /Volumes/Source/journey
-    ~/src/mag: /Volumes/Source/mag
-    ~/src/personal: /Volumes/Source/personal
+    ~/src: /Volumes/Source
 
 - shell:
     - [make dependencies/brew]
