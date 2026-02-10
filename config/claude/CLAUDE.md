@@ -105,3 +105,11 @@ If tools like `yarn` or `pnpm` are not available in PATH:
 1. Check `package.json` for a `packageManager` field
 2. If present, use `corepack enable` to activate the specified package manager
 3. Then run the required package manager commands
+
+## Revision and Studying
+
+### Mochi Cards
+
+When creating Mochi cards:
+- DO NOT add tags unless explicitly asked to
+- Focus on the content of the card rather than categorization
