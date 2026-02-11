@@ -1,0 +1,51 @@
+name: Check Node.js LTS
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check-node-lts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Node.js LTS version
+        run: |
+          LTS_MAJOR=$(curl -s https://endoflife.date/api/nodejs.json \
+            | jq -r '[.[] | select(.lts != false and .lts != null)] | first | .cycle')
+
+          PINNED=$(grep '^node' config/mise/config.toml \
+            | sed 's/.*"\(.*\)".*/\1/')
+
+          echo "Current LTS: $LTS_MAJOR"
+          echo "Pinned: $PINNED"
+
+          if [ "$LTS_MAJOR" != "$PINNED" ]; then
+            echo "STALE=true" >> "$GITHUB_ENV"
+            echo "LTS_MAJOR=$LTS_MAJOR" >> "$GITHUB_ENV"
+            echo "PINNED=$PINNED" >> "$GITHUB_ENV"
+          fi
+
+      - name: Open issue if stale
+        if: env.STALE == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `Node.js LTS is now v${process.env.LTS_MAJOR}, pinned at v${process.env.PINNED}`;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'node-lts'
+            });
+            if (issues.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body: `Update \`node\` in \`config/mise/config.toml\` from \`"${process.env.PINNED}"\` to \`"${process.env.LTS_MAJOR}"\`.`,
+                labels: ['node-lts']
+              });
+            }
