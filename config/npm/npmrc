@@ -2,3 +2,5 @@ cache=${XDG_CACHE_HOME}/npm
 init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 logs-dir=${XDG_STATE_HOME}/npm/logs
 @kieran-ohara:registry=https://npm.pkg.github.com/
+@irkb:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}
