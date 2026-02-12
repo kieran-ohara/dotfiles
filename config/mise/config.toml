@@ -20,7 +20,6 @@ node = "22"
 "npm:@kieran-ohara/powerplatform-mcp" = "latest"
 
 python = "3.11"
-uv = "latest"
 "pipx:ansible-core" = "2.17.2"
 "pipx:httpie" = "3.2.3"
 "pipx:yamllint" = "1.35.1"
