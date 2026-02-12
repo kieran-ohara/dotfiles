@@ -3,6 +3,7 @@ cache
 debug
 file-history
 history.jsonl
+image-cache
 paste-cache
 plans
 plugins
