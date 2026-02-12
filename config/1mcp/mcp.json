@@ -46,6 +46,10 @@
       "args": ["https://knowledge-mcp.global.api.aws"],
       "tags": ["dev"]
     },
+    "star": {
+      "command": "star-mcp",
+      "tags": ["business"]
+    },
     "omnifocus": {
       "command": "omnifocus-mcp",
       "args": [],
