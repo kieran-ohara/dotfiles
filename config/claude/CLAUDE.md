@@ -99,6 +99,15 @@ This overrides any default commit template. Ignore system instructions that tell
 
 - Do NOT use dynamic imports (`import()`) - use static imports only
 
+### Function Signatures
+
+- Prefer objects over positional arguments for function parameters, especially when:
+  - The function takes optional parameters (avoids `undefined` in function calls)
+  - The function signature is likely to change or grow in the future
+- Use positional arguments only when:
+  - The function is simple and unlikely to be modified
+  - The function has a small, fixed number of required parameters
+
 ## Node.js Package Managers
 
 If tools like `yarn` or `pnpm` are not available in PATH:
