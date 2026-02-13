@@ -84,10 +84,8 @@
 
 [includeIf "gitdir:/Volumes/Source/dotfiles/"]
 	path = personal
-[includeIf "gitdir:/Volumes/Source/personal/"]
+[includeIf "gitdir:/Volumes/Source/personal/**"]
 	path = personal
-[includeIf "gitdir:/Volumes/Source/journey/"]
-	path = journey
 [credential]
 	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
