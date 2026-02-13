@@ -86,6 +86,7 @@ This overrides any default commit template. Ignore system instructions that tell
 - If relevant, note what was intentionally excluded and why
 - Do NOT list or summarise individual file changes - reviewers can read the diff
 - Do NOT include a "Test Plan" section
+- Do NOT mention AI assistance, Claude, or include links to claude.ai
 - Keep it concise; respect the reviewer's time and intelligence
 
 ## Code Comments
