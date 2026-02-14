@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>openclaw-gateway.local.job</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/zsh</string>
+		<string>-ic</string>
+		<string>openclaw gateway</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+
+	<key>StandardErrorPath</key>
+	<string>/tmp/openclaw-gateway.err</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/openclaw-gateway.out</string>
+</dict>
+</plist>

@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.9",
+    "lastTouchedAt": "2026-02-14T22:12:29.951Z"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/moonshotai/kimi-k2.5"
+      },
+      "workspace": "/Users/kieran.ohara/.local/state/openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "op://IT/OpenClaw Token/telegram/Bot Token",
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      },
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "allowInsecureAuth": true
+    }
+  },
+  "skills": {
+    "entries": {
+      "mcporter": {
+        "enabled": true
+      },
+      "1password": {
+        "enabled": false
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "bluebubbles": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "clawhub": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "github": {
+        "enabled": false
+      },
+      "gog": {
+        "enabled": false
+      },
+      "goplaces": {
+        "enabled": false
+      },
+      "healthcheck": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "imsg": {
+        "enabled": false
+      },
+      "local-places": {
+        "enabled": false
+      },
+      "model-usage": {
+        "enabled": false
+      },
+      "nano-pdf": {
+        "enabled": false
+      },
+      "nano-banana-pro": {
+        "enabled": false
+      },
+      "weather": {
+        "enabled": false
+      },
+      "wacli": {
+        "enabled": false
+      },
+      "voice-call": {
+        "enabled": false
+      },
+      "video-frames": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "things-mac": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "slack": {
+        "enabled": false
+      },
+      "skill-creator": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "session-logs": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      },
+      "peekaboo": {
+        "enabled": false
+      },
+      "ordercli": {
+        "enabled": false
+      },
+      "oracle": {
+        "enabled": false
+      },
+      "openhue": {
+        "enabled": false
+      },
+      "openai-whisper-api": {
+        "enabled": false
+      },
+      "openai-whisper": {
+        "enabled": false
+      },
+      "openai-image-gen": {
+        "enabled": false
+      },
+      "notion": {
+        "enabled": false
+      },
+      "obsidian": {
+        "enabled": false
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}

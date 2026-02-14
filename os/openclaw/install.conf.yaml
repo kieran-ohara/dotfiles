@@ -1,0 +1,19 @@
+---
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.local/state/openclaw
+    - ~/Library/LaunchAgents
+
+- link:
+    ~/.config/openclaw: config/openclaw
+    ~/Library/LaunchAgents/me.kieranbamforth.openclaw-gateway.plist:
+      os/openclaw/me.kieranbamforth.openclaw-gateway.plist
+
+- shell:
+    - [/opt/homebrew/bin/op inject -i ./config/openclaw/openclaw.json.tmpl -o ./config/openclaw/openclaw.json]
+    - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.openclaw-gateway.plist]
