@@ -85,6 +85,10 @@ export MISE_PYTHON_DEFAULT_PACKAGES_FILE=$XDG_CONFIG_HOME/mise/python-packages.t
 # Ollama
 export OLLAMA_MODELS=$XDG_DATA_HOME/ollama/models
 
+# OpenClaw
+export OPENCLAW_CONFIG_PATH=$XDG_CONFIG_HOME/openclaw/openclaw.json
+export OPENCLAW_STATE_DIR=$XDG_STATE_HOME/openclaw
+
 # Azure
 export AZURE_CONFIG_DIR=$XDG_CONFIG_HOME/azure
 

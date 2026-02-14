@@ -1,0 +1,16 @@
+{
+  "gateway": {
+    "port": 18789,
+    "bind": "lan",
+    "mode": "local",
+    "controlUi": {
+      "allowInsecureAuth": true
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": { "primary": "openrouter/google/gemini-2.5-flash" },
+      "workspace": "~/.local/state/openclaw/workspace"
+    }
+  }
+}

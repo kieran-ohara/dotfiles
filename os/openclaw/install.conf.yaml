@@ -1,0 +1,18 @@
+---
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.local/state/openclaw
+    - ~/Library/LaunchAgents
+
+- link:
+    ~/.config/openclaw: config/openclaw
+    ~/Library/LaunchAgents/me.kieranbamforth.openclaw-gateway.plist:
+      os/openclaw/me.kieranbamforth.openclaw-gateway.plist
+
+- shell:
+    - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.openclaw-gateway.plist]
