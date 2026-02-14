@@ -19,6 +19,10 @@ node = "22"
 "npm:mcp-remote" = "latest"
 "npm:omnifocus-mcp" = "latest"
 
+# OpenClaw
+"npm:mcporter" = "latest"
+"npm:openclaw" = "latest"
+
 python = "3.11"
 "pipx:ansible-core" = "2.17.2"
 "pipx:httpie" = "3.2.3"

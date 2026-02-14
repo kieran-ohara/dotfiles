@@ -103,6 +103,19 @@ Claude Desktop / Windsurf / Claude Code
 
 **Restart 1mcp:** `launchctl kickstart -k gui/$(id -u)/1mcp.local.job`
 
+### Sensitive Configuration Files
+
+Configuration files containing secrets **must never** be committed directly. Instead, use 1Password CLI's `op inject` to template them:
+
+1. Create a `.tmpl` file checked into the repo with `op://` references in place of secrets (e.g. `op://vault/item/field`)
+2. During install, run `op inject` to produce the real config file:
+   ```bash
+   /opt/homebrew/bin/op inject -i ./path/to/config.tmpl -o ~/path/to/config
+   ```
+3. Ensure the generated output file is gitignored
+
+See `config/zsh/.zshenv.secrets.tmpl` for an example.
+
 ### Deployment System
 The repository uses dotbot with OS-specific configuration files:
 - `os/default/install.conf.yaml` - Base configuration for all systems
