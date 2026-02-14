@@ -1,0 +1,52 @@
+{
+  "mcpServers": {
+    "1mcp-core": {
+      "command": "mcp-remote",
+      "args": [
+        "http://localhost:3050/sse?tag-filter=core"
+      ],
+      "env": {
+        "PATH": "$HOME/.local/share/mise/shims:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    },
+    "1mcp-dev": {
+      "command": "mcp-remote",
+      "args": [
+        "http://localhost:3050/sse?tag-filter=core,dev"
+      ],
+      "env": {
+        "PATH": "$HOME/.local/share/mise/shims:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    },
+    "1mcp-business": {
+      "command": "mcp-remote",
+      "args": [
+        "http://localhost:3050/sse?tag-filter=core,business"
+      ],
+      "env": {
+        "PATH": "$HOME/.local/share/mise/shims:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    },
+    "1mcp-accounting": {
+      "command": "mcp-remote",
+      "args": [
+        "http://localhost:3050/sse?tag-filter=core,accounting"
+      ],
+      "env": {
+        "PATH": "$HOME/.local/share/mise/shims:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    }
+  },
+  "preferences": {
+    "menuBarEnabled": false,
+    "localAgentModeTrustedFolders": [
+      "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Documents/Properties/11 Livermore",
+      "$HOME/cv",
+      "$HOME/Library/CloudStorage/OneDrive-irkb.me",
+      "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Documents/Family/Harper",
+      "$HOME/Documents/Properties/11 Livermore"
+    ],
+    "coworkScheduledTasksEnabled": false,
+    "sidebarMode": "chat"
+  }
+}

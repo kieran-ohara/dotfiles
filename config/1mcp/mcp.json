@@ -16,7 +16,7 @@
     },
     "obsidian": {
       "command": "mcp-obsidian",
-      "args": ["/Users/kieranohara/Obsidian/Vault"],
+      "args": ["${HOME}/Obsidian/Vault"],
       "tags": ["core"]
     },
     "mochi": {
