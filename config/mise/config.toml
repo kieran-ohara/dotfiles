@@ -18,7 +18,6 @@ node = "22"
 "npm:@xeroapi/xero-mcp-server" = "latest"
 "npm:mcp-remote" = "latest"
 "npm:omnifocus-mcp" = "latest"
-"npm:@kieran-ohara/powerplatform-mcp" = "latest"
 
 python = "3.11"
 "pipx:ansible-core" = "2.17.2"
