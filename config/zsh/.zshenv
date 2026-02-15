@@ -70,6 +70,7 @@ export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
 
 # Docker
 export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
+export DOCKER_HOST=unix://${HOME}/.orbstack/run/docker.sock
 
 # Node
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
