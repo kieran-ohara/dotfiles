@@ -20,6 +20,7 @@ node = "22"
 "npm:omnifocus-mcp" = "latest"
 
 # OpenClaw
+"npm:mcporter" = "latest"
 "npm:openclaw" = "latest"
 
 python = "3.11"
