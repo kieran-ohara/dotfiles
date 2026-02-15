@@ -23,6 +23,7 @@
     - [/opt/homebrew/bin/mise install]
     - [/opt/homebrew/bin/envsubst '$HOME' < ./config/claude-desktop/claude_desktop_config.json.tmpl > "$HOME/Library/Application Support/Claude/claude_desktop_config.json", Generating Claude Desktop config]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist]
+    - [/opt/homebrew/bin/skhd --install-service]
     - [./os/macos/preferences.sh]
     - [./os/macos/startup-items.sh]
     - [./local/share/scripts/build-completions]
