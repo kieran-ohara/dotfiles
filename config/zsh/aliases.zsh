@@ -10,6 +10,7 @@ alias bs='brew search'
 alias bu='brew uninstall'
 alias cdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 alias c="claude"
+alias ct="CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude"
 alias cpr='cp -r'
 alias d='docker'
 alias dc='docker-compose'
