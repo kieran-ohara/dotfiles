@@ -9,7 +9,8 @@
     "allow": [
       "Bash(ls *)",
       "Bash(find *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Read"
     ]
   }
 }
