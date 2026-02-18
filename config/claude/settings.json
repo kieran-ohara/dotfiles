@@ -1,0 +1,14 @@
+{
+  "model": "opus",
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "invoice-tools@kieran-plugins": true
+  },
+  "alwaysThinkingEnabled": true,
+  "permissions": {
+    "allow": [
+      "Bash(ls *)",
+      "Bash(find *)"
+    ]
+  }
+}

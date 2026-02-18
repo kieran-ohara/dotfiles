@@ -8,11 +8,11 @@ paste-cache
 plans
 plugins
 projects
-settings.json
 settings.local.json
 shell-snapshots
 stats-cache.json
 statsig
 tasks
+teams
 telemetry
 todos
