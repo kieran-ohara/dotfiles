@@ -14,7 +14,8 @@
       "Bash(gh pr *)",
       "Bash(cat *)",
       "Bash(cd *)",
-      "Bash(npx prettier *)"
+      "Bash(npx prettier *)",
+      "Bash(git fetch *)"
     ]
   }
 }
