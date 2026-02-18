@@ -15,7 +15,9 @@
       "Bash(cat *)",
       "Bash(cd *)",
       "Bash(npx prettier *)",
-      "Bash(git fetch *)"
+      "Bash(git fetch *)",
+      "Bash(git checkout *)",
+      "WebFetch"
     ]
   }
 }
