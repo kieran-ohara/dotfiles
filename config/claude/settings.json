@@ -10,7 +10,8 @@
       "Bash(ls *)",
       "Bash(find *)",
       "Bash(git commit *)",
-      "Read"
+      "Read",
+      "Bash(gh pr *)"
     ]
   }
 }
