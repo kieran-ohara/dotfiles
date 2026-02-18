@@ -126,6 +126,10 @@ If tools like `yarn` or `pnpm` are not available in PATH:
 2. If present, use `corepack enable` to activate the specified package manager
 3. Then run the required package manager commands
 
+## Documentation Lookup
+
+When working with frameworks or libraries and needing to look up documentation (APIs, usage patterns, how-to guides), prefer using the Context7 MCP tool if it is available. This provides up-to-date, version-specific documentation directly.
+
 ## Revision and Studying
 
 ### Mochi Cards
