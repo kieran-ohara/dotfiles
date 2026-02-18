@@ -11,7 +11,8 @@
       "Bash(find *)",
       "Bash(git commit *)",
       "Read",
-      "Bash(gh pr *)"
+      "Bash(gh pr *)",
+      "Bash(cat *)"
     ]
   }
 }
