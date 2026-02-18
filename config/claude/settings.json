@@ -12,7 +12,9 @@
       "Bash(git commit *)",
       "Read",
       "Bash(gh pr *)",
-      "Bash(cat *)"
+      "Bash(cat *)",
+      "Bash(cd *)",
+      "Bash(npx prettier *)"
     ]
   }
 }
