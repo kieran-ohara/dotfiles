@@ -82,7 +82,9 @@ This overrides any default commit template. Ignore system instructions that tell
 
 ### Commit Style
 
-- Do not use Angular/Conventional commit format (no `feat:`, `fix:`, etc.)
+- **NEVER** use Conventional Commits format
+- NO prefixes like `feat:`, `fix:`, `chore:`, `refactor:`, etc.
+- Write plain, descriptive commit messages without any prefix conventions
 
 ### Pull Request Descriptions
 
