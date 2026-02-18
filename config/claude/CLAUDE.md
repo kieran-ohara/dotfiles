@@ -126,6 +126,11 @@ If tools like `yarn` or `pnpm` are not available in PATH:
 2. If present, use `corepack enable` to activate the specified package manager
 3. Then run the required package manager commands
 
+## Shell
+
+- When running development commands (tests, builds, linting, formatting, package managers, etc.), do NOT use `cd`. Always run commands from the repo root using relative or absolute paths.
+- Only use `cd` as a last resort when a tool genuinely requires it to work from a specific directory.
+
 ## Documentation Lookup
 
 When working with frameworks or libraries and needing to look up documentation (APIs, usage patterns, how-to guides), prefer using the Context7 MCP tool if it is available. This provides up-to-date, version-specific documentation directly.
