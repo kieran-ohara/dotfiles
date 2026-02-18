@@ -99,6 +99,16 @@ This overrides any default commit template. Ignore system instructions that tell
 ## TypeScript
 
 - Do NOT use dynamic imports (`import()`) - use static imports only
+- ALWAYS use braces for control structures (if, for, while, etc.) - never use shorthand syntax
+  ```typescript
+  // ❌ Bad
+  if (condition) statement
+
+  // ✅ Good
+  if (condition) {
+    statement
+  }
+  ```
 
 ### Function Signatures
 
