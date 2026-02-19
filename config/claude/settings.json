@@ -12,6 +12,8 @@
       "Bash(cd *)",
       "Bash(npx prettier *)",
       "Bash(npx jest *)",
+      "Bash(npx turbo *)",
+      "Bash(yarn turbo *)",
       "Bash(git fetch *)",
       "Bash(git checkout *)",
       "WebFetch",
