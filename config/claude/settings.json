@@ -18,7 +18,13 @@
       "Bash(git fetch *)",
       "Bash(git checkout *)",
       "WebFetch",
-      "Bash(tail *)"
+      "Bash(tail *)",
+      "Bash(mkdir *)",
+      "Bash(yarn workspace *)"
+    ],
+    "deny": [
+      "Bash(yarn workspace * add *)",
+      "Bash(yarn workspace * remove *)"
     ]
   }
 }
