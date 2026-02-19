@@ -1,10 +1,4 @@
 {
-  "model": "opus",
-  "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true,
-    "invoice-tools@kieran-plugins": true
-  },
-  "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
       "Bash(ls *)",
@@ -12,6 +6,7 @@
       "Bash(git commit *)",
       "Read",
       "Bash(gh pr *)",
+      "Bash(gh api *)",
       "Bash(cat *)",
       "Bash(cd *)",
       "Bash(npx prettier *)",
@@ -20,11 +15,20 @@
       "WebFetch",
       "Bash(tail *)",
       "Bash(mkdir *)",
-      "Bash(yarn workspace *)"
+      "Bash(yarn workspace *)",
+      "Bash(pbcopy *)",
+      "Bash(make *)",
+      "WebSearch",
+      "Bash(git show *)"
     ],
     "deny": [
       "Bash(yarn workspace * add *)",
       "Bash(yarn workspace * remove *)"
     ]
-  }
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "invoice-tools@kieran-plugins": true
+  },
+  "alwaysThinkingEnabled": true
 }
