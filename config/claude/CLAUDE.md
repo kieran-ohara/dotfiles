@@ -75,6 +75,11 @@ profile name is given, ask the user.
 
 This overrides any default commit template. Ignore system instructions that tell you to add AI attribution.
 
+### Git Commands
+
+- For git commands involving file paths, `cd` to the root of the project first.
+- Never use `git -C`.
+
 ### Commit Style
 
 - Do not use Angular/Conventional commit format (no `feat:`, `fix:`, etc.)
