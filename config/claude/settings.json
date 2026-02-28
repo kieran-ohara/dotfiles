@@ -26,7 +26,9 @@
       "Bash(git show *)",
       "Bash(gh run view *)",
       "Bash(gh run rerun *)",
-      "Bash(git ls-tree *)"
+      "Bash(git ls-tree *)",
+      "mcp__1mcp-accounting__xero_1mcp_list-bank-transactions",
+      "mcp__1mcp-accounting__xero_1mcp_list-tax-rates"
     ],
     "deny": [
       "Bash(yarn workspace * add *)",
