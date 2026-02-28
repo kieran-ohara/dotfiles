@@ -23,7 +23,10 @@
       "Bash(pbcopy *)",
       "Bash(make *)",
       "WebSearch",
-      "Bash(git show *)"
+      "Bash(git show *)",
+      "Bash(gh run view *)",
+      "Bash(gh run rerun *)",
+      "Bash(git ls-tree *)"
     ],
     "deny": [
       "Bash(yarn workspace * add *)",
