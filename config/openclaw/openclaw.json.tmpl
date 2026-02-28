@@ -4,6 +4,17 @@
     "lastTouchedAt": "2026-02-14T22:12:29.951Z"
   },
   "agents": {
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "craig",
+        "name": "craig",
+        "workspace": "/Users/kieran.ohara/.local/state/openclaw/ls",
+        "agentDir": "/Users/kieran.ohara/.local/state/openclaw/agents/craig/agent"
+      }
+    ],
     "defaults": {
       "model": {
         "primary": "openrouter/moonshotai/kimi-k2.5"
@@ -29,16 +40,27 @@
     "telegram": {
       "enabled": true,
       "dmPolicy": "pairing",
-      "botToken": "op://IT/OpenClaw Token/telegram/Bot Token",
       "groups": {
         "*": {
           "requireMention": true
         }
       },
       "groupPolicy": "allowlist",
-      "streamMode": "partial"
+      "streamMode": "partial",
+      "accounts": {
+        "default": {
+          "botToken": "op://IT/OpenClaw Token/telegram/Bot Token"
+        },
+        "craig": {
+          "botToken": "op://IT/OpenClaw Token/telegram/Craig"
+        }
+      }
     }
   },
+  "bindings": [
+    { "agentId": "main", "match": { "channel": "telegram", "accountId": "default" } },
+    { "agentId": "craig", "match": { "channel": "telegram", "accountId": "craig" } }
+  ],
   "gateway": {
     "port": 18789,
     "mode": "local",
