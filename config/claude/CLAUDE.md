@@ -22,6 +22,17 @@ Code should be delivered using a the Test Driven Development approach:
 5. Move to the next test
 6. Suggest refactoring opportunities when appropriate
 
+### Follow the Twelve-Factor App
+
+We follow the [Twelve-Factor App](https://12factor.net/) methodology closely.
+
+**Especially important: Factor III - Config**
+
+- Store configuration in environment variables, never in code
+- Never commit secrets, credentials, or environment-specific config to version control
+- Use `.env` files locally (gitignored) and environment variables in production
+- Configuration should vary between deployments (dev, staging, prod) without code changes
+
 ## AWS
 
 ### CLI
