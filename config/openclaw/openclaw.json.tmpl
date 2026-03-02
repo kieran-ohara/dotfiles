@@ -11,8 +11,14 @@
       {
         "id": "craig",
         "name": "craig",
-        "workspace": "/Users/kieran.ohara/.local/state/openclaw/ls",
+        "workspace": "/Users/kieran.ohara/.local/state/openclaw/workspaces/craig",
         "agentDir": "/Users/kieran.ohara/.local/state/openclaw/agents/craig/agent"
+      },
+      {
+        "id": "peter",
+        "name": "peter",
+        "workspace": "/Users/kieran.ohara/.local/state/openclaw/workspaces/peter",
+        "agentDir": "/Users/kieran.ohara/.local/state/openclaw/agents/peter/agent"
       }
     ],
     "defaults": {
@@ -53,13 +59,17 @@
         },
         "craig": {
           "botToken": "op://IT/OpenClaw Token/telegram/Craig"
+        },
+        "peter": {
+          "botToken": "op://IT/OpenClaw Token/telegram/Peter"
         }
       }
     }
   },
   "bindings": [
     { "agentId": "main", "match": { "channel": "telegram", "accountId": "default" } },
-    { "agentId": "craig", "match": { "channel": "telegram", "accountId": "craig" } }
+    { "agentId": "craig", "match": { "channel": "telegram", "accountId": "craig" } },
+    { "agentId": "peter", "match": { "channel": "telegram", "accountId": "peter" } }
   ],
   "gateway": {
     "port": 18789,
