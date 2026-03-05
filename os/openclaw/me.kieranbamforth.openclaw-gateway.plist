@@ -13,6 +13,18 @@
 	<key>RunAtLoad</key>
 	<true/>
 
+	<key>KeepAlive</key>
+	<dict>
+		<key>Crashed</key>
+		<true/>
+	</dict>
+
+	<key>ExitTimeOut</key>
+	<integer>10</integer>
+
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+
 	<key>StandardErrorPath</key>
 	<string>/tmp/openclaw-gateway.err</string>
 	<key>StandardOutPath</key>
