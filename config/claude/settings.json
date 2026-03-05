@@ -29,7 +29,9 @@
       "Bash(yarn workspace * exec *)",
       "Read",
       "WebFetch",
-      "WebSearch"
+      "WebSearch",
+      "mcp__1mcp-accounting__xero_1mcp_list-bank-transactions",
+      "mcp__1mcp-accounting__xero_1mcp_list-tax-rates"
     ]
   },
   "model": "opus",
