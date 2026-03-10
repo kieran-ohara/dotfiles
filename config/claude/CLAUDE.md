@@ -71,6 +71,10 @@ aws-vault exec profile-name -- cdk list
 Replace `profile-name` with the profile name given in the instruction. If no
 profile name is given, ask the user.
 
+## Jira
+
+Claude has access to Jira via the Jira CLI (`jira`). Use it to view, create, update, and search for issues.
+
 ## Git
 
 ### Commit Messages
