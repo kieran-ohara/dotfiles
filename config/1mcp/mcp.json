@@ -10,7 +10,7 @@
       "tags": ["core"]
     },
     "playwright": {
-      "command": "mcp-server-playwright",
+      "command": "playwright-mcp",
       "args": [],
       "tags": ["core"]
     },
