@@ -1,4 +1,5 @@
 .credentials.json
+backups
 cache
 debug
 file-history
@@ -8,6 +9,7 @@ paste-cache
 plans
 plugins
 projects
+session-env
 settings.local.json
 shell-snapshots
 stats-cache.json
