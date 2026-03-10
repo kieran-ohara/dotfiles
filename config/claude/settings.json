@@ -16,6 +16,7 @@
       "Bash(git ls-tree *)",
       "Bash(git show *)",
       "Bash(grep *)",
+      "Bash(jira *)",
       "Bash(ls *)",
       "Bash(make *)",
       "Bash(mkdir *)",
