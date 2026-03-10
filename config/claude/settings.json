@@ -42,6 +42,10 @@
     "invoice-tools@kieran-plugins": true
   },
   "alwaysThinkingEnabled": true,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "hooks": {
     "SessionStart": [
       {
