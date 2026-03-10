@@ -41,15 +41,6 @@
     ]
   },
   "model": "opus",
-  "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true,
-    "invoice-tools@kieran-plugins": true
-  },
-  "alwaysThinkingEnabled": true,
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
   "hooks": {
     "SessionStart": [
       {
@@ -73,5 +64,19 @@
         ]
       }
     ]
-  }
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "dev-tools@kierans-plugins": true,
+    "invoice-tools@kierans-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "kierans-plugins": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/kieranohara/src/personal/claude-plugins"
+      }
+    }
+  },
+  "alwaysThinkingEnabled": true
 }
