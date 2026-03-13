@@ -1,0 +1,11 @@
+#!/bin/zsh -li
+
+if [ "$1" = "mp1" ]; then
+  /opt/homebrew/bin/jira issue list --jql 'project IN (DT) AND "delivery team[dropdown]" IN (DT_TS_Marketplace_1) AND sprint is not EMPTY AND status NOT IN (Done, Closed) ' "${@:2}"
+elif [ "$1" = "ff" ]; then
+  /opt/homebrew/bin/jira issue list --jql 'Project = "Digital Technology" AND "delivery team[dropdown]" IN (DT_TS_Integration) AND sprint is not EMPTY AND status NOT IN (Done, Closed) ' "${@:2}"
+elif [ "$1" = "mp2" ]; then
+  /opt/homebrew/bin/jira issue list --jql 'project IN (DT) AND "delivery team[dropdown]" IN (DT_TS_Marketplace_2) AND sprint is not EMPTY AND status NOT IN (Done, Closed) ' "${@:2}"
+else
+  /opt/homebrew/bin/jira "$@"
+fi

@@ -73,7 +73,7 @@ profile name is given, ask the user.
 
 ## Jira
 
-Claude has access to Jira via the Jira CLI (`jira`). Use it to view, create, update, and search for issues.
+Claude has access to Jira via the Jira CLI (`j`). Use it to view, create, update, and search for issues.
 
 ## Git
 
