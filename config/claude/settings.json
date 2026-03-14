@@ -43,11 +43,12 @@
       "mcp__1mcp-accounting__xero_1mcp_list-bank-transactions",
       "mcp__1mcp-accounting__xero_1mcp_list-contacts",
       "mcp__1mcp-accounting__xero_1mcp_list-tax-rates",
-      "mcp__1mcp-dev__obsidian_1mcp_read_note",
-      "mcp__1mcp-dev__obsidian_1mcp_read_multiple_notes",
-      "mcp__1mcp-dev__obsidian_1mcp_search_notes",
+      "mcp__1mcp-core__playwright_1mcp_browser_snapshot",
+      "mcp__1mcp-core__playwright_1mcp_browser_take_screenshot",
       "mcp__1mcp-dev__obsidian_1mcp_list_directory",
-      "mcp__1mcp-core__playwright_1mcp_browser_snapshot"
+      "mcp__1mcp-dev__obsidian_1mcp_read_multiple_notes",
+      "mcp__1mcp-dev__obsidian_1mcp_read_note",
+      "mcp__1mcp-dev__obsidian_1mcp_search_notes"
     ]
   },
   "model": "opus",
