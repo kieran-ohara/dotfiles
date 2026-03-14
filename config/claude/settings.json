@@ -71,6 +71,10 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/pretool-block-cd.sh"
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/pretool-block-git-c.sh"
           }
         ]
       }
