@@ -49,7 +49,7 @@
       "mcp__1mcp-core__obsidian_1mcp_read_note",
       "mcp__1mcp-core__obsidian_1mcp_search_notes",
       "mcp__1mcp-core__playwright_1mcp_browser_snapshot",
-      "mcp__1mcp-core__playwright_1mcp_browser_take_screenshot",
+      "mcp__1mcp-core__playwright_1mcp_browser_take_screenshot"
     ]
   },
   "model": "opus",
