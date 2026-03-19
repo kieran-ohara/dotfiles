@@ -23,6 +23,7 @@ python = "3.11"
 "pipx:ansible-core" = "2.17.2"
 "pipx:httpie" = "3.2.3"
 "pipx:yamllint" = "1.35.1"
+"pipx:uv" = "0.10.11"
 
 [settings]
 experimental = true
@@ -37,4 +38,3 @@ python.uv_venv_auto = true
 idiomatic_version_file_enable_tools = ["python"]
 
 [settings.pipx]
-uvx = true
