@@ -7,4 +7,9 @@ if echo "$COMMAND" | grep -q 'git -C'; then
   exit 2
 fi
 
+if echo "$COMMAND" | grep -qE 'git add (\.|(-A|--all))'; then
+  echo "BLOCKED: Do not use 'git add .' or 'git add -A'. Always explicitly list the specific files to stage." >&2
+  exit 2
+fi
+
 exit 0
