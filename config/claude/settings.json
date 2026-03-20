@@ -9,6 +9,7 @@
       "Bash(AWS_PROFILE* aws cloudformation describe-stack-resources *)",
       "Bash(cat *)",
       "Bash(cd *)",
+      "Bash(echo *)",
       "Bash(find *)",
       "Bash(gh api *)",
       "Bash(gh api repos *)",
