@@ -16,6 +16,7 @@ node = "22"
 "npm:@playwright/mcp" = "latest"
 "npm:@softeria/ms-365-mcp-server" = "latest"
 "npm:@xeroapi/xero-mcp-server" = "latest"
+"npm:langfuse-cli" = "latest"
 "npm:mcp-remote" = "latest"
 "npm:omnifocus-mcp" = "latest"
 
