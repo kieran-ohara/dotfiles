@@ -38,6 +38,7 @@
       "Bash(tail *)",
       "Bash(yarn turbo *)",
       "Bash(yarn workspace * exec *)",
+      "Bash(yarn workspace * test*)",
       "Read",
       "WebFetch",
       "WebSearch",
