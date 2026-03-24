@@ -10,6 +10,7 @@ plans
 plugins
 projects
 session-env
+sessions
 settings.local.json
 shell-snapshots
 stats-cache.json
