@@ -15,6 +15,10 @@ These principles MUST be followed at all times.
 
 Code should be delivered using a the Test Driven Development approach:
 
+0. Before writing a test, consider its utility. What real behaviour does it
+   verify? A test that mocks everything and only asserts glue wiring is
+essentially worthless — if the only thing left under test is trivial
+orchestration, skip the test.
 1. Write ONE single failing test first
 2. Run the test to confirm it fails
 3. Implement minimal code to make that test pass
