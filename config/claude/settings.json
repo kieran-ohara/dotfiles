@@ -77,6 +77,10 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/pretool-block-git.sh"
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/pretool-block-gh-repo.sh"
           }
         ]
       }
