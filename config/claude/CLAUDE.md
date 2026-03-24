@@ -140,7 +140,10 @@ If tools like `yarn` or `pnpm` are not available in PATH:
 
 ## Documentation Lookup
 
-When working with frameworks or libraries and needing to look up documentation (APIs, usage patterns, how-to guides), prefer using the Context7 MCP tool if it is available. This provides up-to-date, version-specific documentation directly.
+When working with frameworks or libraries and needing to look up documentation
+(APIs, usage patterns, how-to guides), prefer using the Context7 MCP tool if it
+is available. This provides up-to-date, version-specific documentation
+directly.
 
 ## Revision and Studying
 
