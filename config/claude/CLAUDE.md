@@ -138,6 +138,26 @@ If tools like `yarn` or `pnpm` are not available in PATH:
 - When running development commands (tests, builds, linting, formatting, package managers, etc.), do NOT use `cd`. Always run commands from the repo root using relative or absolute paths.
 - Only use `cd` as a last resort when a tool genuinely requires it to work from a specific directory.
 
+## AI Applications
+
+### Testing & Evaluation
+
+#### Single-Step Evals
+
+Test individual LLM decisions in isolation, not full agent pipelines end-to-end. This is unit testing applied to agents.
+
+- Isolate and test one LLM call at a time - failures point directly to the broken component
+- Test properties, not exact values - LLM outputs are non-deterministic
+  ```python
+  # Bad: brittle, will break across runs
+  assert result["tech_stack"] == ["Python", "Django", "PostgreSQL"]
+
+  # Good: tests the properties that matter
+  assert "Python" in result["tech_stack"]
+  assert len(result["tech_stack"]) >= 2
+  ```
+- Fast and cheap - 1 LLM call per test vs 10+ for end-to-end
+
 ## Documentation Lookup
 
 When working with frameworks or libraries and needing to look up documentation
