@@ -76,6 +76,7 @@
     sta = stash
     stp = stash pop
     unstage = restore --staged
+    wt = "!wt list"
     x = "!gitx"
 [init]
 	defaultBranch = main

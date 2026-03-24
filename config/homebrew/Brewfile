@@ -91,5 +91,6 @@ brew 'tmux'
 brew 'tree'
 brew 'tree-sitter-cli'
 brew 'uv'
+brew 'worktrunk'
 brew 'xdg-ninja', head: true
 brew 'zoxide'
