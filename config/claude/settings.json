@@ -85,6 +85,10 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/pretool-block-gh-repo.sh"
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/pretool-check-gh-account.sh"
           }
         ]
       }
