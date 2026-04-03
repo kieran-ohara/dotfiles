@@ -59,7 +59,6 @@
       "mcp__1mcp-dev__context7_1mcp_resolve-library-id"
     ]
   },
-  "model": "opus",
   "hooks": {
     "SessionStart": [
       {
