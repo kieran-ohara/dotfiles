@@ -6,6 +6,10 @@ if ! echo "$COMMAND" | grep -q '^gh '; then
   exit 0
 fi
 
+if echo "$COMMAND" | grep -q '^gh auth switch'; then
+  exit 0
+fi
+
 if [ -z "$GH_REQUIRED_ACCOUNT" ]; then
   exit 0
 fi
