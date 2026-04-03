@@ -121,6 +121,11 @@ Claude has access to Jira via the Jira CLI (`j`). Use it to view, create, update
   }
   ```
 
+### Type Safety
+
+- Do NOT use `as` type assertions to cast unvalidated data (e.g. `JSON.parse(x) as Foo`). Parse and validate at runtime instead (e.g. with Zod).
+- Avoid `any` — prefer `unknown` and narrow with type guards or schema validation.
+
 ### Function Signatures
 
 - Prefer objects over positional arguments for function parameters, especially when:
