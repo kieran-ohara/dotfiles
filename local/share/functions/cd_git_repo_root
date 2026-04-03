@@ -1,0 +1,13 @@
+cd_git_repo_root() {
+  emulate -L zsh
+
+  local root
+  root=$(git rev-parse --show-toplevel 2>/dev/null)
+
+  if [[ -z "$root" ]]; then
+    echo "Not inside a git repository" >&2
+    return 1
+  fi
+
+  cd "$root"
+}

@@ -8,6 +8,7 @@ alias bcu='brew uninstall --cask'
 alias bi='brew install'
 alias bs='brew search'
 alias bu='brew uninstall'
+alias cdr=cd_git_repo_root
 alias cdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 alias c="claude"
 alias ct="CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude"
