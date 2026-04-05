@@ -27,6 +27,20 @@ sso_account_id = 645614495521
 sso_role_name = Administrator
 region = eu-west-2
 
+[profile bdev]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 426421370365
+sso_role_name = Administrator
+region = eu-west-2
+
+[profile bprod]
+sso_start_url = https://kieran.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 217001797574
+sso_role_name = Administrator
+region = eu-west-2
+
 [profile network]
 sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
