@@ -16,7 +16,7 @@
       "Bash(gh issue *)",
       "Bash(gh issue view *)",
       "Bash(gh label list *)",
-      "Bash(gh pr *)",
+      "Bash(gh pr * )",
       "Bash(gh run rerun *)",
       "Bash(gh run view *)",
       "Bash(git checkout *)",
@@ -75,6 +75,10 @@
       {
         "matcher": "Bash",
         "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/pretool-block-aws.sh"
+          },
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/pretool-block-cd.sh"
