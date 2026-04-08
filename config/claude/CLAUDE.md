@@ -79,6 +79,14 @@ profile name is given, ask the user.
 
 Claude has access to Jira via the Jira CLI (`j`). Use it to view, create, update, and search for issues.
 
+### Adding Comments
+
+Use a positional argument for the comment body — there is no `--body` flag:
+
+```bash
+j issue comment add ISSUE-KEY "comment text"
+```
+
 ## Git
 
 ### Git Commands
