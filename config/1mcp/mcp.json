@@ -50,6 +50,11 @@
       "command": "star-mcp",
       "tags": ["business"]
     },
+    "granola": {
+      "command": "mcp-remote",
+      "args": ["https://mcp.granola.ai/mcp"],
+      "tags": ["core"]
+    },
     "omnifocus": {
       "command": "omnifocus-mcp",
       "args": [],
