@@ -27,4 +27,4 @@
     - [./os/macos/preferences.sh]
     - [./os/macos/startup-items.sh]
     - [./local/share/scripts/build-completions]
-    - [./local/share/scripts/build-parsers ~/.local/share/nvim/site/pack/treesitter/start/nvim-treesitter/lockfile.json]
+    - [./local/share/scripts/build-parsers ~/.local/share/nvim/site/pack/treesitter/start/nvim-treesitter/lua/nvim-treesitter/parsers.lua]

@@ -1,59 +1,80 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Check if lockfile parameter is provided
+# Check if parsers.lua parameter is provided
 if [ $# -eq 0 ]; then
-  echo "Error: Lockfile parameter is required."
-  echo "Usage: $0 <lockfile>"
+  echo "Error: parsers.lua path is required."
+  echo "Usage: $0 <parsers.lua>"
   exit 1
 fi
 
-LOCKFILE="$1"
+PARSERS_LUA="$1"
 
-# Check if lockfile exists
-if [ ! -f "$LOCKFILE" ]; then
-  echo "Error: Lockfile not found: $LOCKFILE"
+# Check if file exists
+if [ ! -f "$PARSERS_LUA" ]; then
+  echo "Error: File not found: $PARSERS_LUA"
   exit 1
 fi
 
-# Function to build parser
-build_parser_with_revision() {
+# Extract install_info fields for a language from parsers.lua
+get_parser_info() {
   local lang="$1"
-  local repo_url="$2"
-
-  echo "Building parser for $lang..."
-
-  # Remove first two arguments so that "$@" contains user's remaining arguments.
-  shift 2
-
-  # Get revision from lockfile
-  local revision
-  revision=$(jq -r ".$lang.revision" < "$LOCKFILE")
-
-  build-parser "$lang" "$repo_url" "$revision" "$@"
+  luajit -e "
+    local p = dofile('$PARSERS_LUA')
+    local entry = p['$lang']
+    if not entry or not entry.install_info then
+      io.stderr:write('No entry for $lang in parsers.lua\n')
+      os.exit(1)
+    end
+    local info = entry.install_info
+    print(info.revision)
+    print(info.url)
+    print(info.location or '.')
+  "
 }
 
-build_parser_with_revision bash "https://github.com/tree-sitter/tree-sitter-bash"
-build_parser_with_revision css "https://github.com/tree-sitter/tree-sitter-css.git"
-build_parser_with_revision dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile.git"
-build_parser_with_revision dot "https://github.com/rydesun/tree-sitter-dot.git"
-build_parser_with_revision git_rebase "https://github.com/the-mikedavis/tree-sitter-git-rebase.git"
-build_parser_with_revision gitcommit "https://github.com/gbprod/tree-sitter-gitcommit.git"
-build_parser_with_revision gitignore "https://github.com/shunsambongi/tree-sitter-gitignore"
-build_parser_with_revision go "https://github.com/tree-sitter/tree-sitter-go.git"
-build_parser_with_revision hcl "https://github.com/MichaHoffmann/tree-sitter-hcl.git"
-build_parser_with_revision html "https://github.com/tree-sitter/tree-sitter-html.git"
-build_parser_with_revision hurl "https://github.com/pfeiferj/tree-sitter-hurl.git"
-build_parser_with_revision java "https://github.com/tree-sitter/tree-sitter-java"
-build_parser_with_revision javascript "https://github.com/tree-sitter/tree-sitter-javascript.git"
-build_parser_with_revision json "https://github.com/tree-sitter/tree-sitter-json.git"
-build_parser_with_revision lua "https://github.com/MunifTanjim/tree-sitter-lua.git"
-build_parser_with_revision make "https://github.com/alemuller/tree-sitter-make.git"
-build_parser_with_revision markdown "https://github.com/MDeiml/tree-sitter-markdown.git" --subdirectory="tree-sitter-markdown"
-build_parser_with_revision markdown_inline "https://github.com/MDeiml/tree-sitter-markdown.git" --subdirectory="tree-sitter-markdown-inline"
-build_parser_with_revision python "https://github.com/tree-sitter/tree-sitter-python.git"
-build_parser_with_revision regex "https://github.com/tree-sitter/tree-sitter-regex.git"
-build_parser_with_revision ssh_config "https://github.com/ObserverOfTime/tree-sitter-ssh-config.git"
-build_parser_with_revision typescript "https://github.com/tree-sitter/tree-sitter-typescript.git" --subdirectory="typescript" --npm-install
-build_parser_with_revision vim "https://github.com/neovim/tree-sitter-vim"
-build_parser_with_revision yaml "https://github.com/tree-sitter-grammars/tree-sitter-yaml"
+# Function to build parser
+build_parser_from_lua() {
+  local lang="$1"
+  shift
+
+  local info
+  info=$(get_parser_info "$lang")
+  local revision url subdirectory
+  revision=$(echo "$info" | sed -n '1p')
+  url=$(echo "$info" | sed -n '2p')
+  subdirectory=$(echo "$info" | sed -n '3p')
+
+  local args=()
+  if [ "$subdirectory" != "." ]; then
+    args+=(--subdirectory="$subdirectory")
+  fi
+  args+=("$@")
+
+  build-parser "$lang" "$url" "$revision" ${args[@]+"${args[@]}"}
+}
+
+build_parser_from_lua bash
+build_parser_from_lua css
+build_parser_from_lua dockerfile
+build_parser_from_lua dot
+build_parser_from_lua git_rebase
+build_parser_from_lua gitcommit
+build_parser_from_lua gitignore
+build_parser_from_lua go
+build_parser_from_lua hcl
+build_parser_from_lua html
+build_parser_from_lua hurl
+build_parser_from_lua java
+build_parser_from_lua javascript
+build_parser_from_lua json
+build_parser_from_lua lua
+build_parser_from_lua make
+build_parser_from_lua markdown
+build_parser_from_lua markdown_inline
+build_parser_from_lua python
+build_parser_from_lua regex
+build_parser_from_lua ssh_config
+build_parser_from_lua typescript --npm-install
+build_parser_from_lua vim
+build_parser_from_lua yaml

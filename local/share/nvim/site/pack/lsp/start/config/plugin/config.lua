@@ -5,9 +5,7 @@ for type, icon in pairs(signs) do
     vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
 end
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] =
-    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
-                 {underline = true, signs = true, virtual_text = false})
+vim.diagnostic.config({underline = true, signs = true, virtual_text = false})
 
 require"lspsaga".setup({
     finder = {keys = {shuttle = '<TAB>', toggle_or_open = 'i', vsplit = 'v'}}
@@ -15,8 +13,8 @@ require"lspsaga".setup({
 
 -- Only attach if lsp server supports capability
 local function any_client_supports(capability)
-    for _, client in ipairs(vim.lsp.get_active_clients({bufnr = 0})) do
-        if client.supports_method(capability) then return true end
+    for _, client in ipairs(vim.lsp.get_clients({bufnr = 0})) do
+        if client:supports_method(capability) then return true end
     end
     return false
 end
@@ -52,12 +50,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
                            merge_opts("Goto Definition"))
         end
 
-        if (any_client_supports("textDocument/publishDiagnostics")) then
-            vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>",
-                           merge_opts("Next LSP Warning"))
-            vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>",
-                           merge_opts("Previous LSP Warning"))
-        end
+        vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>",
+                       merge_opts("Previous LSP Warning"))
+        vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>",
+                       merge_opts("Next LSP Warning"))
 
         if (any_client_supports("textDocument/references")) then
             vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga finder<CR>",

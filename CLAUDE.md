@@ -22,7 +22,7 @@ make dependencies/brew
 /opt/homebrew/bin/mise install
 
 # Build tree-sitter parsers
-./local/share/scripts/build-parsers ./local/share/nvim/site/pack/treesitter/start/nvim-treesitter/lockfile.json
+./local/share/scripts/build-parsers ./local/share/nvim/site/pack/treesitter/start/nvim-treesitter/lua/nvim-treesitter/parsers.lua
 
 # Build shell completions
 ./local/share/scripts/build-completions

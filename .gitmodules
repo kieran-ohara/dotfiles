@@ -81,9 +81,6 @@
 [submodule "cmp-buffer"]
 	path = local/share/nvim/site/pack/autocomplete/start/cmp-buffer
 	url = https://github.com/hrsh7th/cmp-buffer
-[submodule "playground"]
-	path = local/share/nvim/site/pack/treesitter/start/playground
-	url = https://github.com/nvim-treesitter/playground
 [submodule "cmp-path"]
 	path = local/share/nvim/site/pack/autocomplete/start/cmp-path
 	url = https://github.com/hrsh7th/cmp-path

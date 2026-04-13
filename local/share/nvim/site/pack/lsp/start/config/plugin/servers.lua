@@ -1,60 +1,53 @@
 -- vim: set foldmethod=marker foldlevel=0 modeline:
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+vim.lsp.config('*', {capabilities = capabilities})
+
 -- Typescript {{{
-require"lspconfig".ts_ls.setup {
-    capabilities = capabilities,
+vim.lsp.config('ts_ls', {
     init_options = {
-        ts_ls = {
-            fallbackPath = os.getenv("XDG_DATA_HOME") ..
+        tsserver = {
+            path = os.getenv("XDG_DATA_HOME") ..
                 "/mise/installs/npm-typescript/latest/lib/node_modules/typescript/lib"
         }
     }
-}
-require'lspconfig'.terraformls.setup {capabilities = capabilities}
+})
+vim.lsp.enable('ts_ls')
+-- }}}
+-- Terraform {{{
+vim.lsp.enable('terraformls')
 -- }}}
 -- EFM {{{
-local lspconfig = require "lspconfig"
-local util = require "lspconfig.util"
-local configs = require "lspconfig.configs"
-
-configs.efmWithFormat = {
-    default_config = {
-        cmd = {"efm-langserver"},
-        root_dir = util.find_git_ancestor,
-        single_file_support = true,
-        filetypes = {"sh"},
-        init_options = {
-            documentFormatting = true,
-            hover = true,
-            documentSymbol = true,
-            codeAction = true,
-            completion = true
-        }
+vim.lsp.config('efmWithFormat', {
+    cmd = {"efm-langserver"},
+    root_markers = {".git"},
+    filetypes = {"sh"},
+    init_options = {
+        documentFormatting = true,
+        hover = true,
+        documentSymbol = true,
+        codeAction = true,
+        completion = true
     }
-}
-lspconfig.efmWithFormat.setup {capabilities = capabilities}
+})
+vim.lsp.enable('efmWithFormat')
 
-configs.efmNoFormat = {
-    default_config = {
-        cmd = {"efm-langserver"},
-        root_dir = util.find_git_ancestor,
-        single_file_support = true,
-        filetypes = {"dockerfile", "markdown", "yaml"},
-        init_options = {
-            documentFormatting = false,
-            hover = true,
-            documentSymbol = true,
-            codeAction = true,
-            completion = true
-        }
+vim.lsp.config('efmNoFormat', {
+    cmd = {"efm-langserver"},
+    root_markers = {".git"},
+    filetypes = {"dockerfile", "markdown", "yaml"},
+    init_options = {
+        documentFormatting = false,
+        hover = true,
+        documentSymbol = true,
+        codeAction = true,
+        completion = true
     }
-}
-lspconfig.efmNoFormat.setup {capabilities = capabilities}
+})
+vim.lsp.enable('efmNoFormat')
 -- }}}
 -- YAML {{{
-require("lspconfig").yamlls.setup {
-    capabilities = capabilities,
+vim.lsp.config('yamlls', {
     filetypes = {"json", "yaml"},
     settings = {
         yaml = {
@@ -64,5 +57,6 @@ require("lspconfig").yamlls.setup {
             }
         }
     }
-}
+})
+vim.lsp.enable('yamlls')
 -- }}}
