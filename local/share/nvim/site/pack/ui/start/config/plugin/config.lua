@@ -6,7 +6,6 @@ require'nvim-web-devicons'.setup({
   }
  };
 })
-require'colorizer'.setup()
 require('lualine').setup({
   options = {
     section_separators = '',
