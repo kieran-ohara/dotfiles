@@ -150,6 +150,27 @@ If tools like `yarn` or `pnpm` are not available in PATH:
 2. If present, use `corepack enable` to activate the specified package manager
 3. Then run the required package manager commands
 
+### Monorepo Workspaces
+
+In a monorepo, **always use the package manager's workspace flag** to run commands in the context of a specific package. Never `cd` into a package directory or hack together paths to binaries in `node_modules/.bin/`.
+
+```bash
+# npm workspaces
+npm -w @scope/package-name run build
+npm -w @scope/package-name exec cdk synth
+npm -w @scope/package-name test
+
+# yarn workspaces
+yarn workspace @scope/package-name run build
+yarn workspace @scope/package-name exec cdk synth
+
+# pnpm workspaces
+pnpm --filter @scope/package-name run build
+pnpm --filter @scope/package-name exec cdk synth
+```
+
+This ensures the command runs with the correct working directory, PATH, and dependency resolution for that package.
+
 ## Shell
 
 - When running development commands (tests, builds, linting, formatting, package managers, etc.), do NOT use `cd`. Always run commands from the repo root using relative or absolute paths.
