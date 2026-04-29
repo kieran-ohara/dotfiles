@@ -106,3 +106,10 @@ sso_region = eu-north-1
 sso_account_id = 095652686417
 sso_role_name = AdministratorAccess
 region = eu-west-1
+
+[profile jd-commerce-dev]
+sso_start_url = https://d-936748aa88.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 463470971770
+sso_role_name = DevOpsAdmins
+region = eu-central-1
