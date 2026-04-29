@@ -1,0 +1,10 @@
+[user]
+  email = kieran.ohara@jdplc.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQExt267XRkEJeCBcl6E0ZjA0oOzmiZjvilAXq63Jpo kieranohara@kierans-MacBook-Pro.local
+
+[commit]
+  gpgsign = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
