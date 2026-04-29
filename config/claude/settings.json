@@ -7,6 +7,7 @@
   "permissions": {
     "allow": [
       "Bash(AWS_PROFILE* aws cloudformation describe-stack-resources *)",
+      "Bash(AWS_PROFILE* aws codepipeline *)",
       "Bash(cat *)",
       "Bash(cd *)",
       "Bash(echo *)",
