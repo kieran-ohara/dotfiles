@@ -60,16 +60,6 @@
       "args": [],
       "tags": ["core"]
     },
-    "ms365": {
-      "command": "ms-365-mcp-server",
-      "args": ["--org-mode", "--enabled-tools", "mail|attachment|draft|calendar|event|contact|shared"],
-      "env": {
-        "MS365_MCP_CLIENT_ID": "${MS365_MCP_CLIENT_ID}",
-        "MS365_MCP_CLIENT_SECRET": "${MS365_MCP_CLIENT_SECRET}",
-        "MS365_MCP_TENANT_ID": "${MS365_MCP_TENANT_ID}"
-      },
-      "tags": ["business"]
-    },
     "ms365-accounting": {
       "command": "ms-365-mcp-server",
       "args": ["--org-mode", "--enabled-tools", "mail|attachment|draft|calendar|event|contact|shared|sharepoint|site|excel|worksheet|workbook|range|chart|file"],
