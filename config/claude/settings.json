@@ -94,6 +94,10 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/pretool-check-gh-account.sh"
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/pretool-block-find-grep.sh"
           }
         ]
       }
