@@ -12,7 +12,7 @@ if echo "$COMMAND" | grep -qE '(^|\|)\s*ls '; then
   exit 2
 fi
 
-if echo "$COMMAND" | grep -qE '(^|\|)\s*(grep|rg) '; then
+if echo "$COMMAND" | grep -qE '^\s*(grep|rg) '; then
   echo "BLOCKED: Do not use grep/rg via Bash. Use the Grep tool instead." >&2
   exit 2
 fi
