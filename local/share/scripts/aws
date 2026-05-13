@@ -6,6 +6,7 @@ aws-vault exec ${AWS_PROFILE:=kieran} -- docker run --rm \
   -e AWS_SESSION_TOKEN \
   -e AWS_SECURITY_TOKEN \
   -e AWS_PAGER="" \
+  -v "${AWS_CONFIG_FILE:-$HOME/.config/aws/config}:/root/.aws/config:ro" \
   -v "$(pwd)":/workdir \
   -w /workdir \
   kieranbamforth/aws-cli "$@"
