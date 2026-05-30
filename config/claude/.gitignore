@@ -5,6 +5,7 @@ debug
 file-history
 history.jsonl
 image-cache
+mcp-needs-auth-cache.json
 paste-cache
 plans
 plugins
