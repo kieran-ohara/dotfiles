@@ -75,6 +75,19 @@ aws-vault exec profile-name -- cdk list
 Replace `profile-name` with the profile name given in the instruction. If no
 profile name is given, ask the user.
 
+### Lambda
+
+Use **AWS Lambda Powertools for TypeScript** (`@aws-lambda-powertools/*`) as the standard toolkit for all Lambda handlers:
+
+- **Logger** (`@aws-lambda-powertools/logger`) — structured JSON logging. Set `serviceName` per handler.
+- **Parameters** (`@aws-lambda-powertools/parameters`) — retrieve secrets and config from Secrets Manager, SSM, etc. Use `getSecret()` for API keys rather than passing them as plaintext environment variables.
+- **Batch** (`@aws-lambda-powertools/batch`) — use `BatchProcessor` with `processPartialResponse` for any Lambda triggered by SQS or DynamoDB Streams. This handles partial batch failures correctly (reports `batchItemFailures`).
+- **Idempotency** (`@aws-lambda-powertools/idempotency`) — use for handlers where at-least-once delivery requires deduplication.
+
+Do NOT roll your own batch processing, structured logging, or secrets retrieval when Powertools provides it.
+
+In TypeScript projects, type Lambda handlers and events using **`@types/aws-lambda`** wherever applicable (e.g. `APIGatewayProxyHandler`, `SQSHandler`, `DynamoDBStreamHandler`, `ScheduledHandler`, `S3Handler`, `EventBridgeHandler`). If the package is not already a dev dependency, recommend adding it (`npm install -D @types/aws-lambda`) before writing the handler rather than hand-rolling types or using `any`.
+
 ## Jira
 
 Claude has access to Jira via the Jira CLI (`j`). Use it to view, create, update, and search for issues.
@@ -98,6 +111,14 @@ j issue comment add ISSUE-KEY "comment text"
 - **NEVER** use Conventional Commits format
 - NO prefixes like `feat:`, `fix:`, `chore:`, `refactor:`, etc.
 - Write plain, descriptive commit messages without any prefix conventions
+
+### Lockfile Conflict Resolution
+
+When a lockfile (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`) has merge or rebase conflicts, **never** just pick a side. Instead:
+
+1. `git checkout --theirs <lockfile>`
+2. Run the package manager install (e.g. `npm install`) to regenerate it
+3. `git add <lockfile>` and continue
 
 ### Pull Request Descriptions
 
