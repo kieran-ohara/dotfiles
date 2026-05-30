@@ -18,8 +18,11 @@ vim.lsp.enable('ts_ls')
 vim.lsp.enable('terraformls')
 -- }}}
 -- EFM {{{
+local efm_log = vim.env.XDG_STATE_HOME .. "/efm-langserver/logs/all.log"
+vim.fn.mkdir(vim.fn.fnamemodify(efm_log, ":h"), "p")
+
 vim.lsp.config('efmWithFormat', {
-    cmd = {"efm-langserver"},
+    cmd = {"efm-langserver", "-logfile", efm_log},
     root_markers = {".git"},
     filetypes = {"sh"},
     init_options = {
@@ -33,7 +36,7 @@ vim.lsp.config('efmWithFormat', {
 vim.lsp.enable('efmWithFormat')
 
 vim.lsp.config('efmNoFormat', {
-    cmd = {"efm-langserver"},
+    cmd = {"efm-langserver", "-logfile", efm_log},
     root_markers = {".git"},
     filetypes = {"dockerfile", "markdown", "yaml"},
     init_options = {
