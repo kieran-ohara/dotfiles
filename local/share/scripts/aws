@@ -9,4 +9,4 @@ aws-vault exec ${AWS_PROFILE:=kieran} -- docker run --rm \
   -v "${AWS_CONFIG_FILE:-$HOME/.config/aws/config}:/root/.aws/config:ro" \
   -v "$(pwd)":/workdir \
   -w /workdir \
-  kieranbamforth/aws-cli "$@"
+  kieranbamforth/aws-cli:latest "$@"

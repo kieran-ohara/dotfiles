@@ -4,4 +4,4 @@ tty_flag=""
 docker run --rm -i $tty_flag \
   -v "$(pwd)":/workdir \
   -w /workdir \
-  kieranbamforth/pandoc "$@"
+  kieranbamforth/pandoc:latest "$@"
