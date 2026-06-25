@@ -231,3 +231,5 @@ directly.
 When creating Mochi cards:
 - DO NOT add tags unless explicitly asked to
 - Focus on the content of the card rather than categorization
+
+@RTK.md

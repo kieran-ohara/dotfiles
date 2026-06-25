@@ -8,19 +8,15 @@
     "allow": [
       "Bash(AWS_PROFILE* aws cloudformation describe-stack-resources *)",
       "Bash(AWS_PROFILE* aws codepipeline *)",
-      "Bash(cat *)",
       "Bash(cd *)",
       "Bash(echo *)",
       "Bash(gh api *)",
-      "Bash(gh api repos *)",
-      "Bash(gh issue *)",
       "Bash(gh issue view *)",
       "Bash(gh label list *)",
       "Bash(gh pr * )",
       "Bash(gh run rerun *)",
       "Bash(gh run view *)",
       "Bash(git checkout *)",
-      "Bash(git commit *)",
       "Bash(git fetch *)",
       "Bash(git ls-tree *)",
       "Bash(git show *)",
@@ -28,16 +24,14 @@
       "Bash(jira *)",
       "Bash(make *)",
       "Bash(mkdir *)",
-      "Bash(npx jest *)",
-      "Bash(npx prettier *)",
       "Bash(npx turbo *)",
       "Bash(pbcopy *)",
+      "Bash(rtk *)",
       "Bash(sed *)",
       "Bash(tail *)",
       "Bash(yarn turbo *)",
       "Bash(yarn workspace * exec *)",
       "Bash(yarn workspace * test*)",
-      "Bash(yarn workspace * test:*)",
       "Glob",
       "Grep",
       "Read",
@@ -60,6 +54,8 @@
       "mcp__1mcp-core__playwright_1mcp_browser_select_option",
       "mcp__1mcp-core__playwright_1mcp_browser_snapshot",
       "mcp__1mcp-core__playwright_1mcp_browser_take_screenshot",
+      "mcp__1mcp-core__playwright_1mcp_browser_type",
+      "mcp__1mcp-core__playwright_1mcp_browser_console_messages",
       "mcp__1mcp-core__playwright_1mcp_browser_wait_for",
       "mcp__1mcp-dev__context7_1mcp_query-docs",
       "mcp__1mcp-dev__context7_1mcp_resolve-library-id"
@@ -106,21 +102,34 @@
             "command": "$HOME/.claude/hooks/pretool-block-find-grep.sh"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
       }
     ]
   },
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "dev-tools@kierans-plugins": true,
-    "invoice-tools@kierans-plugins": true
+    "invoice-tools@kierans-plugins": true,
+    "personal-tools@kierans-plugins": true
   },
   "extraKnownMarketplaces": {
     "kierans-plugins": {
       "source": {
         "source": "directory",
-        "path": "/Users/kieranohara/src/personal/claude-plugins"
-      }
+        "path": "/Users/kieran.ohara/src/personal/claude-plugins"
+      },
+      "autoUpdate": true
     }
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "medium",
+  "editorMode": "vim"
 }
