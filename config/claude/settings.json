@@ -109,10 +109,11 @@
     ]
   },
   "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true,
     "dev-tools@kierans-plugins": true,
+    "figma@claude-plugins-official": true,
     "invoice-tools@kierans-plugins": true,
-    "personal-tools@kierans-plugins": true
+    "personal-tools@kierans-plugins": true,
+    "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "kierans-plugins": {
