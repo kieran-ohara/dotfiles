@@ -32,8 +32,6 @@
       "Bash(yarn turbo *)",
       "Bash(yarn workspace * exec *)",
       "Bash(yarn workspace * test*)",
-      "Glob",
-      "Grep",
       "Read",
       "WebFetch",
       "WebSearch",
@@ -96,10 +94,6 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/pretool-check-gh-account.sh"
-          },
-          {
-            "type": "command",
-            "command": "$HOME/.claude/hooks/pretool-block-find-grep.sh"
           }
         ]
       },
