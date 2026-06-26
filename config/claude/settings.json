@@ -47,16 +47,17 @@
       "mcp__1mcp-core__obsidian_1mcp_write_note",
       "mcp__1mcp-core__playwright_1mcp_browser_click",
       "mcp__1mcp-core__playwright_1mcp_browser_close",
+      "mcp__1mcp-core__playwright_1mcp_browser_console_messages",
       "mcp__1mcp-core__playwright_1mcp_browser_fill_form",
       "mcp__1mcp-core__playwright_1mcp_browser_navigate",
       "mcp__1mcp-core__playwright_1mcp_browser_select_option",
       "mcp__1mcp-core__playwright_1mcp_browser_snapshot",
       "mcp__1mcp-core__playwright_1mcp_browser_take_screenshot",
       "mcp__1mcp-core__playwright_1mcp_browser_type",
-      "mcp__1mcp-core__playwright_1mcp_browser_console_messages",
       "mcp__1mcp-core__playwright_1mcp_browser_wait_for",
       "mcp__1mcp-dev__context7_1mcp_query-docs",
-      "mcp__1mcp-dev__context7_1mcp_resolve-library-id"
+      "mcp__1mcp-dev__context7_1mcp_resolve-library-id",
+      "mcp__plugin_figma_figma__get_screenshot"
     ]
   },
   "hooks": {
