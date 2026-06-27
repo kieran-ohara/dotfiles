@@ -25,6 +25,7 @@ python = "3.11"
 "pipx:httpie" = "3.2.3"
 "pipx:yamllint" = "1.35.1"
 "pipx:uv" = "0.10.11"
+"pipx:git+https://github.com/github/spec-kit.git" = "v0.11.8"
 
 [settings]
 experimental = true

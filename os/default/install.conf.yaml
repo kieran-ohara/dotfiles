@@ -47,6 +47,7 @@
     ~/.config/terminfo: config/terminfo
     ~/.config/tmux: config/tmux
     ~/.config/vim: config/vim
+    ~/.config/worktrunk: config/worktrunk
     ~/.config/zim: config/zim
     ~/.config/zsh: config/zsh
     ~/.local/share/functions: local/share/functions

@@ -1,0 +1,5 @@
+# User-level worktrunk hooks. Apply to all repositories.
+# See https://worktrunk.dev/hook/ for available hook types.
+
+[post-start]
+specify = "specify init --here --script sh --integration claude --force"
