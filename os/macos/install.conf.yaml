@@ -15,7 +15,6 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/skhd: config/skhd
     ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist: os/macos/me.kieranbamforth.1mcp.plist
-    ~/src: /Volumes/Source
 
 - shell:
     - [make dependencies/brew]

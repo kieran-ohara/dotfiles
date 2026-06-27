@@ -83,13 +83,13 @@
 [status]
 	submodulesummary = 1
 
-[includeIf "gitdir:/Volumes/Source/dotfiles/"]
+[includeIf "gitdir:~/src/dotfiles/"]
 	path = personal
-[includeIf "gitdir:/Volumes/Source/personal/**"]
+[includeIf "gitdir:~/src/personal/**"]
 	path = personal
-[includeIf "gitdir:/Volumes/Source/studia/**"]
+[includeIf "gitdir:~/src/studia/**"]
 	path = personal
-[includeIf "gitdir:/Volumes/Source/jd/**"]
+[includeIf "gitdir:~/src/jd/**"]
 	path = jd
 
 [credential]
