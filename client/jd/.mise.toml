@@ -1,0 +1,12 @@
+[tools]
+node = "20"
+terraform = "1.7.5"
+terragrunt = "0.55.5"
+
+[env]
+_.file = { path = ".env", redact = true }
+JIRA_CONFIG_FILE = "${XDG_CONFIG_HOME}/.jira/.config.jd.yml"
+GH_REQUIRED_ACCOUNT = "Kieran-OHara_JDPLC"
+
+[settings]
+env_shell_expand = true
