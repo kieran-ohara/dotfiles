@@ -110,13 +110,20 @@
     ]
   },
   "enabledPlugins": {
-    "dev-tools@kierans-plugins": true,
+    "deploy-on-aws@agent-plugins-for-aws": true,
     "figma@claude-plugins-official": true,
     "invoice-tools@kierans-plugins": true,
     "personal-tools@kierans-plugins": true,
     "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
+    "agent-plugins-for-aws": {
+      "source": {
+        "source": "github",
+        "repo": "awslabs/agent-plugins"
+      },
+      "autoUpdate": true
+    },
     "kierans-plugins": {
       "source": {
         "source": "directory",
