@@ -9,3 +9,6 @@ vault = "MAG"
 
 [[ssh-keys]]
 vault = "Journey"
+
+[[ssh-keys]]
+vault = "JD"
