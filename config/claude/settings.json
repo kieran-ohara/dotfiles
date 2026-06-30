@@ -134,5 +134,7 @@
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "medium",
-  "editorMode": "vim"
+  "theme": "dark",
+  "editorMode": "vim",
+  "skipAutoPermissionPrompt": true
 }
