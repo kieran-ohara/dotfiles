@@ -136,6 +136,19 @@ When a lockfile (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`) has merge o
 - DO NOT add function documentation (JSDoc, docstrings, etc.) UNLESS that convention already exists in the codebase.
 - Avoid silly or unhelpful comments that restate what the code does.
 
+### Spec-kit Task References
+
+When working through a spec-kit (`/speckit-*`) workflow, **never** embed spec-kit
+identifiers into the code or its comments. These reference numbers are local
+planning artefacts and mean nothing to anyone reading the codebase:
+
+- Task numbers (e.g. `// T012`, `// Task 3.2`)
+- User story / requirement codes (e.g. `// US-04`, `// FR-12`, `// AC-2`)
+- Spec or plan section references (e.g. `// per spec.md §4`)
+
+The implementation should stand on its own. If a comment is genuinely warranted,
+explain the behaviour — do not cite the task or story that produced it.
+
 ## TypeScript
 
 - Do NOT use dynamic imports (`import()`) - use static imports only
