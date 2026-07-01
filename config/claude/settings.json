@@ -61,6 +61,27 @@
     ]
   },
   "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/prevent-sleep.sh",
+            "statusMessage": "Keeping Mac awake"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/allow-sleep.sh"
+          }
+        ]
+      }
+    ],
     "SessionStart": [
       {
         "hooks": [
