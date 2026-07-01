@@ -149,6 +149,11 @@ planning artefacts and mean nothing to anyone reading the codebase:
 The implementation should stand on its own. If a comment is genuinely warranted,
 explain the behaviour — do not cite the task or story that produced it.
 
+This applies equally to **git commit messages** (both titles and descriptions).
+Do not tag commits with task numbers or story/requirement codes (e.g.
+`Add role guard (T029, T031)`). Describe the change on its own terms; the commit
+history should read as a narrative of the work, not of the plan that produced it.
+
 ## TypeScript
 
 - Do NOT use dynamic imports (`import()`) - use static imports only
