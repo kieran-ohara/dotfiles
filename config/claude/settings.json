@@ -111,6 +111,7 @@
   },
   "enabledPlugins": {
     "deploy-on-aws@agent-plugins-for-aws": true,
+    "dev-tools@kierans-plugins": true,
     "figma@claude-plugins-official": true,
     "invoice-tools@kierans-plugins": true,
     "personal-tools@kierans-plugins": true,
