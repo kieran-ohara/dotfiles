@@ -1,0 +1,8 @@
+redactions = ["JIRA_API_TOKEN"]
+
+[env]
+JIRA_API_TOKEN = "{{ exec(command='op read \"op://Studia/JIRA API Key/credential\"') }}"
+JIRA_CONFIG_FILE = "${XDG_CONFIG_HOME}/.jira/.config.studia.yml"
+
+[settings]
+env_shell_expand = true
