@@ -23,29 +23,29 @@ issue:
               schema:
                 datatype: string
             - name: Category
-              key: customfield_10111
-              schema:
-                datatype: option
-            - name: Category
               key: customfield_10232
               schema:
                 datatype: option
-            - name: Company size
-              key: customfield_10112
+            - name: Category
+              key: customfield_10111
               schema:
                 datatype: option
             - name: Value
               key: customfield_10233
               schema:
                 datatype: number
-            - name: Website
-              key: customfield_10113
+            - name: Company size
+              key: customfield_10112
               schema:
-                datatype: string
+                datatype: option
             - name: Effort
               key: customfield_10234
               schema:
                 datatype: number
+            - name: Website
+              key: customfield_10113
+              schema:
+                datatype: string
             - name: Email
               key: customfield_10114
               schema:
@@ -54,14 +54,14 @@ issue:
               key: customfield_10235
               schema:
                 datatype: string
-            - name: Roadmap
-              key: customfield_10225
-              schema:
-                datatype: option
             - name: Confidence
               key: customfield_10346
               schema:
                 datatype: number
+            - name: Roadmap
+              key: customfield_10225
+              schema:
+                datatype: option
             - name: Impact score
               key: customfield_10226
               schema:
@@ -83,15 +83,15 @@ issue:
               key: customfield_10223
               schema:
                 datatype: number
+            - name: Reach
+              key: customfield_10345
+              schema:
+                datatype: number
             - name: Theme
               key: customfield_10224
               schema:
                 datatype: array
                 items: option
-            - name: Reach
-              key: customfield_10345
-              schema:
-                datatype: number
             - name: Atlassian project
               key: customfield_10040
               schema:
@@ -146,34 +146,34 @@ issue:
               key: customfield_10277
               schema:
                 datatype: number
-            - name: Original Design
-              key: customfield_10157
-              schema:
-                datatype: number
-            - name: Remaining Tech
-              key: customfield_10278
-              schema:
-                datatype: number
             - name: Vulnerability
               key: customfield_10036
               schema:
                 datatype: any
+            - name: Remaining Tech
+              key: customfield_10278
+              schema:
+                datatype: number
+            - name: Original Design
+              key: customfield_10157
+              schema:
+                datatype: number
             - name: Original Tech
               key: customfield_10158
               schema:
                 datatype: number
-            - name: Remaining Design
-              key: customfield_10279
-              schema:
-                datatype: number
-            - name: Figma URL
-              key: customfield_10312
-              schema:
-                datatype: string
             - name: Idea archived
               key: customfield_10037
               schema:
                 datatype: option
+            - name: Figma URL
+              key: customfield_10312
+              schema:
+                datatype: string
+            - name: Remaining Design
+              key: customfield_10279
+              schema:
+                datatype: number
             - name: Goals
               key: customfield_10027
               schema:
@@ -197,7 +197,7 @@ issue:
               key: customfield_10016
               schema:
                 datatype: number
-            - name: Issue color
+            - name: Issue colour
               key: customfield_10017
               schema:
                 datatype: string
@@ -213,38 +213,38 @@ issue:
               key: customfield_10240
               schema:
                 datatype: number
-            - name: 'Subject '
-              key: customfield_10120
-              schema:
-                datatype: string
             - name: RICE Effort
               key: customfield_10241
               schema:
                 datatype: number
+            - name: 'Subject '
+              key: customfield_10120
+              schema:
+                datatype: string
             - name: Development
               key: customfield_10000
               schema:
                 datatype: any
+            - name: RICE Confidence
+              key: customfield_10242
+              schema:
+                datatype: number
             - name: Student
               key: customfield_10121
               schema:
                 datatype: string
-            - name: RICE Confidence
-              key: customfield_10242
+            - name: Team
+              key: customfield_10001
+              schema:
+                datatype: team
+            - name: RICE Score
+              key: customfield_10243
               schema:
                 datatype: number
             - name: Tutor
               key: customfield_10122
               schema:
                 datatype: string
-            - name: RICE Score
-              key: customfield_10243
-              schema:
-                datatype: number
-            - name: Team
-              key: customfield_10001
-              schema:
-                datatype: team
             - name: Subject
               key: customfield_10123
               schema:
