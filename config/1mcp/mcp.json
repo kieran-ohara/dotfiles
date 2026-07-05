@@ -51,6 +51,11 @@
       "args": ["https://mcp.granola.ai/mcp"],
       "tags": ["core"]
     },
+    "miro": {
+      "command": "mcp-remote",
+      "args": ["https://mcp.miro.com/mcp"],
+      "tags": ["core"]
+    },
     "omnifocus": {
       "command": "omnifocus-mcp",
       "args": [],
