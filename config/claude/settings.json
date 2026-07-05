@@ -61,6 +61,27 @@
     ]
   },
   "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/prevent-sleep.sh",
+            "statusMessage": "Keeping Mac awake"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/allow-sleep.sh"
+          }
+        ]
+      }
+    ],
     "SessionStart": [
       {
         "hooks": [
@@ -68,11 +89,6 @@
             "type": "command",
             "command": "$HOME/.claude/hooks/session-start-mise.sh",
             "statusMessage": "Loading mise environment"
-          },
-          {
-            "type": "command",
-            "command": "$HOME/.claude/hooks/keep-awake.sh",
-            "statusMessage": "Keeping Mac awake"
           }
         ]
       }
