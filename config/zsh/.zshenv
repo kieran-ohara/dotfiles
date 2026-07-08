@@ -120,3 +120,7 @@ export OPENAI_API_HOST=api.openai.com
 # Many programs use this, but Python doesn't like it when I don't set it.
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
+
+
+# Remove built in claude rubbish
+export ENABLE_CLAUDEAI_MCP_SERVERS=false
