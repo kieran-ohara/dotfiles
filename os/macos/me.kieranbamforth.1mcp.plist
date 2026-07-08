@@ -8,8 +8,15 @@
 	<array>
 		<string>/bin/zsh</string>
 		<string>-ic</string>
-    <string>1mcp --config ${HOME}/.config/1mcp/mcp.json</string>
+		<string>exec 1mcp serve</string>
 	</array>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>ONE_MCP_PORT</key>
+		<string>3050</string>
+		<key>ONE_MCP_ENABLE_AUTH</key>
+		<string>false</string>
+	</dict>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>KeepAlive</key>
