@@ -88,6 +88,23 @@ Do NOT roll your own batch processing, structured logging, or secrets retrieval 
 
 In TypeScript projects, type Lambda handlers and events using **`@types/aws-lambda`** wherever applicable (e.g. `APIGatewayProxyHandler`, `SQSHandler`, `DynamoDBStreamHandler`, `ScheduledHandler`, `S3Handler`, `EventBridgeHandler`). If the package is not already a dev dependency, recommend adding it (`npm install -D @types/aws-lambda`) before writing the handler rather than hand-rolling types or using `any`.
 
+#### Handler exports in ADOT environments
+
+When a Lambda uses the ADOT (AWS Distro for OpenTelemetry) layer with the
+`aws-lambda` auto-instrumentation, the handler **must** be exported with
+`module.exports = { handler }`, **not** `export const handler`. The ADOT layer
+hot-patches `exports.handler` at init via `Object.defineProperty`; esbuild
+compiles `export const handler` to a non-configurable getter, so the patch throws
+`TypeError: Cannot redefine property: handler` and the function fails at init —
+every invocation dead-letters.
+
+Before writing or refactoring a Lambda handler's export, determine whether the
+project runs in an ADOT environment (look for the ADOT layer in CDK, the
+`AWS_LAMBDA_EXEC_WRAPPER=/opt/otel-handler` env var, or `OTEL_*` config). If you
+cannot tell from the code, use AskUserQuestion to ask whether the project uses
+the ADOT layer before choosing the export style. When in doubt, prefer
+`module.exports = { handler }`.
+
 ## Jira
 
 Claude has access to Jira via the Jira CLI (`j`). Use it to view, create, update, and search for issues.
