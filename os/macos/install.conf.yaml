@@ -9,6 +9,8 @@
     - ~/.local/share/ollama
     - ~/Library/Application Support/Claude
     - ~/Library/LaunchAgents
+    - ~/src/jd
+    - ~/src/studia
 
 - link:
     ~/.config/1Password: config/1Password
@@ -20,7 +22,9 @@
 
 - shell:
     - [make dependencies/brew]
-    - [/opt/homebrew/bin/op inject -i ./config/zsh/.zshenv.secrets.tmpl -o ~/.zshenv.secrets]
+    - [/opt/homebrew/bin/op inject -f -i ./config/zsh/.zshenv.secrets.tmpl -o ~/.zshenv.secrets]
+    - [/opt/homebrew/bin/op inject -f -i ./client/studia/.env.tmpl -o ~/src/studia/.env]
+    - [/opt/homebrew/bin/op inject -f -i ./client/jd/.env.tmpl -o ~/src/jd/.env]
     - [/opt/homebrew/bin/mise install]
     - [/opt/homebrew/bin/envsubst '$HOME' < ./config/claude-desktop/claude_desktop_config.json.tmpl > "$HOME/Library/Application Support/Claude/claude_desktop_config.json", Generating Claude Desktop config]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist]
