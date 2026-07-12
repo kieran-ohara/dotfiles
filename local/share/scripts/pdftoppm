@@ -1,0 +1,24 @@
+#!/bin/bash -e
+
+# Containerised poppler CLI. The entrypoint is derived from the script name, so
+# a single image serves every poppler tool (pdftoppm, pdftotext, pdfinfo, ...) —
+# symlink this file to any other poppler binary name to expose it. See `magick`
+# for the same pattern.
+#
+# Claude Code shells out to `pdftoppm` to rasterise pages when reading PDFs. It
+# passes absolute paths for both the input (under $HOME) and its output (under
+# the system temp dir), so those trees are mounted at their real macOS locations
+# to keep paths identical inside the container.
+
+tty_flag=""
+[ -t 0 ] && tty_flag="-t"
+
+docker run --rm -i $tty_flag \
+  -v "$HOME:$HOME" \
+  -v /private/tmp:/private/tmp \
+  -v /private/tmp:/tmp \
+  -v /private/var/folders:/private/var/folders \
+  -v /private/var/folders:/var/folders \
+  -w "$(pwd)" \
+  --entrypoint "$(basename "$0")" \
+  kieranbamforth/poppler:latest "$@"

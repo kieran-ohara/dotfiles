@@ -232,6 +232,16 @@ This ensures the command runs with the correct working directory, PATH, and depe
 - When running development commands (tests, builds, linting, formatting, package managers, etc.), do NOT use `cd`. Always run commands from the repo root using relative or absolute paths.
 - Only use `cd` as a last resort when a tool genuinely requires it to work from a specific directory.
 
+## PDFs
+
+To read, render, or extract content from PDFs, use the **poppler** CLI. It is
+available on `PATH` as a containerised tool (a `docker run` wrapper) — do NOT
+install poppler via Homebrew or `apt`.
+
+- `pdftoppm` — rasterise pages to images (this is what the PDF-reading path uses)
+- `pdftotext` — extract text
+- `pdfinfo` — inspect metadata / page count
+
 ## AI Applications
 
 ### Testing & Evaluation
