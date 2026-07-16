@@ -87,6 +87,8 @@
 	path = personal
 [includeIf "gitdir:~/src/personal/**"]
 	path = personal
+[includeIf "gitdir:~/src/irkb/**"]
+	path = personal
 [includeIf "gitdir:~/src/jd/**"]
 	path = jd
 
