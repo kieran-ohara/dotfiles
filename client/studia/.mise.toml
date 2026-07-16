@@ -1,7 +1,0 @@
-[env]
-JIRA_CONFIG_FILE = "${XDG_CONFIG_HOME}/.jira/.config.studia.yml"
-GH_REQUIRED_ACCOUNT = "kieran-ohara"
-_.file = [{ path = ".env", redact = true }, ".env.local"]
-
-[settings]
-env_shell_expand = true

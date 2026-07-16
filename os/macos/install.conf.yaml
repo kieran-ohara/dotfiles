@@ -10,7 +10,6 @@
     - ~/Library/Application Support/Claude
     - ~/Library/LaunchAgents
     - ~/src/jd
-    - ~/src/studia
 
 - link:
     ~/.config/1Password: config/1Password
@@ -18,12 +17,10 @@
     ~/.config/skhd: config/skhd
     ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist: os/macos/me.kieranbamforth.1mcp.plist
     ~/src/jd/.mise.toml: client/jd/.mise.toml
-    ~/src/studia/.mise.toml: client/studia/.mise.toml
 
 - shell:
     - [make dependencies/brew]
     - [/opt/homebrew/bin/op inject -f -i ./config/zsh/.zshenv.secrets.tmpl -o ~/.zshenv.secrets]
-    - [/opt/homebrew/bin/op inject -f -i ./client/studia/.env.tmpl -o ~/src/studia/.env]
     - [/opt/homebrew/bin/op inject -f -i ./client/jd/.env.tmpl -o ~/src/jd/.env]
     - [/opt/homebrew/bin/mise install]
     - [/opt/homebrew/bin/envsubst '$HOME' < ./config/claude-desktop/claude_desktop_config.json.tmpl > "$HOME/Library/Application Support/Claude/claude_desktop_config.json", Generating Claude Desktop config]

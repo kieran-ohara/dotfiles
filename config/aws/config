@@ -3,11 +3,6 @@ sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
 sso_registration_scopes = sso:account:access
 
-[sso-session studia]
-sso_start_url = https://studia.awsapps.com/start
-sso_region = eu-north-1
-sso_registration_scopes = sso:account:access
-
 [sso-session jdplc]
 sso_start_url = https://d-936748aa88.awsapps.com/start
 sso_region = eu-west-1
@@ -94,18 +89,6 @@ region = eu-west-2
 
 [profile personal]
 region = eu-west-2
-
-[profile sdev]
-sso_session = studia
-sso_account_id = 040162742786
-sso_role_name = AdministratorAccess
-region = eu-west-1
-
-[profile sprod]
-sso_session = studia
-sso_account_id = 095652686417
-sso_role_name = AdministratorAccess
-region = eu-west-1
 
 [profile jd-commerce-dev]
 sso_session = jdplc
