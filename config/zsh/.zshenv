@@ -105,6 +105,10 @@ if test -f "$SECRETS_FILE"; then
     source $SECRETS_FILE;
 fi
 
+if [ -n "$LANGFUSE_PUBLIC_KEY" ] && [ -n "$LANGFUSE_SECRET_KEY" ]; then
+    export LANGFUSE_MCP_AUTH="Basic $(printf '%s' "${LANGFUSE_PUBLIC_KEY}:${LANGFUSE_SECRET_KEY}" | base64)"
+fi
+
 # terminfo
 export TERMINFO="$XDG_CONFIG_HOME"/terminfo/db
 export TERMINFO_DIRS="${XDG_CONFIG_HOME}/terminfo:/usr/share/terminfo"

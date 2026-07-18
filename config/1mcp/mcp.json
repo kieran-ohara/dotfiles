@@ -60,6 +60,11 @@
       "command": "omnifocus-mcp",
       "args": [],
       "tags": ["core"]
+    },
+    "langfuse": {
+      "command": "mcp-remote",
+      "args": ["https://cloud.langfuse.com/api/public/mcp", "--header", "Authorization:${LANGFUSE_MCP_AUTH}"],
+      "tags": ["dev"]
     }
   }
 }
