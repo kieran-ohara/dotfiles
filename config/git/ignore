@@ -5,6 +5,7 @@
 .gpteng
 .idea
 .project
+.rtk
 .tern-project
 Session.vim
 __pycache__
