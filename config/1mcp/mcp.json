@@ -65,6 +65,11 @@
       "command": "mcp-remote",
       "args": ["https://cloud.langfuse.com/api/public/mcp", "--header", "Authorization:${LANGFUSE_MCP_AUTH}"],
       "tags": ["dev"]
+    },
+    "1password": {
+      "command": "/Applications/1Password.app/Contents/MacOS/onepassword-mcp",
+      "args": [],
+      "tags": ["dev"]
     }
   }
 }
