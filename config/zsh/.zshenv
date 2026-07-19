@@ -128,3 +128,4 @@ export LC_CTYPE="en_US.UTF-8"
 
 # Remove built in claude rubbish
 export ENABLE_CLAUDEAI_MCP_SERVERS=false
+export CLAUDE_CODE_DISABLE_MOUSE_CLICKS=1
