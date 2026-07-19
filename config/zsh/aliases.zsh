@@ -42,6 +42,7 @@ alias v=resumevimsession
 alias w=nicewhich
 alias wts='wt switch'
 alias wtl='wt list'
+alias wtrmf='() { wt remove -f  $1}'
 alias x=exit
 alias y='yarn'
 alias ywr='() { yarn workspace $1 run $2}'

@@ -40,6 +40,7 @@
     rc = "!git-branchless record"
     rci = "!git-branchless record -i"
     rw = "!git-branchless reword"
+    sync = "!git-branchless sync"
 
     pr = "!gh pr create"
     prm = "!gh pr list --author='@me'"
@@ -68,7 +69,6 @@
     rh = reset --hard
     rs = restore
     s = status
-    sl = "!git branch --merged | grep  -v '\\*\\|master\\|main' | xargs -n 1 -r git branch -d"
     sm = submodule
     smur =  submodule update --recursive
     smuri =  submodule update --recursive --init
