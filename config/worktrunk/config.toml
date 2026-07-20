@@ -3,3 +3,20 @@
 
 [post-start]
 specify = "specify init --here --script sh --integration claude --force"
+install-deps = '''
+if [ -f package.json ]; then
+  pm=$(jq -r '.packageManager // empty' package.json | cut -d@ -f1)
+  if [ -n "$pm" ]; then
+    corepack enable
+    corepack "$pm" install
+  elif [ -f pnpm-lock.yaml ]; then
+    corepack pnpm install
+  elif [ -f yarn.lock ]; then
+    corepack yarn install
+  elif [ -f package-lock.json ]; then
+    npm ci
+  else
+    npm install
+  fi
+fi
+'''
