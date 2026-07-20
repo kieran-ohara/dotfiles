@@ -75,6 +75,20 @@ aws-vault exec profile-name -- cdk list
 Replace `profile-name` with the profile name given in the instruction. If no
 profile name is given, ask the user.
 
+#### Verifying a deployment
+
+A CDK deploy that reports `UPDATE_COMPLETE` / `CREATE_COMPLETE` (the `✅` line)
+has shipped the code. Do **not** download or grep the deployed Lambda bundle to
+"confirm" the new code is present — a completed deploy is the confirmation.
+(Provided the artifact was built fresh: always let the build run before
+deploying — e.g. `turbo run deploy:dev`, which builds first, or run the
+package's own `build` before a direct `cdk deploy`. Never deploy a stale
+pre-built bundle; that, not the deploy status, is what makes people distrust it.)
+
+To **verify a deployment**, exercise the deployed behaviour and observe the
+result — invoke the function or publish the triggering event, then check the
+output/logs/traces (e.g. Langfuse) — rather than inspecting the code artifact.
+
 ### Lambda
 
 Use **AWS Lambda Powertools for TypeScript** (`@aws-lambda-powertools/*`) as the standard toolkit for all Lambda handlers:
