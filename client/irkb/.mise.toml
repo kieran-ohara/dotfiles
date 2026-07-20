@@ -3,7 +3,10 @@ node = "24.10.0"
 
 [env]
 GH_REQUIRED_ACCOUNT = "kieran-ohara"
-_.file = [{ path = ".env", redact = true }, ".env.local"]
+_.file = [
+  { path = ".env", redact = true },
+  ".env.local",
+]
 
 [settings]
 env_shell_expand = true
