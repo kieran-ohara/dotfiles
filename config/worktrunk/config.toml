@@ -9,14 +9,25 @@ if [ -f package.json ]; then
   if [ -n "$pm" ]; then
     corepack enable
     corepack "$pm" install
+    run="corepack $pm run"
   elif [ -f pnpm-lock.yaml ]; then
     corepack pnpm install
+    run="corepack pnpm run"
   elif [ -f yarn.lock ]; then
     corepack yarn install
+    run="corepack yarn run"
   elif [ -f package-lock.json ]; then
     npm ci
+    run="npm run"
   else
     npm install
+    run="npm run"
+  fi
+
+  # Yarn Berry skips the root `prepare` script on install, so hook managers like
+  # husky never get wired up in a fresh worktree. Run it explicitly if defined.
+  if [ -n "$(jq -r '.scripts.prepare // empty' package.json)" ]; then
+    $run prepare || true
   fi
 fi
 '''
