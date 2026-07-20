@@ -8,7 +8,7 @@
 	<array>
 		<string>/bin/zsh</string>
 		<string>-ic</string>
-		<string>exec 1mcp serve</string>
+    <string>exec /opt/homebrew/bin/op run --env-file ${HOME}/.config/1mcp/.env.tmpl -- 1mcp serve</string>
 	</array>
 	<key>EnvironmentVariables</key>
 	<dict>
