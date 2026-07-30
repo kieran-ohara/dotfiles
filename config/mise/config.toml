@@ -16,6 +16,7 @@ node = "22"
 "npm:@xeroapi/xero-mcp-server" = "latest"
 "npm:langfuse-cli" = "latest"
 "npm:mcp-remote" = "latest"
+"npm:next-devtools-mcp" = "latest"
 "npm:omnifocus-mcp" = "latest"
 
 python = "3.11"

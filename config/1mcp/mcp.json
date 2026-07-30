@@ -70,6 +70,11 @@
       "command": "/Applications/1Password.app/Contents/MacOS/onepassword-mcp",
       "args": [],
       "tags": ["dev"]
+    },
+    "next-devtools": {
+      "command": "next-devtools-mcp",
+      "args": [],
+      "tags": ["dev"]
     }
   }
 }
