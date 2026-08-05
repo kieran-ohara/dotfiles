@@ -1,12 +1,8 @@
 {
   "mcpServers": {
     "browserbase": {
-      "command": "mcp-server-browserbase",
-      "args": [],
-      "env": {
-        "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
-        "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}"
-      },
+      "command": "mcp-remote",
+      "args": ["https://mcp.browserbase.com/mcp?browserbaseApiKey=${BROWSERBASE_API_KEY}"],
       "tags": ["core"]
     },
     "playwright": {
