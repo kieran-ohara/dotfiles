@@ -102,6 +102,50 @@ Do NOT roll your own batch processing, structured logging, or secrets retrieval 
 
 In TypeScript projects, type Lambda handlers and events using **`@types/aws-lambda`** wherever applicable (e.g. `APIGatewayProxyHandler`, `SQSHandler`, `DynamoDBStreamHandler`, `ScheduledHandler`, `S3Handler`, `EventBridgeHandler`). If the package is not already a dev dependency, recommend adding it (`npm install -D @types/aws-lambda`) before writing the handler rather than hand-rolling types or using `any`.
 
+#### Caching across warm invocations
+
+Lambda containers are reused: anything awaited or constructed in the handler
+body is paid on **every** invocation, not just cold start. Expensive init —
+SSM parameters, secrets, DB connections, SDK/service clients — must be cached
+at module level so warm invocations skip it. Never call `getParameter` /
+`getSecret` directly in the handler path (Powertools' built-in cache has a
+short default `maxAge` and is not a substitute).
+
+The canonical shape is a module-level **promise cache**: memoize the in-flight
+promise, validate the result inside it, and reset to `null` on failure so a
+transient error is retried on the next invocation instead of being cached
+forever:
+
+```typescript
+let apiKeyPromise: Promise<string> | null = null;
+
+export function getApiKey(): Promise<string> {
+  if (!apiKeyPromise) {
+    apiKeyPromise = getParameter("/service/api-key", { decrypt: true })
+      .then((value) => {
+        if (!value) {
+          throw new Error("Missing API key");
+        }
+        return value;
+      })
+      .catch((err) => {
+        apiKeyPromise = null;
+        throw err;
+      });
+  }
+  return apiKeyPromise;
+}
+```
+
+A cold-start-only value cache (`if (!cached) { cached = ... }` assigned only
+after a successful await) is an acceptable equivalent inside a handler module —
+don't churn existing code between the two shapes.
+
+Corollary: wire services **once per container** (module scope, or a memoized
+`getApp()`/factory). An object constructed per invocation defeats any caching
+it does internally — e.g. a service that lazily fetches its encryption key on
+first use re-fetches it every invocation if the handler news it up per event.
+
 #### Handler exports in ADOT environments
 
 When a Lambda uses the ADOT (AWS Distro for OpenTelemetry) layer with the
@@ -159,6 +203,33 @@ When a lockfile (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`) has merge o
 - Do NOT list or summarise individual file changes - reviewers can read the diff
 - Do NOT include a "Test Plan" section
 - Keep it concise; respect the reviewer's time and intelligence
+
+### Pull Request Reviews
+
+When reviewing a pull request - or your own changes before opening one - apply
+these in addition to checking correctness.
+
+#### YAGNI
+
+Flag production surface that has no caller: public methods, exported types,
+repository/service functions, config, routes, or endpoints that are exercised
+only by tests, or by nothing at all. Unused code is a liability - delete it, or
+defer it until a real consumer exists. A method that exists purely so a test can
+observe internal state is NOT a consumer; verify the behaviour through the real
+seam instead (e.g. query the datastore directly).
+
+#### Spec-driven work (spec-kit / specify)
+
+When the change came out of a spec-kit workflow (a `specs/<n>/` directory with
+`spec.md` / `plan.md` / `tasks.md`), additionally check the spec against what
+actually ships:
+
+- If a functional requirement or success criterion mandates a capability the
+  delivered slice has no consumer for, it should be descoped or deferred in the
+  spec - not built speculatively to satisfy the letter of the spec.
+- Requirements describing a deferred consumer (a future read, endpoint, or UI)
+  do not justify building that surface now.
+- Prefer amending the spec to match the delivered scope over adding unused code.
 
 ## Code Comments
 
