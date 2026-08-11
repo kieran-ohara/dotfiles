@@ -256,6 +256,14 @@ Do not tag commits with task numbers or story/requirement codes (e.g.
 `Add role guard (T029, T031)`). Describe the change on its own terms; the commit
 history should read as a narrative of the work, not of the plan that produced it.
 
+## Banned Phrases
+
+Never use the following phrases in responses, code comments, commit messages, or
+any other written output:
+
+- "you're absolutely right"
+- "load bearing"
+
 ## TypeScript
 
 - Do NOT use dynamic imports (`import()`) - use static imports only
