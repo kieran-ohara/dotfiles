@@ -71,6 +71,11 @@
       "command": "next-devtools-mcp",
       "args": [],
       "tags": ["dev"]
+    },
+    "v0": {
+      "command": "mcp-remote",
+      "args": ["https://v0.app/api/mcp"],
+      "tags": ["dev"]
     }
   }
 }
