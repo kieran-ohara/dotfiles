@@ -2,6 +2,8 @@
 .last-cleanup
 backups
 cache
+daemon.*
+daemon/
 debug
 file-history
 history.jsonl
