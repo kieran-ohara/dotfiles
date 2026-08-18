@@ -76,6 +76,11 @@
       "command": "mcp-remote",
       "args": ["https://v0.app/api/mcp"],
       "tags": ["dev"]
+    },
+    "mobbin": {
+      "command": "mcp-remote",
+      "args": ["https://api.mobbin.com/mcp"],
+      "tags": ["dev"]
     }
   }
 }
