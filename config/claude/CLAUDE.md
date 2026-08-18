@@ -231,6 +231,37 @@ actually ships:
   do not justify building that surface now.
 - Prefer amending the spec to match the delivered scope over adding unused code.
 
+## Clean Up
+
+When the user says a feature is finished and asks to clean up, run through these:
+
+### Stacked branches (`gh stack`)
+
+- If the feature was built as a stack, clean it up with `gh stack sync --prune`,
+  run from a branch **in** the stack (not the trunk) while the local stack
+  tracking still exists. It fetches, fast-forwards the trunk, cascade-rebases any
+  still-open branches, and then prunes — deletes the **local** branches whose PRs
+  are merged. Do this *before* the local tracking is lost.
+- If the tracking is already gone (`gh stack view --json` reports "not part of a
+  stack"), `sync --prune` has nothing to operate on. Fall back to: confirm each
+  PR is `MERGED` (`gh pr list --head <branch> --state all`), then
+  `git branch -D <branch>`. Force-delete (`-D`) is needed because squash-merged
+  branches are not ancestors of the trunk, so `git branch -d`'s merged-check
+  refuses them.
+- Remote branches are usually auto-deleted on merge; confirm with
+  `git ls-remote --heads origin '<pattern>'` before assuming they linger.
+
+### Worktrees
+
+- If this session — or an agent spawned during it — created git worktrees, tidy
+  them up once the work is merged or abandoned. List them with
+  `git worktree list`, then `git worktree remove <path>` for each
+  session-created one, and `git worktree prune` to clear stale administrative
+  entries.
+- Never force-remove a worktree that has uncommitted or unpushed changes. Check
+  its state first (`git -C <path> status`, `git -C <path> log --oneline @{u}..`)
+  and surface anything unmerged to the user rather than discarding it.
+
 ## Code Comments
 
 - Code should be self-documenting. Reduce the need for comments.
