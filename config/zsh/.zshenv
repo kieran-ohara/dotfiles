@@ -11,6 +11,10 @@ export XDG_DATA_HOME=$HOME/.local/share
 # Alalogous to /var/lib
 export XDG_STATE_HOME=$HOME/.local/state
 
+# Codex does not read XDG_CONFIG_HOME directly, but supports relocating its
+# configuration and state root with CODEX_HOME.
+export CODEX_HOME=$XDG_CONFIG_HOME/codex
+
 # ZSH XDG config
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
