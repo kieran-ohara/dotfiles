@@ -89,9 +89,6 @@
 	path = personal
 [includeIf "gitdir:~/src/irkb/**"]
 	path = personal
-[includeIf "gitdir:~/src/jd/**"]
-	path = jd
-
 [credential]
 	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager

@@ -3,11 +3,6 @@ sso_start_url = https://kieran.awsapps.com/start
 sso_region = eu-west-1
 sso_registration_scopes = sso:account:access
 
-[sso-session jdplc]
-sso_start_url = https://d-936748aa88.awsapps.com/start
-sso_region = eu-west-1
-sso_registration_scopes = sso:account:access
-
 [profile kieran]
 sso_session = kieran
 sso_account_id = 855277617897
@@ -89,69 +84,3 @@ region = eu-west-2
 
 [profile personal]
 region = eu-west-2
-
-[profile jd-commerce-dev]
-sso_session = jdplc
-sso_account_id = 463470971770
-sso_role_name = DevOpsAdmins
-region = eu-central-1
-
-[profile jd-commerce-tst]
-sso_session = jdplc
-sso_account_id = 816069141512
-sso_role_name = DevOpsEngineers
-region = eu-central-1
-
-[profile jd-commerce-prd]
-sso_session = jdplc
-sso_account_id = 536697223798
-sso_role_name = DevOpsEngineers
-region = eu-central-1
-
-[profile jd-commerce-pprd]
-sso_session = jdplc
-sso_account_id = 977098998562
-sso_role_name = DevOpsEngineers
-region = eu-central-1
-
-[profile jd-dip-tst]
-sso_session = jdplc
-sso_account_id = 043309359455
-sso_role_name = DevOpsEngineers
-region = eu-central-1
-
-[profile jd-dip-pprd]
-sso_session = jdplc
-sso_account_id = 605134465947
-sso_role_name = DevOpsEngineers
-region = eu-central-1
-
-[profile jd-dip-prd]
-sso_session = jdplc
-sso_account_id = 619071337252
-sso_role_name = DevOpsEngineers
-region = eu-central-1
-
-[profile jd-admin-tooling-dev]
-sso_session = jdplc
-sso_account_id = 721224593294
-sso_role_name = DevOpsAdmins
-region = eu-central-1
-
-[profile jd-admin-tooling-tst]
-sso_session = jdplc
-sso_account_id = 582626474672
-sso_role_name = DevOpsEngineers
-region = eu-central-1
-
-[profile jd-admin-tooling-pprd]
-sso_session = jdplc
-sso_account_id = 248729599262
-sso_role_name = DevOpsEngineers
-region = eu-central-1
-
-[profile jd-admin-tooling-prd]
-sso_session = jdplc
-sso_account_id = 980664882429
-sso_role_name = DevOpsEngineers
-region = eu-central-1
