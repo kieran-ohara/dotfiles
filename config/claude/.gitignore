@@ -2,6 +2,7 @@
 .last-cleanup
 backups
 cache
+chrome
 daemon.*
 daemon/
 debug
@@ -9,6 +10,7 @@ file-history
 history.jsonl
 ide
 image-cache
+jobs
 mcp-needs-auth-cache.json
 paste-cache
 plans
