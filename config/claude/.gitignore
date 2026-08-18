@@ -5,6 +5,7 @@ cache
 debug
 file-history
 history.jsonl
+ide
 image-cache
 mcp-needs-auth-cache.json
 paste-cache
