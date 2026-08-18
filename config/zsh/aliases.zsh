@@ -11,6 +11,7 @@ alias bu='brew uninstall'
 alias cdr=cd_git_repo_root
 alias cdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 alias c="claude"
+alias cx="codex"
 alias ct="CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude"
 alias cpr='cp -r'
 alias d='docker'
