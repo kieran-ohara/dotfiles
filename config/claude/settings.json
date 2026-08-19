@@ -155,7 +155,7 @@
     }
   },
   "alwaysThinkingEnabled": true,
-  "theme": "dark",
+  "theme": "dark-ansi",
   "editorMode": "vim",
   "skipAutoPermissionPrompt": true,
   "effortLevel": "high"
