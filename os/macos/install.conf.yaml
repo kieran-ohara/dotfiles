@@ -9,6 +9,7 @@
     - ~/.local/share/ollama
     - ~/Library/Application Support/Claude
     - ~/Library/LaunchAgents
+    - ~/src/arden
     - ~/src/irkb
 
 - link:
@@ -16,11 +17,13 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/skhd: config/skhd
     ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist: os/macos/me.kieranbamforth.1mcp.plist
+    ~/src/arden/.mise.toml: client/arden/.mise.toml
     ~/src/irkb/.mise.toml: client/irkb/.mise.toml
 
 - shell:
     - [make dependencies/brew]
     - [/opt/homebrew/bin/op inject -f -i ./config/zsh/.zshenv.secrets.tmpl -o ~/.zshenv.secrets]
+    - [/opt/homebrew/bin/op inject -f -i ./client/arden/.env.tmpl -o ~/src/arden/.env]
     - [/opt/homebrew/bin/mise install]
     - [/opt/homebrew/bin/envsubst '$HOME' < ./config/claude-desktop/claude_desktop_config.json.tmpl > "$HOME/Library/Application Support/Claude/claude_desktop_config.json", Generating Claude Desktop config]
     - [launchctl load ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist]

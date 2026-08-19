@@ -1,0 +1,10 @@
+[user]
+  email = kohara@arden.ac.uk
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKkfkQx8BcSnrWqrwim490LtrE1J//60AT0iQGlXTMuT
+
+[commit]
+  gpgsign = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"

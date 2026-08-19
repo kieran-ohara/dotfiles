@@ -1,0 +1,9 @@
+[env]
+JIRA_CONFIG_FILE = "${XDG_CONFIG_HOME}/.jira/.config.arden.yml"
+_.file = [
+  { path = ".env", redact = true },
+  ".env.local",
+]
+
+[settings]
+env_shell_expand = true
