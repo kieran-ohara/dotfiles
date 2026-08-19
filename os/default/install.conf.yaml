@@ -9,6 +9,7 @@
     - ~/.cache
     - ~/.cache/zsh
     - ~/.config
+    - ~/.config/codex
     - ~/.local/jira
     - ~/.local/share
     - ~/.local/share/nvim/site
@@ -33,7 +34,7 @@
     ~/.config/ansible: config/ansible
     ~/.config/aws: config/aws
     ~/.config/azure: config/azure
-    ~/.config/codex: config/codex
+    ~/.config/codex/.gitignore: config/codex/.gitignore
     ~/.config/docker: config/docker
     ~/.config/efm-langserver: config/efm-langserver
     ~/.config/gcloud: config/gcloud
