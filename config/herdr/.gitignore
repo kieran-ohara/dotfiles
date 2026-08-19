@@ -1,0 +1,4 @@
+# Herdr keeps session state, sockets, logs, and plugins beside its config.
+*
+!.gitignore
+!config.toml

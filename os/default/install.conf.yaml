@@ -39,6 +39,7 @@
     ~/.config/efm-langserver: config/efm-langserver
     ~/.config/gcloud: config/gcloud
     ~/.config/git: config/git
+    ~/.config/herdr: config/herdr
     ~/.config/homebrew: config/homebrew
     ~/.config/httpie: config/httpie
     ~/.config/luacheck: config/luacheck

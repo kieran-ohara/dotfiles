@@ -1,0 +1,34 @@
+# Keep first-run setup from rewriting this managed config file.
+onboarding = false
+
+[terminal]
+# New panes and tabs inherit the current pane's working directory.
+new_cwd = "follow"
+
+[keys]
+prefix = "ctrl+a"
+
+# Preserve the tmux tab bindings while keeping Herdr's shorter defaults.
+previous_tab = ["prefix+p", "prefix+ctrl+p"]
+next_tab = ["prefix+n", "prefix+ctrl+n"]
+
+# Match the tmux split directions: l opens right, j opens below.
+split_vertical = "prefix+l"
+split_horizontal = "prefix+j"
+
+# Move between panes with Ctrl-a followed by an arrow key.
+focus_pane_left = "prefix+left"
+focus_pane_down = "prefix+down"
+focus_pane_up = "prefix+up"
+focus_pane_right = "prefix+right"
+
+[theme]
+# Follow the host terminal's ANSI palette rather than duplicating tmux themes.
+name = "terminal"
+
+[ui]
+# tmux presents its window list at the bottom.
+tab_bar_position = "bottom"
+pane_gaps = false
+pane_scrollbars = false
+agent_panel_sort = "spaces"
