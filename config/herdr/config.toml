@@ -9,8 +9,10 @@ new_cwd = "follow"
 prefix = "ctrl+a"
 
 # Preserve the tmux tab bindings while keeping Herdr's shorter defaults.
-previous_tab = ["prefix+p", "prefix+ctrl+p"]
-next_tab = ["prefix+n", "prefix+ctrl+n"]
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
+goto = "prefix+q"
+detach = "prefix+d"
 
 # Match the tmux split directions: l opens right, j opens below.
 split_vertical = "prefix+l"
@@ -21,6 +23,7 @@ focus_pane_left = "prefix+left"
 focus_pane_down = "prefix+down"
 focus_pane_up = "prefix+up"
 focus_pane_right = "prefix+right"
+last_pane = "prefix+;"
 
 [theme]
 # Follow the host terminal's ANSI palette rather than duplicating tmux themes.
