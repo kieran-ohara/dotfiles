@@ -26,6 +26,50 @@ orchestration, skip the test.
 5. Move to the next test
 6. Suggest refactoring opportunities when appropriate
 
+#### Use the test setup the codebase already has
+
+TDD is followed using the **established test patterns of the codebase** — its
+runner, its config, its file naming, its directory layout. Match what is there.
+
+Do NOT introduce test infrastructure into a codebase that has none. If a repo or
+package has no test runner, no test files, or only a placeholder script (e.g.
+`"test": "echo \"Error: no test specified\" && exit 1"`), that is not an
+invitation to add one. Stop and say so: state that the code is untestable as it
+stands, what adding a runner would involve, and ask for explicit instruction
+before doing it. Adding a runner is its own piece of work with its own
+consequences — dependencies, CI changes, a second tool for the team to learn —
+and it is the user's call, not a prerequisite to be quietly satisfied on the way
+to something else.
+
+The same restraint applies to changing an existing setup: do not swap runners,
+add a second one alongside the first, or restructure test layout because a
+different approach would suit the code better. Work within what exists, or ask.
+
+#### Test the real technology, never a mock of it
+
+Anything that talks to a datastore or external service — Postgres, DynamoDB,
+OpenSearch, S3, a queue — is tested against **the actual technology**, using
+testcontainers or an equivalent local instance. Do NOT mock the repository and
+assert that a `jest.fn()` received the right arguments. That proves the caller's
+arguments and nothing else: not that the query parses, not that the update
+expression is valid, not that the schema matches. A mocked repository cannot
+fail the way the real one does.
+
+The same applies to the deployed shape: prefer exercising the real handler,
+client, or query over a stand-in that merely resembles it.
+
+#### Tests must stand alone
+
+Each test sets up everything it asserts on and shares no mutable state with any
+other test. No test may rely on a previous test having written a row, seeded a
+fixture, or left a client in a particular state. Ordering is not a contract — a
+test that passes only in sequence is testing the sequence.
+
+The check that catches this: run the test on its own (e.g. `jest -t '<name>'`).
+If it passes in the suite but fails alone, it is asserting another test's side
+effects. Where tests share a container or database, give each one its own key,
+row, or namespace rather than reusing an identifier.
+
 ### Follow the Twelve-Factor App
 
 We follow the [Twelve-Factor App](https://12factor.net/) methodology closely.
