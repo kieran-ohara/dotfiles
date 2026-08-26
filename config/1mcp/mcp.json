@@ -49,7 +49,7 @@
     },
     "miro": {
       "command": "mcp-remote",
-      "args": ["https://mcp.miro.com/mcp"],
+      "args": ["https://mcp.miro.com/"],
       "tags": ["core"]
     },
     "omnifocus": {
