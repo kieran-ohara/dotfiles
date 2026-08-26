@@ -11,6 +11,7 @@ prefix = "ctrl+a"
 # Preserve the tmux tab bindings while keeping Herdr's shorter defaults.
 previous_tab = "prefix+p"
 next_tab = "prefix+n"
+rename_tab = "prefix+comma"
 goto = "prefix+q"
 detach = "prefix+d"
 
