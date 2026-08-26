@@ -15,7 +15,7 @@ node = "22"
 "npm:@playwright/mcp" = "latest"
 "npm:@xeroapi/xero-mcp-server" = "latest"
 "npm:langfuse-cli" = "latest"
-"npm:mcp-remote" = "latest"
+"npm:mcp-remote" = "0.1.49"
 "npm:next-devtools-mcp" = "latest"
 "npm:omnifocus-mcp" = "latest"
 
