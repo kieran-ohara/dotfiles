@@ -53,7 +53,8 @@ testcontainers or an equivalent local instance. Do NOT mock the repository and
 assert that a `jest.fn()` received the right arguments. That proves the caller's
 arguments and nothing else: not that the query parses, not that the update
 expression is valid, not that the schema matches. A mocked repository cannot
-fail the way the real one does.
+fail the way the real one does — a malformed query or update expression passes
+every mocked test and fails every real call.
 
 The same applies to the deployed shape: prefer exercising the real handler,
 client, or query over a stand-in that merely resembles it.
