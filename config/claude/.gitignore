@@ -3,6 +3,7 @@
 backups
 cache
 chrome
+daemon-*
 daemon.*
 daemon/
 debug
