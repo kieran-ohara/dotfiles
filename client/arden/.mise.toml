@@ -1,3 +1,6 @@
+[tools]
+node = "24"
+
 [env]
 JIRA_CONFIG_FILE = "${XDG_CONFIG_HOME}/.jira/.config.arden.yml"
 _.file = [
