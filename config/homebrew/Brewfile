@@ -3,6 +3,7 @@ tap 'koekeishiya/formulae'
 tap 'heroku/brew'
 tap 'lucagrulla/tap'
 tap 'ankitpokhrel/jira-cli'
+tap 'avivsinai/tap'
 
 cask '1password-cli'
 cask '1password'
@@ -56,6 +57,7 @@ mas 'Numbers', id: 361304891
 mas 'Pages', id: 361309726
 
 brew 'asmvik/formulae/skhd'
+brew 'bitbucket-cli'
 # brew 'azure-cli'
 # brew 'cw'
 brew 'dive'

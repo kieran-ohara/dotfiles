@@ -1,5 +1,6 @@
 {
   "trustedformulae": [
-    "asmvik/formulae/skhd"
+    "asmvik/formulae/skhd",
+    "avivsinai/tap/bitbucket-cli"
   ]
 }
