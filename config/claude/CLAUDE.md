@@ -11,6 +11,49 @@ These principles MUST be followed at all times.
 - Changes should be able to be committed to git as single, atomic commits.
 - Do NOT make sweeping changes across multiple parts of the codebase at once.
 
+### Express intent, not mechanism
+
+Build the named thing the domain or the specification calls for — a service, a
+repository, the port that already exists — and let helpers fall out of it as
+private detail. Do NOT scatter free-floating pure functions named after their
+mechanism (`compileX`, `toY`, `buildZ`) and then wire them together only in a
+test.
+
+A function named after its mechanism describes the mechanism. A method named
+after the use case — `matchLeadsForCandidate`, `matchCandidatesForLead` —
+describes the requirement, so the test reads as the behaviour and can be checked
+against the spec. Tests over loose helpers assert glue and tell a reader nothing
+about what the code is for.
+
+Before writing a helper:
+
+- Find the seam the specification or the existing ports already name, and
+  implement **that** rather than inventing something beside it.
+- Name methods for what a caller does, not for what the code does internally.
+- Keep third-party client APIs (SDKs, query DSLs, ORMs) behind that seam, so
+  nothing outside it is shaped by the library.
+- Never ship production surface with no caller. If the only consumer is a test,
+  either build the real consumer in the same change or do not build it yet.
+
+Where a datastore or external service is involved, exercise the named service
+against the real technology **through the API its callers will use**, rather
+than driving the client directly from the test.
+
+#### The file structure is the smell test
+
+If the thing you are writing has no obvious home — it lands loose at the top of
+a domain folder, next to nothing it belongs with — that is the structure telling
+you the abstraction is wrong. Well-formed code falls naturally into the layout
+the codebase already has. When there is no obvious home, stop and find the seam
+it belongs to instead of inventing a folder for it.
+
+Related: avoid type-to-type mappers as a design habit. A type named after a
+shape transformation (`XDocument`, `toX`, `XMapper`) tells a reader nothing
+about where it is used, and a type that merely mirrors another type is usually
+duplication rather than design. Where a translation is genuinely needed, it is
+private detail of the service that owns it — not exported surface a reader has
+to guess the purpose of.
+
 ### Use Test Driven Development (TDD)
 
 Code should be delivered using a the Test Driven Development approach:
@@ -70,6 +113,43 @@ The check that catches this: run the test on its own (e.g. `jest -t '<name>'`).
 If it passes in the suite but fails alone, it is asserting another test's side
 effects. Where tests share a container or database, give each one its own key,
 row, or namespace rather than reusing an identifier.
+
+#### Do not touch tests outside the work
+
+Change a test only when the work you were asked to do requires it: the behaviour
+it covers has changed, or your change breaks it. A test that merely sits nearby,
+reads badly, or carries a misleading name is not yours to edit.
+
+This applies above all to **renaming**. Never rename a test on your own
+initiative. A name that no longer matches what the test asserts is worth
+raising, not silently fixing: say which tests and why, and let the call be made.
+Unrequested renames pad a diff the reviewer needs kept small, and they change
+the shared vocabulary of the suite without anyone having agreed to it.
+
+The same restraint covers deleting tests, retitling `describe` blocks, and
+tidying assertions that are not in your way. Flag freely; edit narrowly.
+
+#### Find elements by test id, never by their copy
+
+In UI tests, locate elements with `data-testid` (`getByTestId`,
+`queryByTestId`, `within(scope).getByTestId(...)`). Do **not** find them by
+matching rendered prose — `getByText` / `queryByText` / `findByText` against a
+sentence the component displays.
+
+Rewording a message is a copy decision, not a behaviour change, but a text
+query fails on it. Worse, the assertion duplicates the translation, so the test
+starts fighting i18n: the same test cannot pass in two locales, and the string
+in the test drifts from the one in the translation file.
+
+Role and label queries are fine and often better — `getByRole("button", {name})`,
+`getByRole("region", {name})`, `getByLabelText(...)` — because they identify an
+element by its role and accessible name, which is behaviour, not decoration.
+
+When a component gains a new visible state, give it a `data-testid` in the same
+edit rather than reaching for its text afterwards. Name the id after the state,
+prefixed by the feature (e.g. `cv-extraction-nothing`). Reach for
+`toHaveTextContent` with a short substring only when a test must distinguish
+*which* of several messages rendered — never as the way to find the element.
 
 ### Follow the Twelve-Factor App
 
@@ -220,6 +300,31 @@ Use a positional argument for the comment body — there is no `--body` flag:
 j issue comment add ISSUE-KEY "comment text"
 ```
 
+## Bitbucket
+
+Repos hosted on Bitbucket (`origin` pointing at `bitbucket.org` or a Data
+Center host) are managed with the Bitbucket CLI, whose binary is **`bkt`** —
+installed by the `bitbucket-cli` formula from the `avivsinai/tap`. Use it for
+pull requests, pipelines and repository queries; `gh` will not work against
+these remotes.
+
+```bash
+bkt pr list                 # open PRs in the current repo
+bkt pr list --mine          # your PRs across all repos
+bkt pr view <id>            # description, state, source -> target
+bkt pr create               # source defaults to the current branch
+bkt pipeline list           # Cloud pipelines
+```
+
+Notes:
+
+- There is no `--head` / branch filter on `bkt pr list`. List and grep for the
+  branch name instead.
+- `bkt pr create` defaults the target to the **remote's default branch**. Where
+  a team integrates into a branch other than the default (e.g. `develop`), pass
+  `--target` explicitly rather than relying on the default.
+- `--json` plus `--jq` is supported on commands that produce structured output.
+
 ## Git
 
 ### Git Commands
@@ -307,12 +412,47 @@ When the user says a feature is finished and asks to clean up, run through these
   its state first (`git -C <path> status`, `git -C <path> log --oneline @{u}..`)
   and surface anything unmerged to the user rather than discarding it.
 
+## Clients
+
+Conventions that apply only to a particular client's repositories. Where these
+conflict with the general guidance above, the client's convention wins.
+
+### Arden
+
+Repositories under `~/src/arden`. Bitbucket-hosted, so pull requests go through
+`bkt`.
+
+Pull requests:
+
+- The ticket number always goes at the front of the title, e.g.
+  `MW-124: Add structured logging foundation`.
+- Never leave the description empty. There is no required format beyond that,
+  so the general pull request guidance above applies.
+
+The team is publishing further PR guides and conventions to their channels;
+update this section as they land.
+
 ## Code Comments
 
 - Code should be self-documenting. Reduce the need for comments.
 - Only add comments for complex procedures where the logic is not immediately obvious.
 - DO NOT add function documentation (JSDoc, docstrings, etc.) UNLESS that convention already exists in the codebase.
 - Avoid silly or unhelpful comments that restate what the code does.
+- **Comment the surprise, not the code.** A comment earns its place only if,
+  without it, a reader would be liable to change the code *incorrectly* — a
+  non-obvious constraint, a default that bites, a decision that looks wrong but
+  is not. If the comment would still read as true with the code deleted, it is
+  narration; delete it.
+- Do NOT restate the method name in prose above the method. A well-named method
+  is the comment.
+- **Design rationale belongs in the commit message and the pull request**, not
+  above every member. The code explains what the system does now; the history
+  explains why it came to be that way. Do not editorialise in source about
+  alternatives considered, what another service does differently, or why an
+  approach was chosen.
+- **Comment density is itself a smell.** A comment above nearly every member
+  means either the names are not carrying their weight or rationale is being
+  narrated. Both are fixed by deleting the comments, not by improving them.
 
 ### Spec-kit Task References
 
