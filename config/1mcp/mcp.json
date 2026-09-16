@@ -30,7 +30,7 @@
         "XERO_CLIENT_ID": "${XERO_CLIENT_ID}",
         "XERO_CLIENT_SECRET": "${XERO_CLIENT_SECRET}"
       },
-      "tags": ["accounting"]
+      "tags": ["business"]
     },
     "context7": {
       "command": "mcp-remote",
@@ -45,7 +45,7 @@
     "granola": {
       "command": "mcp-remote",
       "args": ["https://mcp.granola.ai/mcp"],
-      "tags": ["core"]
+      "tags": ["business"]
     },
     "miro": {
       "command": "mcp-remote",
