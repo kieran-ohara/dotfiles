@@ -84,3 +84,28 @@ region = eu-west-2
 
 [profile personal]
 region = eu-west-2
+
+# arden-master / 218463292780 - IAM user kohara, the only stored key pair;
+# every other arden profile assumes a role from here
+[profile arden-master]
+region = eu-west-1
+
+# arden-sandpit01 / 313689764888
+[profile arden-sandpit]
+source_profile = arden-master
+role_arn = arn:aws:iam::313689764888:role/ArdenAdministratorsRole
+region = eu-west-1
+
+# arden-dev01 / 853298144243 - also the uat env (ut1), same account and
+# role, distinguished only by the CDK -c config= value
+[profile arden-dev]
+source_profile = arden-master
+role_arn = arn:aws:iam::853298144243:role/ArdenAdministratorsRole
+region = eu-west-1
+
+# arden-prod01 / 075153712722 - role name inferred from the others,
+# never confirmed; verify before enabling
+# [profile arden-prod]
+# source_profile = arden-master
+# role_arn = arn:aws:iam::075153712722:role/ArdenAdministratorsRole
+# region = eu-west-1
