@@ -1,5 +1,5 @@
 # Treesitter Shared Objects
-FROM rust:bullseye AS treesitter
+FROM rust:bookworm AS treesitter
 RUN apt-get update --no-install-recommends && apt-get install  -y \
         git \
         jq \

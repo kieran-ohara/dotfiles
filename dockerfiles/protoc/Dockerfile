@@ -1,16 +1,22 @@
-FROM debian:bullseye-slim as bin
+FROM debian:bookworm-slim AS bin
 
 ENV RELEASES_URL=https://github.com/protocolbuffers/protobuf/releases/download
 ARG VERSION=21.9
+ARG TARGETARCH
 
 WORKDIR /tmp/protoc
 
 RUN apt-get update -y \
       && apt-get install -y wget unzip \
-      && wget ${RELEASES_URL}/v${VERSION}/protoc-${VERSION}-linux-aarch_64.zip -O protoc.zip \
+      && case "${TARGETARCH}" in \
+           amd64) ARCH=x86_64 ;; \
+           arm64) ARCH=aarch_64 ;; \
+           *) echo "unsupported arch: ${TARGETARCH}" >&2; exit 1 ;; \
+         esac \
+      && wget ${RELEASES_URL}/v${VERSION}/protoc-${VERSION}-linux-${ARCH}.zip -O protoc.zip \
       && unzip protoc.zip
 
-FROM golang:1.19-bullseye
+FROM golang:1.19-bookworm
 
 WORKDIR /protoc
 COPY --from=bin /tmp/protoc/bin/protoc /usr/local/bin/protoc
