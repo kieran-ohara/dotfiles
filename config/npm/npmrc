@@ -4,3 +4,4 @@ logs-dir=${XDG_STATE_HOME}/npm/logs
 @kieran-ohara:registry=https://npm.pkg.github.com/
 @irkb:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
