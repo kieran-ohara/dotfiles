@@ -42,6 +42,7 @@ This is a comprehensive dotfiles repository using **dotbot** for deployment mana
 - **`config/`** - All application configuration files organized by tool
 - **`local/share/`** - Local data including shell functions, scripts, and package management
 - **`os/`** - OS-specific installation configurations (default, macos)
+- **`client/`** - Per-client environment and secrets, linked into `~/src/<client>`
 - **`dotbot/`** - Dotbot deployment framework (git submodule)
 
 ### Key Components
@@ -63,6 +64,62 @@ This is a comprehensive dotfiles repository using **dotbot** for deployment mana
 - **System Preferences**: Automated via `os/macos/preferences.sh`
 - **Startup Items**: Apps to launch at login via `os/macos/startup-items.sh`
 - **Launch Agents**: Custom on-login service
+
+#### Client Projects and Secrets
+
+Each client gets a work root at `~/src/<client>` holding their repositories.
+Environment and secrets are configured **once at that root** and inherited by
+everything beneath it — repositories, worktrees, and any future clone — because
+mise walks up the directory tree. Nothing is ever written into a client's own
+repository.
+
+Three files make up the chain:
+
+| File | Written by | Tracked |
+|---|---|---|
+| `.mise.toml` | dotbot symlink to `client/<name>/.mise.toml` | yes |
+| `.env` | 1Password, as a mounted Environment | no |
+| `.env.local` | you, by hand | no |
+
+`.mise.toml` declares the toolchain and the client's identity — the non-secret
+values that select which account to act as:
+
+```toml
+[tools]
+node = "24.10.0"
+
+[env]
+GH_REQUIRED_ACCOUNT = "kieran-ohara"
+_.file = [
+  { path = ".env", redact = true },
+  ".env.local",
+]
+```
+
+`_.file` is ordered, so **`.env.local` overrides `.env`** — that is the slot for
+local experiments, never for a shared secret. `redact = true` registers `.env`
+values for masking in mise's task output.
+
+**Secrets come from a mounted 1Password Environment, not `op inject`.** The
+Environment is mounted directly as `~/src/<client>/.env`, so 1Password owns the
+file and a rotation in the vault is live immediately. Do not add an `op inject`
+step for a client: rendering a template writes a plaintext snapshot that goes
+stale the moment the secret rotates, and only refreshes on the next `./install`.
+
+> **These mounts report `size=0` to `stat` and `ls`.** They are served through a
+> virtual filesystem. Read them (`wc -lc`, `grep`) or check `mise env -C
+> ~/src/<client>` before concluding a mount is empty.
+
+Adding a client:
+
+1. Create `client/<name>/.mise.toml`.
+2. Add `~/src/<name>` to `create:` and the `.mise.toml` link to `link:` in
+   `os/macos/install.conf.yaml`.
+3. Create a 1Password Environment and mount it at `~/src/<name>/.env`.
+
+`config/zsh/.zshenv.secrets.tmpl` remains on `op inject` deliberately: 1mcp
+needs those variables in the launch agent's environment at startup, which a
+directory-scoped `.env` cannot reach.
 
 #### MCP (Model Context Protocol) Configuration
 
