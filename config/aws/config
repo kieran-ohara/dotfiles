@@ -88,6 +88,7 @@ region = eu-west-2
 # arden-master / 218463292780 - IAM user kohara, the only stored key pair;
 # every other arden profile assumes a role from here
 [profile arden-master]
+mfa_serial = arn:aws:iam::218463292780:mfa/1password
 region = eu-west-1
 
 # arden-sandpit01 / 313689764888
