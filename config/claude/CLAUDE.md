@@ -321,6 +321,35 @@ Corollary: wire services **once per container** (module scope, or a memoized
 it does internally — e.g. a service that lazily fetches its encryption key on
 first use re-fetches it every invocation if the handler news it up per event.
 
+The caching is the **handler's** job, not the collaborator's. A helper, client
+or service takes resolved values — a secret as a `string`, a connection as a
+connection — and knows nothing about how often it is built. The handler
+memoizes the whole object once per container.
+
+```typescript
+// ✅ The class has no opinion about caching.
+export class RevalidateEndpoint {
+  constructor(private readonly baseUrl: string, private readonly secret: string) {}
+}
+
+let endpoint: RevalidateEndpoint | undefined;
+async function getEndpoint(): Promise<RevalidateEndpoint> {
+  if (!endpoint) {
+    const secret = await getSecret(process.env.SECRET_NAME!);
+    endpoint = new RevalidateEndpoint(process.env.BASE_URL!, String(secret));
+  }
+  return endpoint;
+}
+```
+
+A constructor parameter typed `() => Promise<T>` is the tell: a thunk returning
+a promise only makes sense if the caller already knows it is memoized, so the
+class has been built around a caching strategy rather than around what it does.
+Take the `T`.
+
+Memoize the object, not the value inside it. Caching a secret behind a
+`getSecret()` thunk while newing up its consumer per invocation caches the cheap
+part and repeats the rest.
 #### Handler exports in ADOT environments
 
 When a Lambda uses the ADOT (AWS Distro for OpenTelemetry) layer with the
