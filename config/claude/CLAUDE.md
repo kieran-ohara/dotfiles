@@ -69,6 +69,56 @@ orchestration, skip the test.
 5. Move to the next test
 6. Suggest refactoring opportunities when appropriate
 
+#### Never test the library's behaviour
+
+A test must exercise code **we** wrote. A test whose assertion would still pass
+against an empty project — because the behaviour under test belongs to the
+library, not to us — verifies the library's own test suite and costs a reviewer
+time to read. Delete it rather than write it.
+
+**Zod schemas are the most common offender**, because a schema is a declaration
+with no logic in it: there is no branch to cover and no function to call. Asking
+"does `z.string()` reject a number?" is asking whether Zod works.
+
+```typescript
+// ❌ Worthless — these assert Zod's own semantics
+it("accepts a number for low", () => {
+  expect(Schema.safeParse([{ low: 400, high: 450 }]).success).toBe(true);
+});
+it("accepts a null low", () => {                    // z.number().nullable()
+  expect(Schema.safeParse([{ low: null }]).success).toBe(true);
+});
+it("rejects a missing required field", () => {      // required means required
+  expect(Schema.safeParse([{}]).success).toBe(false);
+});
+it("accepts two entries", () => {                   // z.array() holds elements
+  expect(Schema.parse([a, b])).toHaveLength(2);
+});
+
+// ✅ Worth keeping — asserts a DEFENSIVE SETTING whose removal breaks
+// production silently, and which nothing else catches
+it("strips an unmodelled key rather than rejecting the whole payload", () => {
+  const result = Schema.parse([{ ...valid, unmodelled: "x" }]);
+  expect(result[0]).not.toHaveProperty("unmodelled");
+});
+```
+
+The test on the right earns its place because adding `.strict()` would make
+every LLM extraction return `parsed: null` in production, and no other test in
+the suite would fail. That is the bar: *what silent breakage does this catch
+that nothing else does?* If there is no answer, do not write it.
+
+Where a schema's real behaviour matters, test it where the behaviour is:
+
+- What the **model** produces against it — a live extraction test asserting the
+  shape that came back.
+- What the **projection or consumer** does with it — assert the output of the
+  code that reads the parsed value.
+
+The same rule covers every dependency, not just Zod: do not test that the AWS
+SDK marshals a request, that the framework routes a path, that the date library
+adds a day, or that the ORM builds valid SQL for a query with no logic of ours
+in it.
 #### Use the test setup the codebase already has
 
 TDD is followed using the **established test patterns of the codebase** — its
