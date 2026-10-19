@@ -514,7 +514,8 @@ update this section as they land.
 ## Code Comments
 
 - Code should be self-documenting. Reduce the need for comments.
-- Only add comments for complex procedures where the logic is not immediately obvious.
+- Complexity alone does not license a comment. A procedure that is hard to follow
+  needs better names and smaller pieces, not narration bolted on top.
 - DO NOT add function documentation (JSDoc, docstrings, etc.) UNLESS that convention already exists in the codebase.
 - Avoid silly or unhelpful comments that restate what the code does.
 - **Comment the surprise, not the code.** A comment earns its place only if,
@@ -532,6 +533,15 @@ update this section as they land.
 - **Comment density is itself a smell.** A comment above nearly every member
   means either the names are not carrying their weight or rationale is being
   narrated. Both are fixed by deleting the comments, not by improving them.
+- **Describe business logic in the tests, not in implementation comments.**
+  Comments in implementation are for *surprise* only, per the rule above. The
+  behaviour itself — the rules, the cases, the worked examples — belongs in the
+  tests that describe it, because a test is executable and cannot go stale
+  silently, whereas a comment restating the same rule is a second copy of the
+  spec that will drift from it unnoticed. Where a rule needs explaining, explain
+  it in the test that pins it, and name the test so the rule reads from the
+  runner's output. A paragraph above a function describing how the logic behaves
+  is a sign the test names are not doing their job.
 
 ### Spec-kit Task References
 
