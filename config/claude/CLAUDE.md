@@ -11,6 +11,22 @@ These principles MUST be followed at all times.
 - Changes should be able to be committed to git as single, atomic commits.
 - Do NOT make sweeping changes across multiple parts of the codebase at once.
 
+### Check for designs before the spec
+
+When a feature has any frontend work, settle "do we have designs for this?"
+before the spec is written, not after implementing. List Claude Artifacts
+(scope "all") for a Design canvas, and ask if nothing turns up. Treat a design
+as an input to the spec alongside clarification; where design and spec
+disagree, surface it at spec time rather than discovering it in review.
+
+### A plan's phases are the stack
+
+Plan phases are pull requests in a `gh stack`: phase 1 is the bottom, the last
+phase is the top, and the stack lands back-to-back. There is exactly one
+ordering — build order, stack position and merge order are the same number.
+Never present "build order" and "merge order" as two sequences to reconcile,
+and do not infer an ordering rule from a past stack's merge timestamps.
+
 ### Express intent, not mechanism
 
 Build the named thing the domain or the specification calls for — a service, a
