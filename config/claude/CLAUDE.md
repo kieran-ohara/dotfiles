@@ -417,6 +417,13 @@ Notes:
 
 - For git commands involving file paths, `cd` to the root of the project first.
 
+### Staging Scope
+
+Stage only the files the requested work produced. Pre-existing modified or
+untracked files are not yours to sweep up, even when they look related — name
+them and leave them. Where a shared file (a manifest, a lockfile) carries both
+your change and someone else's, stage only your lines.
+
 ### Commit Style
 
 - **NEVER** use Conventional Commits format
