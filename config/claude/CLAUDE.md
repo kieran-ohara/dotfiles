@@ -54,6 +54,13 @@ duplication rather than design. Where a translation is genuinely needed, it is
 private detail of the service that owns it — not exported surface a reader has
 to guess the purpose of.
 
+### Delete the mechanism that isn't paying for itself
+
+When a mechanism — a cache, an index, an abstraction — is not earning its
+complexity, propose removing it rather than tuning it. Removal usually takes
+the scaffolding it required with it: the constraints, the comments and the
+tests that existed only to serve it.
+
 ### Use Test Driven Development (TDD)
 
 Code should be delivered using a the Test Driven Development approach:
