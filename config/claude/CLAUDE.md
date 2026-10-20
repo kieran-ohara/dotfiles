@@ -142,6 +142,17 @@ The same rule covers every dependency, not just Zod: do not test that the AWS
 SDK marshals a request, that the framework routes a path, that the date library
 adds a day, or that the ORM builds valid SQL for a query with no logic of ours
 in it.
+
+#### Prove a new test can fail
+
+Knowing the rule above does not catch a test that cannot fail. After writing
+one, delete the clause it covers — the `.max()`, the refine, the prop, the
+guard — run it, and expect red. If it still passes, it is asserting a library's
+behaviour or the input never reaches the code under test. Do this before
+claiming a red/green cycle happened. Where a test counts calls, settle the work
+before asserting rather than putting `waitFor` on the count, which passes the
+moment the count is right and never sees it go wrong.
+
 #### Use the test setup the codebase already has
 
 TDD is followed using the **established test patterns of the codebase** — its
