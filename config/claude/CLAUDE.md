@@ -505,6 +505,14 @@ When the user says a feature is finished and asks to clean up, run through these
   its state first (`git -C <path> status`, `git -C <path> log --oneline @{u}..`)
   and surface anything unmerged to the user rather than discarding it.
 
+## Memory
+
+Projects are worked in git worktrees, and per-project memory is keyed by the
+working directory — so a memory written in one worktree is invisible from every
+other and dies with it. Durable guidance belongs in a CLAUDE.md, not memory;
+memory is for facts that are genuinely local and perishable. Hoisting out of
+memory is a move, not a copy: delete the file and its `MEMORY.md` line.
+
 ## Clients
 
 Conventions that apply only to a particular client's repositories. Where these
