@@ -578,10 +578,11 @@ update this section as they land.
 - DO NOT add function documentation (JSDoc, docstrings, etc.) UNLESS that convention already exists in the codebase.
 - Avoid silly or unhelpful comments that restate what the code does.
 - **Comment the surprise, not the code.** A comment earns its place only if,
-  without it, a reader would be liable to change the code *incorrectly* — a
-  non-obvious constraint, a default that bites, a decision that looks wrong but
-  is not. If the comment would still read as true with the code deleted, it is
-  narration; delete it.
+  without it, a reader would be liable to change the code *incorrectly* — an
+  external API limit, a silent failure mode, a non-obvious ordering
+  requirement, a default that bites. If the comment would still read as true
+  with the code deleted, it is narration; delete it. (Usage/invocation headers
+  on operator-facing CLIs are also fine.)
 - Do NOT restate the method name in prose above the method. A well-named method
   is the comment.
 - **Design rationale belongs in the commit message and the pull request**, not
