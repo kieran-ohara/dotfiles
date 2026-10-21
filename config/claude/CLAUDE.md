@@ -6,8 +6,8 @@ These principles MUST be followed at all times.
 
 ### Build one feature at a time.
 
-- Changes to the codebase should be small and
-- Changes should focused on a single purpose at a time.
+- Changes to the codebase should be small.
+- Changes should be focused on a single purpose at a time.
 - Changes should be able to be committed to git as single, atomic commits.
 - Do NOT make sweeping changes across multiple parts of the codebase at once.
 
@@ -79,7 +79,7 @@ tests that existed only to serve it.
 
 ### Use Test Driven Development (TDD)
 
-Code should be delivered using a the Test Driven Development approach:
+Code should be delivered using the Test Driven Development approach:
 
 0. Before writing a test, consider its utility. What real behaviour does it
    verify? A test that mocks everything and only asserts glue wiring is
@@ -126,7 +126,7 @@ it("strips an unmodelled key rather than rejecting the whole payload", () => {
 });
 ```
 
-The test on the right earns its place because adding `.strict()` would make
+The last test earns its place because adding `.strict()` would make
 every LLM extraction return `parsed: null` in production, and no other test in
 the suite would fail. That is the bar: *what silent breakage does this catch
 that nothing else does?* If there is no answer, do not write it.
@@ -384,6 +384,7 @@ Take the `T`.
 Memoize the object, not the value inside it. Caching a secret behind a
 `getSecret()` thunk while newing up its consumer per invocation caches the cheap
 part and repeats the rest.
+
 #### Handler exports in ADOT environments
 
 When a Lambda uses the ADOT (AWS Distro for OpenTelemetry) layer with the
