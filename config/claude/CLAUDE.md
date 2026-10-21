@@ -77,6 +77,15 @@ complexity, propose removing it rather than tuning it. Removal usually takes
 the scaffolding it required with it: the constraints, the comments and the
 tests that existed only to serve it.
 
+### Let the stylesheet do layout
+
+Before adding code for a presentation concern — truncating, aligning, fitting,
+sizing — read what the stylesheet already does. Alignment, one-line clipping
+and digit width are CSS's job (`tabular-nums`, `truncate`, `min-w-0`), and code
+layered on top of them re-decides at a width the stylesheet was never asked
+about. When rendered output contradicts the source, compile the rule and check
+it before editing code.
+
 ### Use Test Driven Development (TDD)
 
 Code should be delivered using the Test Driven Development approach:
