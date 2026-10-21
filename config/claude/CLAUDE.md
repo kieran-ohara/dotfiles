@@ -594,6 +594,10 @@ update this section as they land.
   over a bare `10` with a comment beside it, and do NOT then comment the
   constant: a comment that restates its name is narration. Put the meaning in
   the name, not in a comment above it.
+- NEVER put machine- or environment-specific config into comments (or code):
+  local profile names (e.g. an AWS profile), personal file paths, per-developer
+  env values. They vary by machine and mean nothing to the next reader. State
+  the requirement generically ("needs AWS credentials"), not your setup.
 - **Comment density is itself a smell.** A comment above nearly every member
   means either the names are not carrying their weight or rationale is being
   narrated. Both are fixed by deleting the comments, not by improving them.
