@@ -590,6 +590,10 @@ update this section as they land.
   explains why it came to be that way. Do not editorialise in source about
   alternatives considered, what another service does differently, or why an
   approach was chosen.
+- A well-named constant is self-documenting. Prefer `SQS_HARD_BATCH_LIMIT = 10`
+  over a bare `10` with a comment beside it, and do NOT then comment the
+  constant: a comment that restates its name is narration. Put the meaning in
+  the name, not in a comment above it.
 - **Comment density is itself a smell.** A comment above nearly every member
   means either the names are not carrying their weight or rationale is being
   narrated. Both are fixed by deleting the comments, not by improving them.
