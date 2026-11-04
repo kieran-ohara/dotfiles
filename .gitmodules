@@ -129,9 +129,6 @@
 [submodule "which-key.nvim"]
 	path = local/share/nvim/site/pack/navigation/start/which-key.nvim
 	url = https://github.com/folke/which-key.nvim
-[submodule "diffview.nvim"]
-	path = local/share/nvim/site/pack/vcs/start/diffview.nvim
-	url = https://github.com/sindrets/diffview.nvim
 [submodule "config/nvim/pack/ui/start/lualine.nvim"]
 	path = local/share/nvim/site/pack/ui/start/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim
