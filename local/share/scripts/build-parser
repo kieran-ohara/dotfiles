@@ -64,7 +64,9 @@ get_source() {
     git fetch
     git checkout .
     rm tree-sitter.json || true
-    git checkout "$revision"
+    # tree-sitter generate leaves untracked src files that a newer revision may
+    # track; they are regenerated on every build, so overwriting them is safe.
+    git checkout -f "$revision"
     cd "$pwd"
 
     # Run npm install if required
