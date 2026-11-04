@@ -72,18 +72,6 @@
 [submodule "lspkind-nvim"]
 	path = local/share/nvim/site/pack/lsp/start/lspkind-nvim
 	url = https://github.com/onsails/lspkind-nvim
-[submodule "nvim-cmp"]
-	path = local/share/nvim/site/pack/autocomplete/start/nvim-cmp
-	url = https://github.com/hrsh7th/nvim-cmp
-[submodule "cmp-buffer"]
-	path = local/share/nvim/site/pack/autocomplete/start/cmp-buffer
-	url = https://github.com/hrsh7th/cmp-buffer
-[submodule "cmp-path"]
-	path = local/share/nvim/site/pack/autocomplete/start/cmp-path
-	url = https://github.com/hrsh7th/cmp-path
-[submodule "cmp-nvim-lsp"]
-	path = local/share/nvim/site/pack/autocomplete/start/cmp-nvim-lsp
-	url = https://github.com/hrsh7th/cmp-nvim-lsp
 [submodule "nvim-web-devicons"]
 	path = local/share/nvim/site/pack/ui/start/nvim-web-devicons
 	url = https://github.com/kyazdani42/nvim-web-devicons
@@ -105,12 +93,6 @@
 [submodule "friendly-snippets"]
 	path = local/share/nvim/site/pack/snippets/start/friendly-snippets
 	url = https://github.com/rafamadriz/friendly-snippets
-[submodule "cmp-vsnip"]
-	path = local/share/nvim/site/pack/autocomplete/start/cmp-vsnip
-	url = https://github.com/hrsh7th/cmp-vsnip
-[submodule "cmp-nvim-lsp-signature-help"]
-	path = local/share/nvim/site/pack/autocomplete/start/cmp-nvim-lsp-signature-help
-	url = https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
 [submodule "nvim-treesitter-context"]
 	path = local/share/nvim/site/pack/treesitter/start/nvim-treesitter-context
 	url = https://github.com/nvim-treesitter/nvim-treesitter-context

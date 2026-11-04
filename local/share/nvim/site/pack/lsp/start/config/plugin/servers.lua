@@ -1,8 +1,4 @@
 -- vim: set foldmethod=marker foldlevel=0 modeline:
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-vim.lsp.config('*', {capabilities = capabilities})
-
 -- Typescript {{{
 vim.lsp.enable('tsc')
 -- }}}
