@@ -48,9 +48,6 @@
 [submodule "telescope.nvim"]
 	path = local/share/nvim/site/pack/navigation/start/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim
-[submodule "tokyonight.nvim"]
-	path = local/share/nvim/site/pack/ui/start/tokyonight.nvim
-	url = https://github.com/folke/tokyonight.nvim
 [submodule "vim-abolish"]
 	path = local/share/vim/site/pack/edit-ux/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish
