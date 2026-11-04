@@ -31,7 +31,6 @@ wk.setup({
   show_help = true, -- show help message on the command line when the popup is visible
 })
 wk.add({
-  { "<leader>c", group = "ChatGPT" },
   { "<leader>f", group = "Find" },
   { "<leader>g", group = "Git" },
   { "<leader>l", group = "LSP" },
