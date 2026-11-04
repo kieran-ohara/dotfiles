@@ -42,6 +42,9 @@ require('render-markdown').setup({
       icon = ' ',
     }
   },
+  pipe_table = {
+    wrap = false,
+  },
   link = {
     enabled = true,
     render_modes = false,
