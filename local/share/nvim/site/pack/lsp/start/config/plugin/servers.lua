@@ -4,15 +4,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 vim.lsp.config('*', {capabilities = capabilities})
 
 -- Typescript {{{
-vim.lsp.config('ts_ls', {
-    init_options = {
-        tsserver = {
-            path = os.getenv("XDG_DATA_HOME") ..
-                "/mise/installs/npm-typescript/latest/lib/node_modules/typescript/lib"
-        }
-    }
-})
-vim.lsp.enable('ts_ls')
+vim.lsp.enable('tsc')
 -- }}}
 -- Terraform {{{
 vim.lsp.enable('terraformls')
