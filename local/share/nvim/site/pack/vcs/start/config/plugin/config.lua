@@ -20,5 +20,10 @@ require('gitsigns').setup({
       vim.schedule(function() gs.prev_hunk() end)
       return '<Ignore>'
     end, { expr = true })
+
+    -- <leader>gd targets this name; the vim tree defines it as :Gdiff for
+    -- both editors, and this buffer-local redefinition wins where gitsigns
+    -- is attached.
+    map('n', '<Plug>(git-diff)', gs.diffthis, { desc = 'Diff against the index' })
   end
 })
