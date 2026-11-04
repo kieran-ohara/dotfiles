@@ -63,9 +63,6 @@
 [submodule "nvim-treesitter-textobjects"]
 	path = local/share/nvim/site/pack/treesitter/start/nvim-treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-[submodule "lspsaga.nvim"]
-	path = local/share/nvim/site/pack/lsp/start/lspsaga.nvim
-	url = https://github.com/glepnir/lspsaga.nvim
 [submodule "nvim-lspconfig"]
 	path = local/share/nvim/site/pack/lsp/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig

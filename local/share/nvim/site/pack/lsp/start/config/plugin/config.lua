@@ -19,8 +19,6 @@ vim.diagnostic.config({
     }
 })
 
-require"lspsaga".setup({})
-
 -- Only attach if lsp server supports capability
 local function any_client_supports(bufnr, capability)
     for _, client in ipairs(vim.lsp.get_clients({bufnr = bufnr})) do
@@ -53,9 +51,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end
 
         if (any_client_supports(bufnr, "textDocument/definition")) then
-            vim.keymap.set("n", "<leader>lD",
-                           "<cmd>Lspsaga peek_definition<CR>",
-                           merge_opts("Peek Definition"))
+            vim.keymap.set("n", "<leader>lD", "<C-w>]",
+                           merge_opts("Definition in Split"))
             vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition,
                            merge_opts("Goto Definition"))
         end
