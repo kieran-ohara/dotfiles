@@ -6,6 +6,9 @@
 [submodule "vim-tmux-navigator"]
 	path = local/share/vim/site/pack/navigation/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "vim-dirvish"]
+	path = local/share/vim/site/pack/ui/opt/vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish
 [submodule "vim-commentary"]
 	path = local/share/vim/site/pack/edit-ux/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
