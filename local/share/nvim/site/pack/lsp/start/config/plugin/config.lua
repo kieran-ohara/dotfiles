@@ -1,11 +1,23 @@
 -- vim: set foldmethod=marker foldlevel=0 modeline:
-local signs = {Error = " ", Warn = " ", Hint = " ", Info = " "}
-for type, icon in pairs(signs) do
-    local hl = "DiagnosticSign" .. type
-    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
-end
-
-vim.diagnostic.config({underline = true, signs = true, virtual_text = false})
+local severity = vim.diagnostic.severity
+vim.diagnostic.config({
+    underline = true,
+    virtual_text = false,
+    signs = {
+        text = {
+            [severity.ERROR] = " ",
+            [severity.WARN] = " ",
+            [severity.HINT] = " ",
+            [severity.INFO] = " "
+        },
+        numhl = {
+            [severity.ERROR] = "DiagnosticSignError",
+            [severity.WARN] = "DiagnosticSignWarn",
+            [severity.HINT] = "DiagnosticSignHint",
+            [severity.INFO] = "DiagnosticSignInfo"
+        }
+    }
+})
 
 require"lspsaga".setup({})
 
