@@ -7,9 +7,7 @@ end
 
 vim.diagnostic.config({underline = true, signs = true, virtual_text = false})
 
-require"lspsaga".setup({
-    finder = {keys = {shuttle = '<TAB>', toggle_or_open = 'i', vsplit = 'v'}}
-})
+require"lspsaga".setup({})
 
 -- Only attach if lsp server supports capability
 local function any_client_supports(capability)
@@ -33,12 +31,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end
 
         if (any_client_supports("textDocument/rename")) then
-            vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>",
+            vim.keymap.set("n", "<leader>ln", vim.lsp.buf.rename,
                            merge_opts("Rename"))
         end
 
         if (any_client_supports("textDocument/codeAction")) then
-            vim.keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>",
+            vim.keymap.set({"n", "v"}, "<leader>la", vim.lsp.buf.code_action,
                            merge_opts("Code Action"))
         end
 
@@ -50,13 +48,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
                            merge_opts("Goto Definition"))
         end
 
-        vim.keymap.set("n", "[w", "<cmd>Lspsaga diagnostic_jump_prev<CR>",
-                       merge_opts("Previous LSP Warning"))
-        vim.keymap.set("n", "]w", "<cmd>Lspsaga diagnostic_jump_next<CR>",
-                       merge_opts("Next LSP Warning"))
+        vim.keymap.set("n", "[w", function()
+            vim.diagnostic.jump({count = -1, float = true})
+        end, merge_opts("Previous LSP Warning"))
+        vim.keymap.set("n", "]w", function()
+            vim.diagnostic.jump({count = 1, float = true})
+        end, merge_opts("Next LSP Warning"))
 
         if (any_client_supports("textDocument/references")) then
-            vim.keymap.set("n", "<leader>lr", "<cmd>Lspsaga finder<CR>",
+            vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references,
                            merge_opts("References"))
         end
 
