@@ -10,9 +10,9 @@ vim.diagnostic.config({underline = true, signs = true, virtual_text = false})
 require"lspsaga".setup({})
 
 -- Only attach if lsp server supports capability
-local function any_client_supports(capability)
-    for _, client in ipairs(vim.lsp.get_clients({bufnr = 0})) do
-        if client:supports_method(capability) then return true end
+local function any_client_supports(bufnr, capability)
+    for _, client in ipairs(vim.lsp.get_clients({bufnr = bufnr})) do
+        if client:supports_method(capability, bufnr) then return true end
     end
     return false
 end
@@ -30,17 +30,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
             return vim.tbl_extend('force', default_opts, {desc = desc})
         end
 
-        if (any_client_supports("textDocument/rename")) then
+        if (any_client_supports(bufnr, "textDocument/rename")) then
             vim.keymap.set("n", "<leader>ln", vim.lsp.buf.rename,
                            merge_opts("Rename"))
         end
 
-        if (any_client_supports("textDocument/codeAction")) then
+        if (any_client_supports(bufnr, "textDocument/codeAction")) then
             vim.keymap.set({"n", "v"}, "<leader>la", vim.lsp.buf.code_action,
                            merge_opts("Code Action"))
         end
 
-        if (any_client_supports("textDocument/definition")) then
+        if (any_client_supports(bufnr, "textDocument/definition")) then
             vim.keymap.set("n", "<leader>lD",
                            "<cmd>Lspsaga peek_definition<CR>",
                            merge_opts("Peek Definition"))
@@ -55,14 +55,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.diagnostic.jump({count = 1, float = true})
         end, merge_opts("Next LSP Warning"))
 
-        if (any_client_supports("textDocument/references")) then
+        if (any_client_supports(bufnr, "textDocument/references")) then
             vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references,
                            merge_opts("References"))
         end
 
         local function format() vim.lsp.buf.format({async = true}) end
 
-        if (any_client_supports("textDocument/formatting")) then
+        if (any_client_supports(bufnr, "textDocument/formatting")) then
             vim.keymap.set("n", "<leader>lf", format, merge_opts("Format"))
         end
     end
