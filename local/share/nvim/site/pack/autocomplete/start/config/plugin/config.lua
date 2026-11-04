@@ -53,8 +53,3 @@ cmp.event:on(
   cmp_autopairs.on_confirm_done()
 )
 -- }}}
--- Vsnips {{{
-vim.cmd([[
-  let g:vsnip_snippet_dirs = [ '~/.config/nvim/pack/snippets/start/friendly-snippets' ]
-]])
--- }}}
