@@ -58,6 +58,9 @@ get_source() {
     # Checkout correct revision
     pwd=$(pwd)
     cd "$SRC_DIR/$repo_name"
+    # Grammars move between GitHub orgs; a clone keyed by repo name keeps
+    # fetching the old home unless the remote follows parsers.lua.
+    git remote set-url origin "$repo_url"
     git fetch
     git checkout .
     rm tree-sitter.json || true
