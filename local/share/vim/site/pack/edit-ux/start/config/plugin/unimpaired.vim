@@ -1,26 +1,5 @@
 " Only add the bits of unimpaired I want.
 
-function! s:BlankUp() abort
-  let cmd = 'put!=repeat(nr2char(10), v:count1)|silent '']+'
-  if &modifiable
-    let cmd .= '|silent! call repeat#set("\<Plug>(unimpaired-blank-up)", v:count1)'
-  endif
-  return cmd
-endfunction
-
-function! s:BlankDown() abort
-  let cmd = 'put =repeat(nr2char(10), v:count1)|silent ''[-'
-  if &modifiable
-    let cmd .= '|silent! call repeat#set("\<Plug>(unimpaired-blank-down)", v:count1)'
-  endif
-  return cmd
-endfunction
-
-nnoremap  <Plug>(unimpaired-blank-up)   :<C-U>exe <SID>BlankUp()<CR>
-nnoremap  <Plug>(unimpaired-blank-down) :<C-U>exe <SID>BlankDown()<CR>
-nmap ]<Space> <Plug>(unimpaired-blank-down)
-nmap [<Space> <Plug>(unimpaired-blank-up)
-
 function! s:ExecMove(cmd) abort
   let old_fdm = &foldmethod
   if old_fdm !=# 'manual'
