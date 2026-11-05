@@ -13,6 +13,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end
 })
 
+-- rhubarb claims the omnifunc in a GitHub repo's commit buffer and spends two
+-- issue searches per call, against a search endpoint that allows ten a minute,
+-- so reaching it per keystroke rate limits after five characters. Dropping "o"
+-- here leaves it on <C-x><C-o>.
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "gitcommit",
+  callback = function() vim.bo.complete = ".^5" end
+})
+
 vim.o.wildmode = "noselect:lastused,full"
 vim.api.nvim_create_autocmd("CmdlineChanged", {
   pattern = { ":", "/", "?" },
