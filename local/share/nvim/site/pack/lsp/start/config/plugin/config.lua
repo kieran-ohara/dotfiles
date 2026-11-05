@@ -3,6 +3,7 @@ local severity = vim.diagnostic.severity
 vim.diagnostic.config({
     underline = true,
     virtual_text = false,
+    virtual_lines = {current_line = true},
     signs = {
         text = {
             [severity.ERROR] = " ",
