@@ -3,7 +3,7 @@ node = "22"
 
 # NPM/IDE
 "npm:markdownlint-cli" = "latest"
-"npm:typescript" = "latest"
+"npm:typescript" = "7.0.2"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
 
