@@ -448,6 +448,17 @@ Notes:
   `--target` explicitly rather than relying on the default.
 - `--json` plus `--jq` is supported on commands that produce structured output.
 
+## Commenting as the user
+
+Never post a comment, reply or review as the user on Jira, Bitbucket, GitHub,
+Slack or any other service without their explicit permission for that specific
+comment. Writing the text is fine and often useful; posting it is not. When a
+comment seems warranted, show the draft and ask - "want me to post this?" - and
+post only on a clear yes. Permission to post one comment does not carry over to
+the next. Editing a pull request's own title or description, transitioning a
+ticket or merging a pull request the user asked to merge are not comments and
+are not covered by this rule.
+
 ## Git
 
 ### Git Commands
