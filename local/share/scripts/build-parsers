@@ -87,8 +87,10 @@ build_parser_from_lua() {
 
 build_parser_from_lua bash
 build_parser_from_lua css
+build_parser_from_lua diff
 build_parser_from_lua dockerfile
 build_parser_from_lua dot
+build_parser_from_lua git_config
 build_parser_from_lua git_rebase
 build_parser_from_lua gitcommit
 build_parser_from_lua gitignore
@@ -106,6 +108,9 @@ build_parser_from_lua markdown_inline
 build_parser_from_lua python
 build_parser_from_lua regex
 build_parser_from_lua ssh_config
+build_parser_from_lua toml
 build_parser_from_lua typescript --npm-install
+build_parser_from_lua tsx --npm-install
 build_parser_from_lua vim
 build_parser_from_lua yaml
+build_parser_from_lua zsh
