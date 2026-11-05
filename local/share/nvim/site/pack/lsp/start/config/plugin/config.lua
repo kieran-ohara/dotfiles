@@ -6,9 +6,9 @@ vim.diagnostic.config({
     virtual_lines = {current_line = true},
     signs = {
         text = {
-            [severity.ERROR] = " ",
-            [severity.WARN] = " ",
-            [severity.HINT] = " ",
+            [severity.ERROR] = "󱎘 ",
+            [severity.WARN] = " ",
+            [severity.HINT] = "󰌵 ",
             [severity.INFO] = " "
         },
         numhl = {
