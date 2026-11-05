@@ -16,6 +16,21 @@ if [ ! -f "$PARSERS_LUA" ]; then
   exit 1
 fi
 
+# A parser is only half of what treesitter needs; the queries that say what a
+# node means ship beside it in the plugin and are installed alongside it.
+QUERY_SRC="$(cd "$(dirname "$PARSERS_LUA")/../../runtime/queries" && pwd)"
+QUERY_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/queries"
+mkdir -p "$QUERY_DIR"
+
+link_queries() {
+  local lang="$1"
+  if [ -d "$QUERY_SRC/$lang" ]; then
+    ln -sfn "$QUERY_SRC/$lang" "$QUERY_DIR/$lang"
+  else
+    echo "No queries for $lang in $QUERY_SRC" >&2
+  fi
+}
+
 # Extract install_info fields for a language from parsers.lua
 get_parser_info() {
   local lang="$1"
@@ -52,6 +67,7 @@ build_parser_from_lua() {
   args+=("$@")
 
   build-parser "$lang" "$url" "$revision" ${args[@]+"${args[@]}"}
+  link_queries "$lang"
 }
 
 build_parser_from_lua bash
