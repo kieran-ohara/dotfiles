@@ -486,6 +486,19 @@ When a lockfile (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`) has merge o
 2. Run the package manager install (e.g. `npm install`) to regenerate it
 3. `git add <lockfile>` and continue
 
+### Raising Pull Requests
+
+Never open a pull request unless the user explicitly asks for one. Finishing
+the work, pushing the branch, or a ticket moving to "PR raised" is not an
+instruction to raise it - stop after the push and say the branch is ready.
+
+A pull request going up is the moment other people get asked to look at it,
+and the user decides when that happens. So when they ask for a pull request,
+open it as a **draft**: that gives them a diff and a description to review on
+their own before anyone else is invited, and they mark it ready when they are
+happy. Open it ready-for-review only when they say so. One "raise the PR"
+covers that pull request only, not the next piece of work.
+
 ### Pull Request Descriptions
 
 - Open with a brief "why" - provide context for the change
