@@ -20,63 +20,28 @@ vim.diagnostic.config({
     }
 })
 
--- Only attach if lsp server supports capability
-local function any_client_supports(bufnr, capability)
-    for _, client in ipairs(vim.lsp.get_clients({bufnr = bufnr})) do
-        if client:supports_method(capability, bufnr) then return true end
-    end
-    return false
-end
-
--- Always attach this
+-- Nothing native reports client state, so this one still does the work.
 vim.keymap.set("n", "<leader>li", "<cmd>checkhealth vim.lsp<CR>", {desc = "Info"})
 
--- Conditionally attach when a client supports a capability.
-vim.api.nvim_create_autocmd('LspAttach', {
-    callback = function(args)
-        local bufnr = args.buf
+-- Each of these keys now only names the one that replaced it. Pressing it
+-- reports the native key and does nothing else, so the habit has to move.
+local replaced_by = {
+    {lhs = "<leader>ld", native = "<C-]>", also = "g<C-]> to pick between matches"},
+    {lhs = "<leader>ln", native = "grn"},
+    {lhs = "<leader>la", native = "gra", mode = {"n", "v"}},
+    {lhs = "<leader>lr", native = "grr"},
+    {lhs = "<leader>lf", native = "gq{motion}", also = "gggqG for the whole buffer"},
+    {lhs = "[w", native = "[d"},
+    {lhs = "]w", native = "]d"}
+}
 
-        local default_opts = {noremap = true, silent = true, buffer = bufnr}
-        local function merge_opts(desc)
-            return vim.tbl_extend('force', default_opts, {desc = desc})
-        end
-
-        if (any_client_supports(bufnr, "textDocument/rename")) then
-            vim.keymap.set("n", "<leader>ln", vim.lsp.buf.rename,
-                           merge_opts("Rename"))
-        end
-
-        if (any_client_supports(bufnr, "textDocument/codeAction")) then
-            vim.keymap.set({"n", "v"}, "<leader>la", vim.lsp.buf.code_action,
-                           merge_opts("Code Action"))
-        end
-
-        if (any_client_supports(bufnr, "textDocument/definition")) then
-            vim.keymap.set("n", "<leader>lD", "<C-w>]",
-                           merge_opts("Definition in Split"))
-            vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition,
-                           merge_opts("Goto Definition"))
-        end
-
-        vim.keymap.set("n", "[w", function()
-            vim.diagnostic.jump({count = -1, float = true})
-        end, merge_opts("Previous LSP Warning"))
-        vim.keymap.set("n", "]w", function()
-            vim.diagnostic.jump({count = 1, float = true})
-        end, merge_opts("Next LSP Warning"))
-
-        if (any_client_supports(bufnr, "textDocument/references")) then
-            vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references,
-                           merge_opts("References"))
-        end
-
-        local function format() vim.lsp.buf.format({async = true}) end
-
-        if (any_client_supports(bufnr, "textDocument/formatting")) then
-            vim.keymap.set("n", "<leader>lf", format, merge_opts("Format"))
-        end
-    end
-})
+for _, key in ipairs(replaced_by) do
+    local hint = "Use " .. key.native
+    vim.keymap.set(key.mode or "n", key.lhs, function()
+        vim.notify(key.also and (hint .. ", " .. key.also) or hint,
+                   vim.log.levels.WARN)
+    end, {desc = hint})
+end
 
 -- Trouble {{{
 require"trouble".setup {auto_preview = false}
