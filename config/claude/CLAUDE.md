@@ -504,9 +504,18 @@ covers that pull request only, not the next piece of work.
 - Open with a brief "why" - provide context for the change
 - Follow with a brief summary of what was done
 - If relevant, note what was intentionally excluded and why
-- Do NOT list or summarise individual file changes - reviewers can read the diff
-- Do NOT include a "Test Plan" section
+- Do NOT list or summarise individual file changes - reviewers can read the
+  diff
+- Do NOT include a "Test Plan" section, and do NOT describe how the change was
+  verified anywhere in the description unless explicitly asked for
+- Never mention the pipeline or CI in the description either - not its state,
+  not changes made to it, not what it needs set up. If the change touched the
+  pipeline, the diff says so - again, unless you are asked for it
 - Keep it concise; respect the reviewer's time and intelligence
+- Never link back to other pull requests (`#12`) or Jira tickets (`MW-123`) in
+  the description. Describe the context in words - the reader should not have
+  to follow a reference to understand the change. The ticket belongs in the
+  title only, where a client convention puts it there.
 
 ### Pull Request Reviews
 
@@ -597,9 +606,10 @@ update this section as they land.
 ## Code Comments
 
 - Code should be self-documenting. Reduce the need for comments.
-- Complexity alone does not license a comment. A procedure that is hard to follow
-  needs better names and smaller pieces, not narration bolted on top.
-- DO NOT add function documentation (JSDoc, docstrings, etc.) UNLESS that convention already exists in the codebase.
+- Complexity alone does not license a comment. A procedure that is hard to
+  follow needs better names and smaller pieces, not narration bolted on top.
+- DO NOT add function documentation (JSDoc, docstrings, etc.) UNLESS that
+  convention already exists in the codebase.
 - Avoid silly or unhelpful comments that restate what the code does.
 - **Comment the surprise, not the code.** A comment earns its place only if,
   without it, a reader would be liable to change the code *incorrectly* — an
@@ -609,6 +619,11 @@ update this section as they land.
   on operator-facing CLIs are also fine.)
 - Do NOT restate the method name in prose above the method. A well-named method
   is the comment.
+- Do NOT comment that something is temporary, tactical, a quick win, e.g. "goes
+  when X does", or otherwise short-lived, unless explicitly asked to. The code
+  does not change by being called temporary; the ticket and the pull request
+  carry that context, and a comment saying it is noise that outlives the thing
+  it describes.
 - **Design rationale belongs in the commit message and the pull request**, not
   above every member. The code explains what the system does now; the history
   explains why it came to be that way. Do not editorialise in source about
@@ -630,10 +645,10 @@ update this section as they land.
   behaviour itself — the rules, the cases, the worked examples — belongs in the
   tests that describe it, because a test is executable and cannot go stale
   silently, whereas a comment restating the same rule is a second copy of the
-  spec that will drift from it unnoticed. Where a rule needs explaining, explain
-  it in the test that pins it, and name the test so the rule reads from the
-  runner's output. A paragraph above a function describing how the logic behaves
-  is a sign the test names are not doing their job.
+  spec that will drift from it unnoticed. Where a rule needs explaining,
+  explain it in the test that pins it, and name the test so the rule reads from
+  the runner's output. A paragraph above a function describing how the logic
+  behaves is a sign the test names are not doing their job.
 
 ### Spec-kit Task References
 
@@ -661,6 +676,7 @@ any other written output:
 - "you're absolutely right"
 - "load bearing"
 - "wrinkles"
+- "worth knowing" (and "two things worth knowing" etc.) - just state the thing
 
 ## TypeScript
 
