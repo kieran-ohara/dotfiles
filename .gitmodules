@@ -9,9 +9,6 @@
 [submodule "vim-dirvish"]
 	path = local/share/vim/site/pack/ui/opt/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
-[submodule "vim-commentary"]
-	path = local/share/vim/site/pack/edit-ux/start/vim-commentary
-	url = https://github.com/tpope/vim-commentary
 [submodule "vim-eunuch"]
 	path = local/share/vim/site/pack/packages/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
@@ -27,12 +24,6 @@
 [submodule "vim-surround"]
 	path = local/share/vim/site/pack/edit-ux/start/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule "vim-unimpaired"]
-	path = local/share/vim/site/pack/edit-ux/opt/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired
-[submodule "undotree"]
-	path = local/share/vim/site/pack/ui/opt/undotree
-	url = https://github.com/mbbill/undotree
 [submodule "targets.vim"]
 	path = local/share/vim/site/pack/edit-ux/start/targets.vim
 	url = https://github.com/wellle/targets.vim
@@ -72,9 +63,6 @@
 [submodule "nightfox.nvim"]
 	path = local/share/nvim/site/pack/ui/start/nightfox.nvim
 	url = https://github.com/EdenEast/nightfox.nvim
-[submodule "trouble.nvim"]
-	path = local/share/nvim/site/pack/lsp/start/trouble.nvim
-	url = https://github.com/folke/trouble.nvim
 [submodule "vim-sneak"]
 	path = local/share/vim/site/pack/navigation/start/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
@@ -102,9 +90,6 @@
 [submodule "config/nvim/pack/ui/start/lualine.nvim"]
 	path = local/share/nvim/site/pack/ui/start/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim
-[submodule "config/vim/pack/packages/start/vim-easy-align"]
-	path = local/share/vim/site/pack/edit-ux/opt/vim-easy-align
-	url = https://github.com/junegunn/vim-easy-align
 [submodule "local/share/nvim/site/pack/navigation/start/oil.nvim"]
 	path = local/share/nvim/site/pack/navigation/start/oil.nvim
 	url = https://github.com/stevearc/oil.nvim

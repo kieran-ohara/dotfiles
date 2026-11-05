@@ -42,8 +42,3 @@ for _, key in ipairs(replaced_by) do
                    vim.log.levels.WARN)
     end, {desc = hint})
 end
-
--- Trouble {{{
-require"trouble".setup {auto_preview = false}
-
--- }}}
