@@ -27,7 +27,12 @@ set smarttab          " Tab at front of line inserts blanks according to tabstop
 set autoindent        " Use indent from previous line
 set smartindent       " Same as above but recognises C-like syntax (brackets et al.)
 
-syntax enable
+" Neovim turns syntax and filetype on after init on its own. Doing it here
+" runs filetype detection on the argument buffers before any plugin has
+" registered its LSP servers, so those buffers never get a client.
+if !has('nvim')
+  syntax enable
+endif
 
 set formatoptions+=j  " Remove comment character when joining comments
 
