@@ -31,6 +31,18 @@ link_queries() {
   fi
 }
 
+# Languages a parser's queries inherit from. These have no grammar of their
+# own; ecma, jsx and html_tags exist so javascript, typescript and html can
+# share one copy of the rules via a "; inherits:" line.
+get_requires() {
+  local lang="$1"
+  luajit -e "
+    local p = dofile('$PARSERS_LUA')
+    local entry = p['$lang']
+    for _, r in ipairs(entry and entry.requires or {}) do print(r) end
+  "
+}
+
 # Extract install_info fields for a language from parsers.lua
 get_parser_info() {
   local lang="$1"
@@ -68,6 +80,9 @@ build_parser_from_lua() {
 
   build-parser "$lang" "$url" "$revision" ${args[@]+"${args[@]}"}
   link_queries "$lang"
+  while read -r dep; do
+    [ -n "$dep" ] && link_queries "$dep"
+  done < <(get_requires "$lang")
 }
 
 build_parser_from_lua bash
