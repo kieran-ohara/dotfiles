@@ -20,7 +20,7 @@ local function any_client_supports(capability)
 end
 
 -- Always attach this
-vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<CR>", {desc = "Info"})
+vim.keymap.set("n", "<leader>li", "<cmd>checkhealth vim.lsp<CR>", {desc = "Info"})
 
 -- Conditionally attach when a client supports a capability.
 vim.api.nvim_create_autocmd('LspAttach', {
