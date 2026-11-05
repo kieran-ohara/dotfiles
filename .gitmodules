@@ -69,9 +69,6 @@
 [submodule "nvim-lspconfig"]
 	path = local/share/nvim/site/pack/lsp/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
-[submodule "lspkind-nvim"]
-	path = local/share/nvim/site/pack/lsp/start/lspkind-nvim
-	url = https://github.com/onsails/lspkind-nvim
 [submodule "nvim-web-devicons"]
 	path = local/share/nvim/site/pack/ui/start/nvim-web-devicons
 	url = https://github.com/kyazdani42/nvim-web-devicons

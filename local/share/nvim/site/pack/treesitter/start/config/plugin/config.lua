@@ -22,7 +22,11 @@ require("nvim-treesitter-textobjects").setup {
     }
 }
 
-require("aerial").setup({backends = {"treesitter"}, manage_folds = false})
+require("aerial").setup({
+    backends = {"treesitter"},
+    manage_folds = false,
+    nerd_font = true
+})
 vim.keymap.set("n", "<leader>ta", "<cmd>AerialToggle<cr>",
                {desc = "Toggle Aerial"})
 vim.keymap.set("n", "<leader>tp", "<cmd>InspectTree<cr>",
