@@ -76,6 +76,14 @@
       "command": "mcp-remote",
       "args": ["https://api.mobbin.com/mcp"],
       "tags": ["dev"]
+    },
+    "transcriptapi": {
+      "type": "http",
+      "url": "https://transcriptapi.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${TRANSCRIPTAPI_API_KEY}"
+      },
+      "tags": ["core"]
     }
   }
 }
