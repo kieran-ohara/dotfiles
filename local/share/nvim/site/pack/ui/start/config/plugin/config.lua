@@ -32,14 +32,14 @@ require('lualine').setup({
 require('render-markdown').setup({
   heading = {
     sign = false,
-    icons = { '  ', '  ', '  ', '  ', '  ', '  ' }
+    icons = { '󰉫  ', '󰉬  ', '󰉭  ', '󰉮  ', '󰉯  ', '󰉰  ' }
   },
   checkbox = {
     unchecked = {
-      icon = ' ',
+      icon = '󰄰 ',
     },
     checked = {
-      icon = ' ',
+      icon = '󰄳 ',
     }
   },
   pipe_table = {
