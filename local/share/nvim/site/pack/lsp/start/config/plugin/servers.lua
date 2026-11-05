@@ -36,6 +36,24 @@ vim.lsp.config('efmNoFormat', {
     }
 })
 vim.lsp.enable('efmNoFormat')
+
+vim.lsp.config('efmLua', {
+    cmd = {
+        "efm-langserver", "-logfile", efm_log, "-c",
+        vim.env.XDG_CONFIG_HOME .. "/efm-langserver/lua.yaml"
+    },
+    root_markers = {".git"},
+    filetypes = {"lua"},
+    init_options = {
+        codeAction = false,
+        completion = false,
+        documentFormatting = true,
+        documentRangeFormatting = true,
+        documentSymbol = true,
+        hover = false
+    }
+})
+vim.lsp.enable('efmLua')
 -- }}}
 -- YAML {{{
 vim.lsp.config('yamlls', {
