@@ -11,6 +11,14 @@ These principles MUST be followed at all times.
 - Changes should be able to be committed to git as single, atomic commits.
 - Do NOT make sweeping changes across multiple parts of the codebase at once.
 
+### Fix it in the change that owns it
+
+When a change already touches a piece of code and that code has a problem
+worth fixing, fix it there. Do not defer it to a follow-up ticket to keep the
+diff small or to protect a reviewer's time: these repos are worked solo, so
+the separate review that deferral buys does not exist. Raise a ticket only
+for work that genuinely sits outside the change.
+
 ### Check for designs before the spec
 
 When a feature has any frontend work, settle "do we have designs for this?"
