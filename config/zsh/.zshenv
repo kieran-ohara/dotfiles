@@ -82,10 +82,6 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # Go.
 export GOPATH=$HOME/src/go
 
-# Mise.
-export MISE_NODE_DEFAULT_PACKAGES_FILE=$XDG_CONFIG_HOME/mise/node-packages.txt
-export MISE_PYTHON_DEFAULT_PACKAGES_FILE=$XDG_CONFIG_HOME/mise/python-packages.txt
-
 # Ollama
 export OLLAMA_MODELS=$XDG_DATA_HOME/ollama/models
 
