@@ -10,7 +10,6 @@
 [core]
     filemode = false
     pager = less -F -X
-[merge]
 [mergetool]
     prompt = false
 [color]

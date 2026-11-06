@@ -42,7 +42,6 @@ alias tree='() {tree -aC -I ".git|node_modules" --dirsfirst "$@" | less -FRNX;}'
 alias v=resumevimsession
 alias w=nicewhich
 alias wtc='wt switch --create'
-alias wtl='wt list'
 alias wtrmf='() { wt remove -f  $1}'
 alias wts='wt switch'
 alias x=exit
