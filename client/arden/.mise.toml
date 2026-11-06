@@ -7,6 +7,3 @@ _.file = [
   { path = ".env", redact = true },
   ".env.local",
 ]
-
-[settings]
-env_shell_expand = true
