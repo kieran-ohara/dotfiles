@@ -464,6 +464,10 @@ are not covered by this rule.
 ### Git Commands
 
 - For git commands involving file paths, `cd` to the root of the project first.
+- Several worktrees of one repo are usually live at once, sharing a git dir
+  and a stash stack. Say which worktree you are operating in whenever the
+  effect depends on it - pulling, rebasing, branching, cleaning up - rather
+  than waiting to be asked.
 
 ### Staging Scope
 
