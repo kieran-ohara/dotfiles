@@ -22,6 +22,7 @@ sessions
 settings.local.json
 shell-snapshots
 skills
+state
 stats-cache.json
 statsig
 tasks

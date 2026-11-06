@@ -1,4 +1,4 @@
 #!/bin/bash -e
 docker run --rm -i \
-  -v "$(PWD)":/ws -w /ws \
+  -v "$(pwd)":/ws -w /ws \
   kieranbamforth/luaformatter:latest "$@"

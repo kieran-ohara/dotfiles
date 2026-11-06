@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run --rm -v "$(PWD)":/ws -w /ws kieranbamforth/graphviz:latest dot "$@"
+docker run --rm -v "$(pwd)":/ws -w /ws kieranbamforth/graphviz:latest dot "$@"

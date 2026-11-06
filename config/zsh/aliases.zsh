@@ -23,7 +23,7 @@ alias drmoc='docker ps -aqf "status=exited" -f "status=created" | xargs docker r
 alias drmoi="docker images -qf \"dangling=true\" | xargs docker rmi"
 alias dvm="docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh"
 alias e="echo"
-alias fpath="echo $FPATH | sed -r 's/:/\n/g'"
+alias fpath='echo $FPATH | sed -r "s/:/\n/g"'
 alias g="git"
 alias h="cd -"
 alias k=kubectl
@@ -33,7 +33,7 @@ alias m=make
 alias md='mkdir -p'
 alias npmi="npm install"
 alias o=open
-alias path="echo $PATH | sed -r 's/:/\n/g'"
+alias path='echo $PATH | sed -r "s/:/\n/g"'
 alias rmf='rm -rf'
 alias t="aws-vault exec kieran -- terraform"
 alias ta="tmux attach"
