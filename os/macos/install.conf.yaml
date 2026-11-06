@@ -11,6 +11,7 @@
     - ~/Library/LaunchAgents
     - ~/src/arden
     - ~/src/irkb
+    - ~/src/personal
 
 - link:
     ~/.config/1Password: config/1Password
@@ -19,6 +20,7 @@
     ~/Library/LaunchAgents/me.kieranbamforth.1mcp.plist: os/macos/me.kieranbamforth.1mcp.plist
     ~/src/arden/.mise.toml: client/arden/.mise.toml
     ~/src/irkb/.mise.toml: client/irkb/.mise.toml
+    ~/src/personal/.mise.toml: client/personal/.mise.toml
 
 - shell:
     - [make dependencies/brew]

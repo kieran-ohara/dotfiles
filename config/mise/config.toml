@@ -29,8 +29,6 @@ python = "3.11"
 [settings]
 experimental = true
 
-env_file = '.env'
-
 legacy_version_file = true
 asdf_compat = false
 
