@@ -126,7 +126,7 @@ directory-scoped `.env` cannot reach.
 Claude Desktop and other Claude tools connect to MCP servers via **1mcp** relay:
 
 ```
-Claude Desktop / Windsurf / Claude Code
+Claude Desktop / Claude Code
             ↓
     http://localhost:3050/sse
             ↓
