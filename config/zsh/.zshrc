@@ -106,11 +106,6 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
 fi
 source ${ZIM_HOME}/init.zsh
 # }}}
-# Old settings {{{
-if [ "$DOTS_USE_OLD_SETTINGS" = true ] ; then
-    source ${ZDOTDIR}/old-settings.zsh
-fi
-# }}}
 # {{{ More debug
 if [ "$ZSH_PROFILE" = true ] ; then
     zprof
