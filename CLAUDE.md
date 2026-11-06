@@ -55,7 +55,7 @@ This is a comprehensive dotfiles repository using **dotbot** for deployment mana
 - **Development**: mise for tool management, Docker configurations
 
 #### Development Environment
-- **Language Servers**: efm-langserver, lua-language-server, typescript-language-server
+- **Language Servers**: efm-langserver, lua-language-server, tsc (TypeScript 7 `--lsp`)
 - **Tree-sitter**: Custom parser building system with lockfile management
 - **Package Management**: Homebrew (Brewfile), npm, mise, uv/pipx for Python
 

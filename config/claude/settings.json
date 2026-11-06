@@ -115,7 +115,7 @@
     "figma@claude-plugins-official": true,
     "invoice-tools@kierans-plugins": true,
     "personal-tools@kierans-plugins": true,
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@kierans-plugins": true
   },
   "extraKnownMarketplaces": {
     "agent-plugins-for-aws": {
