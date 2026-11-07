@@ -484,6 +484,9 @@ are not covered by this rule.
   and a stash stack. Say which worktree you are operating in whenever the
   effect depends on it - pulling, rebasing, branching, cleaning up - rather
   than waiting to be asked.
+- Stay on the branch the work is on. Do not check out another branch - least
+  of all the one that happened to be current when the session started -
+  without asking first and saying why the switch is needed.
 
 ### Staging Scope
 
