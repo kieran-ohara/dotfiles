@@ -475,6 +475,13 @@ the next. Editing a pull request's own title or description, transitioning a
 ticket or merging a pull request the user asked to merge are not comments and
 are not covered by this rule.
 
+## Artifacts
+
+Do not publish artifacts unprompted - diagrams, walkthroughs and summaries
+stay in the terminal unless the user asks for a published page. Each publish
+starts a background watch that cannot be declined. Offer a link only where a
+shareable page genuinely helps.
+
 ## Git
 
 ### Git Commands
