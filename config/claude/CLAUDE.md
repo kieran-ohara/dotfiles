@@ -611,6 +611,9 @@ other and dies with it. Durable guidance belongs in a CLAUDE.md, not memory;
 memory is for facts that are genuinely local and perishable. Hoisting out of
 memory is a move, not a copy: delete the file and its `MEMORY.md` line.
 
+Do not edit any CLAUDE.md as a side effect of other work. If an edit seems
+warranted, propose what and why first and wait for approval.
+
 ## Clients
 
 Conventions that apply only to a particular client's repositories. Where these
