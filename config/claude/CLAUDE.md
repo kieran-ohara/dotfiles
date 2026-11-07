@@ -545,6 +545,11 @@ covers that pull request only, not the next piece of work.
 When reviewing a pull request - or your own changes before opening one - apply
 these in addition to checking correctness.
 
+When relaying review feedback on a document - a spec requirement, a scenario,
+a success criterion - quote the wording in question in the chat (before and
+after, if it changed), not just its identifier. "FR-018 tightened" forces a
+trip to the diff; the two lines it refers to do not.
+
 #### YAGNI
 
 Flag production surface that has no caller: public methods, exported types,
