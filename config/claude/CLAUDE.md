@@ -668,6 +668,11 @@ update this section as they land.
   local profile names (e.g. an AWS profile), personal file paths, per-developer
   env values. They vary by machine and mean nothing to the next reader. State
   the requirement generically ("needs AWS credentials"), not your setup.
+- The same applies to repo-tracked skills and docs. A skill states the
+  **requirement** - the env var it reads, "the operator's record" - never how
+  one machine meets it (which vault or secret manager, which MCP, which
+  wrapper, what the notes are called). How this machine meets it is machine
+  setup and lives in project memory.
 - **Comment density is itself a smell.** A comment above nearly every member
   means either the names are not carrying their weight or rationale is being
   narrated. Both are fixed by deleting the comments, not by improving them.
