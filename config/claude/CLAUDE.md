@@ -27,6 +27,14 @@ before the spec is written, not after implementing. List Claude Artifacts
 as an input to the spec alongside clarification; where design and spec
 disagree, surface it at spec time rather than discovering it in review.
 
+Specs name widths by device - phone, tablet, desktop - never in pixels. A
+pixel value in a spec is a guess lifted from a frame, and frames do not always
+marry up with each other or with the app's breakpoints; a spec is followed, so
+the guess becomes a requirement. Where the boundary matters, define it once by
+behaviour (e.g. "the breakpoint at which the pane stops replacing the list")
+and say which side a tablet falls on. Pixels are decided in the plan against
+the stylesheet's existing breakpoints.
+
 ### A plan's phases are the stack
 
 Plan phases are pull requests in a `gh stack`: phase 1 is the bottom, the last
