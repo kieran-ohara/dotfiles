@@ -49,6 +49,13 @@ ordering — build order, stack position and merge order are the same number.
 Never present "build order" and "merge order" as two sequences to reconcile,
 and do not infer an ordering rule from a past stack's merge timestamps.
 
+### A redirect puts the workflow on hold
+
+When the user interjects a different task mid-workflow, the original workflow is
+on hold once the interjection is done. Report what was done, say what the paused
+workflow's next step would be, and wait for an explicit go-ahead. "X first" does
+not mean "then carry on".
+
 ### Express intent, not mechanism
 
 Build the named thing the domain or the specification calls for — a service, a
@@ -535,6 +542,13 @@ their own before anyone else is invited, and they mark it ready when they are
 happy. Open it ready-for-review only when they say so. One "raise the PR"
 covers that pull request only, not the next piece of work.
 
+### After the push
+
+Commit, push, stop. Do not deploy to dev, and do not rebase, reorder or
+otherwise restructure a `gh stack`, unless asked - offer, do not act. If a
+change logically belongs on another layer of the stack, say so and leave it
+where it is.
+
 ### Pull Request Descriptions
 
 - Open with a brief "why" - provide context for the change
@@ -587,6 +601,10 @@ actually ships:
 - Requirements describing a deferred consumer (a future read, endpoint, or UI)
   do not justify building that surface now.
 - Prefer amending the spec to match the delivered scope over adding unused code.
+- A delivered `specs/<feature>/` directory is a historical record. Follow-on
+  work that reverses or extends it carries the new behaviour itself - code,
+  commits, its own spec - and never amends the old one. Amending to match
+  delivered scope applies only while that feature is in flight.
 
 ## Clean Up
 
@@ -626,6 +644,17 @@ working directory — so a memory written in one worktree is invisible from ever
 other and dies with it. Durable guidance belongs in a CLAUDE.md, not memory;
 memory is for facts that are genuinely local and perishable. Hoisting out of
 memory is a move, not a copy: delete the file and its `MEMORY.md` line.
+
+The same split governs skills and any other repo-tracked instruction file: they
+state a requirement generically - the env var a CLI reads, "the operator's
+record" - never how this machine meets it. Which vault or MCP, which credential
+wrapper, where the operator keeps their notes: that is machine config and goes
+in project memory, as it does for code comments.
+
+The same goes for the operator's working notes themselves. A skill never cites
+them - no "Round 4 Batch B6", no figures that only make sense inside a note. The
+reader of the skill does not have that context. State the kind of decision and
+let the register hold the ruling.
 
 Do not edit any CLAUDE.md as a side effect of other work. If an edit seems
 warranted, propose what and why first and wait for approval.
