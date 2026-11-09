@@ -855,6 +855,11 @@ Test individual LLM decisions in isolation, not full agent pipelines end-to-end.
   ```
 - Fast and cheap - 1 LLM call per test vs 10+ for end-to-end
 
+## Diagrams
+
+Draw diagrams in Mermaid rather than ASCII or prose. It renders natively in
+GitHub, so a diagram stays readable in the file where it lives.
+
 ## Documentation Lookup
 
 When working with frameworks or libraries and needing to look up documentation
