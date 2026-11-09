@@ -35,6 +35,12 @@ behaviour (e.g. "the breakpoint at which the pane stops replacing the list")
 and say which side a tablet falls on. Pixels are decided in the plan against
 the stylesheet's existing breakpoints.
 
+More generally: a spec carries behaviour - order, presence, copy, placement
+by device, what keeps working. Shape, colour, spacing, component boundaries
+and token names are the plan's, read from the frames. And a spec describes
+its own slice only - it does not name, hand off to, or caveat around the work
+that follows it.
+
 ### A plan's phases are the stack
 
 Plan phases are pull requests in a `gh stack`: phase 1 is the bottom, the last
@@ -555,7 +561,10 @@ these in addition to checking correctness.
 When relaying review feedback on a document - a spec requirement, a scenario,
 a success criterion - quote the wording in question in the chat (before and
 after, if it changed), not just its identifier. "FR-018 tightened" forces a
-trip to the diff; the two lines it refers to do not.
+trip to the diff; the two lines it refers to do not. The same goes for any
+identifier - a task number, a slice name, a finding code: gloss it inline on
+each use ("T019 (build the pane frame)", "S1 (the first PR, heading inside
+today's card)"), never bare.
 
 #### YAGNI
 
@@ -692,6 +701,11 @@ update this section as they land.
   explain it in the test that pins it, and name the test so the rule reads from
   the runner's output. A paragraph above a function describing how the logic
   behaves is a sign the test names are not doing their job.
+- **Describe what is, not the null.** When reversing one of your own earlier
+  decisions in an unmerged document, write the thing as it now is. Do not
+  leave "X is not a component" or "there is no X", or a rejected-alternative
+  bullet for an idea only your own draft ever proposed - a reader who never
+  saw the draft is being told not to think something they never thought.
 
 ### Spec-kit Task References
 
