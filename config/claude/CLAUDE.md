@@ -865,6 +865,13 @@ Test individual LLM decisions in isolation, not full agent pipelines end-to-end.
 Draw diagrams in Mermaid rather than ASCII or prose. It renders natively in
 GitHub, so a diagram stays readable in the file where it lives.
 
+When a change moves, removes or re-parents parts of a tree - components,
+modules, services - show that tree before and after rather than describing it.
+The trigger is the shape changing, not a node's contents. It goes in the plan
+where there is one, and in the pull request description otherwise. This is the
+shape the diff cannot show, so it is not the file summary reviewers are told to
+read for themselves.
+
 ## Documentation Lookup
 
 When working with frameworks or libraries and needing to look up documentation
