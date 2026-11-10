@@ -160,6 +160,42 @@ Claude Desktop / Claude Code
 
 **Restart 1mcp:** `launchctl kickstart -k gui/$(id -u)/1mcp.local.job`
 
+#### Debugging a server that has stopped working
+
+1mcp logs to `/tmp/1mcp.out` (its own log) and `/tmp/1mcp.err` (stderr of
+every child server, prefixed by the child's pid). Start there:
+
+```bash
+grep '<server>' /tmp/1mcp.out | tail            # 1mcp's view: connected / failed
+grep -n '<server url>' /tmp/1mcp.err | tail     # find the child's pid
+grep -n '^\[<pid>\]' /tmp/1mcp.err | tail -40    # that child's own output
+```
+
+Remote servers (any entry in `config/1mcp/mcp.json` whose `command` is
+`mcp-remote`) authenticate with OAuth. mcp-remote caches tokens in
+`~/.mcp-auth/mcp-remote-<version>/<hash>_tokens.json`, one hash per server
+URL; the matching `<hash>_client_info.json` names the scopes, which is how
+to tell which hash is which server.
+
+`Failed to fetch items from client <server>: mcp-remote: Unauthorized` in
+`1mcp.out` means that token file is missing or expired. The child will
+print `Please authorize this client by visiting: <url>` followed by
+`Browser opened automatically`, but the launch agent cannot complete a
+browser login and the callback listener dies with the attempt, so the URL
+in the log is already dead. Do not paste it. Re-authorise from a shell
+instead, approve in the browser, Ctrl+C once it prints `Proxy established`,
+then restart 1mcp:
+
+```bash
+mcp-remote <server url>
+launchctl kickstart -k gui/$(id -u)/1mcp.local.job
+```
+
+The standalone run writes to the same `<hash>` the 1mcp child reads, so no
+config changes are needed. Bumping `mcp-remote` in `config/mise/config.toml`
+starts a fresh `mcp-remote-<version>` directory, so expect every OAuth server
+to need this after an upgrade.
+
 ### Deployment System
 The repository uses dotbot with OS-specific configuration files:
 - `os/default/install.conf.yaml` - Base configuration for all systems
