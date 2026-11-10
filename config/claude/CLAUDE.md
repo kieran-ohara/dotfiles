@@ -242,6 +242,11 @@ Change a test only when the work you were asked to do requires it: the behaviour
 it covers has changed, or your change breaks it. A test that merely sits nearby,
 reads badly, or carries a misleading name is not yours to edit.
 
+Confirm it broke rather than assuming: restore the pre-change file and run it
+against the new code. A test that still passes is not yours to touch, however
+badly it reads - and a task list saying to update it, including one you wrote
+yourself in a spec, is not a licence.
+
 This applies above all to **renaming**. Never rename a test on your own
 initiative. A name that no longer matches what the test asserts is worth
 raising, not silently fixing: say which tests and why, and let the call be made.
