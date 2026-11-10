@@ -256,6 +256,12 @@ the shared vocabulary of the suite without anyone having agreed to it.
 The same restraint covers deleting tests, retitling `describe` blocks, and
 tidying assertions that are not in your way. Flag freely; edit narrowly.
 
+#### Loading skeletons get no tests and no stories
+
+A skeleton is a static placeholder with no behaviour of its own. Do not write a
+test for it or a Storybook story of it. Where its fit matters (e.g. it reserves
+room for a heading), check that by looking at the page it stands in for.
+
 #### Find elements by test id, never by their copy
 
 In UI tests, locate elements with `data-testid` (`getByTestId`,
