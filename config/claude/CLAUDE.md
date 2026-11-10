@@ -759,6 +759,12 @@ Do not tag commits with task numbers or story/requirement codes (e.g.
 `Add role guard (T029, T031)`). Describe the change on its own terms; the commit
 history should read as a narrative of the work, not of the plan that produced it.
 
+## Answering
+
+Answer the question that was asked, then stop. A yes/no question gets yes or no
+first. If investigating turned it up, something else worth knowing goes in a
+line and waits to be asked about - it does not replace the answer.
+
 ## Banned Phrases
 
 Never use the following phrases in responses, code comments, commit messages, or
