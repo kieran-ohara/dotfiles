@@ -68,6 +68,10 @@
             "type": "command",
             "command": "$HOME/.claude/hooks/session-start-mise.sh",
             "statusMessage": "Loading mise environment"
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/worktree-occupancy.sh"
           }
         ]
       }
@@ -95,6 +99,10 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/pretool-check-gh-account.sh"
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/worktree-occupancy.sh"
           }
         ]
       },
@@ -104,6 +112,15 @@
           {
             "type": "command",
             "command": "rtk hook claude"
+          }
+        ]
+      },
+      {
+        "matcher": "EnterWorktree",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/worktree-occupancy.sh"
           }
         ]
       }
