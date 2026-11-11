@@ -99,6 +99,11 @@ duplication rather than design. Where a translation is genuinely needed, it is
 private detail of the service that owns it — not exported surface a reader has
 to guess the purpose of.
 
+Solve a problem with what the codebase already does. A mechanism it does not
+use anywhere - a manifest flag, a config key, a pattern - is a new convention,
+however standard it is elsewhere, and needs proposing on its own rather than
+slipping in with a fix.
+
 ### Delete the mechanism that isn't paying for itself
 
 When a mechanism — a cache, an index, an abstraction — is not earning its
