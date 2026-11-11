@@ -13,4 +13,4 @@ $(DEPS)/brew: config/homebrew/Brewfile.lock.json
 	touch $@
 
 config/terminfo/db/61/alacritty-kieran: config/terminfo/src/alacritty-inline.terminfo
-	tic -x $<
+	tic -x -o config/terminfo/db $<

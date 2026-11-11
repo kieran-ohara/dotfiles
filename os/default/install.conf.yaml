@@ -67,3 +67,10 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [make config/terminfo/db/61/alacritty-kieran]
+
+# zsh looks up $TERM before reading any startup file, so the entry must sit
+# where ncurses searches by default.
+- link:
+    ~/.terminfo/61/alacritty-kieran:
+      path: config/terminfo/db/61/alacritty-kieran
+      create: true
