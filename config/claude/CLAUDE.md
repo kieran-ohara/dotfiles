@@ -333,6 +333,13 @@ aws-vault exec profile-name -- cdk list
 Replace `profile-name` with the profile name given in the instruction. If no
 profile name is given, ask the user.
 
+#### Deploying a branch to a shared environment
+
+Before deploying a branch anywhere others use, check how far its base is behind
+the trunk. A stale branch does not just add its own change - it reverts every
+commit the trunk has gained, in every package it deploys. Rebase first, then
+deploy.
+
 #### Verifying a deployment
 
 A CDK deploy that reports `UPDATE_COMPLETE` / `CREATE_COMPLETE` (the `✅` line)
