@@ -530,6 +530,9 @@ shareable page genuinely helps.
 - Stay on the branch the work is on. Do not check out another branch - least
   of all the one that happened to be current when the session started -
   without asking first and saying why the switch is needed.
+- Ask before creating a worktree, as for a branch switch: say which branch it
+  is for and where it will go. A worktree made unasked is one more checkout
+  for the user to find and clean up later.
 
 ### Staging Scope
 
