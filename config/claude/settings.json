@@ -126,6 +126,10 @@
       }
     ]
   },
+  "disabledMcpjsonServers": [
+    "awsiac",
+    "awspricing"
+  ],
   "enabledPlugins": {
     "deploy-on-aws@agent-plugins-for-aws": true,
     "design@kierans-plugins": true,
