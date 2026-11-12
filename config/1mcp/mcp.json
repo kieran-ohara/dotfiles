@@ -45,7 +45,7 @@
     "granola": {
       "command": "mcp-remote",
       "args": ["https://mcp.granola.ai/mcp"],
-      "tags": ["business"]
+      "tags": ["core"]
     },
     "miro": {
       "command": "mcp-remote",
