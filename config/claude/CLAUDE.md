@@ -41,6 +41,14 @@ and token names are the plan's, read from the frames. And a spec describes
 its own slice only - it does not name, hand off to, or caveat around the work
 that follows it.
 
+### `specs/` belongs to spec-kit
+
+The `specs/` tree holds spec-kit's own artefacts and nothing else - its
+numbering, its lifecycle, its `/speckit-*` commands. A brief written for
+another agent, a scratch document, a throwaway note: those go somewhere
+temporary, and where exactly does not matter. Putting them under `specs/`
+makes them look like a feature that was specified.
+
 ### A plan's phases are the stack
 
 Plan phases are pull requests in a `gh stack`: phase 1 is the bottom, the last
