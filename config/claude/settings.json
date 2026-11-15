@@ -134,6 +134,10 @@
     "awsiac",
     "awspricing"
   ],
+  "statusLine": {
+    "type": "command",
+    "command": "$HOME/.claude/statusline.sh"
+  },
   "enabledPlugins": {
     "deploy-on-aws@agent-plugins-for-aws": true,
     "design@kierans-plugins": true,
@@ -165,9 +169,5 @@
   "effortLevel": "high",
   "theme": "dark-ansi",
   "editorMode": "vim",
-  "skipAutoPermissionPrompt": true,
-  "statusLine": {
-    "type": "command",
-    "command": "$HOME/.claude/statusline.sh"
-  }
+  "skipAutoPermissionPrompt": true
 }
