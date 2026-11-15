@@ -162,10 +162,10 @@
     }
   },
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "theme": "dark-ansi",
   "editorMode": "vim",
   "skipAutoPermissionPrompt": true,
-  "effortLevel": "high",
   "statusLine": {
     "type": "command",
     "command": "$HOME/.claude/statusline.sh"
