@@ -128,6 +128,11 @@ layered on top of them re-decides at a width the stylesheet was never asked
 about. When rendered output contradicts the source, compile the rule and check
 it before editing code.
 
+A component carries no outer margin - it does not know where it is placed.
+The container that places it owns the space between its children (`gap`, a
+grid's row gap) and any rule drawn between them, as its own padding and
+border.
+
 ### Use Test Driven Development (TDD)
 
 Code should be delivered using the Test Driven Development approach:
