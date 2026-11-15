@@ -60,6 +60,10 @@
       "mcp__plugin_figma_figma__get_screenshot"
     ]
   },
+  "disabledMcpjsonServers": [
+    "awsiac",
+    "awspricing"
+  ],
   "hooks": {
     "SessionStart": [
       {
