@@ -41,6 +41,10 @@ and token names are the plan's, read from the frames. And a spec describes
 its own slice only - it does not name, hand off to, or caveat around the work
 that follows it.
 
+A user story is something the product's user experiences. Maintaining the
+product by a reviewed code change - adding an entry to a list, tuning a
+threshold - is how a requirement is met, not a story of its own.
+
 ### `specs/` belongs to spec-kit
 
 The `specs/` tree holds spec-kit's own artefacts and nothing else - its
