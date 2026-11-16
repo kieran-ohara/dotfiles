@@ -589,6 +589,11 @@ their own before anyone else is invited, and they mark it ready when they are
 happy. Open it ready-for-review only when they say so. One "raise the PR"
 covers that pull request only, not the next piece of work.
 
+Cut a pull request's branch from `origin/<trunk>`, not the local trunk,
+which is often ahead with commits that would ride into the PR. Check scope
+against the remote base (`git diff origin/main...HEAD`,
+`gh pr view --json files`), never against local `main`.
+
 ### After the push
 
 Commit, push, stop. Do not deploy to dev, and do not rebase, reorder or
