@@ -601,6 +601,11 @@ otherwise restructure a `gh stack`, unless asked - offer, do not act. If a
 change logically belongs on another layer of the stack, say so and leave it
 where it is.
 
+On a branch that already has a pull request, commit and push each accepted
+change as it is made rather than holding it locally - review happens on
+GitHub's diff, and the history gets squashed later. Push fast-forward;
+never force-push a shared PR branch.
+
 ### Pull Request Descriptions
 
 - Open with a brief "why" - provide context for the change
