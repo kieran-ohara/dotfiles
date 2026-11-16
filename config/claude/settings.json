@@ -131,10 +131,6 @@
       }
     ]
   },
-  "disabledMcpjsonServers": [
-    "awsiac",
-    "awspricing"
-  ],
   "statusLine": {
     "type": "command",
     "command": "$HOME/.claude/statusline.sh"
