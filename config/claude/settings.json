@@ -60,6 +60,7 @@
       "mcp__plugin_figma_figma__get_screenshot"
     ]
   },
+  "model": "opus",
   "disabledMcpjsonServers": [
     "awsiac",
     "awspricing"
