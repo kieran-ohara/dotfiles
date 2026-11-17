@@ -1,14 +1,15 @@
-computer-use.lock
 .credentials.json
 .last-cleanup
 backups
 cache
 chrome
+computer-use.lock
 daemon-*
 daemon.*
 daemon/
 debug
 file-history
+gh-pr-status-cache.json
 history.jsonl
 ide
 image-cache
@@ -30,4 +31,5 @@ tasks
 teams
 telemetry
 todos
+uploads
 usage-data
