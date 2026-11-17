@@ -136,6 +136,7 @@
     "dev-tools@kierans-plugins": true,
     "figma@claude-plugins-official": true,
     "invoice-tools@kierans-plugins": true,
+    "merman@merman": true,
     "mp-tools@kierans-plugins": true,
     "personal-tools@kierans-plugins": true,
     "specify@kierans-plugins": true,
@@ -155,10 +156,34 @@
         "path": "/Users/kieran.ohara/src/personal/claude-plugins"
       },
       "autoUpdate": true
+    },
+    "merman": {
+      "source": {
+        "source": "github",
+        "repo": "iamrohithrnair/merman"
+      },
+      "autoUpdate": true
     }
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
+  "pluginConfigs": {
+    "merman@merman": {
+      "options": {
+        "theme": "catppuccin-mocha",
+        "tableStyle": "box",
+        "taskStyle": "checks",
+        "headingStyle": "banner",
+        "copyButtonStyle": "inline",
+        "promptStyle": "off",
+        "clock": "off",
+        "toolStyle": "classic",
+        "toolOutput": "quiet",
+        "diffStyle": "bar",
+        "pieStyle": "bars"
+      }
+    }
+  },
   "theme": "dark-ansi",
   "editorMode": "vim",
   "skipAutoPermissionPrompt": true
