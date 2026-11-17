@@ -33,6 +33,11 @@ experimental = true
 legacy_version_file = true
 asdf_compat = false
 
+# 1Password mounts .env as a pipe, so concurrent mise processes split its
+# contents between them and fail to parse; caching means one read serves all.
+env_cache = true
+env_cache_redacted = true
+
 python.uv_venv_auto = true
 
 idiomatic_version_file_enable_tools = ["python"]
