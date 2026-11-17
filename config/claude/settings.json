@@ -107,16 +107,11 @@
           },
           {
             "type": "command",
-            "command": "$HOME/.claude/hooks/worktree-occupancy.sh"
-          }
-        ]
-      },
-      {
-        "matcher": "Bash",
-        "hooks": [
+            "command": "rtk hook claude"
+          },
           {
             "type": "command",
-            "command": "rtk hook claude"
+            "command": "$HOME/.claude/hooks/worktree-occupancy.sh"
           }
         ]
       },
