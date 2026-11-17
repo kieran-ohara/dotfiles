@@ -619,10 +619,6 @@ never force-push a shared PR branch.
   not changes made to it, not what it needs set up. If the change touched the
   pipeline, the diff says so - again, unless you are asked for it
 - Keep it concise; respect the reviewer's time and intelligence
-- Never link back to other pull requests (`#12`) or Jira tickets (`MW-123`) in
-  the description. Describe the context in words - the reader should not have
-  to follow a reference to understand the change. The ticket belongs in the
-  title only, where a client convention puts it there.
 
 ### Pull Request Reviews
 
@@ -632,10 +628,7 @@ these in addition to checking correctness.
 When relaying review feedback on a document - a spec requirement, a scenario,
 a success criterion - quote the wording in question in the chat (before and
 after, if it changed), not just its identifier. "FR-018 tightened" forces a
-trip to the diff; the two lines it refers to do not. The same goes for any
-identifier - a task number, a slice name, a finding code: gloss it inline on
-each use ("T019 (build the pane frame)", "S1 (the first PR, heading inside
-today's card)"), never bare.
+trip to the diff; the two lines it refers to do not.
 
 #### YAGNI
 
@@ -726,12 +719,20 @@ conflict with the general guidance above, the client's convention wins.
 Repositories under `~/src/arden`. Bitbucket-hosted, so pull requests go through
 `bkt`.
 
+Commits follow the team's style: the ticket number at the front of the
+subject, e.g. `MW-124: Add structured logging foundation`.
+
 Pull requests:
 
+- One pull request per ticket, targeting `develop`. Arden work is not built as
+  a `gh stack`.
 - The ticket number always goes at the front of the title, e.g.
   `MW-124: Add structured logging foundation`.
 - Never leave the description empty. There is no required format beyond that,
   so the general pull request guidance above applies.
+- Descriptions skip the context paragraph; the readers wrote the tickets. Say
+  what the change does technically and, where it follows an existing package
+  or pattern, only where it differs and a short why.
 
 The team is publishing further PR guides and conventions to their channels;
 update this section as they land.
@@ -793,23 +794,23 @@ update this section as they land.
   bullet for an idea only your own draft ever proposed - a reader who never
   saw the draft is being told not to think something they never thought.
 
-### Spec-kit Task References
+## References
 
-When working through a spec-kit (`/speckit-*`) workflow, **never** embed spec-kit
-identifiers into the code or its comments. These reference numbers are local
-planning artefacts and mean nothing to anyone reading the codebase:
+Say what a reference means in words, so the reader never has to follow it to
+understand you. A reference is any identifier that stands for something: a
+ticket key, a pull request number, a task or requirement code, a comment or
+finding number.
 
-- Task numbers (e.g. `// T012`, `// Task 3.2`)
-- User story / requirement codes (e.g. `// US-04`, `// FR-12`, `// AC-2`)
-- Spec or plan section references (e.g. `// per spec.md §4`)
-
-The implementation should stand on its own. If a comment is genuinely warranted,
-explain the behaviour — do not cite the task or story that produced it.
-
-This applies equally to **git commit messages** (both titles and descriptions).
-Do not tag commits with task numbers or story/requirement codes (e.g.
-`Add role guard (T029, T031)`). Describe the change on its own terms; the commit
-history should read as a narrative of the work, not of the plan that produced it.
+- **In chat**, gloss every identifier where it is used: "#49 (Dan's Arete
+  ingress PR)", "T019 (build the pane frame)". Number your own lists only
+  where the numbers cannot be mistaken for one of these.
+- **In pull request descriptions, commit messages and code**, write the context
+  out in words. A ticket key appears only where a client's convention puts it,
+  such as the front of a pull request title or commit subject.
+- **Local planning codes** - spec-kit task numbers (`T012`), story and
+  requirement codes (`US-04`, `FR-12`), spec or plan sections (`per spec.md
+  §4`) - stay in the plan. They never appear in code, comments or commits;
+  the code and its history describe the behaviour on their own terms.
 
 ## Answering
 
