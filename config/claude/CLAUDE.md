@@ -36,10 +36,17 @@ and say which side a tablet falls on. Pixels are decided in the plan against
 the stylesheet's existing breakpoints.
 
 More generally: a spec carries behaviour - order, presence, copy, placement
-by device, what keeps working. Shape, colour, spacing, component boundaries
+by device. Shape, colour, spacing, component boundaries
 and token names are the plan's, read from the frames. And a spec describes
 its own slice only - it does not name, hand off to, or caveat around the work
 that follows it.
+
+Nor does it describe the system as it stands today - the dialog as it is now,
+"exactly as it does today". Existing behaviour carries on unless the request
+says otherwise, so a spec does not restate it, either as a comparison or as a
+requirement that it stay unchanged. Where the request changes something, the
+spec states the new behaviour. The evidence that prompted the work, such as
+production figures, may stay.
 
 A user story is something the product's user experiences. Maintaining the
 product by a reviewed code change - adding an entry to a list, tuning a
