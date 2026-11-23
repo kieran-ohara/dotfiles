@@ -229,6 +229,14 @@ SDK marshals a request, that the framework routes a path, that the date library
 adds a day, or that the ORM builds valid SQL for a query with no logic of ours
 in it.
 
+#### Write the expected value out
+
+Write a test's expected value literally - the URL, the string, the number -
+rather than building it with the helper the code under test uses. A test that
+calls `leadAddress(...)` for its expectation agrees with the code by
+construction, and the reader has to run the helper in their head to know what
+is asserted.
+
 #### Prove a new test can fail
 
 Knowing the rule above does not catch a test that cannot fail. After writing
