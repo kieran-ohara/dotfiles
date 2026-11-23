@@ -839,6 +839,10 @@ Answer the question that was asked, then stop. A yes/no question gets yes or no
 first. If investigating turned it up, something else worth knowing goes in a
 line and waits to be asked about - it does not replace the answer.
 
+When work runs through skills, say which skill and step produced each result as
+you report it, and say plainly when a step was done outside any skill or a
+skill step was skipped.
+
 ## Banned Phrases
 
 Never use the following phrases in responses, code comments, commit messages, or
