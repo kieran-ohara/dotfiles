@@ -749,6 +749,12 @@ Pull requests:
   what the change does technically and, where it follows an existing package
   or pattern, only where it differs and a short why.
 
+Keep your own Jira tickets in step with the work so the team sees progress,
+without asking: assign yourself and move to Work Started when work begins,
+"PR raised/updated" when the pull request is ready for review, and "Ready
+for End to End testing" when it merges. Comments and field edits still need
+an explicit ask. Never move a teammate's ticket.
+
 The team is publishing further PR guides and conventions to their channels;
 update this section as they land.
 
