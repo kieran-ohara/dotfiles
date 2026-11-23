@@ -68,13 +68,24 @@ another agent, a scratch document, a throwaway note: those go somewhere
 temporary, and where exactly does not matter. Putting them under `specs/`
 makes them look like a feature that was specified.
 
-### A plan's phases are the stack
+### A task list's phases are the stack
 
-Plan phases are pull requests in a `gh stack`: phase 1 is the bottom, the last
-phase is the top, and the stack lands back-to-back. There is exactly one
+The plan describes the design and the constraints on order, never slices,
+pull requests or stacks; splitting the work is the task list's job. Each
+phase of `tasks.md` becomes one pull request in a `gh stack`: phase 1 is the
+bottom, the last phase is the top, and the stack lands back-to-back. There is
+exactly one
 ordering — build order, stack position and merge order are the same number.
 Never present "build order" and "merge order" as two sequences to reconcile,
 and do not infer an ordering rule from a past stack's merge timestamps.
+
+A plan carries no Technical Context section: language, dependencies, storage
+and test setup are in the repo's CLAUDE.md and the code. A constraint that
+shapes a decision goes in that decision's research entry.
+
+A quickstart carries no test commands and no steps. Write one only when
+seeing a slice work needs something the acceptance scenarios do not say;
+otherwise there is none.
 
 ### A redirect puts the workflow on hold
 
