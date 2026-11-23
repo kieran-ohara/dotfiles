@@ -546,6 +546,10 @@ stay in the terminal unless the user asks for a published page. Each publish
 starts a background watch that cannot be declined. Offer a link only where a
 shareable page genuinely helps.
 
+Never link a claude.ai artifact from anything colleagues or other systems
+see - pull requests, commits, Jira, Slack. Inline what the reader needs
+instead.
+
 ## Git
 
 ### Git Commands
