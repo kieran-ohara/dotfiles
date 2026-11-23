@@ -52,6 +52,10 @@ requirement that it stay unchanged. Where the request changes something, the
 spec states the new behaviour. The evidence that prompted the work, such as
 production figures, may stay.
 
+Functional requirements do not restate the user stories' acceptance
+scenarios. A requirement earns its place only by saying what no scenario
+does: a rule across scenarios, or a case none of them covers.
+
 A user story is something the product's user experiences. Maintaining the
 product by a reviewed code change - adding an entry to a list, tuning a
 threshold - is how a requirement is met, not a story of its own.
