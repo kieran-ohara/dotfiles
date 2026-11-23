@@ -11,6 +11,10 @@ These principles MUST be followed at all times.
 - Changes should be able to be committed to git as single, atomic commits.
 - Do NOT make sweeping changes across multiple parts of the codebase at once.
 
+When several changes are on the table and one is approved, ask whether the
+approval covers the others before making them - even when they touch the same
+file and are already worked out. Sometimes it does; do not assume either way.
+
 ### Fix it in the change that owns it
 
 When a change already touches a piece of code and that code has a problem
